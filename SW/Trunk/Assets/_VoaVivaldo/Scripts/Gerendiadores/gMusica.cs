@@ -10,6 +10,8 @@ public class gMusica : MonoBehaviour
 	public string audioInstrumento = "Instrumento1";
 	public Musica musicaAtual;
 
+	public bool verifyEnding = false;
+
 	public Musica _prefabMusica;
 
 	void Awake()
@@ -35,12 +37,14 @@ public class gMusica : MonoBehaviour
 		if (musicaAtual == null)
 						NovaMusica (audioBase, audioInstrumento);
 		musicaAtual.Play ();
+		verifyEnding = true;
 	}
 
 	void StopMusica ()
 	{
 		if (musicaAtual != null)
 			musicaAtual.Stop ();
+		verifyEnding = false;
 	}
 
 	public void NovaMusica (string audioBase, string audioInstrumento, List<NotaInfo>notas = null, bool autoPlay = false)
@@ -66,9 +70,10 @@ public class gMusica : MonoBehaviour
 
 	}
 
-	public void CarregarMusica (string carregarArquivo)
+	public void CarregarMusica (int indice = 0)
 	{
-		MusicaData m = gSave.s.Load ();
+//		MusicaData m = gSave.s.Load ();
+		MusicaData m = gLevels.s.SetLevel(indice).mInfo.dadosDaMusica;
 		if (m == null)
 						Debug.LogError ("Erro ao carregar a musica");
 		NovaMusica (m.audioBase, m.audioInstrumento, m.notas);
@@ -82,5 +87,15 @@ public class gMusica : MonoBehaviour
 	void DestroyMusica (Musica m)
 	{
 		Destroy (m);
+	}
+
+	void Update()
+	{
+		if (verifyEnding && musicaAtual!=null) 
+		{
+			if( musicaAtual.isPlaying == false )
+				gComandosDeMusica.s.Stop();
+
+		}
 	}
 }

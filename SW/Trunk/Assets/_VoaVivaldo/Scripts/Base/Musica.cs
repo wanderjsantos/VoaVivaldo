@@ -6,8 +6,8 @@ public class Musica : MonoBehaviour
 {
 
 	public MusicaInfo 		mInfo;
-	public AudioSource 		sourceBase;
-	public AudioSource 		sourceInstrumento;
+	AudioSource 		sourceBase;
+	AudioSource 		sourceInstrumento;
 	public bool 		isPlaying 	= false;
 	int 				posicaoNotaAtual = 0;
 

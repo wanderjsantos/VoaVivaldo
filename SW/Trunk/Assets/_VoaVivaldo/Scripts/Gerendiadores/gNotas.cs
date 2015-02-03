@@ -53,9 +53,7 @@ public class gNotas : MonoBehaviour
 		{
 			if( c > notasNaPista.Count )
 			{
-				Debug.Log("Acabou as notas");
-//				gComandosDeMusica.s.Stop();
-//				gMenus.s.ShowMenu( "Principal");
+//				Debug.Log("Acabou as notas");
 				return;
 			}
 
@@ -64,11 +62,6 @@ public class gNotas : MonoBehaviour
 			{
 				if( gPontuacao.s.VerificarPontuacao( notasNaPista[i], gGame.s.player ) )
 					DestruirNota(notasNaPista[i]);
-				else
-				{
-					Debug.Log("Parar audio");
-					gAudio.s.PararAudio();
-				}
 			}
 
 			if( areaDeDead.Contains( posNota )) 

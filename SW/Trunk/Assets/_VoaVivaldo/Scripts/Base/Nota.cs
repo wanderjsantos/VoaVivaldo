@@ -11,7 +11,6 @@ public class Nota : MonoBehaviour
 	public void Start()
 	{
 		mView.UpdateColor (cor);
-		
 	}
 
 	public void OnHitAreaDePontuacao()
@@ -49,7 +48,6 @@ public class NotaView
 	public void UpdateColor (Color cor)
 	{
 		mSprite.color = cor;
-		mSprite.depth = 100;
 	}
 }
 

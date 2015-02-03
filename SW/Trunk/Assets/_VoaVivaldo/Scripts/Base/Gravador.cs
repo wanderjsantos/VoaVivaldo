@@ -32,7 +32,7 @@ public class Gravador : MonoBehaviour
 	{
 		Parar ();
 
-		gSave.s.Salvar( PrepararClasseParaGravar () );
+//		gSave.s.Salvar( PrepararClasseParaGravar () );
 	}
 
 	MusicaData PrepararClasseParaGravar ()

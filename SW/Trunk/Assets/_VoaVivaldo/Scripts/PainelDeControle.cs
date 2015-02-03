@@ -15,7 +15,7 @@ public class PainelDeControle : MonoBehaviour {
 	public bool 	play	 			= false;
 	public bool		playAndRecord		= false;
 
-	public string	carregarArquivo		= "Musica.xml";
+	public int		carregarLevel		= 0;
 	public bool		loadXML				= false;
 
 	void Update()
@@ -56,7 +56,7 @@ public class PainelDeControle : MonoBehaviour {
 		if (loadXML)
 		{
 			loadXML = false;
-			gMusica.s.CarregarMusica( carregarArquivo );
+			gMusica.s.CarregarMusica( carregarLevel );
 		}
 	}
 }

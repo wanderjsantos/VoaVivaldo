@@ -7,7 +7,6 @@ public class Controller : MonoBehaviour
 	public Vector3 	input;
 	Vector2 	minMaxInput = new Vector2(-1f,1f);
 	public Vector2 	minMaxInputOnDevice = new Vector2(-1f,1f);
-	public float multiplicadorDeAceleracao = 1.3f;
 
 	Vector3	initialPosition;
 
@@ -32,21 +31,18 @@ public class Controller : MonoBehaviour
 		porFaixa = (Mathf.Abs (minMaxInput.y) + Mathf.Abs (minMaxInput.x))/faixasTotais;
 	}
 
-//	public void OnGUI()
-//	{
-//		GUI.Box (new Rect (0, 0, 200, 50), Input.acceleration.ToString());
-//		GUI.Box (new Rect (0, 50, 200,50), (Input.acceleration * multiplicadorDeAceleracao).ToString());
-//	}
+	public void OnGUI()
+	{
+		GUI.Box (new Rect (0, 0, 200, 200), Input.acceleration.ToString());
+	}
 
 	public void Update()
 	{
 #if UNITY_EDITOR
 		input.y = Mathf.Clamp( Input.GetAxis ("Vertical"), minMaxInput.x, minMaxInput.y ); 
-
-#else
-		float y = Mathf.Clamp (Input.acceleration.y * multiplicadorDeAceleracao, minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
-		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
 #endif
+		float y = Mathf.Clamp (Input.acceleration.y, minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
+		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
 
 
 		faixaAtual = (int)((input.y / porFaixa) - (input.y % porFaixa));

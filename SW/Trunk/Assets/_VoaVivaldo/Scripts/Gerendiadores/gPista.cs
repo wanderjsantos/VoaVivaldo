@@ -115,9 +115,6 @@ public class gPista : MonoBehaviour {
 			n.gameObject.transform.localPosition = v;
 			n.gameObject.transform.parent = rootPista.transform;
 		}
-		
-//		Debug.Break();
-		
 
 	}
 }

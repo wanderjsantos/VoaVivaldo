@@ -25,7 +25,7 @@ public class gGame : MonoBehaviour
 	{
 		gMenus.s.ShowMenu ("Gameplay");
 		gRecord.s.recordOnPlayMusic = false;
-		gMusica.s.CarregarMusica ("Musica.xml");
+		gMusica.s.CarregarMusica (gLevels.s.currentLevelIndex);
 		gComandosDeMusica.s.Play ();
 		gameStarted = true;
 

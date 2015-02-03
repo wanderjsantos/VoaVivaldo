@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<MusicaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BPM>120</BPM>
+  <audioBase>Base1</audioBase>
+  <audioInstrumento>Instrumento1</audioInstrumento>
+  <notas>
+    <NotaInfo>
+      <timbre>DOIS</timbre>
+      <compasso>1</compasso>
+      <batida>2</batida>
+    </NotaInfo>
+    <NotaInfo>
+      <timbre>UM</timbre>
+      <compasso>2</compasso>
+      <batida>2</batida>
+    </NotaInfo>
+    <NotaInfo>
+      <timbre>UM</timbre>
+      <compasso>2</compasso>
+      <batida>3</batida>
+    </NotaInfo>
+  </notas>
+</MusicaData>

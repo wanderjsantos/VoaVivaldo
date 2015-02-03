@@ -11,11 +11,11 @@ public class MenuGameplay : Menu
 	public GameObject	rootCompassos;
 	Vector3 posTemp;
 	public bool			rodando = false;
+	public float			valorParaResetar = 7.5f;
+
+
 
 	public UIRoot		uiRoot;
-	
-	public UILabel		txtPontuacao;
-	public string		pontuacao;
 
 	void IniciarRodagem ()
 	{
@@ -31,7 +31,7 @@ public class MenuGameplay : Menu
 
 	public void Update()
 	{
-		if ( gGame.s.gameStarted == false)
+		if (gMusica.s.musicaAtual.isPlaying == false)
 		return;
 
 		velocidadeDaPista = - ((gPista.s.tamanhoDoCompasso * uiRoot.transform.localScale.x) / (gRitmo.s.intervalo * gRitmo.s.batidasPorCompasso));
@@ -39,8 +39,6 @@ public class MenuGameplay : Menu
 		posTemp.x += velocidadeDaPista * Time.deltaTime;
 
 		rootDasNotas.transform.position = posTemp;
-		
-		txtPontuacao.text = pontuacao + gGame.s.player.mInfo.pontuacao.ToString();
 
 	}
 

@@ -7,6 +7,7 @@ public class MenuLevelSelect : Menu {
 
 	public void SelectFase( int numero )
 	{
+		Debug.Log ("Select Fase: " + numero);
 		gGame.s.IniciarJogo ();
 	}
 }

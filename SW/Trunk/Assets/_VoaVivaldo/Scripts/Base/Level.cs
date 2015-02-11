@@ -3,8 +3,7 @@ using System.Collections;
 
 public class Level : MonoBehaviour 
 {
-	public LevelInfo mInfo;
-		
+	public LevelInfo mInfo;		
 }
 
 [System.Serializable]

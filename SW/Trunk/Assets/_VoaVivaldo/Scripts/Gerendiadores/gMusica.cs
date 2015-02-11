@@ -6,13 +6,16 @@ public class gMusica : MonoBehaviour
 {
 	public static gMusica s;
 
-	public string audioBase = "Base1";
-	public string audioInstrumento = "Instrumento1";
+	public MusicaData dadosDaMusicaAtual;
+
 	public Musica musicaAtual;
 
 	public bool verifyEnding = false;
 
 	public Musica _prefabMusica;
+
+	public int	musicaIndice = -1;
+	public int	instrumentoIndice = -1;
 
 	void Awake()
 	{
@@ -32,10 +35,28 @@ public class gMusica : MonoBehaviour
 		gComandosDeMusica.onStop -= StopMusica;
 	}
 
+	public void SetMusica (int numero = -1)
+	{
+		if( numero != -1 )
+			musicaIndice = numero;
+	}
+
+	public void SetInstrumento (int numero = -1)
+	{
+		if( numero != -1 )
+			instrumentoIndice = numero;
+	}
+
+	public void Set( int musica = -1, int instrumento = -1 )
+	{
+		SetMusica (musica);
+		SetInstrumento (instrumento);
+	}
+
 	void PlayMusica ()
 	{
-		if (musicaAtual == null)
-						NovaMusica (audioBase, audioInstrumento);
+		if (musicaAtual == null)return;
+//						NovaMusica (audioBase, audioInstrumento);
 		musicaAtual.Play ();
 		verifyEnding = true;
 	}
@@ -47,11 +68,19 @@ public class gMusica : MonoBehaviour
 		verifyEnding = false;
 	}
 
-	public void NovaMusica (string audioBase, string audioInstrumento, List<NotaInfo>notas = null, bool autoPlay = false)
+	public void NovaMusica()
+	{
+		dadosDaMusicaAtual = GetMusica (musicaIndice);
+
+		NovaMusica (dadosDaMusicaAtual.audioBase, dadosDaMusicaAtual.audioInstrumentos [instrumentoIndice], dadosDaMusicaAtual.notas, dadosDaMusicaAtual.BPM);
+
+	}
+
+	public void NovaMusica (string audioBase, string audioInstrumento, List<NotaInfo>notas, int beatsPerMinute = 120, bool autoPlay = false)
 	{
 		if (musicaAtual != null) 
 		{
-			StopMusica ();
+			StopMusica();
 			DestroyMusica( musicaAtual );
 		}
 
@@ -62,22 +91,31 @@ public class gMusica : MonoBehaviour
 		if (notas != null)
 						info.notas.AddRange (notas);
 
+
 		Musica m = Instantiate (_prefabMusica) as Musica;
 		m.mInfo = info;
+
+		gRitmo.s.SetBPM (beatsPerMinute);
 
 		musicaAtual = m;
 		if (autoPlay)	PlayMusica ();
 
 	}
 
-	public void CarregarMusica (int indice = 0)
+	public MusicaData GetMusica( int indice = 0 )
 	{
-//		MusicaData m = gSave.s.Load ();
-		MusicaData m = gLevels.s.SetLevel(indice).mInfo.dadosDaMusica;
-		if (m == null)
-						Debug.LogError ("Erro ao carregar a musica");
-		NovaMusica (m.audioBase, m.audioInstrumento, m.notas);
+		MusicaData ret = gLevels.s.GetLevel (indice, false).mInfo.dadosDaMusica;
+		return ret;
 	}
+
+//	public void CarregarMusica (int indice = 0)
+//	{
+////		MusicaData m = gLevels.s.SetLevel(indice).mInfo.dadosDaMusica;
+////
+////		if (m == null)
+////						Debug.LogError ("Erro ao carregar a musica");
+////		NovaMusica (m.audioBase, m.audioInstrumentos[instrumentoIndice], m.notas , m.BPM, false);
+//	}
 
 	public List<NotaInfo> TodasAsNotasNoCompasso( int compasso )
 	{

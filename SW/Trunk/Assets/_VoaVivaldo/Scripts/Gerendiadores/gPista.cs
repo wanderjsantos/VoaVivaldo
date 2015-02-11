@@ -10,12 +10,22 @@ public class gPista : MonoBehaviour {
 	public int		faixasTotais = 5;
 
 	public float	tamanhoYPista = 120f;
+	public float	tamanhoDeCadaPista = 10f;
 
 	public GameObject	pista1;
 	public GameObject	pista2;
 	public GameObject	pista3;
 	public GameObject	pista4;
 	public GameObject	pista5;
+	public GameObject	pista6;
+	public GameObject	pista7;
+	public GameObject	pista8;
+	public GameObject	pista9;
+	public GameObject	pista10;
+	public GameObject	pista11;
+	public GameObject	pista12;
+	public GameObject	pista13;
+	public GameObject	pista14;
 
 	public static gPista s;
 
@@ -42,6 +52,63 @@ public class gPista : MonoBehaviour {
 		if (ret == null)
 			ret = new GameObject ("RootPista");
 		return ret;
+	}
+
+	public Vector3 GetPositionDaPista (int faixaAtual)
+	{
+		int pAtual = faixaAtual + ((int)(faixasTotais/2));
+
+		Vector3 v = new Vector3 ();
+		switch (pAtual)
+		{
+		case 0:
+			v.y = pista1.transform.localPosition.y;
+			break;
+		case 1:
+			v.y = pista2.transform.localPosition.y;
+			break;
+		case 2:
+			v.y = pista3.transform.localPosition.y;
+			break;
+		case 3:
+			v.y = pista4.transform.localPosition.y;
+			break;
+		case 4:
+			v.y = pista5.transform.localPosition.y;
+			break;	
+		case 5:
+			v.y = pista6.transform.localPosition.y;
+			break;
+		case 6:
+			v.y = pista7.transform.localPosition.y;
+			break;
+		case 7:
+			v.y = pista8.transform.localPosition.y;
+			break;
+		case 8:
+			v.y = pista9.transform.localPosition.y;
+			break;
+		case 9:
+			v.y = pista10.transform.localPosition.y;
+			break;
+		case 10:
+			v.y = pista11.transform.localPosition.y;
+			break;
+		case 11:
+			v.y = pista12.transform.localPosition.y;
+			break;
+		case 12:
+			v.y = pista13.transform.localPosition.y;
+			break;
+		case 13:
+			v.y = pista14.transform.localPosition.y;
+			break;
+		default:
+			v.y = pista14.transform.localPosition.y;
+			break;
+		}
+
+		return v;
 	}
 
 //	void InitMusica ()
@@ -104,6 +171,33 @@ public class gPista : MonoBehaviour {
 				break;
 			case Timbre.CINCO:
 				v.y = pista5.transform.localPosition.y;
+				break;	
+			case Timbre.SEIS:
+				v.y = pista6.transform.localPosition.y;
+				break;
+			case Timbre.SETE:
+				v.y = pista7.transform.localPosition.y;
+				break;
+			case Timbre.OITO:
+				v.y = pista8.transform.localPosition.y;
+				break;
+			case Timbre.NOVE:
+				v.y = pista9.transform.localPosition.y;
+				break;
+			case Timbre.DEZ:
+				v.y = pista10.transform.localPosition.y;
+				break;
+			case Timbre.ONZE:
+				v.y = pista11.transform.localPosition.y;
+				break;
+			case Timbre.DOZE:
+				v.y = pista12.transform.localPosition.y;
+				break;
+			case Timbre.TREZE:
+				v.y = pista13.transform.localPosition.y;
+				break;
+			case Timbre.QUATORZE:
+				v.y = pista14.transform.localPosition.y;
 				break;
 			default:
 				v.y = pista1.transform.localPosition.y;

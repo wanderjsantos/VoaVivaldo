@@ -3,9 +3,21 @@ using System.Collections;
 
 public class gGame : MonoBehaviour 
 {
+	public delegate void ChangeGameStatusHandler ();
+
+	public static event ChangeGameStatusHandler 	onInit;
+	public static event ChangeGameStatusHandler 	onPlayGame;
+	public static event ChangeGameStatusHandler 	onStopGame;
+	public static event ChangeGameStatusHandler 	onReset;
+
 	public static gGame s;
 	public bool		gameStarted = false;
-	public Player player;
+	public Player 	player;
+
+	public	int		tempoParaIniciar = 0;
+	public 	float 	contagemRegressiva = 5f;
+	float			iTime = 0f;
+	bool			contando = false;
 
 	void Awake()
 	{
@@ -23,11 +35,48 @@ public class gGame : MonoBehaviour
 
 	public void IniciarJogo()
 	{
-		gMenus.s.ShowMenu ("Gameplay");
-		gRecord.s.recordOnPlayMusic = false;
-		gMusica.s.CarregarMusica (gLevels.s.currentLevelIndex);
-		gComandosDeMusica.s.Play ();
+		gMusica.s.NovaMusica ();
 		gameStarted = true;
 
+
+
+		tempoParaIniciar = 0;
+		iTime = Time.realtimeSinceStartup;
+		contando = true;
+
+		player.Disable ();
+
+		gMenus.s.ShowMenu ("Gameplay");
+
+		if (onInit != null)
+						onInit ();
 	}
+
+	public void PlayGame()
+	{
+		gComandosDeMusica.s.Play ();
+
+		player.Enable ();
+
+		if (onPlayGame != null)
+						onPlayGame ();
+	}
+
+	void Update()
+	{
+		if (contando)
+		{
+			if( Time.realtimeSinceStartup < (iTime + contagemRegressiva ) )
+			{
+				tempoParaIniciar = (int) ((iTime + contagemRegressiva) - Time.realtimeSinceStartup);
+			}
+			else
+			{
+				contando = false;
+				PlayGame();
+			}
+		}
+	}
+
+
 }

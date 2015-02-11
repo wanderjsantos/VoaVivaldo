@@ -16,6 +16,6 @@ public class MenuPrincipal : Menu
 	public void OnClickJogar()
 	{
 //		gGame.s.IniciarJogo ();
-		gMenus.s.ShowMenu ("Select");
+		gMenus.s.ShowMenu ("SelecaoDeMusica");
 	}
 }

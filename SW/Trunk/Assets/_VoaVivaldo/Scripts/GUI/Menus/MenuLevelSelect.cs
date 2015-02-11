@@ -8,6 +8,7 @@ public class MenuLevelSelect : Menu {
 	public void SelectFase( int numero )
 	{
 		Debug.Log ("Select Fase: " + numero);
-		gGame.s.IniciarJogo ();
+		gMusica.s.SetMusica (numero);
+		gMenus.s.ShowMenu ("Instrumento");
 	}
 }

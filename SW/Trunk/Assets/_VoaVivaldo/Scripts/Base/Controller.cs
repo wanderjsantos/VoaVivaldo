@@ -16,9 +16,8 @@ public class Controller : MonoBehaviour
 
 	int		faixaAnterior;
 	int		faixaAtual = 3;
+	float 	faixaAtualFloat;
 	float	porFaixa = 0f;
-
-	public Vector2	areaDeAtuacao = new Vector2 (60f, -60f);
 
 	public float	speed = 30f;
 
@@ -26,26 +25,33 @@ public class Controller : MonoBehaviour
 
 	void Start()
 	{
+//		initialPosition = transform.localPosition;
 		initialPosition = transform.localPosition;
+		initialPosition.y = (faixaAtual * gPista.s.tamanhoDeCadaPista) - (gPista.s.tamanhoDeCadaPista/2);
 		faixasTotais 	= gPista.s.faixasTotais;
 		porFaixa = (Mathf.Abs (minMaxInput.y) + Mathf.Abs (minMaxInput.x))/faixasTotais;
+		faixaAnterior = -1;
 	}
 
-	public void OnGUI()
-	{
-		GUI.Box (new Rect (0, 0, 200, 200), Input.acceleration.ToString());
-	}
+//	public void OnGUI()
+//	{
+//		GUI.Box (new Rect (0, 0, 200, 200), Input.acceleration.ToString());
+//	}
 
 	public void Update()
 	{
-#if UNITY_EDITOR
-		input.y = Mathf.Clamp( Input.GetAxis ("Vertical"), minMaxInput.x, minMaxInput.y ); 
-#endif
+
+
+#if UNITY_IOS || UNITY_ANDROID
 		float y = Mathf.Clamp (Input.acceleration.y, minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
 		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
-
-
-		faixaAtual = (int)((input.y / porFaixa) - (input.y % porFaixa));
+#endif
+#if !UNITY_IOS && !UNITY_ANDROID
+		float y = Mathf.Clamp (Input.GetAxis ("Vertical"), minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
+		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
+#endif
+		faixaAtual = Mathf.RoundToInt((input.y / porFaixa) - (input.y % porFaixa));
+		faixaAtualFloat = ((input.y / porFaixa) - (input.y % porFaixa));
 
 		if (faixaAnterior != faixaAtual) 
 		{
@@ -54,12 +60,11 @@ public class Controller : MonoBehaviour
 		}
 
 		pos = transform.localPosition ;
-		pos.y = initialPosition.y + (faixaAtual * 30f);
+		pos.y = gPista.s.GetPositionDaPista (faixaAtual).y;
 
 		//a faixa ( de -2 a 2 ) + 2 (o numero extra ai) + 1 ( pra nao ir de 0 a 4 )
-		pista = faixaAtual + 2 + 1;
+		pista = faixaAtual + ((int)(faixasTotais/2));
 //		transform.localPosition = pos;
-		
 	}
 
 

@@ -42,7 +42,7 @@ public class PainelDeControle : MonoBehaviour {
 		if (novaMusica)
 		{
 			novaMusica = false;
-			gMusica.s.NovaMusica( audioBase, audioInstrumento );
+//			gMusica.s.NovaMusica( audioBase, audioInstrumento );
 		}
 
 		if (playAndRecord)
@@ -56,7 +56,7 @@ public class PainelDeControle : MonoBehaviour {
 		if (loadXML)
 		{
 			loadXML = false;
-			gMusica.s.CarregarMusica( carregarLevel );
+//			gMusica.s.CarregarMusica( carregarLevel );
 		}
 	}
 }

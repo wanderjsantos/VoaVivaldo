@@ -8,7 +8,9 @@ public class MusicaData
 {
 	public int 				BPM;
 	public string 			audioBase;
-	public string 			audioInstrumento;
+
+	public List<string>		audioInstrumentos;
+//	public string 			audioInstrumento;
 
 	public List<NotaInfo> 	notas;
 }

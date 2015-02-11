@@ -15,12 +15,12 @@ public class Gravador : MonoBehaviour
 
 	public void Gravar()
 	{
-		gravando 	= true;
-		iTime 		= Time.realtimeSinceStartup;
-		notas 		= new List<NotaInfo> ();
+//		gravando 	= true;
+//		iTime 		= Time.realtimeSinceStartup;
+//		notas 		= new List<NotaInfo> ();
 
-		if( gMusica.s.musicaAtual == null )
-			gMusica.s.NovaMusica ("Base1", "Instrumento1");
+//		if( gMusica.s.musicaAtual == null )
+//			gMusica.s.NovaMusica ("Base1", "Instrumento1");
 	}
 
 	public void Parar()
@@ -38,11 +38,11 @@ public class Gravador : MonoBehaviour
 	MusicaData PrepararClasseParaGravar ()
 	{
 		MusicaData ret = new MusicaData ();
-		ret.notas = new List<NotaInfo> ();
-		ret.notas.AddRange (notas);
-		ret.audioBase = gMusica.s.musicaAtual.mInfo.instrumentos.baseMusica.name;
-		ret.audioInstrumento 	= gMusica.s.musicaAtual.mInfo.instrumentos.instrumento.name;
-		ret.BPM = gRitmo.s.BPM;
+//		ret.notas = new List<NotaInfo> ();
+//		ret.notas.AddRange (notas);
+//		ret.audioBase = gMusica.s.musicaAtual.mInfo.instrumentos.baseMusica.name;
+////		ret.audioInstrumento 	= gMusica.s.musicaAtual.mInfo.instrumentos.instrumento.name;
+//		ret.BPM = gRitmo.s.BPM;
 		return ret;
 	}
 	

@@ -24,6 +24,13 @@ public class gLevels : MonoBehaviour
 		return currentLevel;
 	}
 
+	public Level GetLevel( int index = 0, bool set = false )
+	{
+		if (set)
+						SetLevel (index);
+		return allLevels [index];
+	}
+
 	public void NextLevel()
 	{
 		SetLevel (currentLevelIndex++);

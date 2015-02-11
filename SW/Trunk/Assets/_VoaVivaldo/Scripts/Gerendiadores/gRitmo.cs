@@ -34,6 +34,14 @@ public class gRitmo : MonoBehaviour
 		gComandosDeMusica.onPlay -= OnPlayAudio;
 		gComandosDeMusica.onStop -= OnStopAudio;
 	}
+
+	public void SetBPM(int bpm)
+	{
+		Parar ();
+		BPM = bpm;
+//		Iniciar ();
+	}
+
 	void Iniciar()
 	{
 		tempoDeInicioDaMusica = Time.realtimeSinceStartup;

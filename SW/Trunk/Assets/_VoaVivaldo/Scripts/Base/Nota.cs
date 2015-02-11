@@ -26,7 +26,7 @@ public class Nota : MonoBehaviour
 }
 
 
-public enum Timbre{ ZERO, UM, DOIS, TRES, QUATRO, CINCO }
+public enum Timbre{ ZERO, UM, DOIS, TRES, QUATRO, CINCO,SEIS, SETE, OITO, NOVE, DEZ, ONZE, DOZE, TREZE, QUATORZE }
 [System.Serializable]
 public class NotaInfo 
 {

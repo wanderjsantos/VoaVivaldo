@@ -11,26 +11,44 @@ public class MenuGameplay : Menu
 	public GameObject	rootCompassos;
 	Vector3 posTemp;
 	public bool			rodando = false;
-	public float			valorParaResetar = 7.5f;
-
-
+	public float		valorParaResetar = 7.5f;
 
 	public UIRoot		uiRoot;
 
-	void IniciarRodagem ()
-	{
-		rodando = true;
-	}
+	public UILabel		labelContagemRegressiva;
+	public GameObject	goContagemRegressiva;
 
 	public override void Show()
 	{
 		base.Show ();
-//		Debug.Break ();
-//		tamanho = pistaBase.localSize.y;
+		gGame.onPlayGame += ResetContagemRegressiva;
+	}
+
+	public override void Hide ()
+	{
+		base.Hide ();
+		gGame.onPlayGame -= ResetContagemRegressiva;
+	}
+
+	public void InitContagemRegressiva()
+	{
+		goContagemRegressiva.SetActive (true);
+		labelContagemRegressiva.text = gGame.s.contagemRegressiva.ToString ("00");
+	}
+
+	public void ResetContagemRegressiva()
+	{
+		goContagemRegressiva.SetActive (false);
+		labelContagemRegressiva.text = gGame.s.contagemRegressiva.ToString ("00");
 	}
 
 	public void Update()
 	{
+		if (goContagemRegressiva.activeInHierarchy == true) 
+		{
+			labelContagemRegressiva.text = gGame.s.tempoParaIniciar.ToString ("00");
+		}
+
 		if (gMusica.s.musicaAtual.isPlaying == false)
 		return;
 
@@ -41,6 +59,4 @@ public class MenuGameplay : Menu
 		rootDasNotas.transform.position = posTemp;
 
 	}
-
-
 }

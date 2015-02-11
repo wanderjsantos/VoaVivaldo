@@ -17,6 +17,8 @@ public class gNotas : MonoBehaviour
 
 	public int verificarXNotasPorVez = 1;
 
+	public int currentNota = 0;
+
 	public void Awake()
 	{
 		s = this;
@@ -30,6 +32,7 @@ public class gNotas : MonoBehaviour
 	void Init ()
 	{
 //		notasNaPista = new List<Nota> ();
+		currentNota = 0;
 	}
 
 	void OnGUI()
@@ -96,6 +99,9 @@ public class gNotas : MonoBehaviour
 	{
 		if (notasNaPista.Contains (nota))
 						notasNaPista.Remove (nota);
+
+		currentNota++;// = Mathf.Clamp(currentNota++,0,notasNaPista.Count);
+
 		Destroy (nota.gameObject);
 	}
 }

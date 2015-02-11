@@ -38,6 +38,16 @@ public class Player : MonoBehaviour
 		if( (mController.pos - transform.localPosition).magnitude <= .01f )
 			anim = false;
 	}
+
+	public void Disable ()
+	{
+		mController.enabled = false;
+	}
+
+	public void Enable()
+	{
+		mController.enabled = true;
+	}
 }
 
 [System.Serializable]

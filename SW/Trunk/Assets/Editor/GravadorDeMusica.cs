@@ -11,22 +11,23 @@ public class GravadorDeMusica : EditorWindow {
 
 	public static GravadorDeMusica mWindow;
 
-	public static int BPM = 120;
-	public static AudioClip audioBase;
-	public static AudioClip audioInstrumento;
+	public static string nome = "CurrentLevel";
 
-	public static int linhas = 5;
+	public static int 				BPM = 120;
+	public static AudioClip 		audioBase;
+	public static AudioClip 		instrumentoTemporario;
+	public static List<AudioClip> 	audioInstrumento;
+
+	public static int linhas = 14;
 	public static int colunas = 4;
 
-	public static int totalDeCompassos = 1;
-	
-	public static string nomeDoArquivo = "Musica";
+	public static int totalDeCompassos = 3;
 
 	public static Texture2D timbre1;
-	public static Texture2D timbre2;
-	public static Texture2D timbre3;
-	public static Texture2D timbre4;
-	public static Texture2D timbre5;
+//	public static Texture2D timbre2;
+//	public static Texture2D timbre3;
+//	public static Texture2D timbre4;
+//	public static Texture2D timbre5;
 	public static Texture2D timbre0;
 
 	public static BTN_Nota[,,] grid;
@@ -38,27 +39,34 @@ public class GravadorDeMusica : EditorWindow {
 		mWindow = EditorWindow.GetWindow<GravadorDeMusica> ();
 
 		timbre1 = Resources.Load ("Nota1") as Texture2D;
-		timbre2 = Resources.Load ("Nota2") as Texture2D;
-		timbre3 = Resources.Load ("Nota3") as Texture2D;
-		timbre4 = Resources.Load ("Nota4") as Texture2D;
-		timbre5 = Resources.Load ("Nota5") as Texture2D;
+//		timbre2 = Resources.Load ("Nota2") as Texture2D;
+//		timbre3 = Resources.Load ("Nota3") as Texture2D;
+//		timbre4 = Resources.Load ("Nota4") as Texture2D;
+//		timbre5 = Resources.Load ("Nota5") as Texture2D;
 		timbre0 = Resources.Load ("Nota0") as Texture2D;
+
+		audioBase = Resources.Load ("Base1") as AudioClip;
+		instrumentoTemporario = Resources.Load ("Instrumento1") as AudioClip;
+		audioInstrumento = new List<AudioClip> ();
 
 		CreateButtons ();
 	}
 
 	void OnGUI()
 	{
+
 		DrawBPM ();
 		DrawAudioClips ();
 
 
 		DrawButtons ();
+
+		nome = EditorGUILayout.TextField ("Nome do Arquivo:",nome);
 		GUILayout.BeginHorizontal ();
 			GUI.color = Color.red;
 			if (GUILayout.Button ("Resetar")) 
 			{
-				CreateButtons();
+				Init();
 			}
 
 			GUI.color = Color.green;
@@ -71,62 +79,35 @@ public class GravadorDeMusica : EditorWindow {
 
 	void DrawBPM ()
 	{
-		BPM = EditorGUILayout.IntField ("Beats per minute (BPM):", BPM);
+		BPM = EditorGUILayout.IntField ("Batidas por minuto (BPM):", BPM);
 	}
-
+	public static bool audioInstrumentosBool = false;
 	void DrawAudioClips ()
 	{
-		audioBase 			= EditorGUILayout.ObjectField ("Base:",audioBase, typeof(AudioClip), false) as AudioClip;
-		audioInstrumento 	= EditorGUILayout.ObjectField ("Instrumento:",audioInstrumento, typeof(AudioClip), false) as AudioClip;
-		
-		EditorGUILayout.BeginHorizontal();
-		
-			if( GUILayout.Button( "Play" ) )
-			{
-				PlayAudios();
-			}
-			
-			if( GUILayout.Button( "Stop" ) )
-			{
-				StopAudios();
-			}
-		EditorGUILayout.EndHorizontal();
-	}
+		audioBase 				= EditorGUILayout.ObjectField ("Base:",audioBase, typeof(AudioClip), false) as AudioClip;
 
-	public static GameObject aBase;
-	public static GameObject aInst;
-	void PlayAudios ()
-	{
-		aBase = new GameObject( "AudioBase" );
-		aInst = new GameObject( "AudioInstrumento" );
-		
-		aBase.hideFlags = HideFlags.HideAndDontSave;
-		aInst.hideFlags = HideFlags.HideAndDontSave;
-		
-		AudioSource b = aBase.AddComponent<AudioSource>();
-		AudioSource i = aInst.AddComponent<AudioSource>();
-		
-		b.clip = audioBase;
-		i.clip = audioInstrumento;
-		
-		b.Play();
-		i.Play();
-		
-	}
+		audioInstrumentosBool = EditorGUILayout.Foldout (audioInstrumentosBool, "Instrumentos");
+		if (audioInstrumentosBool) 
+		{
+			foreach (AudioClip clip in audioInstrumento) 
+			{
+				GUILayout.Label(clip.name + "\n");
+			}
 
-	void StopAudios ()
-	{
-		if( aBase )
-		{
-			aBase.audio.Stop();
-			DestroyImmediate(aBase);
+			instrumentoTemporario 	= EditorGUILayout.ObjectField ("Instrumento:",instrumentoTemporario, typeof(AudioClip), false) as AudioClip;
+
+			if( instrumentoTemporario != null )
+			{
+				GUI.color = Color.green;
+				if( GUILayout.Button( "Adicionar Instrumento" ))
+			  	{
+					audioInstrumento.Add( instrumentoTemporario );
+				}
+				GUI.color = Color.white;
+		   }
 		}
-		
-		if( aInst )
-		{
-			aInst.audio.Stop();
-			DestroyImmediate(aInst);
-		}
+
+
 	}
 
 	static void CreateButtons ()
@@ -147,58 +128,13 @@ public class GravadorDeMusica : EditorWindow {
 				}
 			}
 		}
-		
-		audioBase 			= Resources.Load("Base1") as AudioClip;
-		audioInstrumento 	= Resources.Load("Instrumento1") as AudioClip;
 	}
-	
-	static void AddCompasso ()
-	{
-				
-		BTN_Nota[,,] temp = grid.Clone() as BTN_Nota[,,];
-		
-		totalDeCompassos ++;
-		CreateButtons();
-						
-		for (int x = 0; x < totalDeCompassos-1; x ++)
-		{
-			for (int i =0; i< linhas; i++) 
-			{
-				for (int j = 0; j < colunas; j++) 
-				{
-					grid[x,i,j] = temp[x,i,j];
-				}
-			}
-		}
-	}
-	
-	static void RemoveCompasso()
-	{
-		BTN_Nota[,,] temp = grid.Clone() as BTN_Nota[,,];
-		
-		totalDeCompassos--;
-		
-		totalDeCompassos = Mathf.Clamp( totalDeCompassos , 1, 10000000);
-		CreateButtons();
-		
-		for (int x = 0; x < totalDeCompassos; x ++)
-		{
-			for (int i =0; i< linhas; i++) 
-			{
-				for (int j = 0; j < colunas; j++) 
-				{
-					grid[x,i,j] = temp[x,i,j];
-				}
-			}
-		}
-	}
-	
-	
-	
 	public static Vector2 scroll;
 	static void DrawButtons ()
 	{
-		nomeDoArquivo = GUILayout.TextField( nomeDoArquivo );
+
+
+		EditorGUILayout.Space ();
 
 		scroll = EditorGUILayout.BeginScrollView (scroll);
 			for (int x = 0; x < totalDeCompassos; x ++)
@@ -210,6 +146,8 @@ public class GravadorDeMusica : EditorWindow {
 					GUILayout.BeginHorizontal ();
 						for (int j = 0; j < colunas; j++) 
 						{
+							if (grid == null || grid[x,i,j] == null || grid [x, i, j].mTexture == null)
+								return;
 							if( GUILayout.Button (grid [x ,i, j].mTexture, GUILayout.Width (30f), GUILayout.Height (30)) )
 							{
 								ChangeValue(x, j, i,grid[x,i,j]);
@@ -219,49 +157,38 @@ public class GravadorDeMusica : EditorWindow {
 				}
 			}
 		EditorGUILayout.EndScrollView ();
-		
-		if( GUILayout.Button(" - Remover Compasso") )
-		{
-			RemoveCompasso();
-		}
-		
-		if( GUILayout.Button(" + Adicionar Compasso") )
-		{
-			AddCompasso();
-		}
-		
-		
-		
-		
+
+		totalDeCompassos = EditorGUILayout.IntField ("Total de compassos: ", totalDeCompassos);
 	}
 
 	static void ChangeValue (int compasso, int batida, int timbre, BTN_Nota bTN_Nota)
 	{
 
 		int l = linhas - timbre;
+//		Debug.Log ("timbre: " + timbre + "Valor: " + l);
 
 		Texture2D tex;
-		switch (l)
-		{
-		case 1:
+//		switch (l)
+//		{
+//		case 1:
 			tex = timbre1;
-			break;
-		case 2:
-			tex = timbre2;
-			break;
-		case 3:	
-			tex = timbre3;
-			break;
-		case 4:
-			tex = timbre4;
-			break;
-		case 5:
-			tex = timbre5;
-			break;
-		default:
-			tex = timbre0;
-			break;
-		}
+//			break;
+//		case 2:
+//			tex = timbre2;
+//			break;
+//		case 3:	
+//			tex = timbre3;
+//			break;
+//		case 4:
+//			tex = timbre4;
+//			break;
+//		case 5:
+//			tex = timbre5;
+//			break;
+//		default:
+//			tex = timbre0;
+//			break;
+//		}
 
 		bTN_Nota.ChangeNota ( compasso, batida, l , tex);
 	}
@@ -288,7 +215,7 @@ public class BTN_Nota
 
 	public void ChangeNota(int compasso, int batida, int timbre, Texture2D texture )
 	{
-		if (currentTimbre == timbre || timbre > 5) {
+		if (currentTimbre == timbre || timbre > GravadorDeMusica.linhas) {
 			Resetar();
 			return;
 		}
@@ -306,31 +233,45 @@ public class BTN_Nota
 	}
 }
 
-
 public static class SaveManager
 {
 	public static void Save( BTN_Nota[,,]botoes)
 	{
-		MusicaData data = TransformButtonsToData (botoes);
-
-
-		Debug.LogWarning ("Salvando");
-		XmlSerializer serializer = new XmlSerializer (typeof(MusicaData));
 		
-		FileStream stream = new FileStream (Application.persistentDataPath + "/" + GravadorDeMusica.nomeDoArquivo +".xml", FileMode.Create);
+		GameObject 	go = new GameObject ("Level:" + GravadorDeMusica.nome);
+		Level 		level = go.AddComponent<Level> ();
+		level.mInfo = new LevelInfo ();
+		LevelInfo 	levelInfo = level.mInfo;
+		
+		MusicaData data = TransformButtonsToData (botoes);
+		
+		levelInfo.dadosDaMusica = data;
+		levelInfo.nome = GravadorDeMusica.nome;
+		
+		Debug.LogWarning ("Salvando");
+		
+		PrefabUtility.CreatePrefab ("Assets/_VoaVivaldo/Prefabs/Levels/" + GravadorDeMusica.nome+".prefab", go);
+		AssetDatabase.Refresh ();
+		
+		XmlSerializer serializer = new XmlSerializer (typeof(MusicaData));
+		FileStream stream = new FileStream ("Assets/Resources/MusicaXML-"+GravadorDeMusica.nome+".xml", FileMode.Create);
 		serializer.Serialize (stream, data);
 		
-		stream = new FileStream( "Assets/Resources/" + GravadorDeMusica.nomeDoArquivo +".xml", FileMode.Create );
-		serializer.Serialize( stream, data );
+		serializer = new XmlSerializer (typeof(LevelInfo));
+		stream = new FileStream ("Assets/Resources/LevelXML-"+GravadorDeMusica.nome+".xml", FileMode.Create);
+		serializer.Serialize (stream, levelInfo);
+		
+		
+		UnityEngine.MonoBehaviour.DestroyImmediate(go);
 		
 		stream.Close ();
 	}
-
+	
 	static MusicaData TransformButtonsToData (BTN_Nota[,,] botoes)
 	{
 		MusicaData ret = new MusicaData ();
 		List<NotaInfo> notas = new List<NotaInfo> ();
-
+		
 		for (int x = 0; x < GravadorDeMusica.totalDeCompassos; x++) 
 		{
 			for(int i = 0; i < GravadorDeMusica.linhas; i++ )
@@ -338,11 +279,11 @@ public static class SaveManager
 				for(int j = 0; j < GravadorDeMusica.colunas; j++ )
 				{
 					BTN_Nota currentButton = botoes[x,i,j];
-					if( currentButton.currentTimbre <= 0 || currentButton.currentTimbre > 5 ) continue;
-
-
+					if( currentButton.currentTimbre <= 0 || currentButton.currentTimbre > GravadorDeMusica.linhas ) continue;
+					
+					
 					NotaInfo nota = new NotaInfo();
-
+					
 					nota.batida = currentButton.batida+1;
 					nota.compasso = currentButton.compasso+1;
 					nota.timbre = (Timbre) currentButton.currentTimbre;
@@ -350,17 +291,25 @@ public static class SaveManager
 				}
 			}
 		}
-
+		
 		ret.notas = notas;
 		ret.BPM = GravadorDeMusica.BPM;
+		
 		ret.audioBase = GravadorDeMusica.audioBase.name;
-		ret.audioInstrumento = GravadorDeMusica.audioInstrumento.name;
+		ret.audioInstrumentos = new List<string> ();
+		foreach (AudioClip clip in GravadorDeMusica.audioInstrumento) 
+		{
+			ret.audioInstrumentos.Add(clip.name);
+		}
 
+//		ret.audioInstrumento = GravadorDeMusica.audioInstrumento[0].name;
+		
 		return ret;
 	}
-
+	
 	public static BTN_Nota[,,] Load()
 	{
 		return null;
 	}
 }
+

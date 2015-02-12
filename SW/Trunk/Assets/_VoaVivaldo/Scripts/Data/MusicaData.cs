@@ -8,9 +8,23 @@ public class MusicaData
 {
 	public int 				BPM;
 	public string 			audioBase;
+	public List<Partitura> 	partituras;
 
-	public List<string>		audioInstrumentos;
-//	public string 			audioInstrumento;
-
-	public List<NotaInfo> 	notas;
+	public MusicaData()
+	{
+		partituras = new List<Partitura> ();
+	}
 }
+
+[System.Serializable]
+public class Partitura
+{
+	public string			audioInstrumentos;
+	public List<NotaInfo> 	notas;
+
+	public Partitura()
+	{
+		notas = new List<NotaInfo> ();
+	}
+}
+

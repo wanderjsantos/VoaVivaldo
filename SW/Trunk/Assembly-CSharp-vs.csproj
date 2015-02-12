@@ -181,9 +181,9 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Banda.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Controller.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Gravador.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Instrumento.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Level.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Musica.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Nota.cs" />

@@ -21,8 +21,8 @@ public class Musica : MonoBehaviour
 	{
 		VerifyAudioSources ();
 
-		sourceBase.clip = mInfo.instrumentos.baseMusica;
-		sourceInstrumento.clip = mInfo.instrumentos.instrumento;
+		sourceBase.clip = mInfo.mBanda.musicaBase;
+		sourceInstrumento.clip = mInfo.mBanda.instrumentoAtual;
 		
 		sourceBase.Play ();
 		sourceInstrumento.Play ();
@@ -72,7 +72,7 @@ public class Musica : MonoBehaviour
 
 	bool UpdateNotas (float tempoDaMusica)
 	{
-		if (posicaoNotaAtual >= mInfo.notas.Count) 
+		if (posicaoNotaAtual >= mInfo.mData.partituras[mInfo.instrumentoAtual].notas.Count) 
 		{
 			Debug.Log("FIM DAS NOTAS");
 			return false;
@@ -91,15 +91,15 @@ public class Musica : MonoBehaviour
 [System.Serializable]
 public class MusicaInfo
 {
+	public MusicaData mData;
+	public int instrumentoAtual = -1;
+	
+	public Banda	mBanda;
+	
 	public MusicaInfo()
 	{
-		instrumentos = new InstrumentosInfo ();
-		notas = new List<NotaInfo> ();
 		tempoDaMusica = 0f;
+		mBanda = new Banda();
 	}
-
-	public InstrumentosInfo instrumentos;
-	public List<NotaInfo> 	notas;
-	[HideInInspector]
 	public float tempoDaMusica;
 }

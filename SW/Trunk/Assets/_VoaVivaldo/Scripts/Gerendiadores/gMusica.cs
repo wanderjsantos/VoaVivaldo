@@ -72,11 +72,11 @@ public class gMusica : MonoBehaviour
 	{
 		dadosDaMusicaAtual = GetMusica (musicaIndice);
 
-		NovaMusica (dadosDaMusicaAtual.audioBase, dadosDaMusicaAtual.audioInstrumentos [instrumentoIndice], dadosDaMusicaAtual.notas, dadosDaMusicaAtual.BPM);
+		NovaMusica (dadosDaMusicaAtual);
 
 	}
 
-	public void NovaMusica (string audioBase, string audioInstrumento, List<NotaInfo>notas, int beatsPerMinute = 120, bool autoPlay = false)
+	public void NovaMusica (MusicaData dados, bool autoPlay = false)
 	{
 		if (musicaAtual != null) 
 		{
@@ -85,18 +85,18 @@ public class gMusica : MonoBehaviour
 		}
 
 		MusicaInfo info 				= new MusicaInfo ();
-		info.instrumentos.baseMusica 	= Resources.Load (audioBase) 		as AudioClip;
-		info.instrumentos.instrumento	= Resources.Load (audioInstrumento) as AudioClip;
-
-		if (notas != null)
-						info.notas.AddRange (notas);
-
+		info.mData = dados;
+		
+		Partitura  partituraEmUso		= info.mData.partituras[instrumentoIndice] ;
+		info.instrumentoAtual = instrumentoIndice;
+		info.mBanda.musicaBase		 	= Resources.Load (info.mData.audioBase) 		as AudioClip;
+		info.mBanda.instrumentoAtual	= Resources.Load (partituraEmUso.audioInstrumentos) as AudioClip;
 
 		Musica m = Instantiate (_prefabMusica) as Musica;
 		m.mInfo = info;
 
-		gRitmo.s.SetBPM (beatsPerMinute);
-
+		gRitmo.s.SetBPM (info.mData.BPM);
+		
 		musicaAtual = m;
 		if (autoPlay)	PlayMusica ();
 
@@ -119,7 +119,7 @@ public class gMusica : MonoBehaviour
 
 	public List<NotaInfo> TodasAsNotasNoCompasso( int compasso )
 	{
-		return musicaAtual.mInfo.notas.FindAll (e => e.compasso == compasso);
+		return musicaAtual.mInfo.mData.partituras[musicaAtual.mInfo.instrumentoAtual].notas.FindAll (e => e.compasso == compasso);
 	}
 
 	void DestroyMusica (Musica m)

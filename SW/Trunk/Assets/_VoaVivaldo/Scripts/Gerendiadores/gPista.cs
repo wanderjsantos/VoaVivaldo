@@ -145,7 +145,7 @@ public class gPista : MonoBehaviour {
 	public void PosicionarTodasAsNotas()
 	{
 		List<NotaInfo> notasAtuais = new List<NotaInfo> ();
-		notasAtuais.AddRange( gMusica.s.musicaAtual.mInfo.notas );
+		notasAtuais.AddRange( gMusica.s.musicaAtual.mInfo.mData.partituras[gMusica.s.instrumentoIndice].notas );
 
 		for (int i = 0; i < notasAtuais.Count; i++)
 		{

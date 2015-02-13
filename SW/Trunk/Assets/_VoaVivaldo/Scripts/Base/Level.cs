@@ -9,6 +9,10 @@ public class Level : MonoBehaviour
 [System.Serializable]
 public class LevelInfo
 {
-	public string nome;
-	public MusicaData dadosDaMusica;
+	public string 		nome;
+	public MusicaData 	dadosDaMusica;
+	public Color		corBackground;
+	public Color		corElementosClaros;
+	public Color		corElementosEscuros;
+	public Color		corTextos;
 }

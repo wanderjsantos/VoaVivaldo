@@ -17,6 +17,10 @@ public class MenuGameplay : Menu
 
 	public UILabel		labelContagemRegressiva;
 	public GameObject	goContagemRegressiva;
+	
+	public UILabel		txtPontuacao;
+	
+	
 
 	public override void Show()
 	{
@@ -61,6 +65,8 @@ public class MenuGameplay : Menu
 
 		if (gMusica.s.musicaAtual.isPlaying == false)
 		return;
+		txtPontuacao.text = "pts " + gGame.s.player.mInfo.pontuacao;
+		
 
 		velocidadeDaPista = - ((gPista.s.tamanhoDoCompasso * uiRoot.transform.localScale.x) / (gRitmo.s.intervalo * gRitmo.s.batidasPorCompasso));
 		posTemp = rootDasNotas.transform.position;

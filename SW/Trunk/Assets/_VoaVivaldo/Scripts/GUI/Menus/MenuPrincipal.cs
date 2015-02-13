@@ -12,10 +12,20 @@ public class MenuPrincipal : Menu
 	{
 		base.Hide ();
 	}
+	
+	public override void Resetar ()
+	{
+		base.Resetar ();
+	}
 
 	public void OnClickJogar()
 	{
 //		gGame.s.IniciarJogo ();
 		gMenus.s.ShowMenu ("SelecaoDeMusica");
+	}
+	
+	public void OnClickOpcoes()
+	{
+		gMenus.s.ShowMenu("Opcoes");
 	}
 }

@@ -4,11 +4,6 @@ using System.Collections;
 [RequireComponent( typeof(UIPanel))]
 public class Menu : MonoBehaviour, iMenu
 {
-//	public void Awake()
-//	{
-//		ForceHide ();
-//	}
-
 	private void ForceHide()
 	{
 		gameObject.SetActive (false);
@@ -16,7 +11,9 @@ public class Menu : MonoBehaviour, iMenu
 
 	public virtual void Show()
 	{
+		Resetar();
 		gameObject.SetActive (true);
+		
 	}
 
 	public virtual void Hide()
@@ -24,6 +21,10 @@ public class Menu : MonoBehaviour, iMenu
 		gameObject.SetActive (false);
 	}
 
+	public virtual void Resetar ()
+	{
+		
+	}
 }
 
 public interface iMenu

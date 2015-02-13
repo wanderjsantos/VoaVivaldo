@@ -15,6 +15,25 @@ public class gLevels : MonoBehaviour
 	{
 		s = this;
 	}
+	
+	void OnEnable()
+	{
+		gComandosDeMusica.onPlay += Resetar;
+		gGame.onReset += Resetar;
+	}
+	
+	void OnDisable()
+	{
+		gComandosDeMusica.onPlay -= Resetar;
+		gGame.onReset -= Resetar;
+	}
+
+	void Resetar ()
+	{
+		currentLevel = null;
+		currentLevelIndex = -1;
+		
+	}
 
 	public Level SetLevel( int index )
 	{

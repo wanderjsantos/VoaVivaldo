@@ -22,11 +22,21 @@ public class MenuGameplay : Menu
 	{
 		base.Show ();
 		gGame.onPlayGame += ResetContagemRegressiva;
+		InitContagemRegressiva();
+	}
+	
+	public override void Resetar ()
+	{
+		base.Resetar ();
+		labelContagemRegressiva.text = "00";
+		rodando = false;
+		
 	}
 
 	public override void Hide ()
 	{
 		base.Hide ();
+		Resetar();
 		gGame.onPlayGame -= ResetContagemRegressiva;
 	}
 

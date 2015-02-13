@@ -18,6 +18,25 @@ public class gPontuacao : MonoBehaviour {
 	{
 		s = this;
 	}
+	
+	void OnEnable()
+	{
+		gGame.onInit += Resetar;
+		gGame.onReset += Resetar;
+	}
+	
+	void OnDisable()
+	{
+		gGame.onInit += Resetar;
+		gGame.onReset += Resetar;
+	}
+
+	void Resetar ()
+	{
+		notasAcertadasNaSequencia = 0;
+		vezesMultiplicado = 0;
+		multiplicador = 1;
+	}
 
 	public bool VerificarPontuacao( Nota n, Player p )
 	{

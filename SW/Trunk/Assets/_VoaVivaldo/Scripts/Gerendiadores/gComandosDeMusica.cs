@@ -63,9 +63,9 @@ public class gComandosDeMusica : MonoBehaviour
 		case PlayMode.TOCAR:
 			Play();
 			break;
-		case PlayMode.GRAVAR:
-			Record();
-			break;
+//		case PlayMode.GRAVAR:
+//			Record();
+//			break;
 		default:
 			break;
 		}
@@ -81,10 +81,10 @@ public class gComandosDeMusica : MonoBehaviour
 		OnStop ();		
 	}
 
-	void Record ()
-	{
-		Stop ();
-	}
+//	void Record ()
+//	{
+//		Stop ();
+//	}
 
 
 }

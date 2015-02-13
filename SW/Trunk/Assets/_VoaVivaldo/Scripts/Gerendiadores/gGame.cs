@@ -13,6 +13,8 @@ public class gGame : MonoBehaviour
 	public static gGame s;
 	public bool		gameStarted = false;
 	public Player 	player;
+	public Player	playerPrefab;
+	public Transform spawnPoint;
 
 	public	int		tempoParaIniciar = 0;
 	public 	float 	contagemRegressiva = 5f;
@@ -27,19 +29,43 @@ public class gGame : MonoBehaviour
 	{
 		IniciarInterfaces ();
 	}
+	
+	public void OnEnable()
+	{
+		gComandosDeMusica.onStop += FimDePartida;
+	}
+	
+	public void OnDisable()
+	{
+		gComandosDeMusica.onStop -= FimDePartida;
+	}
 
 	public void IniciarInterfaces()
 	{
 		gMenus.s.ShowMenu ("MenuPrincipal");
 	}
+	
+	public void NewPlayer()
+	{
+//		if( player != null ) return;
+		
+		player = Instantiate( playerPrefab ) as Player;
+		
+		player.transform.parent = spawnPoint;
+		player.transform.localScale = Vector3.one;
+		player.transform.localPosition = Vector3.zero;
+		
+	}
 
 	public void IniciarJogo()
 	{
+		if( player != null ) Destroy(player.gameObject);
+		if( onReset != null ) onReset();
+		
+		NewPlayer();
+		
 		gMusica.s.NovaMusica ();
-		gameStarted = true;
-
-
-
+		
 		tempoParaIniciar = 0;
 		iTime = Time.realtimeSinceStartup;
 		contando = true;
@@ -54,12 +80,30 @@ public class gGame : MonoBehaviour
 
 	public void PlayGame()
 	{
+		gameStarted = true;
 		gComandosDeMusica.s.Play ();
 
 		player.Enable ();
 
 		if (onPlayGame != null)
 						onPlayGame ();
+	}
+
+	void FimDePartida ()
+	{
+		if( gameStarted == false ) return;
+		
+		gMenus.s.ShowMenu("Vitoria");
+		
+		gameStarted = false;
+		
+		if( onStopGame != null)
+			onStopGame();
+	}
+	
+	void FimDeJogo()
+	{
+		
 	}
 
 	void Update()

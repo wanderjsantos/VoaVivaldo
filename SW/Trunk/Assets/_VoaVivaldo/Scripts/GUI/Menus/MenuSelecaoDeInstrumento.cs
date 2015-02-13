@@ -19,6 +19,14 @@ public class MenuSelecaoDeInstrumento : Menu
 		PrepararBotoes();
 	}
 	
+	public override void Resetar ()
+	{
+		base.Resetar ();
+		buttonIniciarGame.isEnabled = false;
+		DescartarBotoes();
+		
+	}
+	
 	public void PrepararBotoes()
 	{
 //		botoesDeInstrumentos = new List<UIButton>();
@@ -42,6 +50,14 @@ public class MenuSelecaoDeInstrumento : Menu
 		
 		grid.repositionNow = true;
 
+	}
+	
+	public void DescartarBotoes()
+	{
+		for( int i = 0 ; i < botoesDeInstrumentos.Count ; i++ )
+		{
+			botoesDeInstrumentos[i].transform.parent = botoesEscondidos.transform;
+		}
 	}
 
 	public void SelectInstrumento(int numero)

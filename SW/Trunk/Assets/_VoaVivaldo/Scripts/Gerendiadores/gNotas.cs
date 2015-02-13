@@ -27,6 +27,27 @@ public class gNotas : MonoBehaviour
 	void OnEnable()
 	{
 		gComandosDeMusica.onPlay += Init;
+		gGame.onReset += Resetar;
+	}
+	
+	void OnDisable()
+	{
+		gComandosDeMusica.onPlay -= Init;
+		gGame.onReset -= Resetar;
+	}
+
+	void Resetar ()
+	{
+		if( notasNaPista.Count > 0 )
+		{
+			notasNaPista.ForEach( delegate( Nota n ) 
+			{
+				Destroy( n.gameObject );
+			});
+		}
+		
+		currentNota = 0;
+	
 	}
 
 	void Init ()

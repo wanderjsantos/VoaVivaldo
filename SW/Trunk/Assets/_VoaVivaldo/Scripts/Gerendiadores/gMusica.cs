@@ -27,12 +27,22 @@ public class gMusica : MonoBehaviour
 	{
 		gComandosDeMusica.onPlay += PlayMusica;
 		gComandosDeMusica.onStop += StopMusica;
+		gGame.onReset += Resetar;
 	}
 
 	void OnDisable()
 	{
 		gComandosDeMusica.onPlay -= PlayMusica;
 		gComandosDeMusica.onStop -= StopMusica;
+		gGame.onReset -= Resetar;
+	}
+
+	void Resetar ()
+	{
+		Set();
+		if( musicaAtual != null ) 
+			Destroy(musicaAtual.gameObject);
+		dadosDaMusicaAtual = null;
 	}
 
 	public void SetMusica (int numero = -1)
@@ -132,7 +142,9 @@ public class gMusica : MonoBehaviour
 		if (verifyEnding && musicaAtual!=null) 
 		{
 			if( musicaAtual.isPlaying == false )
+			{
 				gComandosDeMusica.s.Stop();
+			}
 
 		}
 	}

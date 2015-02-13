@@ -38,9 +38,21 @@ public class gPista : MonoBehaviour {
 	void OnEnable()
 	{
 		gComandosDeMusica.onPlay += PosicionarTodasAsNotas;
+		gGame.onReset += Resetar;
 		EncontrarPistaBase ();
 	}
+	
+	void OnDisable()
+	{
+		gComandosDeMusica.onPlay -= PosicionarTodasAsNotas;
+		gGame.onReset-= Resetar;
+	}
 
+	Vector3 posInicialPista;
+	void Resetar ()
+	{
+		rootPista.transform.localPosition = posInicialPista;
+	}
 
 	
 	GameObject EncontrarPistaBase()
@@ -144,6 +156,8 @@ public class gPista : MonoBehaviour {
 	public float tamanhoDoCompasso = 500f;
 	public void PosicionarTodasAsNotas()
 	{
+		posInicialPista = rootPista.transform.localPosition;
+		
 		List<NotaInfo> notasAtuais = new List<NotaInfo> ();
 		notasAtuais.AddRange( gMusica.s.musicaAtual.mInfo.mData.partituras[gMusica.s.instrumentoIndice].notas );
 

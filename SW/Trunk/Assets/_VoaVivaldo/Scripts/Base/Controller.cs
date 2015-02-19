@@ -33,11 +33,6 @@ public class Controller : MonoBehaviour
 		faixaAnterior = -1;
 	}
 
-//	public void OnGUI()
-//	{
-//		GUI.Box (new Rect (0, 0, 200, 200), Input.acceleration.ToString());
-//	}
-
 	public void Update()
 	{
 
@@ -47,10 +42,10 @@ public class Controller : MonoBehaviour
 		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
 #endif
 #if !UNITY_IOS && !UNITY_ANDROID
-		float y = Mathf.Clamp (Input.GetAxis ("Vertical"), minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
-		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
+		float y = Mathf.Clamp (Input.GetAxis ("Vertical"), minMaxInput.x, minMaxInput.y); 
+		input.y = y / Mathf.Abs (minMaxInput.x);
 #endif
-		faixaAtual = Mathf.RoundToInt((input.y / porFaixa) - (input.y % porFaixa));
+		faixaAtual = (int)((input.y / porFaixa) - (input.y % porFaixa));
 //		faixaAtualFloat = ((input.y / porFaixa) - (input.y % porFaixa));
 
 		if (faixaAnterior != faixaAtual) 

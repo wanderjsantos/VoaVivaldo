@@ -159,7 +159,7 @@ public class gPista : MonoBehaviour {
 		posInicialPista = rootPista.transform.localPosition;
 		
 		List<NotaInfo> notasAtuais = new List<NotaInfo> ();
-		notasAtuais.AddRange( gMusica.s.musicaAtual.mInfo.mData.partituras[gMusica.s.instrumentoIndice].notas );
+		notasAtuais.AddRange( gMusica.s.musicaAtual.mInfo.mData.instrumentos[gMusica.s.instrumentoIndice].notas );
 
 		for (int i = 0; i < notasAtuais.Count; i++)
 		{

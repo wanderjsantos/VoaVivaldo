@@ -97,7 +97,7 @@ public class gMusica : MonoBehaviour
 		MusicaInfo info 				= new MusicaInfo ();
 		info.mData = dados;
 		
-		Partitura  partituraEmUso		= info.mData.partituras[instrumentoIndice] ;
+		Instrumento  partituraEmUso		= info.mData.instrumentos[instrumentoIndice] ;
 		info.instrumentoAtual = instrumentoIndice;
 		info.mBanda.musicaBase		 	= Resources.Load (info.mData.audioBase) 		as AudioClip;
 		info.mBanda.instrumentoAtual	= Resources.Load (partituraEmUso.audioInstrumentos) as AudioClip;
@@ -129,7 +129,7 @@ public class gMusica : MonoBehaviour
 
 	public List<NotaInfo> TodasAsNotasNoCompasso( int compasso )
 	{
-		return musicaAtual.mInfo.mData.partituras[musicaAtual.mInfo.instrumentoAtual].notas.FindAll (e => e.compasso == compasso);
+		return musicaAtual.mInfo.mData.instrumentos[musicaAtual.mInfo.instrumentoAtual].notas.FindAll (e => e.compasso == compasso);
 	}
 
 	void DestroyMusica (Musica m)

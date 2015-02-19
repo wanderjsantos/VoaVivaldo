@@ -72,7 +72,7 @@ public class Musica : MonoBehaviour
 
 	bool UpdateNotas (float tempoDaMusica)
 	{
-		if (posicaoNotaAtual >= mInfo.mData.partituras[mInfo.instrumentoAtual].notas.Count) 
+		if (posicaoNotaAtual >= mInfo.mData.instrumentos[mInfo.instrumentoAtual].notas.Count) 
 		{
 			Debug.Log("FIM DAS NOTAS");
 			return false;

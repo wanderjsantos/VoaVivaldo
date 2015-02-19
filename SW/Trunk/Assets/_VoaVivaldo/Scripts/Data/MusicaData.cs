@@ -6,25 +6,35 @@ using System.Collections.Generic;
 [System.Serializable]
 public class MusicaData 
 {
-	public int 				BPM;
-	public string 			audioBase;
-	public List<Partitura> 	partituras;
+	public string				nome;
+	public int 					BPM;
+	public string 				audioBase;
+	public List<Instrumento> 	instrumentos;
+	public List<Trecho>			trechos;
 
 	public MusicaData()
 	{
-		partituras = new List<Partitura> ();
+		instrumentos = new List<Instrumento> ();
+		trechos = new List<Trecho>();
 	}
 }
 
 [System.Serializable]
-public class Partitura
+public class Instrumento
 {
 	public string			audioInstrumentos;
 	public List<NotaInfo> 	notas;
 
-	public Partitura()
+	public Instrumento()
 	{
 		notas = new List<NotaInfo> ();
 	}
 }
+
+//[System.Serializable]
+//public class Trecho
+//{
+//	
+//}
+
 

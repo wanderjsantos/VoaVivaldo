@@ -11,6 +11,7 @@ public class gPontuacao : MonoBehaviour {
 
 	public 	int	multiplicador = 1;
 	public 	int	vezesMultiplicado = 1;
+	public 	int maxMultiplicador = 3;
 
 	public	int notasAcertadasNaSequencia = 0;
 
@@ -48,7 +49,7 @@ public class gPontuacao : MonoBehaviour {
 			notasAcertadasNaSequencia ++;
 			if( notasAcertadasNaSequencia >= (aCadaXNotas * vezesMultiplicado) )
 			{
-				vezesMultiplicado ++;
+				vezesMultiplicado = Mathf.Clamp(vezesMultiplicado++, 1, maxMultiplicador );
 				multiplicador = multiplicador * multiplicarPor;
 			}
 			return true;

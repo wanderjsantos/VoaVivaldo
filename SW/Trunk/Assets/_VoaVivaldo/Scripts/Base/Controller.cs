@@ -16,7 +16,7 @@ public class Controller : MonoBehaviour
 
 	int		faixaAnterior;
 	int		faixaAtual = 3;
-	float 	faixaAtualFloat;
+//	float 	faixaAtualFloat;
 	float	porFaixa = 0f;
 
 	public float	speed = 30f;
@@ -51,7 +51,7 @@ public class Controller : MonoBehaviour
 		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
 #endif
 		faixaAtual = Mathf.RoundToInt((input.y / porFaixa) - (input.y % porFaixa));
-		faixaAtualFloat = ((input.y / porFaixa) - (input.y % porFaixa));
+//		faixaAtualFloat = ((input.y / porFaixa) - (input.y % porFaixa));
 
 		if (faixaAnterior != faixaAtual) 
 		{

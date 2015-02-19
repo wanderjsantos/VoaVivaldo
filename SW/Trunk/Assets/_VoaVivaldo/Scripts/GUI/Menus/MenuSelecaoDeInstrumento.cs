@@ -38,13 +38,13 @@ public class MenuSelecaoDeInstrumento : Menu
 			botoesDeInstrumentos[i].transform.parent = botoesEscondidos.transform;
 		}
 		
-		foreach( Partitura p in levelAtual.mInfo.dadosDaMusica.partituras )
+		foreach( Instrumento p in levelAtual.mInfo.dadosDaMusica.instrumentos )
 		{
-			if( levelAtual.mInfo.dadosDaMusica.partituras.Count > botoesDeInstrumentos.Count ) break;
+			if( levelAtual.mInfo.dadosDaMusica.instrumentos.Count > botoesDeInstrumentos.Count ) break;
 			
-			botoesDeInstrumentos[ levelAtual.mInfo.dadosDaMusica.partituras.IndexOf(p) ].transform.parent = grid.transform;
-			botoesDeInstrumentos[ levelAtual.mInfo.dadosDaMusica.partituras.IndexOf(p) ].GetComponent<BotaoInstrumento>().selecionarInstrumento =
-				levelAtual.mInfo.dadosDaMusica.partituras.IndexOf(p);
+			botoesDeInstrumentos[ levelAtual.mInfo.dadosDaMusica.instrumentos.IndexOf(p) ].transform.parent = grid.transform;
+			botoesDeInstrumentos[ levelAtual.mInfo.dadosDaMusica.instrumentos.IndexOf(p) ].GetComponent<BotaoInstrumento>().selecionarInstrumento =
+				levelAtual.mInfo.dadosDaMusica.instrumentos.IndexOf(p);
 			
 		}		
 		

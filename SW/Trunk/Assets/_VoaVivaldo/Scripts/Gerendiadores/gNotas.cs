@@ -90,6 +90,7 @@ public class gNotas : MonoBehaviour
 
 			if( areaDeDead.Contains( posNota )) 
 			{
+				gAudio.s.PararAudio();
 				DestruirNota( notasNaPista[i] );
 			}
 		}

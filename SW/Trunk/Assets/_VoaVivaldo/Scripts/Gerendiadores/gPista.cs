@@ -68,51 +68,51 @@ public class gPista : MonoBehaviour {
 
 	public Vector3 GetPositionDaPista (int faixaAtual)
 	{
-		int pAtual = faixaAtual + ((int)(faixasTotais/2));
+		int pAtual = faixaAtual;// + ((int)(faixasTotais/2));
 
 		Vector3 v = new Vector3 ();
 		switch (pAtual)
 		{
-		case 0:
+		case 1:
 			v.y = pista1.transform.localPosition.y;
 			break;
-		case 1:
+		case 2:
 			v.y = pista2.transform.localPosition.y;
 			break;
-		case 2:
+		case 3:
 			v.y = pista3.transform.localPosition.y;
 			break;
-		case 3:
+		case 4:
 			v.y = pista4.transform.localPosition.y;
 			break;
-		case 4:
+		case 5:
 			v.y = pista5.transform.localPosition.y;
 			break;	
-		case 5:
+		case 6:
 			v.y = pista6.transform.localPosition.y;
 			break;
-		case 6:
+		case 7:
 			v.y = pista7.transform.localPosition.y;
 			break;
-		case 7:
+		case 8:
 			v.y = pista8.transform.localPosition.y;
 			break;
-		case 8:
+		case 9:
 			v.y = pista9.transform.localPosition.y;
 			break;
-		case 9:
+		case 10:
 			v.y = pista10.transform.localPosition.y;
 			break;
-		case 10:
+		case 11:
 			v.y = pista11.transform.localPosition.y;
 			break;
-		case 11:
+		case 12:
 			v.y = pista12.transform.localPosition.y;
 			break;
-		case 12:
+		case 13:
 			v.y = pista13.transform.localPosition.y;
 			break;
-		case 13:
+		case 14:
 			v.y = pista14.transform.localPosition.y;
 			break;
 		default:
@@ -164,7 +164,7 @@ public class gPista : MonoBehaviour {
 		for (int i = 0; i < notasAtuais.Count; i++)
 		{
 			float extraX = ((float)( (notasAtuais[i].batida - 1f) /gRitmo.s.batidasPorCompasso) * tamanhoDoCompasso );
-			float posicaoX = ((tamanhoDoCompasso * (notasAtuais[i].compasso-1)) + extraX) ;
+			float posicaoX = ((tamanhoDoCompasso * (notasAtuais[i].compasso)) + extraX) ;
 //			float posicaoY = gNotas.s.PosicionEmY (notasAtuais [i].timbre, tamanhoYPista);
 //			Debug.Log ("Nota: Posicao" + posicaoX + "Extra x : " + extraX + " - " + posicaoY);
 	
@@ -222,6 +222,8 @@ public class gPista : MonoBehaviour {
 			n.gameObject.transform.localScale = Vector3.one;
 			n.gameObject.transform.localPosition = v;
 			n.gameObject.transform.parent = rootPista.transform;
+			
+//			Debug.Break();
 		}
 
 	}

@@ -54,9 +54,12 @@ public class gRitmo : MonoBehaviour
 	{
 		tempoDeInicioDaMusica = Time.realtimeSinceStartup;
 		batidas = 0;
+		
+		batidasPorCompasso = Vivaldos.COLUNAS;
+		
 		beating = true;
 		contagem = 1;
-		compassoAtual = 1;
+		compassoAtual = 0;
 		Debug.Log (tempoDeInicioDaMusica + " " + Time.realtimeSinceStartup);
 	}
 

@@ -26,10 +26,18 @@ public class _NotaEditor
 	{
 		pressed = !pressed;
 		
-
-		currentTimbre 	= timbre;
-		this.compasso 	= compasso;
-		this.batida 	= batida;
+		if( pressed )
+		{
+			currentTimbre 	= timbre;
+			this.compasso 	= compasso;
+			this.batida 	= batida;
+		}
+		else
+		{
+			currentTimbre 	= 0;
+			this.compasso 	= 0;
+			this.batida 	= 0;
+		}
 		
 	}
 	

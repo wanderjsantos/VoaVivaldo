@@ -45,7 +45,7 @@ public class gNotas : MonoBehaviour
 				Destroy( n.gameObject );
 			});
 		}
-		
+		notasNaPista = new List<Nota>();
 		currentNota = 0;
 	
 	}

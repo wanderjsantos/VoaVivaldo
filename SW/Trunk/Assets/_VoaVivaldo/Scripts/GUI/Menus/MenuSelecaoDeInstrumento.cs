@@ -81,6 +81,6 @@ public class MenuSelecaoDeInstrumento : Menu
 	
 	public void OnClickVoltar()
 	{
-		gMenus.s.ShowMenu("LevelSelect");
+		gMenus.s.ShowMenu("SelecaoDeMusica");
 	}
 }

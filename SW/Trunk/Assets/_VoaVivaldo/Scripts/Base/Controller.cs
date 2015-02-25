@@ -42,9 +42,9 @@ public class Controller : MonoBehaviour
 	public void Update()
 	{
 
-		
+		float y =0f;
 #if UNITY_IOS || UNITY_ANDROID
-		float y = Mathf.Clamp (Input.acceleration.y, minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
+		y = Mathf.Clamp (Input.acceleration.y, minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
 		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
 #endif
 

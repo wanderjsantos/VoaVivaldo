@@ -20,7 +20,7 @@ public class MenuGameplay : Menu
 	
 	public UILabel		txtPontuacao;
 	
-	
+	public UISprite		sptEstrelas;
 
 	public override void Show()
 	{
@@ -34,7 +34,7 @@ public class MenuGameplay : Menu
 		base.Resetar ();
 		labelContagemRegressiva.text = "00";
 		rodando = false;
-		
+		txtPontuacao.text = "pts 0000";
 	}
 
 	public override void Hide ()
@@ -55,6 +55,11 @@ public class MenuGameplay : Menu
 		goContagemRegressiva.SetActive (false);
 		labelContagemRegressiva.text = gGame.s.contagemRegressiva.ToString ("00");
 	}
+	
+	public void OnClickPause()
+	{
+		gGame.s.Pause( true );
+	}
 
 	public void Update()
 	{
@@ -67,12 +72,28 @@ public class MenuGameplay : Menu
 		return;
 		txtPontuacao.text = "pts " + gGame.s.player.mInfo.pontuacao;
 		
-
 		velocidadeDaPista = - ((gPista.s.tamanhoDoCompasso * uiRoot.transform.localScale.x) / (gRitmo.s.intervalo * gRitmo.s.batidasPorCompasso));
 		posTemp = rootDasNotas.transform.position;
 		posTemp.x += velocidadeDaPista * Time.deltaTime;
 
 		rootDasNotas.transform.position = posTemp;
+		
+		float fill = 0.35f;
+		switch( gPontuacao.s.estrelasGanhas )
+		{
+			case 1:
+				fill = .35f;
+				break;
+			case 2:
+				fill = .65f;
+				break;
+			case 3:
+				fill = 1f;
+				break;
+			default :
+				break;
+		}
+		sptEstrelas.fillAmount = fill;
 
 	}
 }

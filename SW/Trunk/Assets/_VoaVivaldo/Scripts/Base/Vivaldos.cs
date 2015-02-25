@@ -7,6 +7,8 @@ public static class Vivaldos
 	public static int COLUNAS = 4;
 	public static int COMPASSOS_DEFAULT = 3;
 	
+	public static bool VIBRAR = true;
+	
 	public static MusicaData TransformEditorToMusicaData(_MusicaEditor mus)
 	{
 		MusicaData ret = new MusicaData();

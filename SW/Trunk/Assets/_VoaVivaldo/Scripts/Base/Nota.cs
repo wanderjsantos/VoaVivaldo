@@ -8,19 +8,12 @@ public class Nota : MonoBehaviour
 
 	public Color 		cor;
 
+	public bool			kill = false;
+
 	public void Start()
 	{
 		mView.UpdateColor (cor);
-	}
-
-	public void OnHitAreaDePontuacao()
-	{
-
-	}
-
-	public void OnHitDeadArea()
-	{
-
+		kill = false;
 	}
 
 }
@@ -33,8 +26,7 @@ public class NotaInfo
 	public Timbre	timbre;
 //	[HideInInspector]
 //	public float	noTempo;
-//	[HideInInspector]
-//	public float	duracao;
+	public int		duracao;
 	public int		compasso;
 	public int 		batida;
 

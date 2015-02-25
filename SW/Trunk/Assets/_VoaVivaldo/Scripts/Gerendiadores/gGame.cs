@@ -4,10 +4,12 @@ using System.Collections;
 public class gGame : MonoBehaviour 
 {
 	public delegate void ChangeGameStatusHandler ();
+	public delegate void ChangePauseStatusHandler (bool pausado);
 
 	public static event ChangeGameStatusHandler 	onInit;
 	public static event ChangeGameStatusHandler 	onPlayGame;
 	public static event ChangeGameStatusHandler 	onStopGame;
+	public static event ChangePauseStatusHandler 	onPauseGame;
 	public static event ChangeGameStatusHandler 	onReset;
 
 	public static gGame s;
@@ -76,6 +78,18 @@ public class gGame : MonoBehaviour
 
 		if (onInit != null)
 						onInit ();
+	}
+	
+	public bool pausado = false;
+	
+	public void Pause( bool pausar )
+	{
+		if( gameStarted == false ) return ;
+		
+		pausado = pausar;
+		Time.timeScale = (pausado)? 0f : 1f ;
+	
+		if( onPauseGame != null ) onPauseGame( pausar );
 	}
 
 	public void PlayGame()

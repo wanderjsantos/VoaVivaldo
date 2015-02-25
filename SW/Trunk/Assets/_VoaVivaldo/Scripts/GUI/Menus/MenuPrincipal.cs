@@ -24,6 +24,11 @@ public class MenuPrincipal : Menu
 		gMenus.s.ShowMenu ("SelecaoDeMusica");
 	}
 	
+	public void OnClickCreditos()
+	{
+		gMenus.s.ShowMenu("Creditos");
+	}
+	
 	public void OnClickOpcoes()
 	{
 		gMenus.s.ShowMenu("Opcoes");

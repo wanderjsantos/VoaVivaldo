@@ -13,6 +13,9 @@ public class gMusica : MonoBehaviour
 	public bool verifyEnding = false;
 
 	public Musica _prefabMusica;
+	
+	public float tempoEmPause;
+	
 
 	public int	musicaIndice = -1;
 	public int	instrumentoIndice = -1;
@@ -28,6 +31,7 @@ public class gMusica : MonoBehaviour
 		gComandosDeMusica.onPlay += PlayMusica;
 		gComandosDeMusica.onStop += StopMusica;
 		gGame.onReset += Resetar;
+		gGame.onPauseGame += OnPause;
 	}
 
 	void OnDisable()
@@ -35,6 +39,24 @@ public class gMusica : MonoBehaviour
 		gComandosDeMusica.onPlay -= PlayMusica;
 		gComandosDeMusica.onStop -= StopMusica;
 		gGame.onReset -= Resetar;
+		gGame.onPauseGame -= OnPause;
+	}
+	
+	
+	public void OnPause( bool estado )
+	{
+		if( musicaAtual == null ) return;
+		
+		if( estado )
+		{
+			musicaAtual.sourceBase.Pause();
+			musicaAtual.sourceInstrumento.Pause();
+		}
+		else
+		{
+			musicaAtual.sourceBase.Play();
+			musicaAtual.sourceInstrumento.Play();
+		}
 	}
 
 	void Resetar ()
@@ -43,6 +65,7 @@ public class gMusica : MonoBehaviour
 		if( musicaAtual != null ) 
 			Destroy(musicaAtual.gameObject);
 		dadosDaMusicaAtual = null;
+		tempoEmPause = 0f;
 	}
 
 	public void SetMusica (int numero = -1)

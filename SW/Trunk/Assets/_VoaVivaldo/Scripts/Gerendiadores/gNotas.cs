@@ -18,6 +18,8 @@ public class gNotas : MonoBehaviour
 	public int verificarXNotasPorVez = 1;
 
 	public int currentNota = 0;
+	
+	public int quantidadeDeNotasNaPista;
 
 	public void Awake()
 	{
@@ -28,12 +30,21 @@ public class gNotas : MonoBehaviour
 	{
 		gComandosDeMusica.onPlay += Init;
 		gGame.onReset += Resetar;
+		gGame.onPauseGame += OnPause;
+		
 	}
 	
 	void OnDisable()
 	{
 		gComandosDeMusica.onPlay -= Init;
 		gGame.onReset -= Resetar;
+		gGame.onPauseGame -= OnPause;
+	}
+	
+		
+	public void OnPause( bool estado )
+	{
+		
 	}
 
 	void Resetar ()
@@ -47,12 +58,15 @@ public class gNotas : MonoBehaviour
 		}
 		notasNaPista = new List<Nota>();
 		currentNota = 0;
+		quantidadeDeNotasNaPista = 0;
+		
 	
 	}
 
 	void Init ()
 	{
 //		notasNaPista = new List<Nota> ();
+		quantidadeDeNotasNaPista = notasNaPista.Count;
 		currentNota = 0;
 	}
 
@@ -72,27 +86,51 @@ public class gNotas : MonoBehaviour
 						return;
 
 		int c = Mathf.Clamp (verificarXNotasPorVez, 1, notasNaPista.Count);
+		
+//		if( notasNaPista.Count > 1 )
+//			VerificarBrilhoDaPista(notasNaPista[0]);
 
 		for (int i = 0; i < c; i++) 
 		{
 			if( c > notasNaPista.Count )
 			{
-//				Debug.Log("Acabou as notas");
 				return;
 			}
-
+			
 			Vector3 posNota = UICamera.mainCamera.WorldToScreenPoint( notasNaPista[i].transform.position );
-			if( areaDePontuacao.Contains( posNota )) 
+			if( areaDePontuacao.Contains( posNota ) && notasNaPista[i].kill == false) 
 			{
 				if( gPontuacao.s.VerificarPontuacao( notasNaPista[i], gGame.s.player ) )
+				{
+					notasNaPista[i].kill = true;
+					
+					if( Vivaldos.VIBRAR && SystemInfo.supportsVibration )
+						Handheld.Vibrate();
+					
+					gPontuacao.s.Pontuar(gGame.s.player);
+						
 					DestruirNota(notasNaPista[i]);
+				}
 			}
 
-			if( areaDeDead.Contains( posNota )) 
-			{
-				gAudio.s.PararAudio();
-				DestruirNota( notasNaPista[i] );
+			if( areaDeDead.Contains( posNota ) && notasNaPista[i].kill == false) 
+			{				
+				notasNaPista[i].kill = true;
+				
+				gAudio.s.PararAudio();		
+				
+				gPontuacao.s.CancelarPontos();
+						
+				DestruirNota( notasNaPista[i] );				
 			}
+		}
+	}
+
+	void VerificarBrilhoDaPista (Nota n)
+	{
+		if( (int) n.mInfo.timbre == gGame.s.player.mController.pista )
+		{
+			gPista.s.FeedbackPista( (int) n.mInfo.timbre );
 		}
 	}
 	

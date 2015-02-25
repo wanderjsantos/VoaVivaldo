@@ -3,17 +3,37 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class gMenus : MonoBehaviour 
-{
+{	
 	public UIRoot	uiRoot;
 
 	public static gMenus s;
 	public Menu		menuAtual;
+	public Menu		menuPause;
 	public List<Menu>		todosOsMenus;
 	void Awake()
 	{
 		s = this;
 		todosOsMenus = new List<Menu> ();
 		todosOsMenus.AddRange (transform.GetComponentsInChildren<Menu>(true));
+		menuPause = Get("Pause");
+	}
+	
+	void OnEnable()
+	{
+		gGame.onPauseGame += OnPause;
+	}
+	
+	void Disable()
+	{
+		gGame.onPauseGame -= OnPause;
+	}
+	
+	public void OnPause( bool estado )
+	{
+		if( estado )
+			menuPause.Show( );
+		else
+			menuPause.Hide();
 	}
 
 	public void ShowMenu( Menu novoMenu )

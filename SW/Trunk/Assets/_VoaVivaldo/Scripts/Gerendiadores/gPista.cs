@@ -11,6 +11,8 @@ public class gPista : MonoBehaviour {
 
 	public float	tamanhoYPista = 120f;
 	public float	tamanhoDeCadaPista = 10f;
+	
+	int		ultimaPista = -1;
 
 	public GameObject	pista1;
 	public GameObject	pista2;
@@ -40,18 +42,27 @@ public class gPista : MonoBehaviour {
 		gComandosDeMusica.onPlay += PosicionarTodasAsNotas;
 		gGame.onReset += Resetar;
 		EncontrarPistaBase ();
+		gGame.onPauseGame += OnPause;
 	}
 	
 	void OnDisable()
 	{
 		gComandosDeMusica.onPlay -= PosicionarTodasAsNotas;
 		gGame.onReset-= Resetar;
+		gGame.onPauseGame -= OnPause;
+	}
+
+	void OnPause (bool pausado)
+	{
+		
 	}
 
 	Vector3 posInicialPista;
 	void Resetar ()
 	{
 		rootPista.transform.localPosition = posInicialPista;
+		ultimaPista = -1;
+		ApagarTodasAsPistas();
 	}
 
 	
@@ -121,6 +132,89 @@ public class gPista : MonoBehaviour {
 		}
 
 		return v;
+	}
+	
+	public Transform GetPista(int qualPista )
+	{
+		Transform ret;
+		
+		switch (qualPista)
+		{
+		case 1:
+			ret = pista1.transform ;
+			break;
+		case 2:
+			ret = pista2.transform ;
+			break;
+		case 3:
+			ret = pista3.transform ;
+			break;
+		case 4:
+			ret = pista4.transform ;
+			break;
+		case 5:
+			ret = pista5.transform ;
+			break;	
+		case 6:
+			ret = pista6.transform ;
+			break;
+		case 7:
+			ret = pista7.transform ;
+			break;
+		case 8:
+			ret = pista8.transform ;
+			break;
+		case 9:
+			ret = pista9.transform ;
+			break;
+		case 10:
+			ret = pista10.transform ;
+			break;
+		case 11:
+			ret = pista11.transform ;
+			break;
+		case 12:
+			ret = pista12.transform ;
+			break;
+		case 13:
+			ret = pista13.transform ;
+			break;
+		case 14:
+			ret = pista14.transform ;
+			break;
+		default:
+			ret = pista14.transform ;
+			break;
+		}
+		
+		return ret;
+	}
+	
+
+	public void FeedbackPista(int qualPista)
+	{		
+		UISprite sp = GetPista( qualPista ).GetComponent<UISprite>();
+		
+		ApagarTodasAsPistas();
+		
+		if( gGame.s.player.mController.pista == qualPista )
+		{
+			sp.alpha = .8f;			
+			return;
+		}
+		
+		sp.alpha = .1f;
+			
+	
+		
+	}
+	
+	void ApagarTodasAsPistas ()
+	{
+		foreach(UISprite sp in pistaBase.GetComponentsInChildren<UISprite>(true) as UISprite[] )
+		{
+			sp.alpha = .1f;
+		}
 	}
 
 //	void InitMusica ()

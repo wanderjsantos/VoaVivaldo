@@ -31,7 +31,7 @@ public class Musica : MonoBehaviour
 
 		mInfo.tempoDaMusica = 0f;
 		posicaoNotaAtual = 0;
-		iTime = Time.realtimeSinceStartup;
+		iTime = Time.time;
 	}
 
 	public void Stop()
@@ -60,11 +60,8 @@ public class Musica : MonoBehaviour
 	{
 		if (isPlaying) 
 		{
-			cTime = Time.realtimeSinceStartup;
+			cTime = Time.time;
 			mInfo.tempoDaMusica = cTime - iTime;
-
-//			UpdateNotas( mInfo.tempoDaMusica );
-
 			if( mInfo.tempoDaMusica >= sourceBase.clip.length ) Stop();
 			
 		}

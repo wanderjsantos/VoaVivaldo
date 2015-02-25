@@ -29,12 +29,19 @@ public class gRitmo : MonoBehaviour
 		gComandosDeMusica.onPlay += OnPlayAudio;
 		gComandosDeMusica.onStop += OnStopAudio;
 		gGame.onReset += Resetar;
+		gGame.onPauseGame += OnPause;
 	}
 	void OnDisable()
 	{
 		gComandosDeMusica.onPlay -= OnPlayAudio;
 		gComandosDeMusica.onStop -= OnStopAudio;
 		gGame.onReset -= Resetar;
+		gGame.onPauseGame -= OnPause;
+	}
+
+	void OnPause (bool pausado)
+	{
+		
 	}
 
 	public void SetBPM(int bpm)

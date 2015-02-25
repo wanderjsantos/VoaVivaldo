@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 7151f46d5b035d84fa1014c1368f4348
+guid: 067a1b9c2ada5014ea4e9c2d0c834f50
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BOTAO_PADRAO
+    21300000: FESTA_TROMPETE_PARTITURA
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,12 +23,12 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 128
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

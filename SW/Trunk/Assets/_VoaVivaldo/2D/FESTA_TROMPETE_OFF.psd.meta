@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: bb048fb2d328353449555345406a4bec
+guid: f0247cc252cc9e54fb2504af36305562
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FESTA__0009_trumpet_cinza
+    21300000: FESTA_TROMPETE_OFF
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,12 +23,12 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 256
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

@@ -30,6 +30,11 @@ public class MenuVitoria : Menu {
 		
 		txtPontuacao.text = gGame.s.player.mInfo.pontuacao.ToString();
 	}
+	
+	public void OnClickFestinha()
+	{
+		gMenus.s.ShowMenu("Festa");
+	}
 
 	public void OnClickContinuar()
 	{

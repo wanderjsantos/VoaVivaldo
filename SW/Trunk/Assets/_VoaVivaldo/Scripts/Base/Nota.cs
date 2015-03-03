@@ -19,15 +19,15 @@ public class Nota : MonoBehaviour
 }
 
 
-public enum Timbre{ ZERO, UM, DOIS, TRES, QUATRO, CINCO,SEIS, SETE, OITO, NOVE, DEZ, ONZE, DOZE, TREZE, QUATORZE }
+public enum Timbre { ZERO, UM, DOIS, TRES, QUATRO, CINCO,SEIS, SETE, OITO, NOVE, DEZ, ONZE, DOZE, TREZE, QUATORZE }
+
 [System.Serializable]
 public class NotaInfo 
 {
 	public Timbre	timbre;
-//	[HideInInspector]
-//	public float	noTempo;
-	public int		duracao;
+	public _NotaEditor.Estado estadoEditor;
 	public int		compasso;
+	public int		duracao = 1;
 	public int 		batida;
 
 }
@@ -35,11 +35,11 @@ public class NotaInfo
 [System.Serializable]
 public class NotaView
 {
-	public UISprite mSprite;
+//	public UISprite mSprite;
 
 	public void UpdateColor (Color cor)
 	{
-		mSprite.color = cor;
+//		mSprite.color = cor;
 	}
 }
 

@@ -1,0 +1,102 @@
+fileFormatVersion: 2
+guid: 4c87cc24727634d4286aef29716b17f2
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GAMEPLAY_FLAUTA_VOANDO_0
+    21300002: GAMEPLAY_FLAUTA_VOANDO_1
+    21300004: GAMEPLAY_FLAUTA_VOANDO_2
+    21300006: GAMEPLAY_FLAUTA_VOANDO_3
+    21300008: GAMEPLAY_FLAUTA_VOANDO_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: GAMEPLAY_FLAUTA_VOANDO_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 134
+        width: 185
+        height: 116
+      alignment: 9
+      pivot: {x: .531382978, y: .449949592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 123
+        width: 185
+        height: 127
+      alignment: 9
+      pivot: {x: .519427478, y: .471699983}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_2
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 122
+        width: 187
+        height: 128
+      alignment: 9
+      pivot: {x: .522176623, y: .469761252}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_3
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 114
+        width: 187
+        height: 136
+      alignment: 9
+      pivot: {x: .516268015, y: .504516721}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_4
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 112
+        width: 193
+        height: 133
+      alignment: 9
+      pivot: {x: .526278615, y: .498093218}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

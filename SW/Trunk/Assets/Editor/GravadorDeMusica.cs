@@ -12,6 +12,9 @@ public class GravadorDeMusica : EditorWindow {
 	public static GravadorDeMusica 	mWindow;
 	public static _MusicaEditor		musicaAtual;
 	public static bool 				init 		= false;
+	
+	public static bool				isShift 	= false;
+	public static bool				isControl	= false;
 
 	[MenuItem( "Vivaldo/Gravador de Musicas")]
 	static void Init()
@@ -27,6 +30,14 @@ public class GravadorDeMusica : EditorWindow {
 	void OnGUI()
 	{
 		if( mWindow == null || !init || musicaAtual == null ) return;
+		
+		isShift = Event.current.shift;
+		isControl = Event.current.control;
+		
+		EditorGUILayout.Toggle( "isShift:", isShift );
+		EditorGUILayout.Toggle( "isShift:", isControl );
+		
+		
 	
 		musicaAtual.nome 		= DrawNome		( musicaAtual.nome );
 		musicaAtual.BPM			= DrawBPM		( musicaAtual.BPM );
@@ -112,16 +123,8 @@ public class GravadorDeMusica : EditorWindow {
 					{						
 						EditorGUILayout.BeginHorizontal();
 						for (int j = 0; j < trecho.colunas; j++) 
-						{
-							if( trecho.grid[x,i,j].pressed )	GUI.color = Color.green;
-							else 								GUI.color = Color.white;
-																								
-							if( GUILayout.Button ("", GUILayout.Width (20f), GUILayout.Height (20f)) )
-							{
-								ChangeValue(x, j, i,trecho.grid[x,i,j]);
-							}
-							
-							GUI.color = Color.white;
+						{														
+							trecho.grid[x,i,j].Draw(x,i,j);					
 						}
 						EditorGUILayout.EndHorizontal();
 						
@@ -180,14 +183,11 @@ public class GravadorDeMusica : EditorWindow {
 		return EditorGUILayout.IntField ("Batidas por minuto (BPM):", valor);
 	}
 	
-
-
-	
-	static void ChangeValue (int compasso, int batida, int timbre, _NotaEditor _nota)
-	{
-		int l = Vivaldos.LINHAS - timbre;
-		_nota.Change ( compasso, batida, l);
-	}
+//	static void Press (int compasso, int batida, int timbre, _NotaEditor _nota)
+//	{
+//		int l = Vivaldos.LINHAS - timbre;
+//		_nota.Press ( compasso, batida, l);
+//	}
 	
 }
 

@@ -15,7 +15,7 @@ public class UI2DSpriteAnimation : MonoBehaviour
 	/// How many frames there are in the animation per second.
 	/// </summary>
 
-	[SerializeField] protected int framerate = 20;
+	[SerializeField] protected int framerate = 9;
 	
 	/// <summary>
 	/// Should this animation be affected by time scale?
@@ -27,13 +27,19 @@ public class UI2DSpriteAnimation : MonoBehaviour
 	/// Should this animation be looped?
 	/// </summary>
 
-	public bool loop = true;
+//	public bool loop = true;
 
 	/// <summary>
 	/// Actual sprites used for the animation.
 	/// </summary>
 
-	public UnityEngine.Sprite[] frames;
+//	public UnityEngine.Sprite[] frames;
+	
+	/// <summary>
+	/// Lista de Animacoes configuraveis.
+	/// </summary>
+	public UI2DAnimation[] animations;
+	public int currentAnimation = 0;
 
 	UnityEngine.SpriteRenderer mUnitySprite;
 	UI2DSprite mNguiSprite;
@@ -56,15 +62,24 @@ public class UI2DSpriteAnimation : MonoBehaviour
 	/// Continue playing the animation. If the animation has reached the end, it will restart from beginning
 	/// </summary>
 
+	public void Play (int index){ currentAnimation = ( index > 0 )? index : 0; Play (); }
+	
+	public void Play (string animationName){ 
+		for( int i =0; i< animations.Length; i++ )
+			if( animations[i].name.ToLower() == animationName.ToLower())
+			{	Play(i);return;}	
+	}
+
 	public void Play ()
 	{
-		if (frames != null && frames.Length > 0)
+	
+		if (animations != null && animations.Length > 0 && animations[currentAnimation].frames.Length > 0)
 		{
-			if (!enabled && !loop)
+			if (!enabled && !animations[currentAnimation].loop)
 			{
 				int newIndex = framerate > 0 ? mIndex + 1 : mIndex - 1;
-				if (newIndex < 0 || newIndex >= frames.Length)
-					mIndex = framerate < 0 ? frames.Length - 1 : 0;
+				if (newIndex < 0 || newIndex >= animations[currentAnimation].frames.Length)
+					mIndex = framerate < 0 ? animations[currentAnimation].frames.Length - 1 : 0;
 			}
 			
 			enabled = true;
@@ -84,7 +99,7 @@ public class UI2DSpriteAnimation : MonoBehaviour
 
 	public void ResetToBeginning ()
 	{
-		mIndex = framerate < 0 ? frames.Length - 1 : 0;
+		mIndex = framerate < 0 ? animations[currentAnimation].frames.Length - 1 : 0;
 		UpdateSprite();
 	}
 
@@ -100,7 +115,7 @@ public class UI2DSpriteAnimation : MonoBehaviour
 
 	void Update ()
 	{
-		if (frames == null || frames.Length == 0)
+		if (animations == null || animations.Length == 0 || animations[currentAnimation].frames.Length == 0)
 		{
 			enabled = false;
 		}
@@ -113,13 +128,13 @@ public class UI2DSpriteAnimation : MonoBehaviour
 				mUpdate = time;
 				int newIndex = framerate > 0 ? mIndex + 1 : mIndex - 1;
 
-				if (!loop && (newIndex < 0 || newIndex >= frames.Length))
+				if (!animations[currentAnimation].loop && (newIndex < 0 || newIndex >= animations[currentAnimation].frames.Length))
 				{
 					enabled = false;
 					return;
 				}
 
-				mIndex = NGUIMath.RepeatIndex(newIndex, frames.Length);
+				mIndex = NGUIMath.RepeatIndex(newIndex, animations[currentAnimation].frames.Length);
 				UpdateSprite();
 			}
 		}
@@ -148,11 +163,19 @@ public class UI2DSpriteAnimation : MonoBehaviour
 
 		if (mUnitySprite != null)
 		{
-			mUnitySprite.sprite = frames[mIndex];
+			mUnitySprite.sprite = animations[currentAnimation].frames[mIndex];
 		}
 		else if (mNguiSprite != null)
 		{
-			mNguiSprite.nextSprite = frames[mIndex];
+			mNguiSprite.nextSprite = animations[currentAnimation].frames[mIndex];;
 		}
 	}
+}
+
+[System.Serializable]
+public class UI2DAnimation
+{
+	public string name;
+	public bool loop = true;
+	public UnityEngine.Sprite[] frames;
 }

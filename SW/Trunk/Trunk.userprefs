@@ -1,10 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuFesta.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NGUI\Scripts\UI\UI2DSpriteAnimation.cs">
     <Files>
-      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Musica.cs" Line="34" Column="21" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuFesta.cs" Line="74" Column="29" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuVitoria.cs" Line="46" Column="16" />
+      <File FileName="Assets\NGUI\Scripts\UI\UI2DSpriteAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets\NGUI\Scripts\UI\UI2DSpriteAnimation_BACKUP.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

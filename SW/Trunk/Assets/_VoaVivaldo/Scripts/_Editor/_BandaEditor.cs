@@ -46,6 +46,7 @@ public class _InstrumentoEditor
 				NotaInfo info = new NotaInfo();
 				info.batida = n.batida;
 				info.compasso = n.compasso;
+//				info.extra		= n.extra;
 				info.timbre = (Timbre) n.currentTimbre;
 				
 				ret.Add( info );

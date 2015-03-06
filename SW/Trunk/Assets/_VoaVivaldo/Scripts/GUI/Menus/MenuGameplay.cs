@@ -78,22 +78,22 @@ public class MenuGameplay : Menu
 
 		rootDasNotas.transform.position = posTemp;
 		
-		float fill = 0.35f;
-		switch( gPontuacao.s.estrelasGanhas )
-		{
-			case 1:
-				fill = .35f;
-				break;
-			case 2:
-				fill = .65f;
-				break;
-			case 3:
-				fill = 1f;
-				break;
-			default :
-				break;
-		}
-		sptEstrelas.fillAmount = fill;
+//		float fill = 0.35f;
+//		switch( gPontuacao.s.estrelasGanhas )
+//		{
+//			case 1:
+//				fill = .35f;
+//				break;
+//			case 2:
+//				fill = .65f;
+//				break;
+//			case 3:
+//				fill = 1f;
+//				break;
+//			default :
+//				break;
+//		}
+//		sptEstrelas.fillAmount = fill;
 
 	}
 }

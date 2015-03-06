@@ -218,6 +218,9 @@
      <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gRitmo.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gSave.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\PainelDeControle.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\View\vEstrelas.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\View\vLevel.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\View\vPontuacao.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\BTN_Nota.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_BandaEditor.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_CompassoEditor.cs" />

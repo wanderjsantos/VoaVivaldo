@@ -5,6 +5,6 @@
 //
 //public class _CompassoEditor : Editor
 //{
-//	public _NotaEditor[,,] 	grid;
-//	public List<_NotaEditor> 	notas		= new List<_NotaEditor>();
+//	public _LinhaDeNotasEditor[,,] 	grid;
+//	public List<_LinhaDeNotasEditor> 	notas		= new List<_LinhaDeNotasEditor>();
 //}

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class _MusicaEditor  
 {
 	public 	string 				nome 		= "Musica sem nome";
-	public 	int					BPM			= 110;
+	public 	int					BPM			= 90;
 	public	AudioClip			audioBase;
 	
 	public 	bool				foldout 	= false;

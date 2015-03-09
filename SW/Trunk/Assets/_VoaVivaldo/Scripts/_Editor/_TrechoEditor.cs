@@ -9,8 +9,7 @@ public class _TrechoEditor
 	public 	bool				foldout 	= false;
 	public	Vector2				scroll		= Vector2.zero;
 	
-	public _NotaEditor[,,] 	grid;
-	public List<_NotaEditor> 	notas		= new List<_NotaEditor>();
+	public _LinhaDeNotasEditor[,] 	grid2;
 	
 	public int					compassos 	= Vivaldos.COMPASSOS_DEFAULT;
 	public int					linhas		= Vivaldos.LINHAS;
@@ -35,24 +34,22 @@ public class _TrechoEditor
 		Init();
 	
 	}
+		
+	public void Draw( int compasso, int linha )
+	{
+		grid2[compasso,linha].Draw();
+	}
+	
 	public void Init()
 	{
-		grid = new _NotaEditor[compassos, linhas , colunas];
-		notas = new List<_NotaEditor> ();
+		grid2 = new _LinhaDeNotasEditor[compassos,linhas];
+		
 		for (int x = 0; x < compassos; x ++)
 		{
 			for (int i =0; i< linhas; i++) 
 			{
-				for (int j = 0; j < colunas; j++) 
-				{
-					_NotaEditor button = new _NotaEditor (i, j, null);
-//					_NotaEditor button = ScriptableObject.CreateInstance<_NotaEditor>();
-//					button.Set( i,j,null);
-					
-					
-					notas.Add (button);
-					grid [x,i, j] = button;
-				}
+				_LinhaDeNotasEditor nota = new _LinhaDeNotasEditor ();
+				grid2[x,i] = nota;
 			}
 		}
 	}

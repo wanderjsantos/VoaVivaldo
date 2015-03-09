@@ -31,8 +31,8 @@ public class GravadorDeMusica : EditorWindow {
 	{
 		if( mWindow == null || !init || musicaAtual == null ) return;
 		
-		isShift = Event.current.shift;
-		isControl = Event.current.control;
+//		isShift = Event.current.shift;
+//		isControl = Event.current.control;
 		
 		EditorGUILayout.Toggle( "isShift:", isShift );
 		EditorGUILayout.Toggle( "isShift:", isControl );
@@ -121,12 +121,9 @@ public class GravadorDeMusica : EditorWindow {
 				EditorGUILayout.BeginVertical();
 					for (int i = 0; i < trecho.linhas; i++) 
 					{						
-						EditorGUILayout.BeginHorizontal();
-						for (int j = 0; j < trecho.colunas; j++) 
-						{														
-							trecho.grid[x,i,j].Draw(x,i,j);					
-						}
-						EditorGUILayout.EndHorizontal();
+//						EditorGUILayout.BeginHorizontal();
+							trecho.Draw( x,i );		
+//						EditorGUILayout.EndHorizontal();
 						
 					}
 				EditorGUILayout.EndVertical();

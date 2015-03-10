@@ -221,9 +221,9 @@
      <Compile Include="Assets\_VoaVivaldo\Scripts\View\vEstrelas.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\View\vLevel.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\View\vPontuacao.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\BTN_Nota.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\NotaEditor.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_BandaEditor.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_CompassoEditor.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_Compasso.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_MusicaEditor.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_NotaEditorInfo.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_TrechoEditor.cs" />

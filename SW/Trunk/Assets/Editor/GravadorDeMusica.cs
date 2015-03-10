@@ -35,10 +35,8 @@ public class GravadorDeMusica : EditorWindow {
 //		isControl = Event.current.control;
 		
 		EditorGUILayout.Toggle( "isShift:", isShift );
-		EditorGUILayout.Toggle( "isShift:", isControl );
+		EditorGUILayout.Toggle( "isControl:", isControl );
 		
-		
-	
 		musicaAtual.nome 		= DrawNome		( musicaAtual.nome );
 		musicaAtual.BPM			= DrawBPM		( musicaAtual.BPM );
 		musicaAtual.audioBase 	= DrawAudioClip	( musicaAtual.audioBase );
@@ -97,55 +95,23 @@ public class GravadorDeMusica : EditorWindow {
 		}
 		GUI.color = Color.white;
 		EditorGUILayout.EndHorizontal();
-						
+		
 	}
 
 	void DrawTrecho (_TrechoEditor trecho)
 	{
 		trecho.foldout = EditorGUILayout.Foldout( trecho.foldout, trecho.nome );
-		if( trecho.foldout == false ) return;
-						
-		EditorGUILayout.Space ();
-		
+		if( trecho.foldout == false ) return;		
 		
 		trecho.nome = DrawNome( trecho.nome );
 		
-		trecho.scroll = EditorGUILayout.BeginScrollView (trecho.scroll);
+//		trecho.scroll = EditorGUILayout.BeginScrollView (trecho.scroll);
+				
+			trecho.Draw();		
 		
-		EditorGUILayout.BeginVertical();
-		EditorGUILayout.BeginHorizontal();
+//		EditorGUILayout.EndScrollView ();
 		
-			for (int x = 0; x < trecho.compassos; x ++)
-			{
-				GUILayout.Label(x + ":" );
-				EditorGUILayout.BeginVertical();
-					for (int i = 0; i < trecho.linhas; i++) 
-					{						
-//						EditorGUILayout.BeginHorizontal();
-							trecho.Draw( x,i );		
-//						EditorGUILayout.EndHorizontal();
-						
-					}
-				EditorGUILayout.EndVertical();
-			}
-		EditorGUILayout.EndHorizontal();
-		EditorGUILayout.EndVertical();
-		EditorGUILayout.EndScrollView ();
-		
-		EditorGUILayout.BeginHorizontal();
-			GUILayout.Label("Compasso:");
-			GUI.color = Color.green;
-			if( GUILayout.Button("+") )
-			{
-				trecho.AddCompasso();
-			}
-			GUI.color = Color.red;
-			if( GUILayout.Button("-") )
-			{
-				trecho.RemoveCompasso();
-			}
-			GUI.color = Color.white;
-		EditorGUILayout.EndHorizontal();
+			trecho.DrawComandos();
 		
 	}
 

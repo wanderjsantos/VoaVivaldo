@@ -6,7 +6,7 @@ public static class Vivaldos
 	public static int LINHAS = 14;
 	public static int COLUNAS = 4;
 	public static int COMPASSOS_DEFAULT = 3;
-	public static float WIDTH_COMPASSO = 300f;
+	public static float WIDTH_COMPASSO = 600f;
 	
 	public static bool VIBRAR = true;
 	
@@ -28,18 +28,19 @@ public static class Vivaldos
 			{
 				Trecho trecho = new Trecho();
 				
-//				foreach( _LinhaDeNotasEditor n in t.notas )
-//				{
-//					if( n.currentTimbre <= 0 ) continue;	
-//					
-//					NotaInfo info = new NotaInfo();
-//					info.batida = n.batida;
-//					info.compasso = n.compasso;
-//					info.timbre = (Timbre) n.currentTimbre;
-//					
-//					trecho.notasDoTrecho.Add( info );
+				foreach( _CompassoEditor compasso in t._compassos )
+				{
+					foreach( _NotaEditor nota in compasso.notas )
+					{
+						if( (int) nota.notaInfo.timbre <= 0 ) continue;	
+						
+						NotaInfo info = new NotaInfo() ;
+						info = nota.notaInfo;
+						
+						trecho.notasDoTrecho.Add( info );
+					}
 				
-//				}
+				}
 				
 				ret.trechos.Add( trecho );
 				

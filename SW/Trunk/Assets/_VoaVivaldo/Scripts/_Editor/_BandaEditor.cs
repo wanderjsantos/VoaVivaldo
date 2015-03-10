@@ -37,20 +37,20 @@ public class _InstrumentoEditor
 	public List<NotaInfo> ConverterTrechosParaNotas()
 	{
 		List<NotaInfo> ret = new List<NotaInfo>();
-		foreach( _TrechoEditor t in trechos )
+		foreach( _TrechoEditor trecho in trechos )
 		{
-//			foreach( _LinhaDeNotasEditor n in t.notas )
-//			{
-//				if( n.currentTimbre <= 0 ) continue;	
-//				
-//				NotaInfo info = new NotaInfo();
-//				info.batida = n.batida;
-//				info.compasso = n.compasso;
-////				info.extra		= n.extra;
-//				info.timbre = (Timbre) n.currentTimbre;
-//				
-//				ret.Add( info );
-//			}
+			foreach( _CompassoEditor compasso in trecho._compassos )
+			{
+				foreach( _NotaEditor nota in compasso.notas )
+				{
+					if( (int) nota.notaInfo.timbre <= 0 ) continue;	
+					
+					NotaInfo info = new NotaInfo() ;
+					info = nota.notaInfo;
+					
+					ret.Add( info );				
+				}
+			}
 		}
 		
 		Debug.Log("Adicionando " + ret.Count + " notas");

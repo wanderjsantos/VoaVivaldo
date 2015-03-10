@@ -75,9 +75,9 @@ public class _CompassoEditor
 		EditorGUILayout.BeginHorizontal();
 			GUILayout.Space( Vivaldos.WIDTH_COMPASSO - GetAllWidths());
 		    GUILayout.Label("Nova nota:");			
-			notaDebug.tipo = (TipoDeNota) EditorGUILayout.EnumPopup( "Tipo:", notaDebug.tipo);
-			notaDebug.timbre = (Timbre) EditorGUILayout.EnumPopup( "Timbre:", notaDebug.timbre);
-			notaDebug.duracao = (Duracao) EditorGUILayout.EnumPopup( "Duracao:", notaDebug.duracao);
+			notaDebug.tipo = (TipoDeNota) EditorGUILayout.EnumPopup( "", notaDebug.tipo, GUILayout.Width(100f));
+			notaDebug.timbre = (Timbre) EditorGUILayout.EnumPopup( "", notaDebug.timbre, GUILayout.Width(100f));
+			notaDebug.duracao = (Duracao) EditorGUILayout.EnumPopup( "", notaDebug.duracao, GUILayout.Width(100f));
 			notaDebug.compasso = trecho._compassos.IndexOf(this) ;
 			GUILayout.Label("No compasso: " + notaDebug.compasso.ToString() );
 			

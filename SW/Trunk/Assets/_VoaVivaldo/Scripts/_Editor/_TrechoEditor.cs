@@ -33,6 +33,14 @@ public class _TrechoEditor
 		_compassos.RemoveAt( _compassos.Count-1);
 		
 	}
+	
+	public void RemoveCompasso(_CompassoEditor compasso)
+	{
+		if( _compassos.Contains( compasso ) == false ) return;
+		
+		_compassos.Remove(compasso);
+		
+	}
 
 	public void DuplicarCompasso (_CompassoEditor aSerDuplicado)
 	{
@@ -66,9 +74,16 @@ public class _TrechoEditor
 	{
 		scroll = EditorGUILayout.BeginScrollView( scroll );
 		
+		EditorGUILayout.BeginHorizontal();
+		EditorGUILayout.HelpBox("Shift + Click ou Click: Aumenta/diminui o valor da nota. \n " +
+		                                "Control + Click: Exclui a nota \n" +
+		                                "Alt + Click: Muda o tipo da nota", MessageType.Info );
+		EditorGUILayout.EndHorizontal();
+		
 		for( int i =0 ; i < _compassos.Count; i++ )
-		{
+		{		
 			EditorGUILayout.BeginHorizontal();
+			if( _compassos[i].trecho == null ) _compassos[i].trecho = this;					
 			_compassos[i].DrawCompasso();
 			_compassos[i].DrawComandos();
 			EditorGUILayout.EndHorizontal();

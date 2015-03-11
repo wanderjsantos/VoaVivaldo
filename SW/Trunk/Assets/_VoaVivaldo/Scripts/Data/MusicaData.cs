@@ -10,7 +10,7 @@ public class MusicaData
 	public int 					BPM;
 	public string 				audioBase;
 	public List<Instrumento> 	instrumentos;
-	public List<NotaInfo>		todasAsNotas;
+	public List<NotaInfo>		notasNormal;
 
 	public MusicaData()
 	{

@@ -204,9 +204,6 @@ public class gPista : MonoBehaviour {
 		}
 		
 		sp.alpha = .1f;
-			
-	
-		
 	}
 	
 	void ApagarTodasAsPistas ()
@@ -217,35 +214,6 @@ public class gPista : MonoBehaviour {
 		}
 	}
 
-//	void InitMusica ()
-//	{
-//		UpdatePista (0);
-//		UpdatePista (1);
-//		UpdatePista (2);
-//	}
-
-	public void UpdatePista (int compassoAtual)
-	{
-//		List<NotaInfo> notasAtuais = gMusica.s.TodasAsNotasNoCompasso (compassoAtual+1);
-//
-//		for( int i = 0; i < notasAtuais.Count; i++ )
-//		{
-////			float tempoDentro = notasAtuais[i].noTempo - compassoAtual;
-////			float posicaoX = (tempoDentro * tamanhoDoCompasso) + (tamanhoDoCompasso * compassoAtual); 
-//			float posicaoX = (tamanhoDoCompasso) + (tamanhoDoCompasso * compassoAtual); 
-//			float posicaoY = gNotas.s.PosicionEmY( notasAtuais[i].timbre, tamanhoYPista );
-//
-//			Debug.Log("Nota: Posicao" + posicaoX + " - " + posicaoY );
-//
-//			Vector3 v = new Vector3( posicaoX,posicaoY,0);
-//
-//			Nota n = gNotas.s.NovaNota( notasAtuais[i] );
-//			n.gameObject.transform.parent = rootPista.transform;
-//			n.gameObject.transform.localScale = Vector3.one;
-//
-//			n.gameObject.transform.localPosition = v;
-//		}
-	}
 
 	public float tamanhoDoCompasso = 500f;
 	public void PosicionarTodasAsNotas()

@@ -31,11 +31,11 @@ public class GravadorDeMusica : EditorWindow {
 	{
 		if( mWindow == null || !init || musicaAtual == null ) return;
 		
-//		isShift = Event.current.shift;
-//		isControl = Event.current.control;
+		isShift 	= Event.current.shift;
+		isControl 	= Event.current.control;
 		
-//		EditorGUILayout.Toggle( "isShift:", isShift );
-//		EditorGUILayout.Toggle( "isControl:", isControl );
+		EditorGUILayout.Toggle( "isShift:", isShift );
+		EditorGUILayout.Toggle( "isControl:", isControl );
 		
 		musicaAtual.nome 		= DrawNome		( musicaAtual.nome );
 		musicaAtual.BPM			= DrawBPM		( musicaAtual.BPM );
@@ -120,7 +120,7 @@ public class GravadorDeMusica : EditorWindow {
 		GUI.color = Color.magenta;
 		if( GUILayout.Button("Load", GUILayout.Height(20)))
 		{
-			SaveManager.Load();
+			musicaAtual = SaveManager.Load();
 		}
 		GUI.color = Color.white;
 	}
@@ -139,7 +139,6 @@ public class GravadorDeMusica : EditorWindow {
 	{
 		return EditorGUILayout.IntField ("Batidas por minuto (BPM):", valor);
 	}
-	
 	
 }
 
@@ -178,10 +177,7 @@ public static class SaveManager
 		serializer.Serialize (stream, levelInfo);
 		
 		
-		serializer = new XmlSerializer (typeof(_MusicaEditor));
-		stream = new FileStream ("Assets/GravadorDeLevels/Levels/"+GravadorDeMusica.musicaAtual.nome+".xml", FileMode.Create);
-		serializer.Serialize (stream, musica);
-		
+						
 		UnityEngine.MonoBehaviour.DestroyImmediate(go);
 		
 		stream.Close ();
@@ -190,19 +186,28 @@ public static class SaveManager
 	public static _MusicaEditor Load()
 	{
 		_MusicaEditor ret = new _MusicaEditor();
-		string path =	EditorUtility.OpenFilePanel( "Seleciona um xml de level", "Assets/GravadorDeLevels/Levels/", "xml");
-	   
-	   if( path == null ) return null;
-	   
- 	
+		MusicaData data = new MusicaData();
 		
-	 Debug.LogWarning("Carregando:" + ret.nome );
+		string path =	EditorUtility.OpenFilePanel( "Selecione um XML de level","Assets/Resources/", "xml");
+	   
+	  	if( path == null ) return null;
+	   
+ 		XmlSerializer serializer = new XmlSerializer( typeof(MusicaData) );
+ 		StreamReader reader = new StreamReader( path );
+ 		
+ 		data = (MusicaData) serializer.Deserialize( reader );
+ 		reader.Close();
+ 		
+ 		ret = Vivaldos.TransformDataToMusicaEditor( data );
+		
+		 Debug.LogWarning("Carregando:" + ret.nome );
 	   
 	   return ret;
 	}
 	
 	
 }
+
 
 
 

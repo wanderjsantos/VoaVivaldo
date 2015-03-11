@@ -10,24 +10,111 @@
           <compassoInicial>0</compassoInicial>
           <compassos>
             <Compasso>
-              <notas />
+              <notas>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>0</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>0</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>0</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>0</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+              </notas>
             </Compasso>
             <Compasso>
-              <notas />
+              <notas>
+                <NotaInfo>
+                  <tipo>PAUSA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>1</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>PAUSA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>1</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>PAUSA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>1</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA_LONGA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>1</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+              </notas>
             </Compasso>
             <Compasso>
-              <notas />
+              <notas>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMIBREVE</duracao>
+                  <compasso>2</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+              </notas>
             </Compasso>
             <Compasso>
-              <notas />
-            </Compasso>
-          </compassos>
-        </Trecho>
-        <Trecho>
-          <compassoInicial>0</compassoInicial>
-          <compassos>
-            <Compasso>
-              <notas />
+              <notas>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>PAUSA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA_LONGA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+              </notas>
             </Compasso>
           </compassos>
         </Trecho>

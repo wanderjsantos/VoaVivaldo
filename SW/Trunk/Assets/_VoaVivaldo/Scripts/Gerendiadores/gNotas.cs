@@ -7,6 +7,8 @@ public class gNotas : MonoBehaviour
 	public static gNotas s;
 
 	public List<Nota> todasAsNotas;
+	public Nota			notaLonga;
+	public Nota			notaPausa;
 	public List<Nota>notasNaPista;
 
 	public bool drawAreaDePontuacao = false;
@@ -87,9 +89,6 @@ public class gNotas : MonoBehaviour
 
 		int c = Mathf.Clamp (verificarXNotasPorVez, 1, notasNaPista.Count);
 		
-//		if( notasNaPista.Count > 1 )
-//			VerificarBrilhoDaPista(notasNaPista[0]);
-
 		for (int i = 0; i < c; i++) 
 		{
 			if( c > notasNaPista.Count )
@@ -98,18 +97,23 @@ public class gNotas : MonoBehaviour
 			}
 			
 			Vector3 posNota = UICamera.mainCamera.WorldToScreenPoint( notasNaPista[i].transform.position );
-			if( areaDePontuacao.Contains( posNota ) && notasNaPista[i].kill == false) 
-			{
-				if( gPontuacao.s.VerificarPontuacao( notasNaPista[i], gGame.s.player ) )
+			
+			if( notasNaPista[i].mInfo.tipo != TipoDeNota.PAUSA )
+			{	
+				
+				if( areaDePontuacao.Contains( posNota ) && notasNaPista[i].kill == false) 
 				{
-					notasNaPista[i].kill = true;
-					
-					if( Vivaldos.VIBRAR && SystemInfo.supportsVibration )
-						Handheld.Vibrate();
-					
-					gPontuacao.s.Pontuar(gGame.s.player);
+					if( gPontuacao.s.VerificarPontuacao( notasNaPista[i], gGame.s.player ) )
+					{
+						notasNaPista[i].kill = true;
 						
-					DestruirNota(notasNaPista[i]);
+						if( Vivaldos.VIBRAR && SystemInfo.supportsVibration )
+							Handheld.Vibrate();
+						
+						gPontuacao.s.Pontuar(gGame.s.player);
+							
+						DestruirNota(notasNaPista[i]);
+					}
 				}
 			}
 
@@ -117,9 +121,11 @@ public class gNotas : MonoBehaviour
 			{				
 				notasNaPista[i].kill = true;
 				
-				gAudio.s.PararAudio();		
-				
-				gPontuacao.s.CancelarPontos();
+				if( notasNaPista[i].mInfo.tipo != TipoDeNota.PAUSA )
+				{
+					gAudio.s.PararAudio();						
+					gPontuacao.s.CancelarPontos();
+				}
 						
 				DestruirNota( notasNaPista[i] );				
 			}
@@ -136,23 +142,60 @@ public class gNotas : MonoBehaviour
 	
 	public Nota NovaNota( NotaInfo info)
 	{
+		Nota n;
+	
+		switch( info.tipo )
+		{
+			case TipoDeNota.NOTA:
+			   	n = 	NovaNotaNormal(info);
+				break;
+			case TipoDeNota.PAUSA:
+				n = 	NovaNotaPausa(info);
+				break;
+			case TipoDeNota.NOTA_LONGA:
+				n = 	NovaNotaLonga(info);
+				break;
+			default :
+				n =	 NovaNotaNormal(info);
+				break;
+		}
+		
+		return n;
+	
+	}
+
+	Nota NovaNotaPausa (NotaInfo info)
+	{
+		Nota ret = Instantiate (notaPausa) as Nota;
+		ret.gameObject.transform.parent = gPista.s.rootPista.transform;
+		ret.mInfo = info;
+
+		notasNaPista.Add (ret);
+		
+		return ret;
+		
+	}
+
+	Nota NovaNotaNormal (NotaInfo info)
+	{
 		Nota ret = Instantiate (todasAsNotas.Find (e => e.mInfo.timbre == info.timbre)) as Nota;
 		ret.gameObject.transform.parent = gPista.s.rootPista.transform;
 		ret.mInfo = info;
 
 		notasNaPista.Add (ret);
-
+		
 		return ret;
 	}
 
-
-	public float PosicionEmY( Timbre t, float tamanhoDaPista = 150f )
+	Nota NovaNotaLonga (NotaInfo info)
 	{
-		float tamanho = tamanhoDaPista / todasAsNotas.Count;
+		Nota ret = Instantiate (notaLonga) as Nota;
+		ret.gameObject.transform.parent = gPista.s.rootPista.transform;
+		ret.mInfo = info;
 
-		int m = (int)todasAsNotas.Find (e => e.mInfo.timbre == t).mInfo.timbre;
-
-		return m * tamanho;
+		notasNaPista.Add (ret);
+		
+		return ret;
 	}
 
 	void DestruirNota (Nota nota)

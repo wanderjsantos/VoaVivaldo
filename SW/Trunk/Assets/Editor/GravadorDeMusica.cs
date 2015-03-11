@@ -15,6 +15,8 @@ public class GravadorDeMusica : EditorWindow {
 	
 	public static bool				isShift 	= false;
 	public static bool				isControl	= false;
+	
+	public static Vector2			scroll;
 
 	[MenuItem( "Vivaldo/Gravador de Musicas")]
 	static void Init()
@@ -41,10 +43,13 @@ public class GravadorDeMusica : EditorWindow {
 		musicaAtual.BPM			= DrawBPM		( musicaAtual.BPM );
 		musicaAtual.audioBase 	= DrawAudioClip	( musicaAtual.audioBase );
 		
+		
+		scroll = EditorGUILayout.BeginScrollView(scroll);
 		foreach( _InstrumentoEditor banda in musicaAtual.banda )
 		{
 			DrawInstrumentos( banda );
 		}
+		EditorGUILayout.EndScrollView();		
 		
 		EditorGUILayout.BeginHorizontal();
 		GUILayout.Label("Instrumento: ");
@@ -61,10 +66,31 @@ public class GravadorDeMusica : EditorWindow {
 		GUI.color = Color.white;
 		EditorGUILayout.EndHorizontal();
 		
+		DrawTema();
+		
 		DrawRodaPe();
 		
 	}
-	
+
+	void DrawTema ()
+	{		
+		GUILayout.Space( 20f );
+		
+		EditorGUILayout.BeginHorizontal();	
+		
+		if( musicaAtual.tema == null ) return;
+				
+		musicaAtual.tema.nome 			= EditorGUILayout.TextField( "Tema:", musicaAtual.tema.nome );
+							
+		musicaAtual.tema.corBackground 	= EditorGUILayout.ColorField( "Background:", musicaAtual.tema.corBackground );
+		musicaAtual.tema.corEscuro 		= EditorGUILayout.ColorField( "Tons escuros:", musicaAtual.tema.corEscuro );
+		musicaAtual.tema.corClaro 		= EditorGUILayout.ColorField( "Tons claros:", musicaAtual.tema.corClaro );
+		musicaAtual.tema.corTextos		= EditorGUILayout.ColorField( "Textos:", musicaAtual.tema.corTextos );
+		
+		EditorGUILayout.EndHorizontal();
+		
+		GUILayout.Space( 20f );
+	}	
 	
 	void DrawInstrumentos (_InstrumentoEditor banda)
 	{
@@ -73,6 +99,8 @@ public class GravadorDeMusica : EditorWindow {
 		
 		banda.nome = DrawNome ( banda.nome );
 		banda.audio = DrawAudioClip( banda.audio );
+		
+		banda.personagem = (QualPersonagem) EditorGUILayout.EnumPopup("Personagem:", banda.personagem );
 		
 		banda.scroll = EditorGUILayout.BeginScrollView( banda.scroll );
 			foreach( _TrechoEditor trecho in banda.trechos )
@@ -88,6 +116,13 @@ public class GravadorDeMusica : EditorWindow {
 		{
 			banda.AddTrecho();
 		}
+		
+		GUI.color = Color.cyan;
+		if( GUILayout.Button("||") )
+		{
+			banda.DuplicarTrecho();
+		}
+		
 		GUI.color = Color.red;
 		if( GUILayout.Button("-") )
 		{
@@ -111,18 +146,20 @@ public class GravadorDeMusica : EditorWindow {
 
 	void DrawRodaPe ()
 	{
+		EditorGUILayout.BeginHorizontal();
 		GUI.color = Color.cyan;
-		if( GUILayout.Button("SALVAR", GUILayout.Height(20) ))
+		if( GUILayout.Button("Salvar", GUILayout.Height(20) ))
 		{
 			SaveManager.Save( musicaAtual );
 		}
 		
 		GUI.color = Color.magenta;
-		if( GUILayout.Button("Load", GUILayout.Height(20)))
+		if( GUILayout.Button("Carregar XML", GUILayout.Height(20)))
 		{
 			musicaAtual = SaveManager.Load();
 		}
 		GUI.color = Color.white;
+		EditorGUILayout.EndHorizontal();
 	}
 	
 	AudioClip DrawAudioClip (AudioClip clip)
@@ -159,8 +196,6 @@ public static class SaveManager
 				
 		levelInfo.dadosDaMusica = data;
 		levelInfo.nome = musica.nome;
-		
-//		Debug.Log( data.instrumentos.Count );
 				
 		Debug.LogWarning ("Salvando");
 		

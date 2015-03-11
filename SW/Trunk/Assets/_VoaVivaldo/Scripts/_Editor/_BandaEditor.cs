@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class _InstrumentoEditor 
 {
 	public	string					nome 	= "Instrumento";
+	
+	public QualPersonagem			personagem = QualPersonagem.TRUMPET;
+	
 	public	bool					foldout = false;
 	public 	Vector2					scroll;
 
@@ -31,6 +34,24 @@ public class _InstrumentoEditor
 	{
 		if( trechos.Count > 1 )
 			trechos.RemoveAt( trechos.Count-1 );
+	}
+
+	_CompassoEditor[] c ;
+	public void DuplicarTrecho ()
+	{
+		if( trechos.Count == 0 ) return;
+		
+		_TrechoEditor t = NewTrecho();
+		_TrechoEditor aSerCopiado = trechos[trechos.Count-1];
+		
+		t.compassos = aSerCopiado.compassos;
+		c = new _CompassoEditor[aSerCopiado._compassos.Count];
+		aSerCopiado._compassos.CopyTo( c );
+		t._compassos.AddRange( c );
+		t.linhas = aSerCopiado.linhas;
+		
+		trechos.Add( t );
+		
 	}
 	
 	public List<NotaInfo> ConverterTrechosParaNotas()

@@ -11,6 +11,7 @@ public class MusicaData
 	public string 				audioBase;
 	public List<Instrumento> 	instrumentos;
 	public List<NotaInfo>		notasNormal;
+	public Tema					tema;
 
 	public MusicaData()
 	{
@@ -24,6 +25,7 @@ public class Instrumento
 	public string			audioInstrumentos;
 	public List<Trecho>		trechos;
 
+	public QualPersonagem personagem ;
 	public Instrumento()
 	{
 		trechos = new List<Trecho>();

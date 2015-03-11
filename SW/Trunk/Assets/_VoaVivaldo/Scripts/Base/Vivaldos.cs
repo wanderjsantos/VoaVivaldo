@@ -17,11 +17,13 @@ public static class Vivaldos
 		
 		ret.BPM 		= mus.BPM;
 		ret.audioBase	= mus.audioBase.name;
+		ret.tema		= mus.tema;
 		
 		foreach( _InstrumentoEditor eInstrumento in mus.banda )
 		{
 			Instrumento instrumento 		= new Instrumento();
 			instrumento.audioInstrumentos 	= eInstrumento.audio.name;
+			instrumento.personagem			= eInstrumento.personagem;
 			
 			List<Trecho> trechosDesseInstrumento = new List<Trecho>();
 			foreach( _TrechoEditor eTrecho in eInstrumento.trechos )
@@ -46,10 +48,13 @@ public static class Vivaldos
 		
 		ret.banda = new List<_InstrumentoEditor>();
 		
+		ret.tema		= data.tema;
+		
 		foreach( Instrumento instrumento in data.instrumentos )
 		{
 			_InstrumentoEditor eInstrumento = new _InstrumentoEditor();
 			eInstrumento.audio =(AudioClip) Resources.Load( instrumento.audioInstrumentos );
+			eInstrumento.personagem = instrumento.personagem;
 			
 			eInstrumento.trechos = new List<_TrechoEditor>();
 			foreach( Trecho t in instrumento.trechos )

@@ -50,8 +50,11 @@ public class Player : MonoBehaviour
 	}
 }
 
+public enum QualPersonagem{ TRUMPET, HORNET, SANFONA, FLAUTA }
+
 [System.Serializable]
 public class PlayerInfo
 {
-	public int pontuacao;
+	public int 				pontuacao;
+	public QualPersonagem 	meuPersonagem;
 }

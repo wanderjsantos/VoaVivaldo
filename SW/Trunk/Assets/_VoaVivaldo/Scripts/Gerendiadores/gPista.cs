@@ -297,7 +297,6 @@ public class gPista : MonoBehaviour {
 				
 			}
 		}
-		Debug.Break();
 
 	}
 }

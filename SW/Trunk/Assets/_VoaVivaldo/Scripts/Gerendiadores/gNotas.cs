@@ -6,10 +6,10 @@ public class gNotas : MonoBehaviour
 {
 	public static gNotas s;
 
-	public List<Nota> todasAsNotas;
+	public Nota			notaComum;
 	public Nota			notaLonga;
 	public Nota			notaPausa;
-	public List<Nota>notasNaPista;
+	public List<Nota>	notasNaPista;
 
 	public bool drawAreaDePontuacao = false;
 	public Rect areaDePontuacao;
@@ -178,7 +178,7 @@ public class gNotas : MonoBehaviour
 
 	Nota NovaNotaNormal (NotaInfo info)
 	{
-		Nota ret = Instantiate (todasAsNotas.Find (e => e.mInfo.timbre == info.timbre)) as Nota;
+		Nota ret = Instantiate (notaComum) as Nota;
 		ret.gameObject.transform.parent = gPista.s.rootPista.transform;
 		ret.mInfo = info;
 

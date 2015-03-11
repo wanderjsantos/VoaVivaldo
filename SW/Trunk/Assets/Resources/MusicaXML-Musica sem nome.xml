@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <MusicaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <BPM>90</BPM>
+  <BPM>110</BPM>
   <audioBase>Base1</audioBase>
   <instrumentos>
     <Instrumento>
@@ -44,30 +44,9 @@
             <Compasso>
               <notas>
                 <NotaInfo>
-                  <tipo>PAUSA</tipo>
-                  <timbre>SETE</timbre>
-                  <duracao>SEMINIMA</duracao>
-                  <compasso>1</compasso>
-                  <batida>-1</batida>
-                </NotaInfo>
-                <NotaInfo>
-                  <tipo>PAUSA</tipo>
-                  <timbre>SETE</timbre>
-                  <duracao>SEMINIMA</duracao>
-                  <compasso>1</compasso>
-                  <batida>-1</batida>
-                </NotaInfo>
-                <NotaInfo>
-                  <tipo>PAUSA</tipo>
-                  <timbre>SETE</timbre>
-                  <duracao>SEMINIMA</duracao>
-                  <compasso>1</compasso>
-                  <batida>-1</batida>
-                </NotaInfo>
-                <NotaInfo>
                   <tipo>NOTA_LONGA</tipo>
                   <timbre>SETE</timbre>
-                  <duracao>SEMINIMA</duracao>
+                  <duracao>SEMIBREVE</duracao>
                   <compasso>1</compasso>
                   <batida>-1</batida>
                 </NotaInfo>
@@ -76,9 +55,16 @@
             <Compasso>
               <notas>
                 <NotaInfo>
-                  <tipo>NOTA</tipo>
+                  <tipo>NOTA_LONGA</tipo>
                   <timbre>SETE</timbre>
-                  <duracao>SEMIBREVE</duracao>
+                  <duracao>MINIMA</duracao>
+                  <compasso>2</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA_LONGA</tipo>
+                  <timbre>SETE</timbre>
+                  <duracao>MINIMA</duracao>
                   <compasso>2</compasso>
                   <batida>-1</batida>
                 </NotaInfo>
@@ -88,30 +74,90 @@
               <notas>
                 <NotaInfo>
                   <tipo>NOTA</tipo>
-                  <timbre>SETE</timbre>
-                  <duracao>SEMINIMA</duracao>
-                  <compasso>3</compasso>
-                  <batida>-1</batida>
-                </NotaInfo>
-                <NotaInfo>
-                  <tipo>PAUSA</tipo>
-                  <timbre>SETE</timbre>
-                  <duracao>SEMINIMA</duracao>
+                  <timbre>UM</timbre>
+                  <duracao>COLCHEIA</duracao>
                   <compasso>3</compasso>
                   <batida>-1</batida>
                 </NotaInfo>
                 <NotaInfo>
                   <tipo>NOTA</tipo>
-                  <timbre>SETE</timbre>
-                  <duracao>SEMINIMA</duracao>
+                  <timbre>UM</timbre>
+                  <duracao>COLCHEIA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>UM</timbre>
+                  <duracao>COLCHEIA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>UM</timbre>
+                  <duracao>COLCHEIA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>PAUSA</tipo>
+                  <timbre>NOVE</timbre>
+                  <duracao>COLCHEIA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>PAUSA</tipo>
+                  <timbre>NOVE</timbre>
+                  <duracao>COLCHEIA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>DOIS</timbre>
+                  <duracao>SEMICOLCHEIA</duracao>
+                  <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>DOIS</timbre>
+                  <duracao>SEMICOLCHEIA</duracao>
                   <compasso>3</compasso>
                   <batida>-1</batida>
                 </NotaInfo>
                 <NotaInfo>
                   <tipo>NOTA_LONGA</tipo>
                   <timbre>SETE</timbre>
-                  <duracao>SEMINIMA</duracao>
+                  <duracao>COLCHEIA</duracao>
                   <compasso>3</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+              </notas>
+            </Compasso>
+            <Compasso>
+              <notas>
+                <NotaInfo>
+                  <tipo>PAUSA</tipo>
+                  <timbre>DOZE</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>4</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>ZERO</timbre>
+                  <duracao>SEMINIMA</duracao>
+                  <compasso>4</compasso>
+                  <batida>-1</batida>
+                </NotaInfo>
+                <NotaInfo>
+                  <tipo>NOTA</tipo>
+                  <timbre>SEIS</timbre>
+                  <duracao>MINIMA</duracao>
+                  <compasso>4</compasso>
                   <batida>-1</batida>
                 </NotaInfo>
               </notas>

@@ -12,11 +12,15 @@ public class _MusicaEditor
 
 	public 	List<_InstrumentoEditor>	banda;
 		
+	public Tema					tema;
+	
+		
 	public _MusicaEditor()
 	{
 		
 		banda = new List<_InstrumentoEditor>();
 		banda.Add(new _InstrumentoEditor());
+		tema = new Tema();
 	}
 	
 	

@@ -46,7 +46,7 @@ public class _TrechoEditor
 			
 			n1.notaInfo = ni;
 			ni.batida = n.notaInfo.batida;
-			ni.compasso = n.notaInfo.compasso;
+			ni.compasso = n.notaInfo.compasso +1;
 			ni.duracao = n.notaInfo.duracao;
 			ni.timbre = n.notaInfo.timbre;
 			
@@ -64,7 +64,6 @@ public class _TrechoEditor
 	
 	public void Draw()
 	{
-		
 		scroll = EditorGUILayout.BeginScrollView( scroll );
 		
 		for( int i =0 ; i < _compassos.Count; i++ )
@@ -78,10 +77,6 @@ public class _TrechoEditor
 		EditorGUILayout.EndScrollView();
 	}
 	
-	public void DrawNotas()
-	{
-	}
-
 	public void DrawComandos ()
 	{
 		EditorGUILayout.BeginHorizontal();

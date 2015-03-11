@@ -10,6 +10,10 @@ public class _CompassoEditor
 	public List<_NotaEditor> notas;
 	public NotaInfo notaDebug;
 	
+	public _CompassoEditor()
+	{
+		new _CompassoEditor( Vivaldos.LINHAS, Vivaldos.COLUNAS, null );
+	}
 	
 	public _CompassoEditor( int linhas, int colunas, _TrechoEditor _trecho)
 	{
@@ -74,10 +78,10 @@ public class _CompassoEditor
 	{
 		EditorGUILayout.BeginHorizontal();
 			GUILayout.Space( Vivaldos.WIDTH_COMPASSO - GetAllWidths());
-		    GUILayout.Label("Nova nota:");			
-			notaDebug.tipo = (TipoDeNota) EditorGUILayout.EnumPopup( "", notaDebug.tipo, GUILayout.Width(100f));
-			notaDebug.timbre = (Timbre) EditorGUILayout.EnumPopup( "", notaDebug.timbre, GUILayout.Width(100f));
-			notaDebug.duracao = (Duracao) EditorGUILayout.EnumPopup( "", notaDebug.duracao, GUILayout.Width(100f));
+		    GUILayout.Label("Nova:");			
+			notaDebug.tipo = (TipoDeNota)	EditorGUILayout.EnumPopup( "", notaDebug.tipo, GUILayout.Width(100f));
+			notaDebug.timbre = (Timbre) 	EditorGUILayout.EnumPopup( "", notaDebug.timbre, GUILayout.Width(100f));
+			notaDebug.duracao = (Duracao) 	EditorGUILayout.EnumPopup( "", notaDebug.duracao, GUILayout.Width(100f));
 			notaDebug.compasso = trecho._compassos.IndexOf(this) ;
 			GUILayout.Label("No compasso: " + notaDebug.compasso.ToString() );
 			
@@ -122,19 +126,15 @@ public class _CompassoEditor
 		
 			novaNota.notaInfo = novoInfo;
 			
-			novoInfo.tipo = qualDuplicar.notaInfo.tipo;
-			novoInfo.batida = qualDuplicar.notaInfo.batida;
-			novoInfo.compasso = qualDuplicar.notaInfo.compasso;
-			novoInfo.duracao = qualDuplicar.notaInfo.duracao;
-			novoInfo.timbre = qualDuplicar.notaInfo.timbre;
+			novoInfo.tipo 		= qualDuplicar.notaInfo.tipo;
+			novoInfo.batida 	= qualDuplicar.notaInfo.batida;
+			novoInfo.compasso 	= qualDuplicar.notaInfo.compasso;
+			novoInfo.duracao 	= qualDuplicar.notaInfo.duracao;
+			novoInfo.timbre 	= qualDuplicar.notaInfo.timbre;
 			
 			notas.Add( novaNota );
 	}
 
-	void DuplicarEsteCompasso ()
-	{
-		trecho.DuplicarCompasso( this );
-	}
 	
 	public void AdicionarNovaNota()
 	{

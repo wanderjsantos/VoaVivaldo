@@ -34,8 +34,8 @@ public class GravadorDeMusica : EditorWindow {
 //		isShift = Event.current.shift;
 //		isControl = Event.current.control;
 		
-		EditorGUILayout.Toggle( "isShift:", isShift );
-		EditorGUILayout.Toggle( "isControl:", isControl );
+//		EditorGUILayout.Toggle( "isShift:", isShift );
+//		EditorGUILayout.Toggle( "isControl:", isControl );
 		
 		musicaAtual.nome 		= DrawNome		( musicaAtual.nome );
 		musicaAtual.BPM			= DrawBPM		( musicaAtual.BPM );
@@ -104,14 +104,8 @@ public class GravadorDeMusica : EditorWindow {
 		if( trecho.foldout == false ) return;		
 		
 		trecho.nome = DrawNome( trecho.nome );
-		
-//		trecho.scroll = EditorGUILayout.BeginScrollView (trecho.scroll);
-				
-			trecho.Draw();		
-		
-//		EditorGUILayout.EndScrollView ();
-		
-			trecho.DrawComandos();
+		trecho.Draw();		
+		trecho.DrawComandos();
 		
 	}
 
@@ -123,10 +117,10 @@ public class GravadorDeMusica : EditorWindow {
 			SaveManager.Save( musicaAtual );
 		}
 		
-		GUI.color = Color.yellow;
-		if( GUILayout.Button("RESET", GUILayout.Height(20)))
+		GUI.color = Color.magenta;
+		if( GUILayout.Button("Load", GUILayout.Height(20)))
 		{
-		
+			SaveManager.Load();
 		}
 		GUI.color = Color.white;
 	}
@@ -146,11 +140,6 @@ public class GravadorDeMusica : EditorWindow {
 		return EditorGUILayout.IntField ("Batidas por minuto (BPM):", valor);
 	}
 	
-//	static void Press (int compasso, int batida, int timbre, _NotaEditor _nota)
-//	{
-//		int l = Vivaldos.LINHAS - timbre;
-//		_nota.Press ( compasso, batida, l);
-//	}
 	
 }
 
@@ -165,12 +154,14 @@ public static class SaveManager
 		level.mInfo = new LevelInfo ();
 		LevelInfo 	levelInfo = level.mInfo;
 		
+		
+		
 		MusicaData data = Vivaldos.TransformEditorToMusicaData( musica );
 				
 		levelInfo.dadosDaMusica = data;
 		levelInfo.nome = musica.nome;
 		
-		Debug.Log( data.instrumentos.Count );
+//		Debug.Log( data.instrumentos.Count );
 				
 		Debug.LogWarning ("Salvando");
 		
@@ -187,9 +178,31 @@ public static class SaveManager
 		serializer.Serialize (stream, levelInfo);
 		
 		
+		serializer = new XmlSerializer (typeof(_MusicaEditor));
+		stream = new FileStream ("Assets/GravadorDeLevels/Levels/"+GravadorDeMusica.musicaAtual.nome+".xml", FileMode.Create);
+		serializer.Serialize (stream, musica);
+		
 		UnityEngine.MonoBehaviour.DestroyImmediate(go);
 		
 		stream.Close ();
 	}
+
+	public static _MusicaEditor Load()
+	{
+		_MusicaEditor ret = new _MusicaEditor();
+		string path =	EditorUtility.OpenFilePanel( "Seleciona um xml de level", "Assets/GravadorDeLevels/Levels/", "xml");
+	   
+	   if( path == null ) return null;
+	   
+ 	
+		
+	 Debug.LogWarning("Carregando:" + ret.nome );
+	   
+	   return ret;
+	}
+	
+	
 }
+
+
 

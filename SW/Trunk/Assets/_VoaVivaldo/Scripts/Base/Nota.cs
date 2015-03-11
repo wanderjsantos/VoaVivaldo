@@ -29,7 +29,7 @@ public class NotaInfo
 	public Timbre			timbre = Timbre.SETE;
 	public Duracao  		duracao = Duracao.SEMINIMA;
 	public int				compasso;	
-	public int 				batida;
+	public float 				batida;
 	
 	public NotaInfo()
 	{

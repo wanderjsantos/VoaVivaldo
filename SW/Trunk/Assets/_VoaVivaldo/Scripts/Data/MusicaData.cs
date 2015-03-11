@@ -10,12 +10,11 @@ public class MusicaData
 	public int 					BPM;
 	public string 				audioBase;
 	public List<Instrumento> 	instrumentos;
-	public List<Trecho>			trechos;
+	public List<NotaInfo>		todasAsNotas;
 
 	public MusicaData()
 	{
 		instrumentos = new List<Instrumento> ();
-		trechos = new List<Trecho>();
 	}
 }
 
@@ -23,18 +22,25 @@ public class MusicaData
 public class Instrumento
 {
 	public string			audioInstrumentos;
-	public List<NotaInfo> 	notas;
+	public List<Trecho>		trechos;
 
 	public Instrumento()
 	{
-		notas = new List<NotaInfo> ();
+		trechos = new List<Trecho>();
+	}
+	
+	public List<NotaInfo> TodasAsNotas()
+	{
+		List<NotaInfo> ret = new List<NotaInfo>();
+		
+		foreach( Trecho trecho in trechos )
+		{
+			foreach( Compasso compasso in trecho.compassos )
+			{
+				ret.AddRange( compasso.notas );
+			}
+		}
+		
+		return ret;
 	}
 }
-
-//[System.Serializable]
-//public class Trecho
-//{
-//	
-//}
-
-

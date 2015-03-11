@@ -150,10 +150,10 @@ public class gMusica : MonoBehaviour
 ////		NovaMusica (m.audioBase, m.audioInstrumentos[instrumentoIndice], m.notas , m.BPM, false);
 //	}
 
-	public List<NotaInfo> TodasAsNotasNoCompasso( int compasso )
-	{
-		return musicaAtual.mInfo.mData.instrumentos[musicaAtual.mInfo.instrumentoAtual].notas.FindAll (e => e.compasso == compasso);
-	}
+//	public List<NotaInfo> TodasAsNotasNoCompasso( int compasso )
+//	{
+//		return musicaAtual.mInfo.mData.instrumentos[musicaAtual.mInfo.instrumentoAtual].notas.FindAll (e => e.compasso == compasso);
+//	}
 
 	void DestroyMusica (Musica m)
 	{

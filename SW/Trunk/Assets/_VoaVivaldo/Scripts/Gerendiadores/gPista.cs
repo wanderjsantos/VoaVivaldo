@@ -226,99 +226,110 @@ public class gPista : MonoBehaviour {
 
 	public void UpdatePista (int compassoAtual)
 	{
-		List<NotaInfo> notasAtuais = gMusica.s.TodasAsNotasNoCompasso (compassoAtual+1);
-
-		for( int i = 0; i < notasAtuais.Count; i++ )
-		{
-//			float tempoDentro = notasAtuais[i].noTempo - compassoAtual;
-//			float posicaoX = (tempoDentro * tamanhoDoCompasso) + (tamanhoDoCompasso * compassoAtual); 
-			float posicaoX = (tamanhoDoCompasso) + (tamanhoDoCompasso * compassoAtual); 
-			float posicaoY = gNotas.s.PosicionEmY( notasAtuais[i].timbre, tamanhoYPista );
-
-			Debug.Log("Nota: Posicao" + posicaoX + " - " + posicaoY );
-
-			Vector3 v = new Vector3( posicaoX,posicaoY,0);
-
-			Nota n = gNotas.s.NovaNota( notasAtuais[i] );
-			n.gameObject.transform.parent = rootPista.transform;
-			n.gameObject.transform.localScale = Vector3.one;
-
-			n.gameObject.transform.localPosition = v;
-		}
+//		List<NotaInfo> notasAtuais = gMusica.s.TodasAsNotasNoCompasso (compassoAtual+1);
+//
+//		for( int i = 0; i < notasAtuais.Count; i++ )
+//		{
+////			float tempoDentro = notasAtuais[i].noTempo - compassoAtual;
+////			float posicaoX = (tempoDentro * tamanhoDoCompasso) + (tamanhoDoCompasso * compassoAtual); 
+//			float posicaoX = (tamanhoDoCompasso) + (tamanhoDoCompasso * compassoAtual); 
+//			float posicaoY = gNotas.s.PosicionEmY( notasAtuais[i].timbre, tamanhoYPista );
+//
+//			Debug.Log("Nota: Posicao" + posicaoX + " - " + posicaoY );
+//
+//			Vector3 v = new Vector3( posicaoX,posicaoY,0);
+//
+//			Nota n = gNotas.s.NovaNota( notasAtuais[i] );
+//			n.gameObject.transform.parent = rootPista.transform;
+//			n.gameObject.transform.localScale = Vector3.one;
+//
+//			n.gameObject.transform.localPosition = v;
+//		}
 	}
 
 	public float tamanhoDoCompasso = 500f;
 	public void PosicionarTodasAsNotas()
 	{
 		posInicialPista = rootPista.transform.localPosition;
-		
-		List<NotaInfo> notasAtuais = new List<NotaInfo> ();
-		notasAtuais.AddRange( gMusica.s.musicaAtual.mInfo.mData.instrumentos[gMusica.s.instrumentoIndice].notas );
 
-		for (int i = 0; i < notasAtuais.Count; i++)
+		List<Trecho> currentTrecho = gMusica.s.musicaAtual.mInfo.mData.instrumentos[gMusica.s.instrumentoIndice].trechos;
+							
+		foreach( Trecho trecho in currentTrecho )
 		{
-			float extraX = ((float)( (notasAtuais[i].batida - 1f) /gRitmo.s.batidasPorCompasso) * tamanhoDoCompasso );
-			float posicaoX = ((tamanhoDoCompasso * (notasAtuais[i].compasso)) + extraX) ;
-//			float posicaoY = gNotas.s.PosicionEmY (notasAtuais [i].timbre, tamanhoYPista);
-//			Debug.Log ("Nota: Posicao" + posicaoX + "Extra x : " + extraX + " - " + posicaoY);
-	
-			Vector3 v = new Vector3 (posicaoX,0,0);//, posicaoY-(tamanhoYPista/2) + pistaBase.transform.localPosition.y, 0);
-			switch (notasAtuais[i].timbre)
+			foreach( Compasso compasso in trecho.compassos )
 			{
-			case Timbre.UM:
-				v.y = pista1.transform.localPosition.y;
-				break;
-			case Timbre.DOIS:
-				v.y = pista2.transform.localPosition.y;
-				break;
-			case Timbre.TRES:
-				v.y = pista3.transform.localPosition.y;
-				break;
-			case Timbre.QUATRO:
-				v.y = pista4.transform.localPosition.y;
-				break;
-			case Timbre.CINCO:
-				v.y = pista5.transform.localPosition.y;
-				break;	
-			case Timbre.SEIS:
-				v.y = pista6.transform.localPosition.y;
-				break;
-			case Timbre.SETE:
-				v.y = pista7.transform.localPosition.y;
-				break;
-			case Timbre.OITO:
-				v.y = pista8.transform.localPosition.y;
-				break;
-			case Timbre.NOVE:
-				v.y = pista9.transform.localPosition.y;
-				break;
-			case Timbre.DEZ:
-				v.y = pista10.transform.localPosition.y;
-				break;
-			case Timbre.ONZE:
-				v.y = pista11.transform.localPosition.y;
-				break;
-			case Timbre.DOZE:
-				v.y = pista12.transform.localPosition.y;
-				break;
-			case Timbre.TREZE:
-				v.y = pista13.transform.localPosition.y;
-				break;
-			case Timbre.QUATORZE:
-				v.y = pista14.transform.localPosition.y;
-				break;
-			default:
-				v.y = pista1.transform.localPosition.y;
-				break;
+				float tamanhoTotal = 0f;					
+				for( int i = 0; i < compasso.notas.Count; i ++  )
+				{	
+									
+					float posXCompasso 	= tamanhoDoCompasso * compasso.notas[i].compasso;
+					float posicaoX 		= posXCompasso + tamanhoTotal;
+					
+					float tamanhoX 		= tamanhoDoCompasso / (float)compasso.notas[i].duracao;
+					tamanhoTotal 		+= tamanhoX;
+					
+					Vector3 v = new Vector3 (posicaoX,0,0);//, posicaoY-(tamanhoYPista/2) + pistaBase.transform.localPosition.y, 0);
+					switch (compasso.notas[i].timbre )
+					{
+					case Timbre.UM:
+						v.y = pista1.transform.localPosition.y;
+						break;
+					case Timbre.DOIS:
+						v.y = pista2.transform.localPosition.y;
+						break;
+					case Timbre.TRES:
+						v.y = pista3.transform.localPosition.y;
+						break;
+					case Timbre.QUATRO:
+						v.y = pista4.transform.localPosition.y;
+						break;
+					case Timbre.CINCO:
+						v.y = pista5.transform.localPosition.y;
+						break;	
+					case Timbre.SEIS:
+						v.y = pista6.transform.localPosition.y;
+						break;
+					case Timbre.SETE:
+						v.y = pista7.transform.localPosition.y;
+						break;
+					case Timbre.OITO:
+						v.y = pista8.transform.localPosition.y;
+						break;
+					case Timbre.NOVE:
+						v.y = pista9.transform.localPosition.y;
+						break;
+					case Timbre.DEZ:
+						v.y = pista10.transform.localPosition.y;
+						break;
+					case Timbre.ONZE:
+						v.y = pista11.transform.localPosition.y;
+						break;
+					case Timbre.DOZE:
+						v.y = pista12.transform.localPosition.y;
+						break;
+					case Timbre.TREZE:
+						v.y = pista13.transform.localPosition.y;
+						break;
+					case Timbre.QUATORZE:
+						v.y = pista14.transform.localPosition.y;
+						break;
+					default:
+						v.y = pista1.transform.localPosition.y;
+						break;
+					}
+					
+					Nota n = gNotas.s.NovaNota (compasso.notas[i]);
+					n.gameObject.transform.localScale = Vector3.one;
+					n.gameObject.transform.localPosition = v;
+					n.gameObject.transform.parent = rootPista.transform;
+				
+				}
+				
+						
+				
 			}
-
-			Nota n = gNotas.s.NovaNota (notasAtuais [i]);
-			n.gameObject.transform.localScale = Vector3.one;
-			n.gameObject.transform.localPosition = v;
-			n.gameObject.transform.parent = rootPista.transform;
-			
-//			Debug.Break();
 		}
+		Debug.Break();
 
 	}
 }

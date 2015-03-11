@@ -13,22 +13,22 @@ public class MenuFesta : Menu
 	public bool ativo = true;
 	
 	public GameObject btnPlay;
-	public GameObject goPartituras;
+	public GameObject goTrechos;
 	
 	public override void Show ()
 	{
 		base.Show ();
-		goPartituras.SetActive(false);
+		goTrechos.SetActive(false);
 	}
 	
-	public void OnClickMostrarPartitura()
+	public void OnClickMostrarTrecho()
 	{
-		goPartituras.SetActive(true);
+		goTrechos.SetActive(true);
 	}
 	
-	public void OnClickFecharPartituras()
+	public void OnClickFecharTrechos()
 	{
-		goPartituras.SetActive(false);
+		goTrechos.SetActive(false);
 	}
 	
 	public void OnClickPlay()
@@ -71,7 +71,7 @@ public class MenuFesta : Menu
 		
 		btnPlay.SetActive(true);
 		
-		OnClickFecharPartituras();
+		OnClickFecharTrechos();
 		
 	}
 

@@ -2,14 +2,26 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class Trecho
 {
 	public int				compassoInicial;
-	public List<NotaInfo> 	notasDoTrecho;
+	public List<Compasso>	compassos;
 	
 	public Trecho()
 	{
-		notasDoTrecho =new List<NotaInfo>();
+		compassos = new List<Compasso>();
+	}
+}
+
+[System.Serializable]
+public class Compasso
+{
+	public List<NotaInfo> 	notas;
+	
+	public Compasso()
+	{
+		notas = new List<NotaInfo>();
 	}
 }
 

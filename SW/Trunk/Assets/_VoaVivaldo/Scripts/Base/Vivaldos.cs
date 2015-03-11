@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public static class Vivaldos  
 {
 	public static int LINHAS = 14;
 	public static int COLUNAS = 4;
-	public static int COMPASSOS_DEFAULT = 3;
+	public static int COMPASSOS_DEFAULT = 1;
 	public static float WIDTH_COMPASSO = 600f;
 	
 	public static bool VIBRAR = true;
@@ -17,38 +18,58 @@ public static class Vivaldos
 		ret.BPM 		= mus.BPM;
 		ret.audioBase	= mus.audioBase.name;
 		
-		foreach( _InstrumentoEditor instrumento in mus.banda )
+		foreach( _InstrumentoEditor eInstrumento in mus.banda )
 		{
-			Instrumento i = new Instrumento();
-			i.audioInstrumentos = instrumento.audio.name;
+			Instrumento instrumento 		= new Instrumento();
+			instrumento.audioInstrumentos 	= eInstrumento.audio.name;
 			
-			i.notas = instrumento.ConverterTrechosParaNotas();
-			
-			foreach( _TrechoEditor t in instrumento.trechos )
+			List<Trecho> trechosDesseInstrumento = new List<Trecho>();
+			foreach( _TrechoEditor eTrecho in eInstrumento.trechos )
 			{
-				Trecho trecho = new Trecho();
-				
-				foreach( _CompassoEditor compasso in t._compassos )
-				{
-					foreach( _NotaEditor nota in compasso.notas )
-					{
-						if( (int) nota.notaInfo.timbre <= 0 ) continue;	
-						
-						NotaInfo info = new NotaInfo() ;
-						info = nota.notaInfo;
-						
-						trecho.notasDoTrecho.Add( info );
-					}
-				
-				}
-				
-				ret.trechos.Add( trecho );
-				
+				trechosDesseInstrumento.Add( TransformTrechoEditorToTrecho( eTrecho ) );
 			}
+			instrumento.trechos.AddRange( trechosDesseInstrumento );
+												
+			ret.instrumentos.Add( instrumento );
 			
-			ret.instrumentos.Add(i);
+		}
+				
+		return ret;
+	}
+	
+	public static Trecho TransformTrechoEditorToTrecho( _TrechoEditor trecho )
+	{
+		Trecho ret =  new Trecho();
+		
+		foreach( _CompassoEditor eCompasso in trecho._compassos )
+		{
+			ret.compassos.Add( TransformCompassoEditorToCompasso( eCompasso ) );
 		}
 		
 		return ret;
 	}
+	
+	public static Compasso TransformCompassoEditorToCompasso( _CompassoEditor compasso )
+	{
+		Compasso ret = new Compasso();
+		ret.notas = GetAllNotasFromCompasso( compasso );
+		
+		return ret;
+	}
+	
+	public static List<NotaInfo> GetAllNotasFromCompasso (_CompassoEditor compasso )
+	{
+		List<NotaInfo> ret = new List<NotaInfo>();
+		foreach( _NotaEditor eNota in compasso.notas )
+		{
+			ret.Add( eNota.notaInfo );
+		}
+		
+		return ret;
+	}
+	
+//	public static _MusicaEditor TransformDataToEditor( MusicaData musicaData )
+//	{
+//		
+//	}
 }

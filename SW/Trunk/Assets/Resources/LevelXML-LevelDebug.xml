@@ -2,191 +2,151 @@
 <LevelInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <nome>LevelDebug</nome>
   <dadosDaMusica>
-    <BPM>60</BPM>
+    <BPM>90</BPM>
     <audioBase>Base1</audioBase>
     <instrumentos>
       <Instrumento>
         <audioInstrumentos>Instrumento1</audioInstrumentos>
         <notas>
           <NotaInfo>
-            <timbre>NOVE</timbre>
+            <tipo>NOTA</tipo>
+            <timbre>SETE</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>0</compasso>
+            <batida>-1</batida>
+          </NotaInfo>
+          <NotaInfo>
+            <tipo>NOTA</tipo>
+            <timbre>SETE</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>0</compasso>
+            <batida>-1</batida>
+          </NotaInfo>
+          <NotaInfo>
+            <tipo>NOTA</tipo>
+            <timbre>SETE</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>0</compasso>
+            <batida>-1</batida>
+          </NotaInfo>
+          <NotaInfo>
+            <tipo>NOTA</tipo>
+            <timbre>SETE</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>0</compasso>
+            <batida>-1</batida>
+          </NotaInfo>
+          <NotaInfo>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
             <compasso>1</compasso>
-            <batida>0</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
             <compasso>1</compasso>
-            <batida>1</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
             <compasso>1</compasso>
-            <batida>2</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
             <compasso>1</compasso>
-            <batida>3</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>2</compasso>
-            <batida>0</batida>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>1</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>2</compasso>
-            <batida>1</batida>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>1</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>2</compasso>
-            <batida>2</batida>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>1</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>2</compasso>
-            <batida>3</batida>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>1</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
+            <duracao>COLCHEIA</duracao>
             <compasso>3</compasso>
-            <batida>0</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
+            <duracao>COLCHEIA</duracao>
             <compasso>3</compasso>
-            <batida>1</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
+            <duracao>COLCHEIA</duracao>
             <compasso>3</compasso>
-            <batida>2</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
+            <duracao>COLCHEIA</duracao>
             <compasso>3</compasso>
-            <batida>3</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
-            <compasso>4</compasso>
-            <batida>0</batida>
+            <duracao>COLCHEIA</duracao>
+            <compasso>3</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
-            <compasso>4</compasso>
-            <batida>1</batida>
+            <duracao>COLCHEIA</duracao>
+            <compasso>3</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
-            <compasso>4</compasso>
-            <batida>2</batida>
+            <duracao>COLCHEIA</duracao>
+            <compasso>3</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
-            <compasso>4</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>5</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>5</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>5</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>5</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>6</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>6</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>6</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>6</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>7</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>7</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>7</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>7</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>8</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>8</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>8</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>8</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>9</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>9</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>9</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>9</compasso>
-            <batida>3</batida>
+            <duracao>COLCHEIA</duracao>
+            <compasso>3</compasso>
+            <batida>-1</batida>
           </NotaInfo>
         </notas>
       </Instrumento>
@@ -196,184 +156,144 @@
         <compassoInicial>0</compassoInicial>
         <notasDoTrecho>
           <NotaInfo>
-            <timbre>NOVE</timbre>
+            <tipo>NOTA</tipo>
+            <timbre>SETE</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>0</compasso>
+            <batida>-1</batida>
+          </NotaInfo>
+          <NotaInfo>
+            <tipo>NOTA</tipo>
+            <timbre>SETE</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>0</compasso>
+            <batida>-1</batida>
+          </NotaInfo>
+          <NotaInfo>
+            <tipo>NOTA</tipo>
+            <timbre>SETE</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>0</compasso>
+            <batida>-1</batida>
+          </NotaInfo>
+          <NotaInfo>
+            <tipo>NOTA</tipo>
+            <timbre>SETE</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>0</compasso>
+            <batida>-1</batida>
+          </NotaInfo>
+          <NotaInfo>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
             <compasso>1</compasso>
-            <batida>0</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
             <compasso>1</compasso>
-            <batida>1</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
             <compasso>1</compasso>
-            <batida>2</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
             <compasso>1</compasso>
-            <batida>3</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>2</compasso>
-            <batida>0</batida>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>1</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>2</compasso>
-            <batida>1</batida>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>1</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>2</compasso>
-            <batida>2</batida>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>1</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>2</compasso>
-            <batida>3</batida>
+            <tipo>NOTA</tipo>
+            <timbre>OITO</timbre>
+            <duracao>SEMINIMA</duracao>
+            <compasso>1</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
+            <duracao>COLCHEIA</duracao>
             <compasso>3</compasso>
-            <batida>0</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
+            <duracao>COLCHEIA</duracao>
             <compasso>3</compasso>
-            <batida>1</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
+            <duracao>COLCHEIA</duracao>
             <compasso>3</compasso>
-            <batida>2</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
+            <duracao>COLCHEIA</duracao>
             <compasso>3</compasso>
-            <batida>3</batida>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
-            <compasso>4</compasso>
-            <batida>0</batida>
+            <duracao>COLCHEIA</duracao>
+            <compasso>3</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
-            <compasso>4</compasso>
-            <batida>1</batida>
+            <duracao>COLCHEIA</duracao>
+            <compasso>3</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
-            <compasso>4</compasso>
-            <batida>2</batida>
+            <duracao>COLCHEIA</duracao>
+            <compasso>3</compasso>
+            <batida>-1</batida>
           </NotaInfo>
           <NotaInfo>
+            <tipo>NOTA</tipo>
             <timbre>NOVE</timbre>
-            <compasso>4</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>5</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>5</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>5</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>5</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>6</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>6</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>6</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>6</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>7</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>7</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>7</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>7</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>8</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>8</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>8</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>8</compasso>
-            <batida>3</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>9</compasso>
-            <batida>0</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>9</compasso>
-            <batida>1</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>9</compasso>
-            <batida>2</batida>
-          </NotaInfo>
-          <NotaInfo>
-            <timbre>NOVE</timbre>
-            <compasso>9</compasso>
-            <batida>3</batida>
+            <duracao>COLCHEIA</duracao>
+            <compasso>3</compasso>
+            <batida>-1</batida>
           </NotaInfo>
         </notasDoTrecho>
       </Trecho>

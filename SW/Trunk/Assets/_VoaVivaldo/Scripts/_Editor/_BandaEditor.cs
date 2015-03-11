@@ -13,7 +13,6 @@ public class _InstrumentoEditor
 	
 	public _InstrumentoEditor()
 	{
-		
 		trechos = new List<_TrechoEditor>();
 		trechos.Add( NewTrecho() );
 	}

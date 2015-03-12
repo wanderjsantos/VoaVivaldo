@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Level : MonoBehaviour 
 {
@@ -9,10 +10,12 @@ public class Level : MonoBehaviour
 [System.Serializable]
 public class LevelInfo
 {
-	public string 		nome;
-	public MusicaData 	dadosDaMusica;
-	public Color		corBackground;
-	public Color		corElementosClaros;
-	public Color		corElementosEscuros;
-	public Color		corTextos;
+	public string 				nome = "Level";
+	public List<MusicaData> 	dadosDaMusica;
+	public Tema					tema;
+	
+	public LevelInfo()
+	{
+		tema = new Tema();
+	}
 }

@@ -3,25 +3,21 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
-public class _TrechoEditor 
+public class _TrechoEditor : VivaldoEditor
 {
-	public 	string				nome		= "Trecho";
+	public TrechoInfo				info;
+	public List<_CompassoEditor> 	_compassos;	
+	public NotaInfo 				adicionarNota;
 	
-	public 	bool				foldout 	= false;
-	public	Vector2				scroll		= Vector2.zero;
-	
-	public List<_CompassoEditor> _compassos;	
-	
-	public NotaInfo 			adicionarNota;
-	
-	public int					compassos 	= Vivaldos.COMPASSOS_DEFAULT;
-	public int					linhas		= Vivaldos.LINHAS;
-	public int					colunas		= Vivaldos.COLUNAS;
-	
-	
+	public _TrechoEditor()
+	{
+		info = new TrechoInfo();
+		Init();
+	}
+			
 	public void AddCompasso()
 	{
-		_CompassoEditor c = new _CompassoEditor( linhas, colunas, this );
+		_CompassoEditor c = new _CompassoEditor( info.linhas, info.colunas, this );
 		_compassos.Add( c );
 		
 	}
@@ -45,7 +41,7 @@ public class _TrechoEditor
 	public void DuplicarCompasso (_CompassoEditor aSerDuplicado)
 	{
 		if( _compassos.Count == 0 )return;
-		_CompassoEditor c = new _CompassoEditor(linhas, colunas, this);
+		_CompassoEditor c = new _CompassoEditor(info.linhas, info.colunas, this);
 		
 		foreach( _NotaEditor n in aSerDuplicado.notas )
 		{
@@ -65,13 +61,14 @@ public class _TrechoEditor
 		
 	}
 	
-	public _TrechoEditor()
-	{
-		Init();
-	}
 	
 	public void Draw()
 	{
+		foldout = EditorGUILayout.Foldout( foldout, info.nome );
+		if( foldout == false ) return;		
+		
+		info.nome = DrawNome( info.nome );
+	
 		scroll = EditorGUILayout.BeginScrollView( scroll );
 		
 		EditorGUILayout.BeginHorizontal();
@@ -84,12 +81,14 @@ public class _TrechoEditor
 		{		
 			EditorGUILayout.BeginHorizontal();
 			if( _compassos[i].trecho == null ) _compassos[i].trecho = this;					
-			_compassos[i].DrawCompasso();
+			_compassos[i].Draw();
 			_compassos[i].DrawComandos();
 			EditorGUILayout.EndHorizontal();
 		}
 		
 		EditorGUILayout.EndScrollView();
+		
+		DrawComandos();
 	}
 	
 	public void DrawComandos ()
@@ -115,6 +114,10 @@ public class _TrechoEditor
 		EditorGUILayout.EndHorizontal();
 	}	
 	
+	string DrawNome (string nome)
+	{
+		return EditorGUILayout.TextField ("Nome da Musica:",nome);
+	}
 	
 	public void Init()
 	{
@@ -122,9 +125,9 @@ public class _TrechoEditor
 	
 		_compassos = new List<_CompassoEditor>( );
 		
-		for( int i =0; i < compassos; i++) 
+		for( int i =0; i < info.compassos; i++) 
 		{
-			_CompassoEditor c = new _CompassoEditor(linhas, colunas, this);
+			_CompassoEditor c = new _CompassoEditor(info.linhas, info.colunas, this);
 			_compassos.Add(c);
 		}
 	}

@@ -220,24 +220,24 @@ public class gPista : MonoBehaviour {
 	{
 		posInicialPista = rootPista.transform.localPosition;
 
-		List<Trecho> currentTrecho = gMusica.s.musicaAtual.mInfo.mData.instrumentos[gMusica.s.instrumentoIndice].trechos;
+		List<Trecho> currentTrecho = gMusica.s.musicaAtual.mInfo.mData.info.instrumentos[gMusica.s.instrumentoIndice].trechos;
 							
 		foreach( Trecho trecho in currentTrecho )
 		{
-			foreach( Compasso compasso in trecho.compassos )
+			foreach( Compasso compasso in trecho.info.lCompassos )
 			{
 				float tamanhoTotal = 0f;					
-				for( int i = 0; i < compasso.notas.Count; i ++  )
+				for( int i = 0; i < compasso.info.notas.Count; i ++  )
 				{	
 									
-					float posXCompasso 	= tamanhoDoCompasso * compasso.notas[i].compasso;
+					float posXCompasso 	= tamanhoDoCompasso * compasso.info.notas[i].compasso;
 					float posicaoX 		= posXCompasso + tamanhoTotal;
 					
-					float tamanhoX 		= tamanhoDoCompasso / (float)compasso.notas[i].duracao;
+					float tamanhoX 		= tamanhoDoCompasso / (float)compasso.info.notas[i].duracao;
 					tamanhoTotal 		+= tamanhoX;
 					
 					Vector3 v = new Vector3 (posicaoX,0,0);//, posicaoY-(tamanhoYPista/2) + pistaBase.transform.localPosition.y, 0);
-					switch (compasso.notas[i].timbre )
+					switch (compasso.info.notas[i].timbre )
 					{
 					case Timbre.UM:
 						v.y = pista1.transform.localPosition.y;
@@ -286,14 +286,14 @@ public class gPista : MonoBehaviour {
 						break;
 					}
 					
-					Nota n = gNotas.s.NovaNota (compasso.notas[i]);
+					Nota n = gNotas.s.NovaNota (compasso.info.notas[i]);
 					n.gameObject.transform.localScale = Vector3.one;
 					n.gameObject.transform.localPosition = v;
 					n.gameObject.transform.parent = rootPista.transform;
 				
 				}
 				
-						
+				Debug.Break();
 				
 			}
 		}

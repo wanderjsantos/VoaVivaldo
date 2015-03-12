@@ -120,15 +120,15 @@ public class gMusica : MonoBehaviour
 		MusicaInfo info 				= new MusicaInfo ();
 		info.mData = dados;
 		
-		Instrumento  partituraEmUso		= info.mData.instrumentos[instrumentoIndice] ;
+		Instrumento  partituraEmUso		= info.mData.info.instrumentos[instrumentoIndice] ;
 		info.instrumentoAtual = instrumentoIndice;
-		info.mBanda.musicaBase		 	= Resources.Load (info.mData.audioBase) 		as AudioClip;
-		info.mBanda.instrumentoAtual	= Resources.Load (partituraEmUso.audioInstrumentos) as AudioClip;
+		info.mBanda.musicaBase		 	= Vivaldos.NameToAudioClip (partituraEmUso.info.audioBase);
+		info.mBanda.instrumentoAtual	= Vivaldos.NameToAudioClip (partituraEmUso.info.audioInstrumento);
 
 		Musica m = Instantiate (_prefabMusica) as Musica;
 		m.mInfo = info;
 
-		gRitmo.s.SetBPM (info.mData.BPM);
+		gRitmo.s.SetBPM (info.mData.info.BPM);
 		
 		musicaAtual = m;
 		if (autoPlay)	PlayMusica ();
@@ -137,8 +137,9 @@ public class gMusica : MonoBehaviour
 
 	public MusicaData GetMusica( int indice = 0 )
 	{
-		MusicaData ret = gLevels.s.GetLevel (indice, false).mInfo.dadosDaMusica;
-		return ret;
+//		MusicaData ret = gLevels.s.GetLevel (indice, false).mInfo.dadosDaMusica;
+//		return ret;
+		return null;
 	}
 
 //	public void CarregarMusica (int indice = 0)

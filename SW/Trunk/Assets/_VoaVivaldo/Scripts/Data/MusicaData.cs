@@ -6,14 +6,22 @@ using System.Collections.Generic;
 [System.Serializable]
 public class MusicaData 
 {
-	public string				nome;
-	public int 					BPM;
-	public string 				audioBase;
-	public List<Instrumento> 	instrumentos;
-	public List<NotaInfo>		notasNormal;
-	public Tema					tema;
-
+	public MusicaDataInfo info;
 	public MusicaData()
+	{
+		info = new MusicaDataInfo();
+	}
+}
+
+[System.Serializable]
+public class MusicaDataInfo
+{
+	public string				nome = "Musica sem nome";
+	public int 					BPM = 120;
+	public List<Instrumento> 	instrumentos;
+	public Tema					tema;
+	
+	public MusicaDataInfo()
 	{
 		instrumentos = new List<Instrumento> ();
 	}
@@ -22,12 +30,13 @@ public class MusicaData
 [System.Serializable]
 public class Instrumento
 {
-	public string			audioInstrumentos;
-	public List<Trecho>		trechos;
+	public InstrumentoInfo 		info;
+	public List<Trecho>			trechos;
 
 	public QualPersonagem personagem ;
 	public Instrumento()
 	{
+		
 		trechos = new List<Trecho>();
 	}
 	
@@ -37,9 +46,9 @@ public class Instrumento
 		
 		foreach( Trecho trecho in trechos )
 		{
-			foreach( Compasso compasso in trecho.compassos )
+			foreach( Compasso compasso in trecho.info.lCompassos )
 			{
-				ret.AddRange( compasso.notas );
+				ret.AddRange( compasso.info.notas );
 			}
 		}
 		

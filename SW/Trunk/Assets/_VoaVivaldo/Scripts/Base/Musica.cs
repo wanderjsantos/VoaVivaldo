@@ -67,36 +67,20 @@ public class Musica : MonoBehaviour
 		}
 	}
 
-	bool UpdateNotas (float tempoDaMusica)
-	{
-//		if (posicaoNotaAtual >= mInfo.mData.instrumentos[mInfo.instrumentoAtual].notas.Count) 
-//		{
-//			Debug.Log("FIM DAS NOTAS");
-//			return false;
-//		}
-
-//		if (mInfo.notas [posicaoNotaAtual].noTempo <= tempoDaMusica)
-//		{
-//			Debug.Log("Criar nota: " + mInfo.notas[ posicaoNotaAtual ] .timbre );
-//			posicaoNotaAtual++;
-//		}
-
-		return true;
-	}
 }
 
 [System.Serializable]
 public class MusicaInfo
 {
 	public MusicaData mData;
-	public int instrumentoAtual = -1;
-	
+	public int instrumentoAtual = -1;	
 	public Banda	mBanda;
+	public float tempoDaMusica;
 	
 	public MusicaInfo()
 	{
 		tempoDaMusica = 0f;
 		mBanda = new Banda();
 	}
-	public float tempoDaMusica;
+	
 }

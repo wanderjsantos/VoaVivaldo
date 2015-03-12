@@ -5,23 +5,23 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Trecho
 {
-	public int				compassoInicial;
-	public List<Compasso>	compassos;
+	public TrechoInfo		info;
 	
 	public Trecho()
 	{
-		compassos = new List<Compasso>();
+		info = new TrechoInfo();
 	}
 }
+
 
 [System.Serializable]
 public class Compasso
 {
-	public List<NotaInfo> 	notas;
+	public CompassoInfo info;
 	
 	public Compasso()
 	{
-		notas = new List<NotaInfo>();
+		info = new CompassoInfo();
 	}
 }
 

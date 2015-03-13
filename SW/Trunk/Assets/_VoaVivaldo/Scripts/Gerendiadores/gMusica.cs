@@ -61,7 +61,7 @@ public class gMusica : MonoBehaviour
 
 	void Resetar ()
 	{
-		Set();
+//		Set();
 		if( musicaAtual != null ) 
 			Destroy(musicaAtual.gameObject);
 		partituraAtual = null;

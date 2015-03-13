@@ -4,6 +4,9 @@ using System.Collections;
 public class Player : MonoBehaviour 
 {
 	public PlayerInfo 	mInfo;
+	
+	public vPersonagem 	vPlayer;
+	
 	public Controller 	mController;
 	public bool			anim = false;
 	

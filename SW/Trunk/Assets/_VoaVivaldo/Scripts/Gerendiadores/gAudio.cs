@@ -15,10 +15,26 @@ public class gAudio : MonoBehaviour
 	
 	float iTime;
 	
+	public AudioClip error;
+	public AudioClip novaEstrela;
+	
 	public static gAudio s;
 	void Awake()
 	{
 		s = this;
+	}
+	
+	public void PlayErrorClip()
+	{
+		audio.clip = error;
+		audio.PlayOneShot( audio.clip );
+		
+	}
+	
+	public void PlayNovaEstrelaClip()
+	{
+		audio.clip = novaEstrela;
+		audio.PlayOneShot( audio.clip );
 	}
 	
 	public void PararAudio()
@@ -32,7 +48,7 @@ public class gAudio : MonoBehaviour
 		iTime = Time.realtimeSinceStartup;
 		esperandoParaTocar = true;
 		
-		audio.PlayOneShot( audio.clip );
+		PlayErrorClip();
 	}
 	
 	public void RecuperarAudio()

@@ -35,7 +35,7 @@ public class GravadorDeFase : EditorWindow
 		GUI.color = Color.yellow;
 		if( GUILayout.Button("Selecionar", GUILayout.Height(20)))
 		{
-			
+			partituraEditor = SaveManager.LoadFase();
 		}
 		GUI.color = Color.white;
 		EditorGUILayout.EndHorizontal();

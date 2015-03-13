@@ -1,0 +1,357 @@
+fileFormatVersion: 2
+guid: 4bcc64fe10db9b6428207b10c89dafca
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FESTA_FLAUTA_DANCANDO
+    21300002: FESTA_FLAUTA_COMEMORANDO
+    21300004: FESTA_FLAUTA_COMEMORANDO_0
+    21300006: FESTA_FLAUTA_COMEMORANDO_1
+    21300008: FESTA_FLAUTA_COMEMORANDO_2
+    21300010: FESTA_FLAUTA_COMEMORANDO_3
+    21300012: FESTA_FLAUTA_COMEMORANDO_4
+    21300014: FESTA_FLAUTA_COMEMORANDO_5
+    21300016: FESTA_FLAUTA_COMEMORANDO_6
+    21300018: FESTA_FLAUTA_COMEMORANDO_7
+    21300020: FESTA_FLAUTA_COMEMORANDO_8
+    21300022: FESTA_FLAUTA_COMEMORANDO_9
+    21300024: FESTA_FLAUTA_COMEMORANDO_10
+    21300026: FESTA_FLAUTA_COMEMORANDO_11
+    21300028: FESTA_FLAUTA_COMEMORANDO_12
+    21300030: FESTA_FLAUTA_COMEMORANDO_13
+    21300032: FESTA_FLAUTA_COMEMORANDO_14
+    21300034: FESTA_FLAUTA_COMEMORANDO_15
+    21300036: FESTA_FLAUTA_COMEMORANDO_16
+    21300038: FESTA_FLAUTA_COMEMORANDO_17
+    21300040: FESTA_FLAUTA_COMEMORANDO_18
+    21300042: FESTA_FLAUTA_COMEMORANDO_19
+    21300044: FESTA_FLAUTA_COMEMORANDO_20
+    21300046: FESTA_FLAUTA_COMEMORANDO_21
+    21300048: FESTA_FLAUTA_COMEMORANDO_22
+    21300050: FESTA_FLAUTA_COMEMORANDO_23
+    21300052: FESTA_FLAUTA_COMEMORANDO_24
+    21300054: FESTA_FLAUTA_COMEMORANDO_25
+    21300056: FESTA_FLAUTA_COMEMORANDO_26
+    21300058: FESTA_FLAUTA_COMEMORANDO_27
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: FESTA_FLAUTA_COMEMORANDO_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1827
+        width: 116
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1827
+        width: 118
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1855
+        width: 122
+        height: 192
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_3
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1674
+        width: 86
+        height: 374
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_4
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1697
+        width: 98
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_5
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1697
+        width: 98
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_6
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1697
+        width: 98
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1327
+        width: 100
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_8
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1327
+        width: 100
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_9
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1327
+        width: 100
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_10
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1479
+        width: 120
+        height: 194
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_11
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1481
+        width: 122
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_12
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 1304
+        width: 57
+        height: 369
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_13
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 1323
+        width: 84
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 953
+        width: 84
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_15
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 950
+        width: 84
+        height: 353
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_16
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1071
+        width: 118
+        height: 232
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_17
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1071
+        width: 118
+        height: 232
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_18
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1111
+        width: 122
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_19
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1109
+        width: 120
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_20
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1674
+        width: 86
+        height: 374
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_21
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1856
+        width: 122
+        height: 192
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_22
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1440
+        width: 118
+        height: 232
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_23
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1439
+        width: 118
+        height: 232
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_24
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1306
+        width: 57
+        height: 369
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_25
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 953
+        width: 92
+        height: 350
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_26
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 954
+        width: 92
+        height: 350
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FLAUTA_COMEMORANDO_27
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 955
+        width: 92
+        height: 350
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -47,7 +47,7 @@ public class gGame : MonoBehaviour
 		gMenus.s.ShowMenu ("MenuPrincipal");
 	}
 	
-	public void NewPlayer()
+	public void NewPlayer(  ) 
 	{
 //		if( player != null ) return;
 		
@@ -57,6 +57,38 @@ public class gGame : MonoBehaviour
 		player.transform.localScale = Vector3.one;
 		player.transform.localPosition = Vector3.zero;
 		
+		player.mInfo = new PlayerInfo();
+		
+		if( player.vPlayer != null ) Destroy( player.vPlayer.gameObject );
+		
+		player.vPlayer = gPersonagens.s.GetPersonagem( player.mInfo.meuPersonagem );
+		player.vPlayer.gameObject.SetActive(true);
+		player.vPlayer.transform.localPosition = Vector3.zero;
+		player.vPlayer.transform.localScale = Vector3.one;
+		
+	}
+	
+	public void NewPlayer( QualPersonagem personagem  ) 
+	{
+		//		if( player != null ) return;
+		
+		player = Instantiate( playerPrefab ) as Player;
+		
+		player.transform.parent = spawnPoint;
+		player.transform.localScale = Vector3.one;
+		player.transform.localPosition = Vector3.zero;
+		
+		player.mInfo = new PlayerInfo();
+		player.mInfo.meuPersonagem = personagem;
+		
+		if( player.vPlayer != null ) Destroy( player.vPlayer.gameObject );
+		
+		player.vPlayer = gPersonagens.s.GetPersonagem( player.mInfo.meuPersonagem );
+		player.vPlayer.transform.parent = player.transform;
+		player.vPlayer.transform.localPosition = Vector3.zero;
+		player.vPlayer.transform.localScale = Vector3.one;
+		
+		
 	}
 
 	public void IniciarJogo()
@@ -64,7 +96,7 @@ public class gGame : MonoBehaviour
 		if( player != null ) Destroy(player.gameObject);
 		if( onReset != null ) onReset();
 		
-		NewPlayer();
+		NewPlayer( gLevels.s.currentPartitura.info.personagem );
 		
 		gMusica.s.NovaMusica ();
 		

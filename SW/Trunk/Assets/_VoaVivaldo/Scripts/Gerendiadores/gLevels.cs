@@ -41,16 +41,20 @@ public class gLevels : MonoBehaviour
 		currentLevelIndex = ClampIndex (index);
 //		currentLevel = NewLevel(index);
 		currentLevel = allLevels[index];
+		
+		gTemas.s.Aplicar( currentLevel.info.tema );
+		
 		return currentLevel;
 	}
 	
-	public Level NewLevel( int index )
-	{
-		Level l = Instantiate( allLevels [index] ) as Level;
-		l.transform.parent = transform;
-		l.gameObject.SetActive(false);
-		return l;
-	}
+//	public Level NewLevel( int index )
+//	{
+//		Level l = Instantiate( allLevels [index] ) as Level;
+//		l.transform.parent = transform;
+//		l.gameObject.SetActive(false);
+//		
+//		return l;
+//	}
 
 	public Level GetLevel( int index = 0, bool set = false )
 	{

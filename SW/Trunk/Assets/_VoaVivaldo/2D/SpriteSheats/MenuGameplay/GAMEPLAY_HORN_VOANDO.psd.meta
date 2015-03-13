@@ -1,11 +1,17 @@
 fileFormatVersion: 2
 guid: 494fe57e69cb84146be50e18e81b497b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: GAMEPLAY_HORN_VOANDO
+    21300002: GAMEPLAY_HORN_VOANDO_0
+    21300004: GAMEPLAY_HORN_VOANDO_1
+    21300006: GAMEPLAY_HORN_VOANDO_2
+    21300008: GAMEPLAY_HORN_VOANDO_3
+    21300010: GAMEPLAY_HORN_VOANDO_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -25,13 +31,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +48,56 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: GAMEPLAY_HORN_VOANDO_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 171
+        width: 326
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 167
+        width: 308
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_2
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 153
+        width: 310
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_3
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 143
+        width: 286
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_4
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 131
+        width: 304
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -3,6 +3,10 @@ using System.Collections;
 
 public class gPontuacao : MonoBehaviour {
 
+	public delegate void UpdatePontuacao( int quantidade );
+	public static event UpdatePontuacao onUpdateEstrelas;
+	public static event UpdatePontuacao onUpdatePontuacao;
+
 	public static gPontuacao s;
 
 	public 	int pontosPorNota = 100;
@@ -11,11 +15,17 @@ public class gPontuacao : MonoBehaviour {
 	public 	int	multiplicador = 1;
 	public 	int maxMultiplicador = 3;
 	
+	
+	public int pontuacao;
+	
 	public int	acertos = 0;
 	public int	erros	= 0;
 	
 	public int estrelasGanhas = 1;	
-		
+	
+	
+			
+	public int min1Estrela	= 15;
 	public int min2Estrelas = 30;
 	public int min3Estrelas = 50;
 	
@@ -51,7 +61,8 @@ public class gPontuacao : MonoBehaviour {
 		erros = 0;
 		porcentagemErros = 0f;
 		porcentagemAcertos = 0f;
-		estrelasGanhas = 1;
+		estrelasGanhas = 0;
+		pontuacao = 0;
 	}
 
 	public bool VerificarPontuacao( Nota n, Player p )
@@ -65,6 +76,8 @@ public class gPontuacao : MonoBehaviour {
 		
 	public void Pontuar( Player p )
 	{
+		int pontuacaoAtual = p.mInfo.pontuacao;
+	
 		p.mInfo.pontuacao += pontosPorNota * multiplicador ;
 		
 		notasAcertadasNaSequencia ++;
@@ -74,6 +87,12 @@ public class gPontuacao : MonoBehaviour {
 			multiplicador = Mathf.Clamp( multiplicador++, 1, maxMultiplicador );
 		}
 		acertos++;
+		
+		pontuacao = p.mInfo.pontuacao;
+		
+		if( p.mInfo.pontuacao == pontuacaoAtual ) return;
+		
+		onUpdatePontuacao( p.mInfo.pontuacao );
 		
 		AtualizarErrosEAcertos();
 	}
@@ -87,16 +106,32 @@ public class gPontuacao : MonoBehaviour {
 		AtualizarErrosEAcertos();
 	}
 	
+	public void ForcarAtualizarPontosEstrelas()
+	{
+		if( onUpdateEstrelas != null ) onUpdateEstrelas( estrelasGanhas );
+		if( onUpdatePontuacao != null ) onUpdatePontuacao( pontuacao);
+	}
+	
 	void AtualizarErrosEAcertos ()
 	{
+		int eAntes = estrelasGanhas;
+	
 		if( acertos > 0 )
 			porcentagemAcertos 	=(float)( (acertos * 100f) / gNotas.s.quantidadeDeNotasNaPista);
 		if( erros > 0 )
 			porcentagemErros	=(float)( (  erros * 100f ) / gNotas.s.quantidadeDeNotasNaPista);
-			
+		
+//		Debug.Log("Porcentagem : " + porcentagemAcertos );
+		
+		if( porcentagemAcertos >= min1Estrela && porcentagemAcertos < min2Estrelas   ) estrelasGanhas = 1;
+		else
 		if( porcentagemAcertos >= min2Estrelas && porcentagemAcertos < min3Estrelas) estrelasGanhas = 2;
 		else
 		if( porcentagemAcertos > min2Estrelas && porcentagemAcertos >= min3Estrelas) estrelasGanhas = 3;
+		
+		if( eAntes == estrelasGanhas ) return;
+		
+		if( onUpdateEstrelas != null ) onUpdateEstrelas( estrelasGanhas );
 		
 	}
 }

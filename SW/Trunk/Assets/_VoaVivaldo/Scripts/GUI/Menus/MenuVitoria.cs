@@ -3,42 +3,37 @@ using System.Collections;
 
 public class MenuVitoria : Menu {
 
-
-	public UISprite  sptEstrelas;
-	public UILabel txtPontuacao;
+	public UI2DSprite spritePersonagem;
 	
+	vPersonagem personagem;
+
 	public override void Show ()
 	{
 		base.Show ();
 		
-		float fill = 0.35f;
-		switch( gPontuacao.s.estrelasGanhas )
-		{
-		case 1:
-			fill = .35f;
-			break;
-		case 2:
-			fill = .65f;
-			break;
-		case 3:
-			fill = 1f;
-			break;
-		default :
-			break;
-		}
-		sptEstrelas.fillAmount = fill;
+		gPontuacao.s.ForcarAtualizarPontosEstrelas();
 		
-		txtPontuacao.text = gGame.s.player.mInfo.pontuacao.ToString();
+		personagem = spritePersonagem.gameObject.GetComponent<vPersonagem>();
+		personagem.meuPersonagem = gGame.s.player.vPlayer.meuPersonagem;
+		
+		personagem.gameObject.GetComponent<UI2DSpriteAnimation>().Play( personagem.meuPersonagem.ToString().ToLower() );
+		spritePersonagem.MakePixelPerfect();
+		
 	}
 	
 	public void OnClickFestinha()
 	{
 		gMenus.s.ShowMenu("Festa");
 	}
+	
+	public void OnClickMusicas()
+	{
+		gMenus.s.ShowMenu("Select");
+	}
 
 	public void OnClickContinuar()
 	{
-		gMenus.s.ShowMenu("Principal");
+		gMenus.s.ShowMenu("Instrumento");
 	}
 	
 	public void OnClickReiniciar()

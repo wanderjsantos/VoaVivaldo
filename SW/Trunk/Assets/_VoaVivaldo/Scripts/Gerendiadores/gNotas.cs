@@ -68,7 +68,7 @@ public class gNotas : MonoBehaviour
 	void Init ()
 	{
 //		notasNaPista = new List<Nota> ();
-		quantidadeDeNotasNaPista = notasNaPista.Count;
+		quantidadeDeNotasNaPista = notasNaPista.FindAll( e => e.mInfo.tipo != TipoDeNota.PAUSA ).Count;
 		currentNota = 0;
 	}
 

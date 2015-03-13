@@ -37,8 +37,7 @@ public class MenuLevelSelect : Menu {
 
 	void AtualizarTema (GameObject centeredObject)
 	{
-//  		BotaoFase botao = centeredObject.GetComponent<BotaoFase>();
-  		
-  		gTemas.s.Aplicar( );
+		BotaoFase level = centeredObject.GetComponent<BotaoFase>();
+		gTemas.s.Aplicar( gLevels.s.allLevels[ level.selecionarLevel ].info.tema );
 	}
 }

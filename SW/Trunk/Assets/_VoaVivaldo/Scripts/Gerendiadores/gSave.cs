@@ -14,7 +14,7 @@ public class gSave : MonoBehaviour {
 		s = this;
 	}
 
-	public void Salvar(MusicaData data)
+	public void Salvar()
 	{
 //		Debug.LogWarning ("Salvando");
 //		XmlSerializer serializer = new XmlSerializer (typeof(MusicaData));
@@ -24,15 +24,15 @@ public class gSave : MonoBehaviour {
 
 	}
 
-	public MusicaData Load()
-	{
-		return null;
+//	public MusicaData Load()
+//	{
+//		return null;
 //		Debug.LogWarning ("Carregando");
 //		XmlSerializer serializer = new XmlSerializer (typeof(MusicaData));
 //		FileStream stream = new FileStream ("Assets/Musica.xml", FileMode.Open);
 //		MusicaData ret = serializer.Deserialize (stream) as MusicaData;
 //		stream.Close ();
 //		return ret;
-	}
+//	}
 	
 }

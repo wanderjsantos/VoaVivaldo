@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\_Editor\_PartituraEditor.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\Gerendiadores\gPista.cs">
     <Files>
-      <File FileName="Assets\_VoaVivaldo\Scripts\_Editor\_PartituraEditor.cs" Line="72" Column="46" />
+      <File FileName="Assets\Editor\GravadorDeFase.cs" Line="22" Column="22" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\_Editor\_PartituraEditor.cs" Line="167" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\_Editor\_CompassoEditor.cs" Line="120" Column="11" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gPista.cs" Line="231" Column="85" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

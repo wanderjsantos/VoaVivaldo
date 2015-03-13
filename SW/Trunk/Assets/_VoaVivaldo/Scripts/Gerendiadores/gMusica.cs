@@ -6,8 +6,8 @@ public class gMusica : MonoBehaviour
 {
 	public static gMusica s;
 
-	public MusicaData dadosDaMusicaAtual;
-
+	public PartituraInfo	partituraAtual;
+	
 	public Musica musicaAtual;
 
 	public bool verifyEnding = false;
@@ -17,8 +17,8 @@ public class gMusica : MonoBehaviour
 	public float tempoEmPause;
 	
 
-	public int	musicaIndice = -1;
-	public int	instrumentoIndice = -1;
+	public int	indiceMusica = -1;
+	public int	indiceFase = -1;
 
 	void Awake()
 	{
@@ -64,26 +64,24 @@ public class gMusica : MonoBehaviour
 		Set();
 		if( musicaAtual != null ) 
 			Destroy(musicaAtual.gameObject);
-		dadosDaMusicaAtual = null;
+		partituraAtual = null;
 		tempoEmPause = 0f;
 	}
 
-	public void SetMusica (int numero = -1)
+	public void SetMusica (int numero)
 	{
-		if( numero != -1 )
-			musicaIndice = numero;
+		indiceMusica = numero;
 	}
 
-	public void SetInstrumento (int numero = -1)
+	public void SetFase (int numero = -1)
 	{
-		if( numero != -1 )
-			instrumentoIndice = numero;
+		indiceFase = numero;		
 	}
 
 	public void Set( int musica = -1, int instrumento = -1 )
 	{
 		SetMusica (musica);
-		SetInstrumento (instrumento);
+		SetFase  (instrumento);
 	}
 
 	void PlayMusica ()
@@ -103,58 +101,44 @@ public class gMusica : MonoBehaviour
 
 	public void NovaMusica()
 	{
-		dadosDaMusicaAtual = GetMusica (musicaIndice);
+		partituraAtual = GetPartitura (indiceMusica);
 
-		NovaMusica (dadosDaMusicaAtual);
+		NovaMusica (partituraAtual);
 
 	}
 
-	public void NovaMusica (MusicaData dados, bool autoPlay = false)
+	PartituraInfo GetPartitura (int indice)
+	{
+		return gLevels.s.currentPartitura.info;
+	}
+
+	public void NovaMusica (PartituraInfo dados, bool autoPlay = false)
 	{
 		if (musicaAtual != null) 
 		{
 			StopMusica();
 			DestroyMusica( musicaAtual );
 		}
+		
+		Debug.Log("Dados> Compasso: " + dados.compassos.Count );
+		Debug.Log("Dados> base: " + dados.nomeAudioBase );
+		Debug.Log("Dados> base: " + dados.nomeAudioInstrumento );
 
 		MusicaInfo info 				= new MusicaInfo ();
-		info.mData = dados;
-		
-		Instrumento  partituraEmUso		= info.mData.info.instrumentos[instrumentoIndice] ;
-		info.instrumentoAtual = instrumentoIndice;
-		info.mBanda.musicaBase		 	= Vivaldos.NameToAudioClip (partituraEmUso.info.audioBase);
-		info.mBanda.instrumentoAtual	= Vivaldos.NameToAudioClip (partituraEmUso.info.audioInstrumento);
+		info.mPartitura = dados;
+
+		info.mBanda.musicaBase		 	= Vivaldos.NameToAudioClip (dados.nomeAudioBase);
+		info.mBanda.instrumentoAtual	= Vivaldos.NameToAudioClip (dados.nomeAudioInstrumento);
 
 		Musica m = Instantiate (_prefabMusica) as Musica;
 		m.mInfo = info;
 
-		gRitmo.s.SetBPM (info.mData.info.BPM);
+		gRitmo.s.SetBPM (info.mPartitura.BPM);
 		
 		musicaAtual = m;
 		if (autoPlay)	PlayMusica ();
 
 	}
-
-	public MusicaData GetMusica( int indice = 0 )
-	{
-//		MusicaData ret = gLevels.s.GetLevel (indice, false).mInfo.dadosDaMusica;
-//		return ret;
-		return null;
-	}
-
-//	public void CarregarMusica (int indice = 0)
-//	{
-////		MusicaData m = gLevels.s.SetLevel(indice).mInfo.dadosDaMusica;
-////
-////		if (m == null)
-////						Debug.LogError ("Erro ao carregar a musica");
-////		NovaMusica (m.audioBase, m.audioInstrumentos[instrumentoIndice], m.notas , m.BPM, false);
-//	}
-
-//	public List<NotaInfo> TodasAsNotasNoCompasso( int compasso )
-//	{
-//		return musicaAtual.mInfo.mData.instrumentos[musicaAtual.mInfo.instrumentoAtual].notas.FindAll (e => e.compasso == compasso);
-//	}
 
 	void DestroyMusica (Musica m)
 	{

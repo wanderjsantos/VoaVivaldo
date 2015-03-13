@@ -35,16 +35,6 @@ public class Gravador : MonoBehaviour
 //		gSave.s.Salvar( PrepararClasseParaGravar () );
 	}
 
-	MusicaData PrepararClasseParaGravar ()
-	{
-		MusicaData ret = new MusicaData ();
-//		ret.notas = new List<NotaInfo> ();
-//		ret.notas.AddRange (notas);
-//		ret.audioBase = gMusica.s.musicaAtual.mInfo.instrumentos.baseMusica.name;
-////		ret.audioInstrumento 	= gMusica.s.musicaAtual.mInfo.instrumentos.instrumento.name;
-//		ret.BPM = gRitmo.s.BPM;
-		return ret;
-	}
 	
 	public void Update()
 	{

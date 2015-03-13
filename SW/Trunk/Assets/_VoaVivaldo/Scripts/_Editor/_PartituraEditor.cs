@@ -9,7 +9,9 @@ public class _PartituraEditor : VivaldoEditor
 	
 	public PartituraInfo 				partituraInfo;
 	public List<_CompassoEditor> 		compassos;
-	
+	GameObject goPlay;
+	GameObject goPlayInstrumento;
+	bool playWithInstrumento;
 	public _PartituraEditor()
 	{
 		partituraInfo = new PartituraInfo();
@@ -41,7 +43,7 @@ public class _PartituraEditor : VivaldoEditor
 			
 			n1.notaInfo = ni;
 			ni.batida = n.notaInfo.batida;
-			ni.compasso = n.notaInfo.compasso +1;
+			ni.compasso = n.notaInfo.compasso;
 			ni.duracao = n.notaInfo.duracao;
 			ni.timbre = n.notaInfo.timbre;
 			
@@ -72,6 +74,7 @@ public class _PartituraEditor : VivaldoEditor
 		partituraInfo.personagem = (QualPersonagem) EditorGUILayout.EnumPopup( "Personagem:", partituraInfo.personagem );
 		
 		//////AUDIOS
+		EditorGUILayout.BeginHorizontal();
 		partituraInfo.clipAudioBase = (AudioClip) EditorGUILayout.ObjectField("Base:", partituraInfo.clipAudioBase, typeof(AudioClip), false );
 		if(partituraInfo.clipAudioBase != null )
 			partituraInfo.nomeAudioBase = partituraInfo.clipAudioBase.name;	
@@ -81,19 +84,48 @@ public class _PartituraEditor : VivaldoEditor
 		if(partituraInfo.clipAudioInstrumento != null )
 			partituraInfo.nomeAudioInstrumento = partituraInfo.clipAudioInstrumento.name;
 		
+		EditorGUILayout.EndHorizontal();
+		
+		EditorGUILayout.BeginHorizontal();
+		
+		playWithInstrumento = EditorGUILayout.Toggle( "Play instrumento:" , playWithInstrumento );
+		
+		GUI.color = Color.yellow;
+		if( partituraInfo.clipAudioBase != null && GUILayout.Button("Play") )
+		{
+			StopAudio();
+		
+			if( playWithInstrumento && partituraInfo.clipAudioInstrumento ) 
+				PlayAudioInstrumento( partituraInfo.clipAudioInstrumento );
+			
+			PlayAudioBase( partituraInfo.clipAudioBase);
+		}
+		GUI.color = Color.gray;
+		if( partituraInfo.clipAudioBase != null &&  GUILayout.Button("Stop"))
+		{
+			StopAudio( );
+		}
+		GUI.color = Color.white;
+		
+		EditorGUILayout.EndHorizontal();
+		
 		
 		scroll = EditorGUILayout.BeginScrollView( scroll );
 		
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.HelpBox("Shift + Click ou Click: Aumenta/diminui o valor da nota. \n " +
-		                        "Control + Click: Exclui a nota \n" +
-		                        "Alt + Click: Muda o tipo da nota", MessageType.Info );
+		                        "Control + Click ou Control + Shift + Click: Altera o Timbre \n" +
+		                        "Alt + Click: Muda o tipo da nota\n" + 
+		                        "Ctrl + Shift + Alt + Click : Exclui a nota", MessageType.Info );
 		EditorGUILayout.EndHorizontal();
 		
 		for( int i =0 ; i < compassos.Count; i++ )
 		{		
 			EditorGUILayout.BeginHorizontal();
-				compassos[i].Draw();
+				GUI.color = Color.red;
+				if( GUILayout.Button("x", GUILayout.Width(20f), GUILayout.Height(20f ) ) ) compassos.RemoveAt( i );
+				compassos[i].Draw(i);
+				GUI.color = Color.white;
 			EditorGUILayout.EndHorizontal();
 		}
 		
@@ -130,4 +162,34 @@ public class _PartituraEditor : VivaldoEditor
 	
 	
 			
+	void PlayAudioBase (AudioClip clip)
+	{	
+		
+		goPlay = new GameObject("Playing: " + clip.name );
+		goPlay.AddComponent<AudioSource>().clip = clip;
+		goPlay.audio.Play();
+	}
+	
+	void PlayAudioInstrumento (AudioClip clip)
+	{	
+		
+		goPlayInstrumento = new GameObject("Playing: " + clip.name );
+		goPlayInstrumento.AddComponent<AudioSource>().clip = clip;
+		goPlayInstrumento.audio.Play();
+	}
+
+	void StopAudio ()
+	{
+		if( goPlay != null ) 
+		{
+			goPlay.audio.Stop();
+			MonoBehaviour.DestroyImmediate( goPlay );
+		}
+		
+		if( goPlayInstrumento != null ) 
+		{
+			goPlayInstrumento.audio.Stop();
+			MonoBehaviour.DestroyImmediate( goPlayInstrumento );
+		}
+	}
 }

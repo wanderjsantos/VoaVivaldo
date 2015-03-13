@@ -11,7 +11,7 @@ public class MenuSelecaoDeInstrumento : Menu
 		base.Show ();
 		
 		DesabilitarBotoes();
-		HabilitarBotoes( gMusica.s.musicaIndice );
+		HabilitarBotoes( gMusica.s.indiceMusica );
 	}
 
 	void DesabilitarBotoes ()
@@ -30,7 +30,10 @@ public class MenuSelecaoDeInstrumento : Menu
 	
 	public void SelectInstrumento(int numero)
 	{
-		gMusica.s.SetInstrumento (numero);
+		gMusica.s.SetFase (numero);
+		
+		gLevels.s.SetLevel( gMusica.s.indiceMusica, gMusica.s.indiceFase );
+		
 		IniciarPartida();
 	}
 

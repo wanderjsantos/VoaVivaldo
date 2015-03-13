@@ -23,10 +23,10 @@ public class MenuLevelSelect : Menu {
 		levelToSelect = 1;
 	}
 
-	public void SelectFase( int numero )
+	public void SelectLevel( int numero )
 	{
-		Debug.Log ("Select Fase: " + numero);
-		gMusica.s.SetMusica (numero);
+		Debug.Log ("Select Partitura: " + numero);
+		gMusica.s.SetMusica( numero );
 		gMenus.s.ShowMenu ("Instrumento");
 	}
 	

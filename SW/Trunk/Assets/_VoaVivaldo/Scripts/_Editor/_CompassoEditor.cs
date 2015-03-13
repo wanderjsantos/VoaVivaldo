@@ -33,9 +33,10 @@ public class _CompassoEditor : VivaldoEditor
 		return mCompasso;
 	}
 	
-	
-	public void Draw()
+	int compasso;
+	public void Draw(int mIndice)
 	{
+		compasso = mIndice;
 		DrawCompasso();		
 		DrawComandos();
 	}
@@ -113,9 +114,19 @@ public class _CompassoEditor : VivaldoEditor
 	
 	void EditNota( _NotaEditor n )
 	{
+		if( Event.current.control && Event.current.alt && Event.current.shift )
+		{
+			RemoverNota(n);
+			return;
+		}
+	
+	
 		if( Event.current.control )
-		{			
-			RemoverNota( n );
+		{
+			if ( !Event.current.shift )
+					AumentarTimbre( n );
+			else
+					AumentarTimbre( n , -1 );
 			return;
 		}
 		
@@ -138,6 +149,18 @@ public class _CompassoEditor : VivaldoEditor
 		
 		n.notaInfo.duracao = (Duracao) dur;
 	}	
+
+	void AumentarTimbre (_NotaEditor n, int mult = 1)
+	{
+		int timbre = (int)n.notaInfo.timbre;
+		
+		if( timbre == (int)Timbre.QUATORZE ) timbre = 0;
+		
+		timbre += mult;
+		
+		n.notaInfo.timbre = (Timbre) timbre;
+	
+	}
 
 	void TrocarTipo (_NotaEditor n)
 	{
@@ -182,7 +205,7 @@ public class _CompassoEditor : VivaldoEditor
 			notaDebug.timbre = (Timbre) 	EditorGUILayout.EnumPopup( "", notaDebug.timbre, GUILayout.Width(100f));
 			notaDebug.duracao = (Duracao) 	EditorGUILayout.EnumPopup( "", notaDebug.duracao, GUILayout.Width(100f));
 			
-//			notaDebug.compasso = trecho._compassos.IndexOf(this) ;
+			notaDebug.compasso = compasso ;
 			GUILayout.Label("No compasso: " + notaDebug.compasso.ToString() );
 			
 			

@@ -72,8 +72,8 @@ public class Musica : MonoBehaviour
 [System.Serializable]
 public class MusicaInfo
 {
-	public MusicaData mData;
-	public int instrumentoAtual = -1;	
+	public PartituraInfo mPartitura;
+//	public int instrumentoAtual = -1;	
 	public Banda	mBanda;
 	public float tempoDaMusica;
 	

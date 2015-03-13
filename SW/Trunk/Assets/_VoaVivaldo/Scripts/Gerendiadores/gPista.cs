@@ -219,18 +219,16 @@ public class gPista : MonoBehaviour {
 	public void PosicionarTodasAsNotas()
 	{
 		posInicialPista = rootPista.transform.localPosition;
-
-		List<Partitura> currentPartitura = gMusica.s.musicaAtual.mInfo.mData.info.instrumentos[gMusica.s.instrumentoIndice].info.trechos;
+		
+		List<Compasso> compassos = gMusica.s.musicaAtual.mInfo.mPartitura.compassos;//.info.instrumentos[gMusica.s.instrumentoIndice].info.trechos;
 							
-		foreach( Partitura trecho in currentPartitura )
-		{
-			foreach( Compasso compasso in trecho.info.compassos )
+			foreach( Compasso compasso in compassos )
 			{
 				float tamanhoTotal = 0f;					
 				for( int i = 0; i < compasso.info.notas.Count; i ++  )
 				{	
 									
-					float posXCompasso 	= tamanhoDoCompasso * compasso.info.notas[i].compasso;
+					float posXCompasso 	= tamanhoDoCompasso * (compasso.info.notas[i].compasso + 1);
 					float posicaoX 		= posXCompasso + tamanhoTotal;
 					
 					float tamanhoX 		= tamanhoDoCompasso / (float)compasso.info.notas[i].duracao;
@@ -293,10 +291,10 @@ public class gPista : MonoBehaviour {
 				
 				}
 				
-				Debug.Break();
+//				Debug.Break();
 				
 			}
-		}
+		
 
 	}
 }

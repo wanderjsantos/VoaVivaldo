@@ -30,6 +30,7 @@ public class gGame : MonoBehaviour
 	public void Start()
 	{
 		IniciarInterfaces ();
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 	}
 	
 	public void OnEnable()

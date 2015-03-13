@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_1;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity_4_6/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity_4_6/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -183,8 +183,15 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Banda.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Compasso.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Controller.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Gravador.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Infos\CompassoInfo.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Infos\InstrumentoInfo.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Infos\LevelInfo.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Infos\MusicaDataInfo.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Infos\NotaInfo.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Instrumento.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Level.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Musica.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Nota.cs" />
@@ -192,10 +199,7 @@
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Teclado.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Tema.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\TemaBehaviour.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Trecho.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\TrechoInfo.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Vivaldos.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\Data\LevelData.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Data\MusicaData.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\GUI\Menu.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuCreditos.cs" />
@@ -223,19 +227,17 @@
      <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gSave.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gTemas.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\PainelDeControle.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\SaveManager.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\View\vEstrelas.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\View\vLevel.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\View\vPontuacao.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\CompassoInfo.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\InstrumentoInfo.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\NotaEditor.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\Partitura.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\PartituraInfo.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\VivaldoEditor.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_CompassoEditor.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_InstrumentoEditor.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_LevelManagerEditor.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_MusicaEditor.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_NotaEditorInfo.cs" />
-     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_TrechoEditor.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_LevelEditor.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_NotaEditor.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\_Editor\_PartituraEditor.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.7.9.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 2.shader" />
@@ -271,10 +273,11 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
+     <None Include="Assets\_VoaVivaldo\Partituras\Partitura.xml" />
      <None Include="Assets\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
      <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity_4_6/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

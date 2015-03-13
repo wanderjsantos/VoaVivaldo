@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<PartituraInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <nome>Partitura</nome>
+  <BPM>120</BPM>
+  <personagem>HORNET</personagem>
+  <_compassos>1</_compassos>
+  <_linhas>14</_linhas>
+  <_colunas>4</_colunas>
+  <compassos />
+</PartituraInfo>

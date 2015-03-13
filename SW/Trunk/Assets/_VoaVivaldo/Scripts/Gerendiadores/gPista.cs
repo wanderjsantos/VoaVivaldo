@@ -220,11 +220,11 @@ public class gPista : MonoBehaviour {
 	{
 		posInicialPista = rootPista.transform.localPosition;
 
-		List<Trecho> currentTrecho = gMusica.s.musicaAtual.mInfo.mData.info.instrumentos[gMusica.s.instrumentoIndice].trechos;
+		List<Partitura> currentPartitura = gMusica.s.musicaAtual.mInfo.mData.info.instrumentos[gMusica.s.instrumentoIndice].info.trechos;
 							
-		foreach( Trecho trecho in currentTrecho )
+		foreach( Partitura trecho in currentPartitura )
 		{
-			foreach( Compasso compasso in trecho.info.lCompassos )
+			foreach( Compasso compasso in trecho.info.compassos )
 			{
 				float tamanhoTotal = 0f;					
 				for( int i = 0; i < compasso.info.notas.Count; i ++  )

@@ -4,55 +4,69 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
+[System.Serializable]
 public class _CompassoEditor : VivaldoEditor
 {
-	public _TrechoEditor trecho;
-	public List<_NotaEditor> notas;
+	public List<_NotaEditor> 	notas;
+	
+	public Compasso				mCompasso;
 	public NotaInfo notaDebug;
 	
 	public _CompassoEditor()
 	{
-		new _CompassoEditor( Vivaldos.LINHAS, Vivaldos.COLUNAS, null );
+		mCompasso = new Compasso();	
+		mCompasso.info = new CompassoInfo();
+		notas = new List<_NotaEditor>();
+	
+		notaDebug = new NotaInfo();
 	}
 	
-	public _CompassoEditor( int linhas, int colunas, _TrechoEditor _trecho)
-	{
-		trecho = _trecho;
-		notas = new List<_NotaEditor>();
-		notaDebug = new NotaInfo();
-	}	
+	public Compasso GetCompasso()
+	{		
+		mCompasso.info.notas = new List<NotaInfo>();
+		
+		notas.ForEach( delegate( _NotaEditor e )
+		{
+			mCompasso.info.notas.Add( e.notaInfo );
+		});
+		
+		return mCompasso;
+	}
 	
 	
 	public void Draw()
+	{
+		DrawCompasso();		
+		DrawComandos();
+	}
+	
+	void DrawCompasso()
 	{
 		EditorGUILayout.BeginHorizontal();
 		
 		GUI.color = VerificarValorDoCompasso();		
 		GUILayout.Button( "", GUILayout.Width(30f), GUILayout.Height(30f) ) ;
 		
-		GUI.color = Color.red;
-		if( GUILayout.Button("X", GUILayout.Width(20f), GUILayout.Height(20f) ) ) trecho.RemoveCompasso( this );
-		
 		GUI.color = Color.white;
-						
+		
 		for( int i = 0; i < notas.Count; i++ )
 		{
 			_NotaEditor n = notas[i];
-							
+			
 			switch( n.notaInfo.tipo )
 			{
-				case TipoDeNota.NOTA:
-					DrawNotaComum( n );
-					break;
-				case TipoDeNota.PAUSA:
-					DrawPausa( n );
-					break;
-				case TipoDeNota.NOTA_LONGA:
-					DrawNotaLonga(n);
-					break;
-				default:
-					DrawNotaComum(n);
-					break;
+			case TipoDeNota.NOTA:
+				DrawNotaComum( n );
+				break;
+			case TipoDeNota.PAUSA:
+				DrawPausa( n );
+				break;
+			case TipoDeNota.NOTA_LONGA:
+				DrawNotaLonga(n);
+				break;
+			default:
+				DrawNotaComum(n);
+				break;
 			}
 			
 		}
@@ -60,10 +74,9 @@ public class _CompassoEditor : VivaldoEditor
 		GUI.color = Color.white;
 		
 		EditorGUILayout.EndHorizontal();
-		
 	}
 	
-	public void DrawNotaComum( _NotaEditor n )
+	void DrawNotaComum( _NotaEditor n )
 	{
 		float width = Vivaldos.WIDTH_COMPASSO/ (float)n.notaInfo.duracao;
 		
@@ -74,7 +87,7 @@ public class _CompassoEditor : VivaldoEditor
 		}
 	}
 	
-	public void DrawPausa( _NotaEditor n )
+	void DrawPausa( _NotaEditor n )
 	{
 		float width = Vivaldos.WIDTH_COMPASSO/ (float)n.notaInfo.duracao;
 		
@@ -86,7 +99,7 @@ public class _CompassoEditor : VivaldoEditor
 		}
 	}
 	
-	public void DrawNotaLonga( _NotaEditor n )
+	void DrawNotaLonga( _NotaEditor n )
 	{
 		float width = Vivaldos.WIDTH_COMPASSO/ (float)n.notaInfo.duracao;
 		
@@ -98,7 +111,7 @@ public class _CompassoEditor : VivaldoEditor
 		}
 	}
 	
-	public void EditNota( _NotaEditor n )
+	void EditNota( _NotaEditor n )
 	{
 		if( Event.current.control )
 		{			
@@ -135,8 +148,6 @@ public class _CompassoEditor : VivaldoEditor
 		t += 1;
 		
 		n.notaInfo.tipo = (TipoDeNota) t;
-		
-//		Debug.Log(n.notaInfo.tipo.ToString());
 	}
 
 	void RemoverNota (_NotaEditor n)
@@ -158,7 +169,7 @@ public class _CompassoEditor : VivaldoEditor
 
  
 	
-	public void DrawComandos()
+	void DrawComandos()
 	{
 		if( notaDebug == null ) notaDebug = new NotaInfo();
 	
@@ -171,7 +182,7 @@ public class _CompassoEditor : VivaldoEditor
 			notaDebug.timbre = (Timbre) 	EditorGUILayout.EnumPopup( "", notaDebug.timbre, GUILayout.Width(100f));
 			notaDebug.duracao = (Duracao) 	EditorGUILayout.EnumPopup( "", notaDebug.duracao, GUILayout.Width(100f));
 			
-			notaDebug.compasso = trecho._compassos.IndexOf(this) ;
+//			notaDebug.compasso = trecho._compassos.IndexOf(this) ;
 			GUILayout.Label("No compasso: " + notaDebug.compasso.ToString() );
 			
 			
@@ -189,7 +200,7 @@ public class _CompassoEditor : VivaldoEditor
 		EditorGUILayout.EndHorizontal();
 	}
 	
-	public Color VerificarValorDoCompasso()
+	Color VerificarValorDoCompasso()
 	{
 		float soma = 0f;
 		Color ret	= Color.white;
@@ -209,6 +220,8 @@ public class _CompassoEditor : VivaldoEditor
 
 	void DuplicarUltimaNota ()
 	{
+		if( notas.Count == 0 ) return;
+		
 			_NotaEditor novaNota = new _NotaEditor();
 			NotaInfo novoInfo = new NotaInfo();
 			_NotaEditor qualDuplicar = notas[notas.Count-1];

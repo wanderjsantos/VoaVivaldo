@@ -4,10 +4,18 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
-public class VivaldoEditor 
+public class _NotaEditor
 {
-	public 	bool				foldout 	= true;
-	public	Vector2				scroll;
+	public NotaInfo notaInfo;
 	
+	public _NotaEditor()
+	{
+		notaInfo = new NotaInfo();
+	}
+
 }
+
+
+
+
 

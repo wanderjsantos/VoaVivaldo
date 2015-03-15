@@ -43,13 +43,13 @@ public class MenuGameplay : Menu
 	public void InitContagemRegressiva()
 	{
 		goContagemRegressiva.SetActive (true);
-		labelContagemRegressiva.text = gGame.s.contagemRegressiva.ToString ("00");
+		labelContagemRegressiva.text = (gGame.s.contagemRegressiva + 1).ToString ("00");
 	}
 
 	public void ResetContagemRegressiva()
 	{
 		goContagemRegressiva.SetActive (false);
-		labelContagemRegressiva.text = gGame.s.contagemRegressiva.ToString ("00");
+		labelContagemRegressiva.text = (gGame.s.contagemRegressiva + 1).ToString ("00");
 	}
 	
 	public void OnClickPause()

@@ -35,6 +35,12 @@ public class gPontuacao : MonoBehaviour {
 	float porcentagemErros = 0f;
 				
 	public	int notasAcertadasNaSequencia = 0;
+	
+	public bool pontuandoNotaLonga = false;
+	public int	pontosNotaLonga = 10;
+	public float adicionarACada = .03f;					
+	
+	float initPontuacaoLonga;
 
 	void Awake()
 	{
@@ -74,10 +80,28 @@ public class gPontuacao : MonoBehaviour {
 		return false;
 	}
 		
-	public void Pontuar( Player p )
+	public void Pontuar(Nota nota, Player p )
+	{
+		switch( nota.mInfo.tipo )
+		{
+			case TipoDeNota.NOTA:
+			PontuarNotaComum(nota, p);
+			break;
+			case TipoDeNota.NOTA_LONGA:
+			PontuarNotaLonga(nota, p);
+			break;
+			case TipoDeNota.PAUSA:
+			break;
+			default:
+			break;
+		}
+	
+	}
+
+	void PontuarNotaComum (Nota nota, Player p)
 	{
 		int pontuacaoAtual = p.mInfo.pontuacao;
-	
+		
 		p.mInfo.pontuacao += pontosPorNota * multiplicador ;
 		
 		notasAcertadasNaSequencia ++;
@@ -93,6 +117,54 @@ public class gPontuacao : MonoBehaviour {
 		if( p.mInfo.pontuacao == pontuacaoAtual ) return;
 		
 		onUpdatePontuacao( p.mInfo.pontuacao );
+		
+		AtualizarErrosEAcertos();
+		
+	}
+
+	public void PontuarNotaLonga (Nota nota, Player p)
+	{
+		
+		lastNota = nota;
+		notasAcertadasNaSequencia ++;
+		
+		if( notasAcertadasNaSequencia >= (aCadaXNotas * multiplicador) )
+		{
+			multiplicador = Mathf.Clamp( multiplicador++, 1, maxMultiplicador );
+		}
+		acertos++;
+		pontuandoNotaLonga = true;		
+		initPontuacao = Time.realtimeSinceStartup;
+	}
+	
+	float initPontuacao;
+	Nota lastNota;
+	public void Update()
+	{
+		if( !pontuandoNotaLonga ) return;
+		
+		
+		if( VerificarPontuacao( lastNota, gGame.s.player ) == false ) 
+		{
+			pontuandoNotaLonga = false;	
+		}
+		
+		float currentTime = Time.realtimeSinceStartup - initPontuacao;
+		
+		if( currentTime > adicionarACada ) 
+		{
+			initPontuacao = currentTime;
+			
+			
+			SomarPontuacao( pontosNotaLonga );
+		}
+	}
+
+	void SomarPontuacao (int pontos)
+	{
+		gGame.s.player.mInfo.pontuacao += pontos * multiplicador;
+		
+		if( onUpdatePontuacao != null )	onUpdatePontuacao( gGame.s.player.mInfo.pontuacao );
 		
 		AtualizarErrosEAcertos();
 	}

@@ -9,6 +9,8 @@ public class Nota : MonoBehaviour
 	public Color 		cor;
 
 	public bool			kill = false;
+
+	public bool verificada;
 	
 	public float		sizeX;
 
@@ -49,9 +51,8 @@ public class NotaView
 	
 	public void SetSpriteSize(float size)
 	{
-	
 		Vector2 s = mSprite.localSize;
-		s.x = size + 20f;
+		s.x = size;
 		
 		mSprite.SetDimensions((int)s.x, (int)s.y );
 	}

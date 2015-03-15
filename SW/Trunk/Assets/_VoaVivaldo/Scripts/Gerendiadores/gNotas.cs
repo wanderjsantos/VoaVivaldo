@@ -10,11 +10,17 @@ public class gNotas : MonoBehaviour
 	public Nota			notaLonga;
 	public Nota			notaPausa;
 	public List<Nota>	notasNaPista;
-
+	
+	public bool dbg = false;
+	
 	public bool drawAreaDePontuacao = false;
+	public float	porcentagemNaTela = .19f;
+	public Vector2 offsetPontuacao;
 	public Rect areaDePontuacao;
 
 	public bool drawAreaDeDead = false;
+	public float	porcentagemNaTelaDead = .05f;
+	public Vector2 offsetDead;
 	public Rect areaDeDead;
 
 	public int verificarXNotasPorVez = 1;
@@ -70,23 +76,46 @@ public class gNotas : MonoBehaviour
 //		notasNaPista = new List<Nota> ();
 		quantidadeDeNotasNaPista = notasNaPista.FindAll( e => e.mInfo.tipo != TipoDeNota.PAUSA ).Count;
 		currentNota = 0;
+		
+		areaDePontuacao.width = Screen.width * porcentagemNaTela;
+		areaDePontuacao.height = Screen.height;
+		
+		areaDeDead.width = Screen.width * porcentagemNaTelaDead;
+		areaDeDead.height = Screen.height;
+		
+		areaDePontuacao.position 	= new Vector2( offsetPontuacao.x * Screen.width, offsetPontuacao.y * Screen.height );
+		areaDeDead.position 		= new Vector2( offsetDead.x * Screen.width, offsetDead.y * Screen.height );
+	
+		verificarXNotasPorVez = notasNaPista.Count;	
 	}
 
 	void OnGUI()
 	{
-		if (drawAreaDePontuacao) 
+		if( dbg ) 
 		{
-			GUI.Button( areaDePontuacao, "") ;
+			areaDePontuacao.width = Screen.width * porcentagemNaTela;
+			areaDePontuacao.height = Screen.height;
+			
+			areaDeDead.width = Screen.width * porcentagemNaTelaDead;
+			areaDeDead.height = Screen.height;
+			
+			areaDePontuacao.position 	= new Vector2( offsetPontuacao.x * Screen.width, offsetPontuacao.y * Screen.height );
+			areaDeDead.position 		= new Vector2( offsetDead.x * Screen.width, offsetDead.y * Screen.height );
+			
 		}
-
-		if (drawAreaDeDead) 
-		{
-			GUI.Button( areaDeDead, "") ;
-		}
-
+	
 		if (gGame.s.gameStarted == false)
 						return;
-
+//						
+//		areaDePontuacao.position = new Vector2(0,0);
+//		areaDePontuacao.width = Screen.width * areaDeVerificacao;
+//		areaDePontuacao.height = Screen.height;
+		
+		if( drawAreaDePontuacao )
+			GUI.Box( areaDePontuacao, "" );
+		if( drawAreaDeDead )
+			GUI.Box( areaDeDead, "" );
+		
 		int c = Mathf.Clamp (verificarXNotasPorVez, 1, notasNaPista.Count);
 		
 		for (int i = 0; i < c; i++) 
@@ -96,39 +125,89 @@ public class gNotas : MonoBehaviour
 				return;
 			}
 			
-			Vector3 posNota = UICamera.mainCamera.WorldToScreenPoint( notasNaPista[i].transform.position );
+			Vector3 posNota = new Vector3();
+		
+			posNota = UICamera.mainCamera.WorldToScreenPoint( notasNaPista[i].transform.position );
+				
+			
 			
 			if( notasNaPista[i].mInfo.tipo != TipoDeNota.PAUSA )
 			{	
-				
 				if( areaDePontuacao.Contains( posNota ) && notasNaPista[i].kill == false) 
 				{
-					if( gPontuacao.s.VerificarPontuacao( notasNaPista[i], gGame.s.player ) )
-					{
-						notasNaPista[i].kill = true;
-						
-						if( Vivaldos.VIBRAR && SystemInfo.supportsVibration )
-							Handheld.Vibrate();
-						
-						gPontuacao.s.Pontuar(gGame.s.player);
-							
-						DestruirNota(notasNaPista[i]);
-					}
+					VerificarPontuacao(posNota, notasNaPista[i] );
 				}
 			}
+			
+			VerificarFimDePercurso(posNota, notasNaPista[i]);
 
-			if( areaDeDead.Contains( posNota ) && notasNaPista[i].kill == false) 
+		}
+	}
+
+	void VerificarFimDePercurso (Vector3 posNota, Nota nota)
+	{
+		if( nota.mInfo.tipo == TipoDeNota.NOTA )
+		{
+			if( areaDeDead.Contains( posNota ) && nota.kill == false ) 
 			{				
-				notasNaPista[i].kill = true;
+				nota.kill = true;
 				
-				if( notasNaPista[i].mInfo.tipo != TipoDeNota.PAUSA )
+				if( nota.mInfo.tipo != TipoDeNota.PAUSA )
 				{
 					gAudio.s.PararAudio();						
 					gPontuacao.s.CancelarPontos();
 				}
-						
-				DestruirNota( notasNaPista[i] );				
+				
+				DestruirNota( nota );				
 			}
+		}
+		else if( nota.mInfo.tipo == TipoDeNota.NOTA_LONGA )
+		{
+			if( areaDeDead.Contains( posNota ) && gPontuacao.s.pontuandoNotaLonga == false && nota.kill == false ) 
+			{				
+				nota.kill = true;
+				
+//				if( nota.mInfo.tipo != TipoDeNota.PAUSA )
+//				{
+//					gAudio.s.PararAudio();						
+//					gPontuacao.s.CancelarPontos();
+//				}
+				
+				DestruirNota( nota );				
+			}
+		}	
+	}
+
+	void VerificarPontuacao (Vector3 posNota, Nota nota)
+	{
+		switch( nota.mInfo.tipo )
+		{
+			case TipoDeNota.NOTA:
+				VerificarNotaComum( posNota, nota );
+				break;
+			case TipoDeNota.NOTA_LONGA:
+				VerificarNotaLonga(posNota, nota);
+				break;
+			default:
+				break;
+		}
+	}
+
+	void VerificarNotaComum (Vector3 posNota, Nota nota)
+	{
+		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ))
+		{
+			gPontuacao.s.Pontuar( nota, gGame.s.player );
+			DestruirNota(nota);
+		}
+	}
+
+	void VerificarNotaLonga (Vector3 posNota, Nota nota)
+	{
+		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ) && nota.verificada == false)
+		{
+			nota.verificada = true;
+			gPontuacao.s.PontuarNotaLonga( nota, gGame.s.player );
 		}
 	}
 

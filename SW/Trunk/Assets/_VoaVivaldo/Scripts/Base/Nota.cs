@@ -9,8 +9,7 @@ public class Nota : MonoBehaviour
 	public Color 		cor;
 
 	public bool			kill = false;
-
-	public bool verificada;
+	public bool			pontuando = false;
 	
 	public float		sizeX;
 

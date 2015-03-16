@@ -8,6 +8,8 @@ public class gPontuacao : MonoBehaviour {
 	public static event UpdatePontuacao onUpdatePontuacao;
 
 	public static gPontuacao s;
+	
+	public int tolerancia = 1;
 
 	public 	int pontosPorNota = 100;
 	public 	int aCadaXNotas = 5;
@@ -69,11 +71,23 @@ public class gPontuacao : MonoBehaviour {
 		porcentagemAcertos = 0f;
 		estrelasGanhas = 0;
 		pontuacao = 0;
+		
+		if( onUpdateEstrelas != null ) onUpdateEstrelas( estrelasGanhas );
+		if( onUpdatePontuacao != null ) onUpdatePontuacao( pontuacao );
 	}
 
 	public bool VerificarPontuacao( Nota n, Player p )
 	{
-		if( (int) n.mInfo.timbre == p.mController.pista )
+		if( (int) n.mInfo.timbre >= p.mController.pista - tolerancia && (int) n.mInfo.timbre <= p.mController.pista + tolerancia )
+		{
+			return true;
+		}	
+		return false;
+	}
+
+	public bool VerificarPontuacaoLonga (Nota nota, Player player)
+	{
+		if( (int) nota.mInfo.timbre >= player.mController.pista -2 && (int) nota.mInfo.timbre <= player.mController.pista + 2 )
 		{
 			return true;
 		}	
@@ -100,6 +114,10 @@ public class gPontuacao : MonoBehaviour {
 
 	void PontuarNotaComum (Nota nota, Player p)
 	{
+		if (nota.kill ) return;
+		
+		 nota.kill = true;
+	
 		int pontuacaoAtual = p.mInfo.pontuacao;
 		
 		p.mInfo.pontuacao += pontosPorNota * multiplicador ;
@@ -124,7 +142,9 @@ public class gPontuacao : MonoBehaviour {
 
 	public void PontuarNotaLonga (Nota nota, Player p)
 	{
+		if( nota.pontuando ) return;
 		
+		nota.pontuando = true;
 		lastNota = nota;
 		notasAcertadasNaSequencia ++;
 		
@@ -144,18 +164,17 @@ public class gPontuacao : MonoBehaviour {
 		if( !pontuandoNotaLonga ) return;
 		
 		
-		if( VerificarPontuacao( lastNota, gGame.s.player ) == false ) 
+		if( VerificarPontuacaoLonga( lastNota, gGame.s.player ) == false ) 
 		{
 			pontuandoNotaLonga = false;	
+			lastNota.kill = true;
 		}
 		
 		float currentTime = Time.realtimeSinceStartup - initPontuacao;
 		
 		if( currentTime > adicionarACada ) 
 		{
-			initPontuacao = currentTime;
-			
-			
+			initPontuacao = Time.realtimeSinceStartup;
 			SomarPontuacao( pontosNotaLonga );
 		}
 	}

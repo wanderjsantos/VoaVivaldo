@@ -103,18 +103,16 @@ public class gNotas : MonoBehaviour
 			areaDeDead.position 		= new Vector2( offsetDead.x * Screen.width, offsetDead.y * Screen.height );
 			
 		}
-	
-		if (gGame.s.gameStarted == false)
-						return;
-//						
-//		areaDePontuacao.position = new Vector2(0,0);
-//		areaDePontuacao.width = Screen.width * areaDeVerificacao;
-//		areaDePontuacao.height = Screen.height;
-		
+
 		if( drawAreaDePontuacao )
 			GUI.Box( areaDePontuacao, "" );
 		if( drawAreaDeDead )
 			GUI.Box( areaDeDead, "" );
+		
+			
+		if (gGame.s.gameStarted == false)
+						return;
+		
 		
 		int c = Mathf.Clamp (verificarXNotasPorVez, 1, notasNaPista.Count);
 		
@@ -125,16 +123,15 @@ public class gNotas : MonoBehaviour
 				return;
 			}
 			
-			Vector3 posNota = new Vector3();
-		
-			posNota = UICamera.mainCamera.WorldToScreenPoint( notasNaPista[i].transform.position );
-				
+//			if( notasNaPista[i].kill ) continue;
 			
+			Vector3 posNota = UICamera.mainCamera.WorldToScreenPoint( notasNaPista[i].transform.position );
 			
 			if( notasNaPista[i].mInfo.tipo != TipoDeNota.PAUSA )
 			{	
 				if( areaDePontuacao.Contains( posNota ) && notasNaPista[i].kill == false) 
 				{
+					
 					VerificarPontuacao(posNota, notasNaPista[i] );
 				}
 			}
@@ -157,22 +154,15 @@ public class gNotas : MonoBehaviour
 					gAudio.s.PararAudio();						
 					gPontuacao.s.CancelarPontos();
 				}
-				
 				DestruirNota( nota );				
 			}
 		}
 		else if( nota.mInfo.tipo == TipoDeNota.NOTA_LONGA )
 		{
-			if( areaDeDead.Contains( posNota ) && gPontuacao.s.pontuandoNotaLonga == false && nota.kill == false ) 
+			if( areaDeDead.Contains( posNota ) && gPontuacao.s.pontuandoNotaLonga == false && nota.pontuando == false && gPontuacao.s.VerificarPontuacao(nota,
+			gGame.s.player) ) 
 			{				
-				nota.kill = true;
-				
-//				if( nota.mInfo.tipo != TipoDeNota.PAUSA )
-//				{
-//					gAudio.s.PararAudio();						
-//					gPontuacao.s.CancelarPontos();
-//				}
-				
+				nota.kill = true;				
 				DestruirNota( nota );				
 			}
 		}	
@@ -204,9 +194,8 @@ public class gNotas : MonoBehaviour
 
 	void VerificarNotaLonga (Vector3 posNota, Nota nota)
 	{
-		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ) && nota.verificada == false)
+		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ))
 		{
-			nota.verificada = true;
 			gPontuacao.s.PontuarNotaLonga( nota, gGame.s.player );
 		}
 	}
@@ -284,6 +273,8 @@ public class gNotas : MonoBehaviour
 
 		currentNota++;// = Mathf.Clamp(currentNota++,0,notasNaPista.Count);
 
+		gPontuacao.s.pontuandoNotaLonga = false;
+		
 		Destroy (nota.gameObject);
 	}
 }

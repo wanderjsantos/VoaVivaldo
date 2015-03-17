@@ -37,22 +37,31 @@ public class gAudio : MonoBehaviour
 		audio.PlayOneShot( audio.clip );
 	}
 	
+	public bool trilhaBloqueada = false;
 	public void PararAudio()
 	{	
-		if( esperandoParaTocar == true ) return;
+		PlayErrorClip();
+	
+		if( esperandoParaTocar == true || trilhaBloqueada ) return;
 			
-		tempoDeEsperaDeUmaNota = (60f/gRitmo.s.BPM); 
+//		tempoDeEsperaDeUmaNota = (60f/gRitmo.s.BPM); 
 		sourceInstrumentos = gMusica.s.musicaAtual.sourceInstrumento;
 		lastVolume = sourceInstrumentos.volume;
 		sourceInstrumentos.volume = 0f;
-		iTime = Time.realtimeSinceStartup;
-		esperandoParaTocar = true;
 		
-		PlayErrorClip();
+		trilhaBloqueada = true;
+		
+//		iTime = Time.realtimeSinceStartup;
+//		esperandoParaTocar = true;
+		
+		
 	}
 	
 	public void RecuperarAudio()
 	{
+		if( !trilhaBloqueada ) return ;
+		
+		trilhaBloqueada = false;
 		esperandoParaTocar = false;
 		sourceInstrumentos.volume = lastVolume;
 		

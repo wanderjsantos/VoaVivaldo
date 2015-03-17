@@ -9,6 +9,13 @@ TextureImporter:
     21300008: VITORIA_HORN_DANCANDO_4
     21300010: VITORIA_HORN_DANCANDO_5
     21300012: VITORIA_HORN_DANCANDO_6
+    21300014: FESTA_HORN_DANCANDO_0
+    21300016: FESTA_HORN_DANCANDO_1
+    21300018: FESTA_HORN_DANCANDO_2
+    21300020: FESTA_HORN_DANCANDO_3
+    21300022: FESTA_HORN_DANCANDO_4
+    21300024: FESTA_HORN_DANCANDO_5
+    21300026: FESTA_HORN_DANCANDO_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +36,7 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 512
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -50,74 +57,74 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: VITORIA_HORN_DANCANDO_0
+    - name: FESTA_HORN_DANCANDO_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 133
-        width: 252
-        height: 374
-      alignment: 0
+        x: 0
+        y: 0
+        width: 260
+        height: 512
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_HORN_DANCANDO_1
+    - name: FESTA_HORN_DANCANDO_1
       rect:
         serializedVersion: 2
-        x: 269
-        y: 61
-        width: 240
-        height: 444
-      alignment: 0
+        x: 260
+        y: 0
+        width: 260
+        height: 512
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_HORN_DANCANDO_2
+    - name: FESTA_HORN_DANCANDO_2
       rect:
         serializedVersion: 2
-        x: 521
-        y: 41
-        width: 252
-        height: 466
-      alignment: 0
+        x: 520
+        y: 0
+        width: 260
+        height: 512
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_HORN_DANCANDO_3
+    - name: FESTA_HORN_DANCANDO_3
       rect:
         serializedVersion: 2
-        x: 789
-        y: 25
-        width: 244
-        height: 482
-      alignment: 0
+        x: 780
+        y: 0
+        width: 260
+        height: 512
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_HORN_DANCANDO_4
+    - name: FESTA_HORN_DANCANDO_4
       rect:
         serializedVersion: 2
-        x: 1051
-        y: 23
-        width: 240
-        height: 484
-      alignment: 0
+        x: 1040
+        y: 0
+        width: 260
+        height: 512
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_HORN_DANCANDO_5
+    - name: FESTA_HORN_DANCANDO_5
       rect:
         serializedVersion: 2
-        x: 1299
-        y: 11
-        width: 254
-        height: 496
-      alignment: 0
+        x: 1300
+        y: 0
+        width: 260
+        height: 512
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_HORN_DANCANDO_6
+    - name: FESTA_HORN_DANCANDO_6
       rect:
         serializedVersion: 2
-        x: 1563
-        y: 7
-        width: 262
-        height: 500
-      alignment: 0
+        x: 1560
+        y: 0
+        width: 260
+        height: 512
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

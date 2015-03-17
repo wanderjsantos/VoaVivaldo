@@ -21,6 +21,18 @@ TextureImporter:
     21300032: VITORIA_TRUMPET_DANCANDO_16
     21300034: VITORIA_TRUMPET_DANCANDO_17
     21300036: VITORIA_TRUMPET_DANCANDO_17
+    21300038: FESTA_TRUMPET_DANCANDO_0
+    21300040: FESTA_TRUMPET_DANCANDO_1
+    21300042: FESTA_TRUMPET_DANCANDO_2
+    21300044: FESTA_TRUMPET_DANCANDO_3
+    21300046: FESTA_TRUMPET_DANCANDO_4
+    21300048: FESTA_TRUMPET_DANCANDO_5
+    21300050: FESTA_TRUMPET_DANCANDO_6
+    21300052: FESTA_TRUMPET_DANCANDO_7
+    21300054: FESTA_TRUMPET_DANCANDO_8
+    21300056: FESTA_TRUMPET_DANCANDO_9
+    21300058: FESTA_TRUMPET_DANCANDO_10
+    21300060: FESTA_TRUMPET_DANCANDO_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -62,115 +74,125 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: VITORIA_TRUMPET_DANCANDO_6
-      rect:
-        serializedVersion: 2
-        x: 1220
-        y: 313
-        width: 189
-        height: 197
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_7
-      rect:
-        serializedVersion: 2
-        x: 1411
-        y: 312
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_8
-      rect:
-        serializedVersion: 2
-        x: 1610
-        y: 312
-        width: 191
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_9
-      rect:
-        serializedVersion: 2
-        x: 1803
-        y: 312
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_10
+    - name: FESTA_TRUMPET_DANCANDO_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_11
+    - name: FESTA_TRUMPET_DANCANDO_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 112
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        x: 153
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_12
+    - name: FESTA_TRUMPET_DANCANDO_2
       rect:
         serializedVersion: 2
-        x: 400
-        y: 112
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        x: 306
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_13
+    - name: FESTA_TRUMPET_DANCANDO_3
       rect:
         serializedVersion: 2
-        x: 587
-        y: 112
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        x: 459
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_14
+    - name: FESTA_TRUMPET_DANCANDO_4
       rect:
         serializedVersion: 2
-        x: 781
-        y: 115
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        x: 612
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_15
+    - name: FESTA_TRUMPET_DANCANDO_5
       rect:
         serializedVersion: 2
-        x: 980
-        y: 111
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        x: 765
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: VITORIA_TRUMPET_DANCANDO_17
+    - name: FESTA_TRUMPET_DANCANDO_6
       rect:
         serializedVersion: 2
-        x: 1172
-        y: 105
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        x: 918
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_7
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_8
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_9
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_10
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_11
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 322
+        width: 153
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

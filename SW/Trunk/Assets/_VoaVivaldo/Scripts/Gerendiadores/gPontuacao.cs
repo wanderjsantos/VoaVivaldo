@@ -109,6 +109,8 @@ public class gPontuacao : MonoBehaviour {
 			default:
 			break;
 		}
+		
+		if( gAudio.s.trilhaBloqueada  ) gAudio.s.RecuperarAudio();
 	
 	}
 

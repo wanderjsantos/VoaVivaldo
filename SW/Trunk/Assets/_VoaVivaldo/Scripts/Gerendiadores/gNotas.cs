@@ -8,17 +8,12 @@ public class gNotas : MonoBehaviour
 	
 	public List<Nota>	_prefabNotas;
 
-//	public Nota			notaX1;
-//	public Nota			notaX2;
-//	public Nota			notaX3;
-//	public Nota			notaX4;
-//	public Nota			notaPausa;
 	public List<Nota>	notasNaPista;
 	
 	public bool dbg = false;
 	
 	public bool drawAreaDePontuacao = false;
-	public float	porcentagemNaTela = .19f;
+	public float	tamanhoAreaDePontuacao = 30f;
 	public Vector2 offsetPontuacao;
 	public Rect areaDePontuacao;
 
@@ -75,37 +70,37 @@ public class gNotas : MonoBehaviour
 	
 	}
 
+	public GameObject root;
 	void Init ()
 	{
 //		notasNaPista = new List<Nota> ();
 		quantidadeDeNotasNaPista = notasNaPista.FindAll( e => e.mInfo.tipo != TipoDeNota.PAUSA ).Count;
 		currentNota = 0;
 		
-		areaDePontuacao.width = Screen.width * porcentagemNaTela;
+		CalcularAreas();	
+		verificarXNotasPorVez = notasNaPista.Count;	
+	}
+
+	void CalcularAreas ()
+	{
+		float posXRoot = UICamera.mainCamera.WorldToScreenPoint( root.transform.position ).x ;
+		
+		areaDePontuacao.width = tamanhoAreaDePontuacao;
 		areaDePontuacao.height = Screen.height;
 		
-		areaDeDead.width = Screen.width * porcentagemNaTelaDead;
+		areaDeDead.width = tamanhoAreaDePontuacao;
 		areaDeDead.height = Screen.height;
 		
-		areaDePontuacao.position 	= new Vector2( offsetPontuacao.x * Screen.width, offsetPontuacao.y * Screen.height );
-		areaDeDead.position 		= new Vector2( offsetDead.x * Screen.width, offsetDead.y * Screen.height );
-	
-		verificarXNotasPorVez = notasNaPista.Count;	
+		areaDePontuacao.position 	= new Vector2( posXRoot - tamanhoAreaDePontuacao, 0 );
+		areaDeDead.position 		= new Vector2( posXRoot - tamanhoAreaDePontuacao * 2, 0 );
+		
 	}
 
 	void OnGUI()
 	{
 		if( dbg ) 
 		{
-			areaDePontuacao.width = Screen.width * porcentagemNaTela;
-			areaDePontuacao.height = Screen.height;
-			
-			areaDeDead.width = Screen.width * porcentagemNaTelaDead;
-			areaDeDead.height = Screen.height;
-			
-			areaDePontuacao.position 	= new Vector2( offsetPontuacao.x * Screen.width, offsetPontuacao.y * Screen.height );
-			areaDeDead.position 		= new Vector2( offsetDead.x * Screen.width, offsetDead.y * Screen.height );
-			
+			CalcularAreas();
 		}
 
 		if( drawAreaDePontuacao )

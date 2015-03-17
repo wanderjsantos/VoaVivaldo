@@ -30,15 +30,19 @@ public class MenuLevelSelect : Menu {
 		gMenus.s.ShowMenu ("Instrumento");
 	}
 	
+	public void OnClickFesta(int level)
+	{
+		gMusica.s.SetMusica( level );
+		gLevels.s.SetLevel( level );
+		
+		gMenus.s.ShowMenu("Festa");
+	}
+	
 	public void OnClickHome()
 	{
 		gMenus.s.ShowMenu("Principal");
 	}
 	
-	public void OnClickFesta()
-	{
-		gMenus.s.ShowMenu("Festa");
-	}
 
 	void AtualizarTema (GameObject centeredObject)
 	{

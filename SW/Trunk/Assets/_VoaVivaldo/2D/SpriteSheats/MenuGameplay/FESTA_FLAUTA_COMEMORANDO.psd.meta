@@ -76,12 +76,12 @@ TextureImporter:
     - name: FESTA_FLAUTA_COMEMORANDO_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 1827
         width: 116
         height: 220
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_1
       rect:
@@ -90,8 +90,8 @@ TextureImporter:
         y: 1827
         width: 118
         height: 220
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_2
       rect:
@@ -100,8 +100,8 @@ TextureImporter:
         y: 1855
         width: 122
         height: 192
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_3
       rect:
@@ -110,8 +110,8 @@ TextureImporter:
         y: 1674
         width: 86
         height: 374
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_4
       rect:
@@ -120,18 +120,18 @@ TextureImporter:
         y: 1697
         width: 98
         height: 350
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_5
       rect:
         serializedVersion: 2
-        x: 749
+        x: 747
         y: 1697
         width: 98
         height: 350
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_6
       rect:
@@ -140,8 +140,8 @@ TextureImporter:
         y: 1697
         width: 98
         height: 350
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_7
       rect:
@@ -150,8 +150,8 @@ TextureImporter:
         y: 1327
         width: 100
         height: 346
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_8
       rect:
@@ -160,8 +160,8 @@ TextureImporter:
         y: 1327
         width: 100
         height: 346
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_9
       rect:
@@ -170,8 +170,8 @@ TextureImporter:
         y: 1327
         width: 100
         height: 346
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_10
       rect:
@@ -180,8 +180,8 @@ TextureImporter:
         y: 1479
         width: 120
         height: 194
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_11
       rect:
@@ -190,8 +190,8 @@ TextureImporter:
         y: 1481
         width: 122
         height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_12
       rect:
@@ -200,8 +200,8 @@ TextureImporter:
         y: 1304
         width: 57
         height: 369
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_13
       rect:
@@ -210,8 +210,8 @@ TextureImporter:
         y: 1323
         width: 84
         height: 350
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_14
       rect:
@@ -220,8 +220,8 @@ TextureImporter:
         y: 953
         width: 84
         height: 350
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_15
       rect:
@@ -230,8 +230,8 @@ TextureImporter:
         y: 950
         width: 84
         height: 353
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_16
       rect:
@@ -240,8 +240,8 @@ TextureImporter:
         y: 1071
         width: 118
         height: 232
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_17
       rect:
@@ -250,8 +250,8 @@ TextureImporter:
         y: 1071
         width: 118
         height: 232
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_18
       rect:
@@ -260,8 +260,8 @@ TextureImporter:
         y: 1111
         width: 122
         height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_19
       rect:
@@ -270,8 +270,8 @@ TextureImporter:
         y: 1109
         width: 120
         height: 194
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_20
       rect:
@@ -280,8 +280,8 @@ TextureImporter:
         y: 1674
         width: 86
         height: 374
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_21
       rect:
@@ -290,8 +290,8 @@ TextureImporter:
         y: 1856
         width: 122
         height: 192
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_22
       rect:
@@ -300,8 +300,8 @@ TextureImporter:
         y: 1440
         width: 118
         height: 232
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_23
       rect:
@@ -310,8 +310,8 @@ TextureImporter:
         y: 1439
         width: 118
         height: 232
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_24
       rect:
@@ -320,8 +320,8 @@ TextureImporter:
         y: 1306
         width: 57
         height: 369
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_25
       rect:
@@ -330,8 +330,8 @@ TextureImporter:
         y: 953
         width: 92
         height: 350
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_26
       rect:
@@ -340,8 +340,8 @@ TextureImporter:
         y: 954
         width: 92
         height: 350
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_FLAUTA_COMEMORANDO_27
       rect:
@@ -350,8 +350,8 @@ TextureImporter:
         y: 955
         width: 92
         height: 350
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -34,6 +34,11 @@ public class MenuLevelSelect : Menu {
 	{
 		gMenus.s.ShowMenu("Principal");
 	}
+	
+	public void OnClickFesta()
+	{
+		gMenus.s.ShowMenu("Festa");
+	}
 
 	void AtualizarTema (GameObject centeredObject)
 	{

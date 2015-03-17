@@ -20,8 +20,6 @@ public class Nota : MonoBehaviour
 		
 		kill = false;
 		
-		if( mInfo.tipo == TipoDeNota.NOTA_LONGA )
-		SetSize( gPista.s.tamanhoDoCompasso / (float) mInfo.duracao );
 	}
 	
 	public void SetSize( float x )

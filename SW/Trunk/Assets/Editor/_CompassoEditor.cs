@@ -78,8 +78,14 @@ public class _CompassoEditor : VivaldoEditor
 			case TipoDeNota.PAUSA:
 				DrawPausa( n );
 				break;
-			case TipoDeNota.NOTA_LONGA:
-				DrawNotaLonga(n);
+			case TipoDeNota.NOTA_X2:
+				DrawNOTA_X2(n);
+				break;
+			case TipoDeNota.NOTA_X3:
+				DrawNOTA_X3(n);
+				break;
+			case TipoDeNota.NOTA_X4:
+				DrawNOTA_X4(n);
 				break;
 			default:
 				DrawNotaComum(n);
@@ -116,7 +122,7 @@ public class _CompassoEditor : VivaldoEditor
 		}
 	}
 	
-	void DrawNotaLonga( _NotaEditor n )
+	void DrawNOTA_X2( _NotaEditor n )
 	{
 		float width = Vivaldos.WIDTH_COMPASSO/ (float)n.notaInfo.duracao;
 		
@@ -127,6 +133,31 @@ public class _CompassoEditor : VivaldoEditor
 			EditNota( n );
 		}
 	}
+	
+	void DrawNOTA_X3( _NotaEditor n )
+	{
+		float width = Vivaldos.WIDTH_COMPASSO/ (float)n.notaInfo.duracao;
+		
+		GUI.color = Color.red;
+		
+		if( GUILayout.Button( ((int)n.notaInfo.timbre).ToString() + "-" +  n.notaInfo.duracao.ToString(), GUILayout.Width(width), GUILayout.Height(20f) ) )
+		{				
+			EditNota( n );
+		}
+	}
+	
+	void DrawNOTA_X4( _NotaEditor n )
+	{
+		float width = Vivaldos.WIDTH_COMPASSO/ (float)n.notaInfo.duracao;
+		
+		GUI.color = Color.cyan;
+		
+		if( GUILayout.Button( ((int)n.notaInfo.timbre).ToString() + "-" +  n.notaInfo.duracao.ToString(), GUILayout.Width(width), GUILayout.Height(20f) ) )
+		{				
+			EditNota( n );
+		}
+	}
+	
 	
 	void EditNota( _NotaEditor n )
 	{
@@ -182,7 +213,7 @@ public class _CompassoEditor : VivaldoEditor
 	{
 		int t = (int) n.notaInfo.tipo;
 		
-		if( t == 2 ) t = -1;
+		if( t == 4 ) t = -1;
 		
 		t += 1;
 		

@@ -101,7 +101,7 @@ public class gPontuacao : MonoBehaviour {
 			case TipoDeNota.NOTA:
 			PontuarNotaComum(nota, p);
 			break;
-			case TipoDeNota.NOTA_LONGA:
+			case TipoDeNota.NOTA_X2:
 			PontuarNotaLonga(nota, p);
 			break;
 			case TipoDeNota.PAUSA:

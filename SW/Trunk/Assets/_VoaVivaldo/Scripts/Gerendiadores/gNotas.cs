@@ -5,10 +5,14 @@ using System.Collections.Generic;
 public class gNotas : MonoBehaviour 
 {
 	public static gNotas s;
+	
+	public List<Nota>	_prefabNotas;
 
-	public Nota			notaComum;
-	public Nota			notaLonga;
-	public Nota			notaPausa;
+//	public Nota			notaX1;
+//	public Nota			notaX2;
+//	public Nota			notaX3;
+//	public Nota			notaX4;
+//	public Nota			notaPausa;
 	public List<Nota>	notasNaPista;
 	
 	public bool dbg = false;
@@ -143,7 +147,7 @@ public class gNotas : MonoBehaviour
 
 	void VerificarFimDePercurso (Vector3 posNota, Nota nota)
 	{
-		if( nota.mInfo.tipo == TipoDeNota.NOTA )
+		if( (int)nota.mInfo.tipo == (int)TipoDeNota.NOTA )
 		{
 			if( areaDeDead.Contains( posNota ) && nota.kill == false ) 
 			{				
@@ -157,7 +161,7 @@ public class gNotas : MonoBehaviour
 				DestruirNota( nota );				
 			}
 		}
-		else if( nota.mInfo.tipo == TipoDeNota.NOTA_LONGA )
+		else if((int)nota.mInfo.tipo > (int)TipoDeNota.NOTA )
 		{
 			if( areaDeDead.Contains( posNota ) && gPontuacao.s.pontuandoNotaLonga == false && nota.pontuando == false && gPontuacao.s.VerificarPontuacao(nota,
 			gGame.s.player) ) 
@@ -175,10 +179,11 @@ public class gNotas : MonoBehaviour
 			case TipoDeNota.NOTA:
 				VerificarNotaComum( posNota, nota );
 				break;
-			case TipoDeNota.NOTA_LONGA:
+			case TipoDeNota.NOTA_X2:
 				VerificarNotaLonga(posNota, nota);
 				break;
 			default:
+				VerificarNotaLonga(posNota, nota);
 				break;
 		}
 	}
@@ -210,43 +215,13 @@ public class gNotas : MonoBehaviour
 	
 	public Nota NovaNota( NotaInfo info)
 	{
-		Nota n;
-	
-		switch( info.tipo )
-		{
-			case TipoDeNota.NOTA:
-			   	n = 	NovaNotaNormal(info);
-				break;
-			case TipoDeNota.PAUSA:
-				n = 	NovaNotaPausa(info);
-				break;
-			case TipoDeNota.NOTA_LONGA:
-				n = 	NovaNotaLonga(info);
-				break;
-			default :
-				n =	 NovaNotaNormal(info);
-				break;
-		}
-		
-		return n;
-	
+		return InstanciarNota( info );	
 	}
 
-	Nota NovaNotaPausa (NotaInfo info)
-	{
-		Nota ret = Instantiate (notaPausa) as Nota;
-		ret.gameObject.transform.parent = gPista.s.rootPista.transform;
-		ret.mInfo = info;
 
-		notasNaPista.Add (ret);
-		
-		return ret;
-		
-	}
-
-	Nota NovaNotaNormal (NotaInfo info)
+	Nota InstanciarNota (NotaInfo info)
 	{
-		Nota ret = Instantiate (notaComum) as Nota;
+		Nota ret = Instantiate ( _prefabNotas.Find( e => e.mInfo.tipo == info.tipo ) ) as Nota;
 		ret.gameObject.transform.parent = gPista.s.rootPista.transform;
 		ret.mInfo = info;
 
@@ -255,16 +230,6 @@ public class gNotas : MonoBehaviour
 		return ret;
 	}
 
-	Nota NovaNotaLonga (NotaInfo info)
-	{
-		Nota ret = Instantiate (notaLonga) as Nota;
-		ret.gameObject.transform.parent = gPista.s.rootPista.transform;
-		ret.mInfo = info;
-
-		notasNaPista.Add (ret);
-		
-		return ret;
-	}
 
 	void DestruirNota (Nota nota)
 	{

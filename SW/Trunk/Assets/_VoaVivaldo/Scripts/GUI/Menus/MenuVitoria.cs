@@ -18,6 +18,7 @@ public class MenuVitoria : Menu {
 		
 		personagem.gameObject.GetComponent<UI2DSpriteAnimation>().Play( personagem.meuPersonagem.ToString().ToLower() );
 		spritePersonagem.MakePixelPerfect();
+		spritePersonagem.MakePixelPerfect();
 		
 	}
 	

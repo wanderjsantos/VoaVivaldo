@@ -26,7 +26,8 @@ public class gTemas : MonoBehaviour
 	
 	public void Aplicar(  )
 	{
-		Change();
+		Aplicar ( gLevels.s.allLevels[0].info.tema );
+//		Change();
 	}
 	
 	public void Change()

@@ -10,7 +10,7 @@ public class MenuOpcoes : Menu {
 	
 	public void OnChangeValueVibrar( bool valor )
 	{		
-		Vivaldos.VIBRAR = valor;
+		Vivaldos.VIBRAR = !valor;
 	}
 	
 	public void OnChangeValueAudio( bool valor )

@@ -13,4 +13,12 @@ public class MenuPause : Menu {
 	{
 		gGame.s.Pause(false);
 	}
+	
+	public void OnClickHome()
+	{
+		gComandosDeMusica.s.Stop();
+		gGame.s.Pause( false );
+		gGame.s.FimDeJogo();
+		gMenus.s.ShowMenu("Principal");
+	}
 }

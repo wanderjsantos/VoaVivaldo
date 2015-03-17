@@ -117,7 +117,11 @@ public class gGame : MonoBehaviour
 	
 	public void Pause( bool pausar )
 	{
-		if( gameStarted == false ) return ;
+		if( gameStarted == false )
+		{
+			 gComandosDeMusica.s.Stop();
+			 FimDeJogo();
+		 }
 		
 		pausado = pausar;
 		Time.timeScale = (pausado)? 0f : 1f ;
@@ -128,6 +132,9 @@ public class gGame : MonoBehaviour
 	public void PlayGame()
 	{
 		gameStarted = true;
+		
+		if( pausado ) Pause(false);
+		
 		gComandosDeMusica.s.Play ();
 
 		player.Enable ();
@@ -135,7 +142,10 @@ public class gGame : MonoBehaviour
 		if (onPlayGame != null)
 						onPlayGame ();
 	}
-
+	
+	/// <summary>
+	/// Fim de partida, leva ao menu de Vitoria apos concluir
+	/// </summary>
 	void FimDePartida ()
 	{
 		if( gameStarted == false ) return;
@@ -147,10 +157,19 @@ public class gGame : MonoBehaviour
 		if( onStopGame != null)
 			onStopGame();
 	}
+
+	/// <summary>
+	/// Fim de jogo cancela o jogo, mas nao toma nenhuma acao.
+	/// </summary>
 	
-	void FimDeJogo()
+	public void FimDeJogo()
 	{
+		if( gameStarted == false ) return;
 		
+		gameStarted = false;
+		
+		if( onStopGame != null)
+			onStopGame();
 	}
 
 	void Update()

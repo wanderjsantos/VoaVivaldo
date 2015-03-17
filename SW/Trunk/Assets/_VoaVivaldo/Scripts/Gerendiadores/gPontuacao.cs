@@ -59,6 +59,7 @@ public class gPontuacao : MonoBehaviour {
 	{
 		gGame.onInit += Resetar;
 		gGame.onReset += Resetar;
+//		gComandosDeMusica.onStop
 	}
 
 	void Resetar ()
@@ -72,8 +73,8 @@ public class gPontuacao : MonoBehaviour {
 		estrelasGanhas = 0;
 		pontuacao = 0;
 		
-		if( onUpdateEstrelas != null ) onUpdateEstrelas( estrelasGanhas );
-		if( onUpdatePontuacao != null ) onUpdatePontuacao( pontuacao );
+		if( onUpdateEstrelas != null ) onUpdateEstrelas( 0 );
+		if( onUpdatePontuacao != null ) onUpdatePontuacao( 0 );
 	}
 
 	public bool VerificarPontuacao( Nota n, Player p )
@@ -136,7 +137,8 @@ public class gPontuacao : MonoBehaviour {
 		
 		if( p.mInfo.pontuacao == pontuacaoAtual ) return;
 		
-		onUpdatePontuacao( p.mInfo.pontuacao );
+		if( onUpdatePontuacao != null )
+			onUpdatePontuacao( p.mInfo.pontuacao );
 		
 		AtualizarErrosEAcertos();
 		

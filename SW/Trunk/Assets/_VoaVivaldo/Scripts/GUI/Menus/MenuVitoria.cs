@@ -20,6 +20,17 @@ public class MenuVitoria : Menu {
 		spritePersonagem.MakePixelPerfect();
 		spritePersonagem.MakePixelPerfect();
 		
+//		LevelSaveInfo savedInfo;
+		
+//		if( gLevels.s.currentLevel.info.savedInfo == null )
+//			gLevels.s.currentLevel.info.savedInfo = new LevelSaveInfo();
+//		
+//		savedInfo = gLevels.s.currentLevel.info.savedInfo;
+//		
+//		savedInfo.estrelasGanhas = gPontuacao.s.estrelasGanhas;
+//		savedInfo.pontosMarcados = gGame.s.player.mInfo.pontuacao;
+//		
+		
 	}
 	
 	public void OnClickFestinha()

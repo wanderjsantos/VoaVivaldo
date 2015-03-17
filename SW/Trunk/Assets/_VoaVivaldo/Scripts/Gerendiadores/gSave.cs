@@ -8,6 +8,10 @@ using System.IO;
 public class gSave : MonoBehaviour {
 
 	public static gSave s;
+	
+	public VivaldoSave saveSettings;
+	
+	public VivaldoSave defaultSavedGame;
 
 	public void Awake()
 	{
@@ -16,11 +20,13 @@ public class gSave : MonoBehaviour {
 
 	public void Salvar()
 	{
-//		Debug.LogWarning ("Salvando");
+//		Debug.LogWarning ("Salvando Settings");
 //		XmlSerializer serializer = new XmlSerializer (typeof(MusicaData));
 //		FileStream stream = new FileStream ("Assets/Musica.xml", FileMode.Create);
 //		serializer.Serialize (stream, data);
 //		stream.Close ();
+
+		
 
 	}
 

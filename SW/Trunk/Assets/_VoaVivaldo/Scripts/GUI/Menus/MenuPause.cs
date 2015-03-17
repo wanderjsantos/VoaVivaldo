@@ -18,6 +18,7 @@ public class MenuPause : Menu {
 	{
 		gComandosDeMusica.s.Stop();
 		gGame.s.Pause( false );
+		gMusica.s.musicaAtual.Stop();
 		gGame.s.FimDeJogo();
 		gMenus.s.ShowMenu("Principal");
 	}

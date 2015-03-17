@@ -8,6 +8,7 @@ public class LevelInfo
 	public string 				nome = "Level";
 	public Partitura[]			partituras;
 	public Tema					tema;
+	public LevelSaveInfo		savedInfo;	
 	
 	
 	public LevelInfo()

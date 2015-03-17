@@ -164,8 +164,6 @@ public class gGame : MonoBehaviour
 	
 	public void FimDeJogo()
 	{
-		if( gameStarted == false ) return;
-		
 		gameStarted = false;
 		
 		if( onStopGame != null)

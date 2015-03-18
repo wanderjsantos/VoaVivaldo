@@ -2,10 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class VivaldoSave 
 {
-	public static List<LevelSaveInfo> 		savedLevels;
-	public static List<SettingsSaveInfo> 	settings;
+	public List<LevelSaveInfo> 		savedLevels;
+	public SettingsSaveInfo 		settings;
 }
 
 [System.Serializable]
@@ -23,12 +24,14 @@ public class PartituraSaveInfo
 	public int		meuIndice 			= -1;
 	public int 		estrelasGanhas;
 	public int 		pontosMarcados;
+	public bool		liberado			= false;
 	public bool		festaLiberada		= false;
 }
 
+[System.Serializable]
 public class SettingsSaveInfo
 {
-	public bool		audio;
+	public bool		mudo;
 	public bool		vibrar;
 }
 

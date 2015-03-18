@@ -10,35 +10,56 @@ public class gSave : MonoBehaviour {
 	public static gSave s;
 	
 	public VivaldoSave saveSettings;
-	
 	public VivaldoSave defaultSavedGame;
 
 	public void Awake()
 	{
 		s = this;
 	}
+	
+	public void Start()
+	{
+		saveSettings = Carregar();
+		AplicarSaveGame();
+	}
 
 	public void Salvar()
 	{
-//		Debug.LogWarning ("Salvando Settings");
-//		XmlSerializer serializer = new XmlSerializer (typeof(MusicaData));
-//		FileStream stream = new FileStream ("Assets/Musica.xml", FileMode.Create);
-//		serializer.Serialize (stream, data);
-//		stream.Close ();
-
-		
+		Debug.LogWarning("Saving Settings");
+		XmlSerializer 	serializer = new XmlSerializer( typeof(VivaldoSave ) );
+		FileStream		writer = new FileStream( "Assets/Vivaldo/Savegames/Save.xml", FileMode.Create );
+		serializer.Serialize( writer, saveSettings );
+		writer.Close();
 
 	}
 
-//	public MusicaData Load()
-//	{
-//		return null;
-//		Debug.LogWarning ("Carregando");
-//		XmlSerializer serializer = new XmlSerializer (typeof(MusicaData));
-//		FileStream stream = new FileStream ("Assets/Musica.xml", FileMode.Open);
-//		MusicaData ret = serializer.Deserialize (stream) as MusicaData;
-//		stream.Close ();
-//		return ret;
-//	}
+	public VivaldoSave Carregar ()
+	{
+		if( File.Exists( "Assets/Vivaldo/Savegames/Save.xml" ) == false )
+		{
+			Debug.LogWarning("Usando save default");
+			return defaultSavedGame;
+		}
 	
+		Debug.LogWarning ("Loading Settings");
+		XmlSerializer serializer = new XmlSerializer (typeof(VivaldoSave));
+		FileStream stream = new FileStream ("Assets/Vivaldo/Savegames/Save.xml", FileMode.Open);
+		VivaldoSave ret = serializer.Deserialize (stream) as VivaldoSave;
+		stream.Close ();
+		return ret;
+	}
+	
+	public void AplicarSaveGame()
+	{
+		AplicarLevels();
+	}
+
+	void AplicarLevels ()
+	{
+		if( saveSettings == null ) saveSettings = Carregar();
+		foreach( Level level in gLevels.s.allLevels )
+		{
+			level.savedInfo = saveSettings.savedLevels.Find( e => e.meuLevel == level.info.meuIndice );
+		}
+	}
 }

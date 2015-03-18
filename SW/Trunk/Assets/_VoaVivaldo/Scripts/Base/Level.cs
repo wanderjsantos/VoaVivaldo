@@ -4,7 +4,12 @@ using System.Collections.Generic;
 
 public class Level : MonoBehaviour 
 {
-	public LevelInfo info;	
-//	public LevelData data;	
+	public LevelInfo 		info;
+	public LevelSaveInfo 	savedInfo;
+	
+	public void UpdateInfo()
+	{
+		
+	}
 }
 

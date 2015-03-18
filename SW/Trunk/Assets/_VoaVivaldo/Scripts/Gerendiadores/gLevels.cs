@@ -10,6 +10,7 @@ public class gLevels : MonoBehaviour
 
 	public Level currentLevel;
 	public Partitura currentPartitura;
+	
 	public List<Level>allLevels;
 
 	void Awake()
@@ -27,6 +28,12 @@ public class gLevels : MonoBehaviour
 	{
 		gComandosDeMusica.onPlay -= Resetar;
 		gGame.onReset -= Resetar;
+	}
+
+	public List<Level> GetLevelsLiberados ()
+	{
+		List<Level> ret = allLevels.FindAll( e => e.savedInfo.liberado );
+		return ret;
 	}
 
 	void Resetar ()

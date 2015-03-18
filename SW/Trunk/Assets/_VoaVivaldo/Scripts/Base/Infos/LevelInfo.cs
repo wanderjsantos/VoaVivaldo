@@ -6,10 +6,10 @@ using System.Collections.Generic;
 public class LevelInfo
 {
 	public string 				nome = "Level";
+	public int					meuIndice = -1;
 	public Partitura[]			partituras;
 	public Tema					tema;
-	public LevelSaveInfo		savedInfo;	
-	
+		
 	
 	public LevelInfo()
 	{

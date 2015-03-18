@@ -14,7 +14,10 @@ public class LevelSaveInfo
 {
 	public string 				nome;
 	public int					meuLevel;
-	public bool					liberado 			= false; 
+	public bool					liberado 			= false;
+	public bool 				festaLiberada		= false;
+
+ 
 	public List<PartituraSaveInfo> 	partiturasConcluidas;
 }
 

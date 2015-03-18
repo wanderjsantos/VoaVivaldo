@@ -9,26 +9,23 @@ public class MenuLevelSelect : Menu {
 	public UICenterOnChild uiCenter;
 	
 	List<Level> levelsDisponiveis;
-	List<BotaoFase> botoesDeLevel;
+	public List<BotaoFase> botoesDeLevel;
 	
 	public override void Show ()
 	{
 		base.Show ();
 		levelsDisponiveis = new List<Level>();
-		botoesDeLevel = new List<BotaoFase>();
-		
-		botoesDeLevel.AddRange( uiCenter.GetComponentsInChildren<BotaoFase>(true ) );
 		
 		levelsDisponiveis.AddRange( gLevels.s.GetLevelsLiberados() );
 		
 		for( int i = 0; i< botoesDeLevel.Count; i++ )
 		{
-			botoesDeLevel[i].SetValue( false );
+			botoesDeLevel[i].SetValue( false, false );
 		}
 		
 		levelsDisponiveis.ForEach( delegate( Level level)
 		{
-			botoesDeLevel.Find( e=> e.selecionarLevel == level.savedInfo.meuLevel ).SetValue( level.savedInfo.liberado);
+			botoesDeLevel.Find( e=> e.selecionarLevel == level.savedInfo.meuLevel ).SetValue( level.savedInfo.liberado, level.savedInfo.festaLiberada);
 		});
 
 	}
@@ -72,7 +69,11 @@ public class MenuLevelSelect : Menu {
 
 	void AtualizarTema (GameObject centeredObject)
 	{
-		BotaoFase level = centeredObject.GetComponent<BotaoFase>();
-		gTemas.s.Aplicar( gLevels.s.allLevels[ level.selecionarLevel ].info.tema );
+		BotaoFase level = centeredObject.GetComponentInChildren<BotaoFase>();
+				
+		if( gLevels.s.allLevels[ level.selecionarLevel ].savedInfo.liberado )
+			gTemas.s.Aplicar( gLevels.s.allLevels[ level.selecionarLevel ].info.tema );
+		else
+			gTemas.s.Aplicar( gTemas.s.temaDisabled );
 	}
 }

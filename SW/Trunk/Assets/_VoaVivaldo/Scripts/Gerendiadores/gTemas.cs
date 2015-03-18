@@ -10,6 +10,8 @@ public class gTemas : MonoBehaviour
 	
 	public Tema temaAtual;
 	
+	public Tema temaDisabled;
+	
 	public bool	usarTemas = false;
 	
 	void Awake()

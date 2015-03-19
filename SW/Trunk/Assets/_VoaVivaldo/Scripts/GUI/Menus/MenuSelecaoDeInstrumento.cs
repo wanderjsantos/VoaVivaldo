@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 public class MenuSelecaoDeInstrumento : Menu 
 {
-	public List<GameObject> listaDeBotoes;
+	public List<GameObject> listaDeBotoesPorFase;
+	public List<vLevel>		listaDeFasesPorLevel;
 
 	public override void Show ()
 	{
@@ -16,16 +17,32 @@ public class MenuSelecaoDeInstrumento : Menu
 
 	void DesabilitarBotoes ()
 	{
-		listaDeBotoes.ForEach( delegate( GameObject e )
+		listaDeBotoesPorFase.ForEach( delegate( GameObject e )
 		{
 			e.SetActive(false);
 		});
 	
 	}
 	
-	void HabilitarBotoes( int index )
+	void HabilitarBotoes( int indiceDoLevel )
 	{
-		listaDeBotoes[index].SetActive(true);
+		listaDeBotoesPorFase[indiceDoLevel].SetActive(true);
+		
+		listaDeFasesPorLevel = new List<vLevel>();
+		listaDeFasesPorLevel.AddRange( listaDeBotoesPorFase[indiceDoLevel].GetComponentsInChildren<vLevel>(true));
+	
+		foreach(vLevel v in listaDeFasesPorLevel ) v.gameObject.SetActive(false);
+	
+		foreach( PartituraSaveInfo partitura in gLevels.s.allLevels[indiceDoLevel].savedInfo.partiturasConcluidas )
+		{
+			if( partitura.liberado == false ) continue;
+		
+			vLevel level = listaDeFasesPorLevel.Find( e => e.minhaFase == partitura.meuIndice );
+			if( level == null ) continue;
+			
+			level.SetActive( true, partitura.estrelasGanhas );
+		}
+	
 	}
 	
 	public void SelectInstrumento(int numero)

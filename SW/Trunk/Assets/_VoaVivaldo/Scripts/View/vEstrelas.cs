@@ -27,7 +27,7 @@ public class vEstrelas : MonoBehaviour
 			estrelas[i].SetActive( true );
 		}
 		
-		gAudio.s.PlayNovaEstrelaClip();
+		
 	}
 
 	public void UpdateStars (int estrelas)
@@ -39,5 +39,6 @@ public class vEstrelas : MonoBehaviour
 		estrelasGanhas = estrelas;
 		
 		SetNewEstrela( estrelasGanhas );
+		gAudio.s.PlayNovaEstrelaClip();
 	}
 }

@@ -9,6 +9,8 @@ public class PartituraInfo
 {
 	public 	string				nome		= "Partitura";
 	
+	public int					meuNumero 	= -1;
+	
 	public	int					BPM			= 120;
 	
 	public 	QualPersonagem		personagem = QualPersonagem.TRUMPET;	

@@ -28,7 +28,9 @@ public class PartituraSaveInfo
 	public int 		estrelasGanhas;
 	public int 		pontosMarcados;
 	public bool		liberado			= false;
-	public bool		festaLiberada		= false;
+//	public bool		festaLiberada		= false;
+	
+	
 }
 
 [System.Serializable]

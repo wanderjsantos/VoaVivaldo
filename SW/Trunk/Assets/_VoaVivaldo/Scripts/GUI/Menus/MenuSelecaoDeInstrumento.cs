@@ -35,6 +35,8 @@ public class MenuSelecaoDeInstrumento : Menu
 	
 		foreach( PartituraSaveInfo partitura in gLevels.s.allLevels[indiceDoLevel].savedInfo.partiturasConcluidas )
 		{
+//			Debug.Log("Estrelas: " + partitura.estrelasGanhas);
+		
 			if( partitura.liberado == false ) continue;
 		
 			vLevel level = listaDeFasesPorLevel.Find( e => e.minhaFase == partitura.meuIndice );

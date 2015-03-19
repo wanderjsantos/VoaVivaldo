@@ -19,23 +19,28 @@ public class gSave : MonoBehaviour {
 	
 	public void Start()
 	{
-		saveSettings = Carregar();
+		saveSettings = CarregarArquivo();
 		AplicarSaveGame();
 	}
+	
+	public void GravarInformacoes()
+	{
+		SalvarEmArquivo();
+	}
 
-	public void Salvar()
+	void SalvarEmArquivo()
 	{
 		Debug.LogWarning("Saving Settings");
 		XmlSerializer 	serializer = new XmlSerializer( typeof(VivaldoSave ) );
-		FileStream		writer = new FileStream( "Assets/Vivaldo/Savegames/Save.xml", FileMode.Create );
+		FileStream		writer = new FileStream( "Assets/_VoaVivaldo/SaveGames/Save.xml", FileMode.Create );
 		serializer.Serialize( writer, saveSettings );
 		writer.Close();
 
 	}
 
-	public VivaldoSave Carregar ()
+	VivaldoSave CarregarArquivo ()
 	{
-		if( File.Exists( "Assets/Vivaldo/Savegames/Save.xml" ) == false )
+		if( File.Exists( "Assets/_VoaVivaldo/SaveGames/Save.xml" ) == false )
 		{
 			Debug.LogWarning("Usando save default");
 			return defaultSavedGame;
@@ -43,7 +48,7 @@ public class gSave : MonoBehaviour {
 	
 		Debug.LogWarning ("Loading Settings");
 		XmlSerializer serializer = new XmlSerializer (typeof(VivaldoSave));
-		FileStream stream = new FileStream ("Assets/Vivaldo/Savegames/Save.xml", FileMode.Open);
+		FileStream stream = new FileStream ("Assets/_VoaVivaldo/SaveGames/Save.xml", FileMode.Open);
 		VivaldoSave ret = serializer.Deserialize (stream) as VivaldoSave;
 		stream.Close ();
 		return ret;
@@ -56,7 +61,7 @@ public class gSave : MonoBehaviour {
 
 	void AplicarLevels ()
 	{
-		if( saveSettings == null ) saveSettings = Carregar();
+		if( saveSettings == null ) saveSettings = CarregarArquivo();
 		foreach( Level level in gLevels.s.allLevels )
 		{
 			level.savedInfo = saveSettings.savedLevels.Find( e => e.meuLevel == level.info.meuIndice );

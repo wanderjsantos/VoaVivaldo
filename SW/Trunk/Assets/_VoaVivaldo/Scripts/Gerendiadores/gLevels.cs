@@ -7,6 +7,7 @@ public class gLevels : MonoBehaviour
 	public static gLevels s;
 
 	public int currentLevelIndex = 0;
+	public int currentPartituraIndex = 0;
 
 	public Level currentLevel;
 	public Partitura currentPartitura;
@@ -74,16 +75,19 @@ public class gLevels : MonoBehaviour
 	{
 		currentLevel = SetLevel( musica );
 		currentPartitura = SetPartitura( partitura );
+		
 	}
 
 	Partitura SetPartitura (int partitura)
 	{
+		currentPartituraIndex = partitura;
 		currentPartitura = currentLevel.info.partituras[partitura];
 		return currentPartitura;
 	}
 
 	public PartituraInfo GetPartitura (int indice)
 	{
+		
 		currentPartitura = NewPartitura(indice);
 		return currentPartitura.info;
 	}
@@ -91,10 +95,35 @@ public class gLevels : MonoBehaviour
 	public Partitura NewPartitura(int indice)
 	{
 		Debug.Log("Indice>" + indice );
+		currentPartituraIndex = indice;
 		Partitura p = Instantiate( currentLevel.info.partituras[indice] ) as Partitura;
+		currentPartitura = p;
 		p.transform.parent = transform;
 		p.gameObject.SetActive(false);
 		return p;
+	}
+
+	public void FinalizarLevel ()
+	{
+		bool pontos = currentLevel.SetPontuacao	( currentPartituraIndex, gGame.s.player.mInfo.pontuacao );
+		bool estrelas = currentLevel.SetEstrelas	( currentPartituraIndex, gPontuacao.s.estrelasGanhas );
+		
+//		if( estrelas || pontos )
+//		{
+//			if( currentLevel.savedInfo.partiturasConcluidas[currentPartituraIndex].liberado == false )
+//				currentLevel.savedInfo.partiturasConcluidas[currentPartituraIndex].liberado = true;
+//		}
+		
+	}
+	
+	public void LiberarProximaFase( int faseAtual )
+	{
+	
+	}
+	
+	public void LiberarProximoLevel()
+	{
+	
 	}
 
 //	public void NextLevel()

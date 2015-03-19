@@ -154,6 +154,10 @@ public class gGame : MonoBehaviour
 		
 		gameStarted = false;
 		
+		gLevels.s.FinalizarLevel();
+		
+		gSave.s.GravarInformacoes();
+		
 		if( onStopGame != null)
 			onStopGame();
 	}

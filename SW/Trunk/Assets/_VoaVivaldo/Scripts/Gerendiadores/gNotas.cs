@@ -122,83 +122,105 @@ public class gNotas : MonoBehaviour
 				return;
 			}
 			
-//			if( notasNaPista[i].kill ) continue;
-			
 			Vector3 posNota = UICamera.mainCamera.WorldToScreenPoint( notasNaPista[i].transform.position );
 			
-			if( notasNaPista[i].mInfo.tipo != TipoDeNota.PAUSA )
-			{	
-				if( areaDePontuacao.Contains( posNota ) && notasNaPista[i].kill == false) 
-				{
-					
-					VerificarPontuacao(posNota, notasNaPista[i] );
-				}
-			}
 			
+			VerificarPercursoDePontuacao(posNota, notasNaPista[i]);
 			VerificarFimDePercurso(posNota, notasNaPista[i]);
-
 		}
 	}
 
 	void VerificarFimDePercurso (Vector3 posNota, Nota nota)
 	{
-		if( (int)nota.mInfo.tipo == (int)TipoDeNota.NOTA )
+	
+		if( nota.VerificarZonaDeMorte( areaDeDead, posNota ) )
 		{
-			if( areaDeDead.Contains( posNota ) && nota.kill == false ) 
+			if( nota.mInfo.tipo != TipoDeNota.PAUSA )
+			{
+				gAudio.s.PararAudio();						
+				gPontuacao.s.CancelarPontos();
+			}
+				DestruirNota(nota);
+		}
+	}
+
+	void VerificarPercursoDePontuacao (Vector3 posNota, Nota nota)
+	{
+		if( nota.mInfo.tipo == TipoDeNota.PAUSA ) return;
+		
+		
+		
+		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ) == false )
+		{
+			if( (int)nota.mInfo.tipo >= (int)TipoDeNota.NOTA && gPontuacao.s.pontuandoNotaLonga )
+			{
+				DestruirNota(nota);
+			} 
+			
+			return;
+		} 
+		
+		if( nota.VerificarZonaDePontuacao( areaDePontuacao, posNota ) && !nota.jaPontuei && !nota.kill  )
+		{
+			if( nota.mInfo.tipo == TipoDeNota.NOTA)
 			{				
+				gPontuacao.s.PontuarNotaComum( nota, gGame.s.player ) ;
+				nota.jaPontuei = true;			
 				nota.kill = true;
-				
-				if( nota.mInfo.tipo != TipoDeNota.PAUSA )
-				{
-					gAudio.s.PararAudio();						
-					gPontuacao.s.CancelarPontos();
-				}
-				DestruirNota( nota );				
+				DestruirNota(nota);
+			}
+			else
+			{
+				if( gPontuacao.s.pontuandoNotaLonga == false )
+					gPontuacao.s.PontuarNotaLonga( nota, gGame.s.player );				
 			}
 		}
-		else if((int)nota.mInfo.tipo > (int)TipoDeNota.NOTA )
+		else
 		{
-			if( areaDeDead.Contains( posNota ) && gPontuacao.s.pontuandoNotaLonga == false && nota.pontuando == false && gPontuacao.s.VerificarPontuacao(nota,
-			gGame.s.player) ) 
-			{				
-				nota.kill = true;				
-				DestruirNota( nota );				
+			if( nota.pontuando )
+			{	
+				nota.pontuando = false;
+//				gPontuacao.s.PontuarNotaLonga( nota, gGame.s.player );
+				gPontuacao.s.pontuandoNotaLonga = false;
+				nota.kill = true;
+				DestruirNota(nota);
 			}
-		}	
-	}
-
-	void VerificarPontuacao (Vector3 posNota, Nota nota)
-	{
-		switch( nota.mInfo.tipo )
-		{
-			case TipoDeNota.NOTA:
-				VerificarNotaComum( posNota, nota );
-				break;
-			case TipoDeNota.NOTA_X2:
-				VerificarNotaLonga(posNota, nota);
-				break;
-			default:
-				VerificarNotaLonga(posNota, nota);
-				break;
+			
 		}
 	}
 
-	void VerificarNotaComum (Vector3 posNota, Nota nota)
-	{
-		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ))
-		{
-			gPontuacao.s.Pontuar( nota, gGame.s.player );
-			DestruirNota(nota);
-		}
-	}
+//	void VerificarPontuacao (Vector3 posNota, Nota nota)
+//	{
+//		switch( nota.mInfo.tipo )
+//		{
+//			case TipoDeNota.NOTA:
+//				VerificarNotaComum( posNota, nota );
+//				break;
+//			case TipoDeNota.NOTA_X2:
+//				VerificarNotaLonga(posNota, nota);
+//				break;
+//			default:
+//				VerificarNotaLonga(posNota, nota);
+//				break;
+//		}
+//	}
 
-	void VerificarNotaLonga (Vector3 posNota, Nota nota)
-	{
-		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ))
-		{
-			gPontuacao.s.PontuarNotaLonga( nota, gGame.s.player );
-		}
-	}
+//	void VerificarNotaComum (Vector3 posNota, Nota nota)
+//	{
+//		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ))
+//		{
+//			gPontuacao.s.Pontuar( nota, gGame.s.player );
+//			DestruirNota(nota);
+//		}
+//	}
+//
+//	void VerificarNotaLonga (Vector3 posNota, Nota nota)
+//	{
+//		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ))
+//		{
+//			gPontuacao.s.PontuarNotaLonga( nota, gGame.s.player );
+//		}
+//	}
 
 	void VerificarBrilhoDaPista (Nota n)
 	{

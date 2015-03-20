@@ -115,7 +115,7 @@ public class gPontuacao : MonoBehaviour {
 	
 	}
 
-	void PontuarNotaComum (Nota nota, Player p)
+	public void PontuarNotaComum (Nota nota, Player p)
 	{
 		if (nota.kill ) return;
 		
@@ -168,11 +168,11 @@ public class gPontuacao : MonoBehaviour {
 		if( !pontuandoNotaLonga ) return;
 		
 		
-		if( VerificarPontuacaoLonga( lastNota, gGame.s.player ) == false ) 
-		{
-			pontuandoNotaLonga = false;	
-			lastNota.kill = true;
-		}
+//		if( VerificarPontuacaoLonga( lastNota, gGame.s.player ) == false ) 
+//		{
+//			pontuandoNotaLonga = false;	
+//			lastNota.kill = true;
+//		}
 		
 		float currentTime = Time.realtimeSinceStartup - initPontuacao;
 		

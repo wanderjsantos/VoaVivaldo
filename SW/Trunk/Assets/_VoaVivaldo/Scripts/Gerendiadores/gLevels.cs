@@ -108,33 +108,56 @@ public class gLevels : MonoBehaviour
 		bool pontos = currentLevel.SetPontuacao	( currentPartituraIndex, gGame.s.player.mInfo.pontuacao );
 		bool estrelas = currentLevel.SetEstrelas	( currentPartituraIndex, gPontuacao.s.estrelasGanhas );
 		
-//		if( estrelas || pontos )
-//		{
-//			if( currentLevel.savedInfo.partiturasConcluidas[currentPartituraIndex].liberado == false )
-//				currentLevel.savedInfo.partiturasConcluidas[currentPartituraIndex].liberado = true;
-//		}
+		if( gPontuacao.s.estrelasGanhas == 0 ) return;
+		
+		if( currentPartituraIndex >= currentLevel.info.partituras.Length -1 )
+			LiberarProximoLevel();
+		else
+			LiberarProximaFase();
 		
 	}
 	
-	public void LiberarProximaFase( int faseAtual )
+	public void LiberarProximaFase( )
 	{
-	
+		if( currentPartituraIndex >= currentLevel.savedInfo.partiturasConcluidas.Count ){ Debug.LogWarning("Todas as fases desbloqueadas"); return;}
+		
+		Debug.LogWarning("PROXIMA FASE: " + (currentPartituraIndex+1));	
+		currentLevel.savedInfo.partiturasConcluidas[currentPartituraIndex + 1].liberado = true;
 	}
 	
 	public void LiberarProximoLevel()
 	{
-	
+		if( currentLevelIndex >= allLevels.Count ){ Debug.LogWarning( "Todos os levels desbloqueados"); return; }
+		
+		Debug.LogWarning("PROXIMO LEVEL: " + (currentLevelIndex+1));
+		
+		allLevels[currentLevelIndex + 1 ].savedInfo.liberado = true;
+		allLevels[currentLevelIndex + 1 ].savedInfo.partiturasConcluidas[0].liberado = true;
 	}
 
-//	public void NextLevel()
-//	{
-//		SetLevel (currentLevelIndex++);
-//	}
-//
-//	public void PreviousLevel()
-//	{
-//		SetLevel (currentLevelIndex--);
-//	}
+	public void ProximaFase (int faseAtual)
+	{
+		int level = currentLevelIndex;
+		int fase = currentPartituraIndex;
+		
+		Debug.LogWarning("PROXIMA FASE (atual): " + faseAtual );
+		
+		if( fase >= allLevels[level].info.partituras.Length - 1 ) 
+		{
+			Debug.LogWarning( "Todos as fases jogadas, indo para o proximo level");
+			level += 1;
+			fase = 0;
+		}
+		else
+			fase += 1;
+		
+		if( level >= allLevels.Count -1 ){ Debug.LogWarning( "Todos os levels desbloqueados"); gMenus.s.ShowMenu("Principal"); return; }
+		
+		gMusica.s.Set( level, fase );
+//		gMusica.s.SetFase (numero);		
+		SetLevel( level, fase );		
+		gGame.s.IniciarJogo();
+	}
 
 	public int ClampIndex( int currentIndex )
 	{

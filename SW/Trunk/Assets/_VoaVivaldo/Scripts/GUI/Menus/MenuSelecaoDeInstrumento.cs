@@ -35,7 +35,7 @@ public class MenuSelecaoDeInstrumento : Menu
 	
 		foreach( PartituraSaveInfo partitura in gLevels.s.allLevels[indiceDoLevel].savedInfo.partiturasConcluidas )
 		{
-//			Debug.Log("Estrelas: " + partitura.estrelasGanhas);
+//			Debug.Log("Partitura liberada: " + partitura.liberado);
 		
 			if( partitura.liberado == false ) continue;
 		
@@ -49,11 +49,9 @@ public class MenuSelecaoDeInstrumento : Menu
 	
 	public void SelectInstrumento(int numero)
 	{
-		gMusica.s.SetFase (numero);
-		
-		gLevels.s.SetLevel( gMusica.s.indiceMusica, gMusica.s.indiceFase );
-		
-		IniciarPartida();
+		gMusica.s.SetFase(numero );
+		gLevels.s.SetLevel( gMusica.s.indiceMusica, gMusica.s.indiceFase );		
+		gGame.s.IniciarJogo();
 	}
 
 	public void IniciarPartida()

@@ -5,6 +5,8 @@ public class MenuVitoria : Menu {
 
 	public UI2DSprite spritePersonagem;
 	
+	public GameObject	botaoContinuar;
+	
 	vPersonagem personagem;
 
 	public override void Show ()
@@ -20,16 +22,8 @@ public class MenuVitoria : Menu {
 		spritePersonagem.MakePixelPerfect();
 		spritePersonagem.MakePixelPerfect();
 		
-//		LevelSaveInfo savedInfo;
-		
-//		if( gLevels.s.currentLevel.info.savedInfo == null )
-//			gLevels.s.currentLevel.info.savedInfo = new LevelSaveInfo();
-//		
-//		savedInfo = gLevels.s.currentLevel.info.savedInfo;
-//		
-//		savedInfo.estrelasGanhas = gPontuacao.s.estrelasGanhas;
-//		savedInfo.pontosMarcados = gGame.s.player.mInfo.pontuacao;
-//		
+		if( gPontuacao.s.estrelasGanhas == 0 ) botaoContinuar.SetActive(false);
+		else botaoContinuar.SetActive(true);
 		
 	}
 	
@@ -40,12 +34,13 @@ public class MenuVitoria : Menu {
 	
 	public void OnClickMusicas()
 	{
-		gMenus.s.ShowMenu("Select");
+		gMenus.s.ShowMenu("Musica");
 	}
 
 	public void OnClickContinuar()
 	{
-		gMenus.s.ShowMenu("Instrumento");
+//		gMenus.s.ShowMenu("Instrumento");
+		gLevels.s.ProximaFase( gLevels.s.currentPartituraIndex );
 	}
 	
 	public void OnClickReiniciar()

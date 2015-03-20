@@ -10,6 +10,7 @@ public class Nota : MonoBehaviour
 
 	public bool			kill = false;
 	public bool			pontuando = false;
+	public bool			jaPontuei = false;
 	
 	public float		sizeX;
 
@@ -22,12 +23,44 @@ public class Nota : MonoBehaviour
 		
 	}
 	
-	public void SetSize( float x )
+	public float GetSizeX(  )
 	{
-		sizeX = x;
-		mView.SetSpriteSize( sizeX );
+		sizeX = mView.mSprite.localSize.x;
+//		mView.SetSpriteSize( sizeX );
+		return sizeX;
 	}
 
+	public bool VerificarZonaDeMorte (Rect areaDeDead, Vector3 posNota)
+	{
+		Vector3 v = new Vector3(GetSizeX(), 0, 0 );
+		if( areaDeDead.Contains( posNota + v ) && !kill )
+		{
+			kill = true;
+			return true;
+		}
+		
+		return false;
+	}
+
+	public bool VerificarZonaDePontuacao (Rect areaDePontuacao, Vector3 posNota)
+	{
+		if( mInfo.tipo == TipoDeNota.PAUSA ) return false;
+		
+		if( mInfo.tipo == TipoDeNota.NOTA )
+		{
+			Vector3 v = new Vector3(GetSizeX(), 0, 0 );
+			if( areaDePontuacao.Contains( posNota + v ) && !kill )
+			{
+				return true;
+			}
+		}else
+		{
+			if( posNota.x <= ( areaDePontuacao.x + areaDePontuacao.width ) && (posNota.x + GetSizeX()) >= ( areaDePontuacao.x + areaDePontuacao.width ))
+				return true;
+		}
+		
+		return false;
+	}
 }
 
 

@@ -9,8 +9,8 @@
       <partiturasConcluidas>
         <PartituraSaveInfo>
           <meuIndice>0</meuIndice>
-          <estrelasGanhas>0</estrelasGanhas>
-          <pontosMarcados>0</pontosMarcados>
+          <estrelasGanhas>1</estrelasGanhas>
+          <pontosMarcados>1000</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>

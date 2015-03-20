@@ -148,8 +148,6 @@ public class gNotas : MonoBehaviour
 	{
 		if( nota.mInfo.tipo == TipoDeNota.PAUSA ) return;
 		
-		
-		
 		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ) == false )
 		{
 			if( (int)nota.mInfo.tipo >= (int)TipoDeNota.NOTA && gPontuacao.s.pontuandoNotaLonga )
@@ -160,6 +158,8 @@ public class gNotas : MonoBehaviour
 			return;
 		} 
 		
+		
+		
 		if( nota.VerificarZonaDePontuacao( areaDePontuacao, posNota ) && !nota.jaPontuei && !nota.kill  )
 		{
 			if( nota.mInfo.tipo == TipoDeNota.NOTA)
@@ -167,12 +167,16 @@ public class gNotas : MonoBehaviour
 				gPontuacao.s.PontuarNotaComum( nota, gGame.s.player ) ;
 				nota.jaPontuei = true;			
 				nota.kill = true;
+				gAudio.s.RecuperarAudio();
 				DestruirNota(nota);
 			}
 			else
 			{
 				if( gPontuacao.s.pontuandoNotaLonga == false )
+				{
 					gPontuacao.s.PontuarNotaLonga( nota, gGame.s.player );				
+					gAudio.s.RecuperarAudio();
+				}
 			}
 		}
 		else
@@ -180,7 +184,6 @@ public class gNotas : MonoBehaviour
 			if( nota.pontuando )
 			{	
 				nota.pontuando = false;
-//				gPontuacao.s.PontuarNotaLonga( nota, gGame.s.player );
 				gPontuacao.s.pontuandoNotaLonga = false;
 				nota.kill = true;
 				DestruirNota(nota);
@@ -189,38 +192,6 @@ public class gNotas : MonoBehaviour
 		}
 	}
 
-//	void VerificarPontuacao (Vector3 posNota, Nota nota)
-//	{
-//		switch( nota.mInfo.tipo )
-//		{
-//			case TipoDeNota.NOTA:
-//				VerificarNotaComum( posNota, nota );
-//				break;
-//			case TipoDeNota.NOTA_X2:
-//				VerificarNotaLonga(posNota, nota);
-//				break;
-//			default:
-//				VerificarNotaLonga(posNota, nota);
-//				break;
-//		}
-//	}
-
-//	void VerificarNotaComum (Vector3 posNota, Nota nota)
-//	{
-//		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ))
-//		{
-//			gPontuacao.s.Pontuar( nota, gGame.s.player );
-//			DestruirNota(nota);
-//		}
-//	}
-//
-//	void VerificarNotaLonga (Vector3 posNota, Nota nota)
-//	{
-//		if( gPontuacao.s.VerificarPontuacao( nota, gGame.s.player ))
-//		{
-//			gPontuacao.s.PontuarNotaLonga( nota, gGame.s.player );
-//		}
-//	}
 
 	void VerificarBrilhoDaPista (Nota n)
 	{

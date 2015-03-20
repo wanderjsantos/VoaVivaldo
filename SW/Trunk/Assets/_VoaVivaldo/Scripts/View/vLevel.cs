@@ -19,6 +19,7 @@ public class vLevel : MonoBehaviour {
 		gameObject.SetActive( estado );	
 	}
 	
+
 	public void SetActive( bool estado, int quantidadeDeEstrelas )
 	{
 		gameObject.SetActive( estado );	

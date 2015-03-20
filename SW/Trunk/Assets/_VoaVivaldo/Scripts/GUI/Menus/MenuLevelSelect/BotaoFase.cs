@@ -19,4 +19,5 @@ public class BotaoFase : MonoBehaviour {
 		
 		gameObject.GetComponent<UIButton>().isEnabled = liberado;
 	}
+	
 }

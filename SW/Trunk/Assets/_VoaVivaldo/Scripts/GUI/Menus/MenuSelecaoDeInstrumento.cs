@@ -31,7 +31,8 @@ public class MenuSelecaoDeInstrumento : Menu
 		listaDeFasesPorLevel = new List<vLevel>();
 		listaDeFasesPorLevel.AddRange( listaDeBotoesPorFase[indiceDoLevel].GetComponentsInChildren<vLevel>(true));
 	
-		foreach(vLevel v in listaDeFasesPorLevel ) v.gameObject.SetActive(false);
+		foreach(vLevel v in listaDeFasesPorLevel )
+		{ v.gameObject.SetActive(false); }
 	
 		foreach( PartituraSaveInfo partitura in gLevels.s.allLevels[indiceDoLevel].savedInfo.partiturasConcluidas )
 		{
@@ -44,6 +45,7 @@ public class MenuSelecaoDeInstrumento : Menu
 			
 			level.SetActive( true, partitura.estrelasGanhas );
 		}
+		
 	
 	}
 	

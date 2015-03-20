@@ -113,7 +113,10 @@ public class gLevels : MonoBehaviour
 		if( currentPartituraIndex >= currentLevel.info.partituras.Length -1 )
 			LiberarProximoLevel();
 		else
+		{			
 			LiberarProximaFase();
+			LiberarFesta();
+		}
 		
 	}
 	
@@ -123,6 +126,24 @@ public class gLevels : MonoBehaviour
 		
 		Debug.LogWarning("PROXIMA FASE: " + (currentPartituraIndex+1));	
 		currentLevel.savedInfo.partiturasConcluidas[currentPartituraIndex + 1].liberado = true;
+	}
+	
+	public void LiberarFesta()
+	{
+		bool liberado = true;
+		
+		foreach( PartituraSaveInfo fase in currentLevel.savedInfo.partiturasConcluidas )
+		{
+			if( fase.liberado  ) continue;
+			
+			liberado = false;
+			break;
+		}
+		
+		if( liberado ) currentLevel.savedInfo.festaLiberada = true;
+		
+		Debug.LogWarning("FESTA LIBERADA: " + liberado );
+		
 	}
 	
 	public void LiberarProximoLevel()

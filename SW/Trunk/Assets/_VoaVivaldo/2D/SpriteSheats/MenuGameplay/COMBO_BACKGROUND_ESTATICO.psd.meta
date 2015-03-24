@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 68f9b420752fe94479a3974af0ae35c2
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: COMBO_BACKGROUND_ESTATICO
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,7 +23,7 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 128
+  maxTextureSize: 256
   textureSettings:
     filterMode: -1
     aniso: 1

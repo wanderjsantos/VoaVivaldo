@@ -32,7 +32,7 @@ public class vEstrelas : MonoBehaviour
 
 	public void UpdateStars (int estrelas)
 	{
-		Debug.Log("Update Estrelas");
+//		Debug.Log("Update Estrelas");
 	
 		if( estrelasGanhas == estrelas ) return;
 		

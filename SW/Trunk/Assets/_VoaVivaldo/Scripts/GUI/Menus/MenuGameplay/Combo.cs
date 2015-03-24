@@ -6,9 +6,22 @@ public class Combo : MonoBehaviour
 	public GameObject goCombo;
 	public UILabel lbl_multiplicador;
 	
+	public TweenScale tween;
+	
+	public EventDelegate nguiEvent;
+	
+	void Start()
+	{
+//		nguiEvent = new EventDelegate( this, "Saida" );
+//		tween = GetComponentInChildren<TweenScale>();
+		tween.AddOnFinished( nguiEvent );
+	}
+		
 	void OnEnable()
 	{
 		gPontuacao.onUpdateCombo += UpdateCombo;
+		
+				
 	}
 	
 	void OnDisable()
@@ -27,14 +40,27 @@ public class Combo : MonoBehaviour
 		lbl_multiplicador.text = "x"+multiplicador.ToString();
 		Entrada();
 	}
+	
+	public bool ativo = false;
+	
+	public void OnFinishAnimation()
+	{
+//		Debug.Log("OnFinishAnimation");
+		goCombo.SetActive(ativo);
+		
+	}
 
 	void Entrada ()
 	{
+		ativo = true;
 		goCombo.SetActive(true);
+		tween.PlayForward();
 	}
 
 	void Saida ()
 	{
-		goCombo.SetActive(false);
+		ativo = false;
+		tween.PlayReverse();
+		
 	}
 }

@@ -63,7 +63,6 @@ public class Controller : MonoBehaviour
 		}
 
 		
-//		pista = 
 		pista = Mathf.Clamp(faixaAtual + ((int)(faixasTotais/2)), 1, faixasTotais );
 		
 		pos = transform.localPosition ;

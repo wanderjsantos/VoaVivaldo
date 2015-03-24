@@ -5,24 +5,24 @@
       <nome>Level1</nome>
       <meuLevel>0</meuLevel>
       <liberado>true</liberado>
-      <festaLiberada>false</festaLiberada>
+      <festaLiberada>true</festaLiberada>
       <partiturasConcluidas>
         <PartituraSaveInfo>
           <meuIndice>0</meuIndice>
-          <estrelasGanhas>1</estrelasGanhas>
-          <pontosMarcados>1000</pontosMarcados>
+          <estrelasGanhas>3</estrelasGanhas>
+          <pontosMarcados>4000</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>1</meuIndice>
           <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>3980</pontosMarcados>
+          <pontosMarcados>4810</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>2</meuIndice>
-          <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>6000</pontosMarcados>
+          <estrelasGanhas>0</estrelasGanhas>
+          <pontosMarcados>0</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
       </partiturasConcluidas>
@@ -30,20 +30,20 @@
     <LevelSaveInfo>
       <nome>Level2</nome>
       <meuLevel>1</meuLevel>
-      <liberado>true</liberado>
+      <liberado>false</liberado>
       <festaLiberada>false</festaLiberada>
       <partiturasConcluidas>
         <PartituraSaveInfo>
           <meuIndice>0</meuIndice>
-          <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>3550</pontosMarcados>
-          <liberado>true</liberado>
+          <estrelasGanhas>0</estrelasGanhas>
+          <pontosMarcados>0</pontosMarcados>
+          <liberado>false</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>1</meuIndice>
           <estrelasGanhas>0</estrelasGanhas>
           <pontosMarcados>0</pontosMarcados>
-          <liberado>true</liberado>
+          <liberado>false</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>2</meuIndice>

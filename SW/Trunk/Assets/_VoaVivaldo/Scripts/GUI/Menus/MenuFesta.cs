@@ -19,6 +19,8 @@ public class MenuFesta : Menu
 	{
 		base.Show ();
 		goPartituras.SetActive(false);
+		
+		Play();
 	}
 	
 	public void OnClickMostrarPartitura()
@@ -41,14 +43,17 @@ public class MenuFesta : Menu
 	{
 		if( tocandoMusica ) Stop();
 	
-		if(gMusica.s.musicaAtual != null )
-		{
+//		if(gMusica.s.musicaAtual != null )
+//		{
 			musica = gMusica.s.musicaAtual;
-		}
-		else
+//		}
+		if( musica == null )
 		{
 			Debug.LogError("Nao ha uma musica para ser tocada");
+			return;
 		}
+
+
 		
 		musica.sourceBase.Stop();		
 		musica.sourceBase.Play();
@@ -61,12 +66,18 @@ public class MenuFesta : Menu
 		iTime = Time.realtimeSinceStartup;
 		
 		btnPlay.SetActive(false);
+		
+		Play();
 	}
 
 	void Stop ()
 	{
-		musica.sourceBase.Stop();		
-		musica.sourceInstrumento.Stop();		
+		if( musica )
+		{
+			musica.sourceBase.Stop();		
+			musica.sourceInstrumento.Stop();		
+		}
+		
 		tocandoMusica = false;
 		
 		btnPlay.SetActive(true);

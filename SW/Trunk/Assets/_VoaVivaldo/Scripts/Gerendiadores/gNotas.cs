@@ -152,7 +152,7 @@ public class gNotas : MonoBehaviour
 		{
 			if( (int)nota.mInfo.tipo >= (int)TipoDeNota.NOTA && gPontuacao.s.pontuandoNotaLonga )
 			{
-				DestruirNota(nota);
+//				DestruirNota(nota);
 			} 
 			
 			return;

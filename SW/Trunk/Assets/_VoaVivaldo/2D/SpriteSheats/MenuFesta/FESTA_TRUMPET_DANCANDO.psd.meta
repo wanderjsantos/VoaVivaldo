@@ -33,6 +33,16 @@ TextureImporter:
     21300056: FESTA_TRUMPET_DANCANDO_9
     21300058: FESTA_TRUMPET_DANCANDO_10
     21300060: FESTA_TRUMPET_DANCANDO_11
+    21300062: FESTA_TRUMPET_DANCANDO_12
+    21300064: FESTA_TRUMPET_DANCANDO_13
+    21300066: FESTA_TRUMPET_DANCANDO_14
+    21300068: FESTA_TRUMPET_DANCANDO_15
+    21300070: FESTA_TRUMPET_DANCANDO_16
+    21300072: FESTA_TRUMPET_DANCANDO_17
+    21300074: FESTA_TRUMPET_DANCANDO_18
+    21300076: FESTA_TRUMPET_DANCANDO_19
+    21300078: FESTA_TRUMPET_DANCANDO_20
+    21300080: FESTA_TRUMPET_DANCANDO_21
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -78,111 +88,221 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 322
-        width: 153
-        height: 190
+        y: 856
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_1
       rect:
         serializedVersion: 2
-        x: 153
-        y: 322
-        width: 153
-        height: 190
+        x: 466
+        y: 856
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_2
       rect:
         serializedVersion: 2
-        x: 306
-        y: 322
-        width: 153
-        height: 190
+        x: 932
+        y: 856
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_3
       rect:
         serializedVersion: 2
-        x: 459
-        y: 322
-        width: 153
-        height: 190
+        x: 1398
+        y: 856
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_4
       rect:
         serializedVersion: 2
-        x: 612
-        y: 322
-        width: 153
-        height: 190
+        x: 0
+        y: 688
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_5
       rect:
         serializedVersion: 2
-        x: 765
-        y: 322
-        width: 153
-        height: 190
+        x: 466
+        y: 688
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_6
       rect:
         serializedVersion: 2
-        x: 918
-        y: 322
-        width: 153
-        height: 190
+        x: 932
+        y: 688
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_7
       rect:
         serializedVersion: 2
-        x: 1071
-        y: 322
-        width: 153
-        height: 190
+        x: 1398
+        y: 688
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_8
       rect:
         serializedVersion: 2
-        x: 1224
-        y: 322
-        width: 153
-        height: 190
+        x: 0
+        y: 520
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_9
       rect:
         serializedVersion: 2
-        x: 1377
-        y: 322
-        width: 153
-        height: 190
+        x: 466
+        y: 520
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_10
       rect:
         serializedVersion: 2
-        x: 1530
-        y: 322
-        width: 153
-        height: 190
+        x: 932
+        y: 520
+        width: 180
+        height: 168
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_11
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 520
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_13
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 352
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_14
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 352
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_15
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 352
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_17
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 184
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_18
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 184
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_19
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 184
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_TRUMPET_DANCANDO_21
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 16
+        width: 180
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

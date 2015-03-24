@@ -1,6 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\..\Desktop\Projetos\Tok3D_Artefatos\Banco de Modelos\materiais-export\planilha de produto.txt">
+    <Files>
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gNotas.cs" Line="155" Column="26" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuFesta.cs" Line="23" Column="10" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuVitoria.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\..\..\Desktop\Projetos\Tok3D_Artefatos\Banco de Modelos\materiais-export\planilha de produto.txt" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

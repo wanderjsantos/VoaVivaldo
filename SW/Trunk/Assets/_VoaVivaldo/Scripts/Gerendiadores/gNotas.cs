@@ -117,7 +117,7 @@ public class gNotas : MonoBehaviour
 		
 		for (int i = 0; i < c; i++) 
 		{
-			if( c > notasNaPista.Count )
+			if( c > notasNaPista.Count || i >= notasNaPista.Count )
 			{
 				return;
 			}

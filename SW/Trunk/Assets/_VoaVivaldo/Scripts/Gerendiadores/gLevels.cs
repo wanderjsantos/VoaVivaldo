@@ -130,19 +130,11 @@ public class gLevels : MonoBehaviour
 	
 	public void LiberarFesta()
 	{
-		bool liberado = true;
+		if( currentPartituraIndex >= currentLevel.savedInfo.partiturasConcluidas.Count - 1 )
+			currentLevel.savedInfo.festaLiberada = true;
 		
-		foreach( PartituraSaveInfo fase in currentLevel.savedInfo.partiturasConcluidas )
-		{
-			if( fase.liberado  ) continue;
-			
-			liberado = false;
-			break;
-		}
-		
-		if( liberado ) currentLevel.savedInfo.festaLiberada = true;
-		
-		Debug.LogWarning("FESTA LIBERADA: " + liberado );
+				
+			Debug.LogWarning("FESTA LIBERADA: " + (currentPartituraIndex >= currentLevel.savedInfo.partiturasConcluidas.Count - 1) );
 		
 	}
 	

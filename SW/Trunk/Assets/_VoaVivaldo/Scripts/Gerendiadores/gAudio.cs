@@ -63,7 +63,10 @@ public class gAudio : MonoBehaviour
 		
 		trilhaBloqueada = false;
 		esperandoParaTocar = false;
+		
+		sourceInstrumentos = gMusica.s.musicaAtual.sourceInstrumento;
 		sourceInstrumentos.volume = lastVolume;
+		
 		
 	}
 	

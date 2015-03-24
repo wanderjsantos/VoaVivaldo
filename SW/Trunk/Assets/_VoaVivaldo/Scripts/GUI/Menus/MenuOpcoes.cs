@@ -14,5 +14,7 @@ public class MenuOpcoes : Menu {
 	}
 	
 	public void OnChangeValueAudio( bool valor )
-	{}
+	{
+		Vivaldos.AUDIO = valor;
+	}
 }

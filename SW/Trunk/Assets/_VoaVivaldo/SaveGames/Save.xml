@@ -36,32 +36,32 @@
         <PartituraSaveInfo>
           <meuIndice>0</meuIndice>
           <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>5290</pontosMarcados>
+          <pontosMarcados>16310</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>1</meuIndice>
-          <estrelasGanhas>0</estrelasGanhas>
-          <pontosMarcados>0</pontosMarcados>
+          <estrelasGanhas>3</estrelasGanhas>
+          <pontosMarcados>14820</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>2</meuIndice>
-          <estrelasGanhas>0</estrelasGanhas>
-          <pontosMarcados>0</pontosMarcados>
-          <liberado>false</liberado>
+          <estrelasGanhas>3</estrelasGanhas>
+          <pontosMarcados>12230</pontosMarcados>
+          <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>3</meuIndice>
-          <estrelasGanhas>0</estrelasGanhas>
-          <pontosMarcados>0</pontosMarcados>
-          <liberado>false</liberado>
+          <estrelasGanhas>3</estrelasGanhas>
+          <pontosMarcados>13680</pontosMarcados>
+          <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>4</meuIndice>
           <estrelasGanhas>0</estrelasGanhas>
           <pontosMarcados>0</pontosMarcados>
-          <liberado>false</liberado>
+          <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>5</meuIndice>

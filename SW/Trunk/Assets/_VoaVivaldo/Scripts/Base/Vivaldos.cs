@@ -10,6 +10,8 @@ public static class Vivaldos
 	public static float WIDTH_COMPASSO = 600f;
 	
 	public static bool VIBRAR = false;
+
+	public static bool AUDIO = true;
 	
 	public static AudioClip NameToAudioClip( string name )
 	{

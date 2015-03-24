@@ -61,7 +61,8 @@ public class MenuGameplay : Menu
 	{
 		if (goContagemRegressiva.activeInHierarchy == true) 
 		{
-			labelContagemRegressiva.text = gGame.s.tempoParaIniciar.ToString ("00");
+			int tempo = gGame.s.tempoParaIniciar +1;
+			labelContagemRegressiva.text = Mathf.Clamp( tempo, 1, 100).ToString ("00");
 		}
 
 		if (gMusica.s.musicaAtual.isPlaying == false)

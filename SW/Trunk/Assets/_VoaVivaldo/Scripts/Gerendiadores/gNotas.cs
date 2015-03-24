@@ -27,6 +27,8 @@ public class gNotas : MonoBehaviour
 	public int currentNota = 0;
 	
 	public int quantidadeDeNotasNaPista;
+	
+		
 
 	public void Awake()
 	{

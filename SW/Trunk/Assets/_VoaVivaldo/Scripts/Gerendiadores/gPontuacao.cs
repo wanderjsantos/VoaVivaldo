@@ -6,6 +6,7 @@ public class gPontuacao : MonoBehaviour {
 	public delegate void UpdatePontuacao( int quantidade );
 	public static event UpdatePontuacao onUpdateEstrelas;
 	public static event UpdatePontuacao onUpdatePontuacao;
+	public static event UpdatePontuacao onUpdateCombo;
 
 	public static gPontuacao s;
 	
@@ -42,7 +43,9 @@ public class gPontuacao : MonoBehaviour {
 	public int	pontosNotaLonga = 10;
 	public float adicionarACada = .03f;					
 	
-	float initPontuacaoLonga;
+	
+	public bool drawNumeros = false;
+	
 
 	void Awake()
 	{
@@ -74,6 +77,7 @@ public class gPontuacao : MonoBehaviour {
 		pontuacao = 0;
 		
 		if( onUpdateEstrelas != null ) onUpdateEstrelas( 0 );
+		if( onUpdateCombo != null ) onUpdateCombo(0);
 		if( onUpdatePontuacao != null ) onUpdatePontuacao( 0 );
 	}
 
@@ -92,6 +96,7 @@ public class gPontuacao : MonoBehaviour {
 		{
 			return true;
 		}	
+
 		return false;
 	}
 		
@@ -129,7 +134,8 @@ public class gPontuacao : MonoBehaviour {
 		
 		if( notasAcertadasNaSequencia >= (aCadaXNotas * multiplicador) )
 		{
-			multiplicador = Mathf.Clamp( multiplicador++, 1, maxMultiplicador );
+			multiplicador += 1;
+			multiplicador = Mathf.Clamp( multiplicador, 1, maxMultiplicador );
 		}
 		acertos++;
 		
@@ -137,8 +143,7 @@ public class gPontuacao : MonoBehaviour {
 		
 		if( p.mInfo.pontuacao == pontuacaoAtual ) return;
 		
-		if( onUpdatePontuacao != null )
-			onUpdatePontuacao( p.mInfo.pontuacao );
+		Atualizar( p.mInfo.pontuacao, 0, multiplicador );
 		
 		AtualizarErrosEAcertos();
 		
@@ -154,11 +159,15 @@ public class gPontuacao : MonoBehaviour {
 		
 		if( notasAcertadasNaSequencia >= (aCadaXNotas * multiplicador) )
 		{
-			multiplicador = Mathf.Clamp( multiplicador++, 1, maxMultiplicador );
+			multiplicador += 1;
+			multiplicador = Mathf.Clamp( multiplicador, 1, maxMultiplicador );
+			
 		}
 		acertos++;
 		pontuandoNotaLonga = true;		
 		initPontuacao = Time.realtimeSinceStartup;
+		
+		Atualizar( p.mInfo.pontuacao, 0, multiplicador );
 	}
 	
 	float initPontuacao;
@@ -187,9 +196,19 @@ public class gPontuacao : MonoBehaviour {
 	{
 		gGame.s.player.mInfo.pontuacao += pontos * multiplicador;
 		
-		if( onUpdatePontuacao != null )	onUpdatePontuacao( gGame.s.player.mInfo.pontuacao );
+		Atualizar( gGame.s.player.mInfo.pontuacao, 0,0);
 		
 		AtualizarErrosEAcertos();
+	}
+	
+	public void Atualizar( int pontos = 0, int estrelas = 0, int combo = 0 )
+	{
+		if( combo != 0 )
+			if( onUpdateCombo != null ) onUpdateCombo( combo );
+		if( estrelas != 0 )
+			if( onUpdateEstrelas != null) onUpdateEstrelas(estrelas );
+		if( pontos !=0 )
+			if( onUpdatePontuacao != null) onUpdatePontuacao( pontos );
 	}
 	
 	public void CancelarPontos()
@@ -199,12 +218,15 @@ public class gPontuacao : MonoBehaviour {
 		erros ++;
 		
 		AtualizarErrosEAcertos();
+		if( onUpdateCombo != null ) onUpdateCombo(0);
+		
 	}
 	
 	public void ForcarAtualizarPontosEstrelas()
-	{
-		if( onUpdateEstrelas != null ) onUpdateEstrelas( estrelasGanhas );
-		if( onUpdatePontuacao != null ) onUpdatePontuacao( pontuacao);
+	{	
+//		if( onUpdateEstrelas != null ) onUpdateEstrelas( estrelasGanhas );
+//		if( onUpdatePontuacao != null ) onUpdatePontuacao( gGame.s.player.mInfo.pontuacao);
+		Atualizar( gGame.s.player.mInfo.pontuacao , estrelasGanhas, multiplicador );
 	}
 	
 	void AtualizarErrosEAcertos ()
@@ -226,7 +248,16 @@ public class gPontuacao : MonoBehaviour {
 		
 		if( eAntes == estrelasGanhas ) return;
 		
-		if( onUpdateEstrelas != null ) onUpdateEstrelas( estrelasGanhas );
+//		if( onUpdateEstrelas != null ) onUpdateEstrelas( estrelasGanhas );
 		
+		Atualizar( 0,estrelasGanhas,0);
+	}
+	
+	public void OnGUI()
+	{
+		if( !drawNumeros ) return;
+		
+		GUILayout.Box( "Notas na sequencia: " + notasAcertadasNaSequencia );	
+		GUILayout.Box( "Multiplicador: " + multiplicador );	
 	}
 }

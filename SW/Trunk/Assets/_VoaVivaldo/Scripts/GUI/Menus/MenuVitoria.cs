@@ -13,8 +13,6 @@ public class MenuVitoria : Menu {
 	{
 		base.Show ();
 		
-		gPontuacao.s.ForcarAtualizarPontosEstrelas();
-		
 		personagem = spritePersonagem.gameObject.GetComponent<vPersonagem>();
 		personagem.meuPersonagem = gGame.s.player.vPlayer.meuPersonagem;
 		
@@ -24,6 +22,9 @@ public class MenuVitoria : Menu {
 		
 		if( gPontuacao.s.estrelasGanhas == 0 ) botaoContinuar.SetActive(false);
 		else botaoContinuar.SetActive(true);
+		
+		gPontuacao.s.ForcarAtualizarPontosEstrelas();
+		
 		
 	}
 	

@@ -10,7 +10,7 @@ public class Musica : MonoBehaviour
 	public AudioSource 		sourceInstrumento;
 	public int			instrumentoAtual;
 	public bool 		isPlaying 	= false;
-	int 				posicaoNotaAtual = 0;
+//	int 				posicaoNotaAtual = 0;
 
 	public void Start()
 	{
@@ -30,7 +30,7 @@ public class Musica : MonoBehaviour
 		isPlaying = true;
 
 		mInfo.tempoDaMusica = 0f;
-		posicaoNotaAtual = 0;
+//		posicaoNotaAtual = 0;
 		iTime = Time.time;
 	}
 

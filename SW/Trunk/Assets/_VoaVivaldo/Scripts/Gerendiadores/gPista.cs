@@ -12,7 +12,7 @@ public class gPista : MonoBehaviour {
 	public float	tamanhoYPista = 120f;
 	public float	tamanhoDeCadaPista = 10f;
 	
-	int		ultimaPista = -1;
+//	int		ultimaPista = -1;
 
 	public GameObject	pista1;
 	public GameObject	pista2;
@@ -61,7 +61,7 @@ public class gPista : MonoBehaviour {
 	void Resetar ()
 	{
 		rootPista.transform.localPosition = posInicialPista;
-		ultimaPista = -1;
+//		ultimaPista = -1;
 		ApagarTodasAsPistas();
 	}
 

@@ -5,66 +5,22 @@
       <nome>Level1</nome>
       <meuLevel>0</meuLevel>
       <liberado>true</liberado>
-      <festaLiberada>true</festaLiberada>
-      <partiturasConcluidas>
-        <PartituraSaveInfo>
-          <meuIndice>0</meuIndice>
-          <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>8060</pontosMarcados>
-          <liberado>true</liberado>
-        </PartituraSaveInfo>
-        <PartituraSaveInfo>
-          <meuIndice>1</meuIndice>
-          <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>10220</pontosMarcados>
-          <liberado>true</liberado>
-        </PartituraSaveInfo>
-        <PartituraSaveInfo>
-          <meuIndice>2</meuIndice>
-          <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>15930</pontosMarcados>
-          <liberado>true</liberado>
-        </PartituraSaveInfo>
-      </partiturasConcluidas>
-    </LevelSaveInfo>
-    <LevelSaveInfo>
-      <nome>Level2</nome>
-      <meuLevel>1</meuLevel>
-      <liberado>true</liberado>
       <festaLiberada>false</festaLiberada>
       <partiturasConcluidas>
         <PartituraSaveInfo>
           <meuIndice>0</meuIndice>
-          <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>16310</pontosMarcados>
-          <liberado>true</liberado>
-        </PartituraSaveInfo>
-        <PartituraSaveInfo>
-          <meuIndice>1</meuIndice>
-          <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>14820</pontosMarcados>
-          <liberado>true</liberado>
-        </PartituraSaveInfo>
-        <PartituraSaveInfo>
-          <meuIndice>2</meuIndice>
-          <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>12230</pontosMarcados>
-          <liberado>true</liberado>
-        </PartituraSaveInfo>
-        <PartituraSaveInfo>
-          <meuIndice>3</meuIndice>
-          <estrelasGanhas>3</estrelasGanhas>
-          <pontosMarcados>13680</pontosMarcados>
-          <liberado>true</liberado>
-        </PartituraSaveInfo>
-        <PartituraSaveInfo>
-          <meuIndice>4</meuIndice>
           <estrelasGanhas>0</estrelasGanhas>
           <pontosMarcados>0</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
-          <meuIndice>5</meuIndice>
+          <meuIndice>1</meuIndice>
+          <estrelasGanhas>0</estrelasGanhas>
+          <pontosMarcados>0</pontosMarcados>
+          <liberado>false</liberado>
+        </PartituraSaveInfo>
+        <PartituraSaveInfo>
+          <meuIndice>2</meuIndice>
           <estrelasGanhas>0</estrelasGanhas>
           <pontosMarcados>0</pontosMarcados>
           <liberado>false</liberado>
@@ -72,8 +28,8 @@
       </partiturasConcluidas>
     </LevelSaveInfo>
     <LevelSaveInfo>
-      <nome>Level3</nome>
-      <meuLevel>2</meuLevel>
+      <nome>Level2</nome>
+      <meuLevel>1</meuLevel>
       <liberado>false</liberado>
       <festaLiberada>false</festaLiberada>
       <partiturasConcluidas>
@@ -106,6 +62,50 @@
           <estrelasGanhas>0</estrelasGanhas>
           <pontosMarcados>0</pontosMarcados>
           <liberado>false</liberado>
+        </PartituraSaveInfo>
+        <PartituraSaveInfo>
+          <meuIndice>5</meuIndice>
+          <estrelasGanhas>0</estrelasGanhas>
+          <pontosMarcados>0</pontosMarcados>
+          <liberado>false</liberado>
+        </PartituraSaveInfo>
+      </partiturasConcluidas>
+    </LevelSaveInfo>
+    <LevelSaveInfo>
+      <nome>Level3</nome>
+      <meuLevel>2</meuLevel>
+      <liberado>true</liberado>
+      <festaLiberada>false</festaLiberada>
+      <partiturasConcluidas>
+        <PartituraSaveInfo>
+          <meuIndice>0</meuIndice>
+          <estrelasGanhas>3</estrelasGanhas>
+          <pontosMarcados>23660</pontosMarcados>
+          <liberado>true</liberado>
+        </PartituraSaveInfo>
+        <PartituraSaveInfo>
+          <meuIndice>1</meuIndice>
+          <estrelasGanhas>0</estrelasGanhas>
+          <pontosMarcados>0</pontosMarcados>
+          <liberado>true</liberado>
+        </PartituraSaveInfo>
+        <PartituraSaveInfo>
+          <meuIndice>2</meuIndice>
+          <estrelasGanhas>0</estrelasGanhas>
+          <pontosMarcados>0</pontosMarcados>
+          <liberado>true</liberado>
+        </PartituraSaveInfo>
+        <PartituraSaveInfo>
+          <meuIndice>3</meuIndice>
+          <estrelasGanhas>0</estrelasGanhas>
+          <pontosMarcados>0</pontosMarcados>
+          <liberado>true</liberado>
+        </PartituraSaveInfo>
+        <PartituraSaveInfo>
+          <meuIndice>4</meuIndice>
+          <estrelasGanhas>0</estrelasGanhas>
+          <pontosMarcados>0</pontosMarcados>
+          <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>5</meuIndice>

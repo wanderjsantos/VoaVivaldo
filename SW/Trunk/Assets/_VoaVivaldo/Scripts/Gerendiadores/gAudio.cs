@@ -13,7 +13,7 @@ public class gAudio : MonoBehaviour
 	
 	float lastVolume = .5f;
 	
-	float iTime;
+//	float iTime;
 	
 	public AudioClip error;
 	public AudioClip novaEstrela;
@@ -70,17 +70,17 @@ public class gAudio : MonoBehaviour
 		
 	}
 	
-	void Update()
-	{
-		if( Input.GetKeyUp( KeyCode.A ) ) PararAudio();
-	
-		if( esperandoParaTocar )
-		{
-			if( Time.realtimeSinceStartup - iTime >= tempoDeEsperaDeUmaNota )
-			{
-				RecuperarAudio();
-			}
-		}
-	}
+//	void Update()
+//	{
+//		if( Input.GetKeyUp( KeyCode.A ) ) PararAudio();
+//	
+//		if( esperandoParaTocar )
+//		{
+//			if( Time.realtimeSinceStartup - iTime >= tempoDeEsperaDeUmaNota )
+//			{
+//				RecuperarAudio();
+//			}
+//		}
+//	}
 	
 }

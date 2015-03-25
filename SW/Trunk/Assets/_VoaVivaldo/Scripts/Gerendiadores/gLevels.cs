@@ -105,8 +105,10 @@ public class gLevels : MonoBehaviour
 
 	public void FinalizarLevel ()
 	{
-		bool pontos = currentLevel.SetPontuacao	( currentPartituraIndex, gGame.s.player.mInfo.pontuacao );
-		bool estrelas = currentLevel.SetEstrelas	( currentPartituraIndex, gPontuacao.s.estrelasGanhas );
+//		bool pontos = currentLevel.SetPontuacao	( currentPartituraIndex, gGame.s.player.mInfo.pontuacao );
+		currentLevel.SetPontuacao	( currentPartituraIndex, gGame.s.player.mInfo.pontuacao );
+//		bool estrelas = currentLevel.SetEstrelas	( currentPartituraIndex, gPontuacao.s.estrelasGanhas );
+		currentLevel.SetEstrelas	( currentPartituraIndex, gPontuacao.s.estrelasGanhas );
 		
 		if( gPontuacao.s.estrelasGanhas == 0 ) return;
 		

@@ -35,7 +35,7 @@ public class gPontuacao : MonoBehaviour {
 //	public int minParaDerrota = 40;
 	
 	float porcentagemAcertos = 0f;
-	float porcentagemErros = 0f;
+//	float porcentagemErros = 0f;
 				
 	public	int notasAcertadasNaSequencia = 0;
 	
@@ -71,7 +71,7 @@ public class gPontuacao : MonoBehaviour {
 		multiplicador = 1;
 		acertos = 0;
 		erros = 0;
-		porcentagemErros = 0f;
+//		porcentagemErros = 0f;
 		porcentagemAcertos = 0f;
 		estrelasGanhas = 0;
 		pontuacao = 0;
@@ -154,7 +154,7 @@ public class gPontuacao : MonoBehaviour {
 		if( nota.pontuando ) return;
 		
 		nota.pontuando = true;
-		lastNota = nota;
+//		lastNota = nota;
 		notasAcertadasNaSequencia ++;
 		
 		if( notasAcertadasNaSequencia >= (aCadaXNotas * multiplicador) )
@@ -171,7 +171,7 @@ public class gPontuacao : MonoBehaviour {
 	}
 	
 	float initPontuacao;
-	Nota lastNota;
+//	Nota lastNota;
 	public void Update()
 	{
 		if( !pontuandoNotaLonga ) return;
@@ -235,8 +235,8 @@ public class gPontuacao : MonoBehaviour {
 	
 		if( acertos > 0 )
 			porcentagemAcertos 	=(float)( (acertos * 100f) / gNotas.s.quantidadeDeNotasNaPista);
-		if( erros > 0 )
-			porcentagemErros	=(float)( (  erros * 100f ) / gNotas.s.quantidadeDeNotasNaPista);
+//		if( erros > 0 )
+//			porcentagemErros	=(float)( (  erros * 100f ) / gNotas.s.quantidadeDeNotasNaPista);
 		
 //		Debug.Log("Porcentagem : " + porcentagemAcertos );
 		

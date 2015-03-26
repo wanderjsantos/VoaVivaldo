@@ -33,6 +33,22 @@ public class Musica : MonoBehaviour
 //		posicaoNotaAtual = 0;
 		iTime = Time.time;
 	}
+	
+	void OnEnable()
+	{
+		Vivaldos.onChangeAudioSettings += UpdateAudioSettings;
+	}
+	
+	void OnDisable()
+	{
+		Vivaldos.onChangeAudioSettings -= UpdateAudioSettings;
+	}
+		
+	public void UpdateAudioSettings( float volumeBase, float volumeInstr, float volumeGeral )
+	{
+		sourceBase.volume = volumeBase;
+		sourceInstrumento.volume = volumeInstr;
+	}
 
 	public void Stop()
 	{
@@ -48,6 +64,9 @@ public class Musica : MonoBehaviour
 			sourceBase = (new GameObject ("SourceBase")).AddComponent<AudioSource> ();
 		if (sourceInstrumento == null)
 			sourceInstrumento = (new GameObject ("SourceInstrumento")).AddComponent<AudioSource> ();
+
+		sourceBase.volume = gSave.s.GetCurrentBaseVolume();
+		sourceInstrumento.volume = gSave.s.GetCurrentInstrumentosVolume();
 
 		sourceBase.transform.parent = gameObject.transform;
 		sourceInstrumento.transform.parent = gameObject.transform;

@@ -36,7 +36,19 @@ public class PartituraSaveInfo
 [System.Serializable]
 public class SettingsSaveInfo
 {
-	public bool		mudo;
+	public bool		audio;
 	public bool		vibrar;
+	
+	public float	volumeGeral = 1f;
+	public float 	volumeBase 	= 1f;
+	public float 	volumeInstrumentos = 1f;
+	
+	//Sao usados temporariamente para guardar os valores antes de 
+	[HideInInspector]
+	public float savedVolumeBase = 1f;
+	[HideInInspector]
+	public float savedVolumeInstrumento = 1f;
+	[HideInInspector]
+	public float savedVolumeGeral = 1f;
 }
 

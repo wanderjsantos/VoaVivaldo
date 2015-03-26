@@ -1,19 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\Gerendiadores\gLevels.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\Gerendiadores\gSave.cs">
     <Files>
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gAudio.cs" Line="16" Column="16" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuVitoria.cs" Line="1" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gPontuacao.cs" Line="157" Column="13" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gNotas.cs" Line="1" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuGameplay\Combo.cs" Line="1" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\View\vEstrelas.cs" Line="1" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Musica.cs" Line="33" Column="18" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gPista.cs" Line="15" Column="22" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gLevels.cs" Line="111" Column="3" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Level.cs" Line="21" Column="2" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gSave.cs" Line="64" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Data\VivaldoSave.cs" Line="46" Column="64" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Vivaldos.cs" Line="26" Column="20" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuOpcoes.cs" Line="18" Column="14" />
+      <File FileName="Assets\NGUI\Scripts\Internal\NGUITools.cs" Line="78" Column="32" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Musica.cs" Line="50" Column="42" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gAudio.cs" Line="23" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

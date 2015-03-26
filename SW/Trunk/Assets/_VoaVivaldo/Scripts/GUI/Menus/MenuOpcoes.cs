@@ -9,12 +9,14 @@ public class MenuOpcoes : Menu {
 	}
 	
 	public void OnChangeValueVibrar( bool valor )
-	{		
+	{	
+			
 		Vivaldos.VIBRAR = !valor;
+		
 	}
 	
 	public void OnChangeValueAudio( bool valor )
 	{
-		Vivaldos.AUDIO = valor;
+		Vivaldos.AUDIO = !valor;
 	}
 }

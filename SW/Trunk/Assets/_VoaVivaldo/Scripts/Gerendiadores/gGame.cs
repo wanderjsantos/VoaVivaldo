@@ -150,7 +150,10 @@ public class gGame : MonoBehaviour
 	{
 		if( gameStarted == false ) return;
 		
-		gMenus.s.ShowMenu("Vitoria");
+		if( player.mInfo.pontuacao <= gPontuacao.s.pontuacaoMinimaParaVitoria )
+			gMenus.s.ShowMenu("Derrota");
+		else
+			gMenus.s.ShowMenu("Vitoria");
 		
 		gameStarted = false;
 		

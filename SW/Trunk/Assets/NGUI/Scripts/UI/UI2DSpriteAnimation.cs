@@ -4,6 +4,7 @@
 //----------------------------------------------
 
 using UnityEngine;
+using System.Collections.Generic;
 
 /// <summary>
 /// Small script that makes it easy to create looping 2D sprite animations.
@@ -173,6 +174,24 @@ public class UI2DSpriteAnimation : MonoBehaviour
 			mNguiSprite.nextSprite = animations[currentAnimation].frames[mIndex];;
 		}
 	}
+	
+	public void AddNewAnimation( string name,  Sprite[] sprites, bool loop = true )
+	{
+		List<UI2DAnimation> temp = new List<UI2DAnimation>();
+		temp.AddRange( animations );
+		
+		UI2DAnimation newAnimation = new UI2DAnimation();
+		newAnimation.name = name;
+		newAnimation.loop = loop;
+		newAnimation.frames = sprites;
+		
+		temp.Add(newAnimation);
+		
+		animations = new UI2DAnimation[temp.Count];
+		animations = temp.ToArray();
+	}
+	
+	
 }
 
 [System.Serializable]
@@ -181,4 +200,6 @@ public class UI2DAnimation
 	public string name;
 	public bool loop = true;
 	public UnityEngine.Sprite[] frames;
+	
+	
 }

@@ -9,6 +9,36 @@ TextureImporter:
     21300008: GAMEPLAY_TRUMPET_COMEMORANDO_3
     21300010: GAMEPLAY_TRUMPET_COMEMORANDO_4
     21300012: GAMEPLAY_TRUMPET_COMEMORANDO_5
+    21300014: GAMEPLAY_TRUMPET_COMEMORANDO_6
+    21300016: GAMEPLAY_TRUMPET_COMEMORANDO_7
+    21300018: GAMEPLAY_TRUMPET_COMEMORANDO_8
+    21300020: GAMEPLAY_TRUMPET_COMEMORANDO_9
+    21300022: GAMEPLAY_TRUMPET_COMEMORANDO_10
+    21300024: GAMEPLAY_TRUMPET_COMEMORANDO_11
+    21300026: GAMEPLAY_TRUMPET_COMEMORANDO_12
+    21300028: GAMEPLAY_TRUMPET_COMEMORANDO_13
+    21300030: GAMEPLAY_TRUMPET_COMEMORANDO_14
+    21300032: GAMEPLAY_TRUMPET_COMEMORANDO_15
+    21300034: GAMEPLAY_TRUMPET_COMEMORANDO_16
+    21300036: GAMEPLAY_TRUMPET_COMEMORANDO_17
+    21300038: GAMEPLAY_TRUMPET_COMEMORANDO_18
+    21300040: GAMEPLAY_TRUMPET_COMEMORANDO_19
+    21300042: GAMEPLAY_TRUMPET_COMEMORANDO_20
+    21300044: GAMEPLAY_TRUMPET_COMEMORANDO_21
+    21300046: GAMEPLAY_TRUMPET_COMEMORANDO_22
+    21300048: GAMEPLAY_TRUMPET_COMEMORANDO_23
+    21300050: GAMEPLAY_TRUMPET_COMEMORANDO_24
+    21300052: GAMEPLAY_TRUMPET_COMEMORANDO_25
+    21300054: GAMEPLAY_TRUMPET_COMEMORANDO_26
+    21300056: GAMEPLAY_TRUMPET_COMEMORANDO_27
+    21300058: GAMEPLAY_TRUMPET_COMEMORANDO_28
+    21300060: GAMEPLAY_TRUMPET_COMEMORANDO_29
+    21300062: GAMEPLAY_TRUMPET_COMEMORANDO_30
+    21300064: GAMEPLAY_TRUMPET_COMEMORANDO_31
+    21300066: GAMEPLAY_TRUMPET_COMEMORANDO_32
+    21300068: GAMEPLAY_TRUMPET_COMEMORANDO_33
+    21300070: GAMEPLAY_TRUMPET_COMEMORANDO_34
+    21300072: GAMEPLAY_TRUMPET_COMEMORANDO_35
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +59,7 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 512
   textureSettings:
     filterMode: -1
     aniso: 1
@@ -54,60 +84,360 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 60
-        width: 192
-        height: 196
-      alignment: 0
+        y: 1186
+        width: 290
+        height: 236
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_TRUMPET_COMEMORANDO_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 60
-        width: 192
-        height: 196
-      alignment: 0
+        x: 298
+        y: 1186
+        width: 290
+        height: 236
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_TRUMPET_COMEMORANDO_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 60
-        width: 192
-        height: 196
-      alignment: 0
+        x: 596
+        y: 1186
+        width: 290
+        height: 236
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_TRUMPET_COMEMORANDO_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 60
-        width: 192
-        height: 196
-      alignment: 0
+        x: 894
+        y: 1186
+        width: 290
+        height: 236
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_TRUMPET_COMEMORANDO_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 60
-        width: 192
-        height: 196
-      alignment: 0
+        x: 1192
+        y: 1186
+        width: 290
+        height: 236
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_TRUMPET_COMEMORANDO_5
       rect:
         serializedVersion: 2
-        x: 960
-        y: 60
-        width: 192
-        height: 196
-      alignment: 0
+        x: 1490
+        y: 1186
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 950
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_7
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 950
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_8
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 950
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_9
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 950
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_10
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 950
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_11
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 950
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 714
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_13
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 714
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_14
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 714
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_15
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 714
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_16
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 714
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_17
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 714
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 478
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_19
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 478
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_20
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 478
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_21
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 478
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_22
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 478
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_23
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 478
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 242
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_25
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 242
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_26
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 242
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_27
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 242
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_28
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 242
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_29
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 242
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_31
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 6
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_32
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 6
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_33
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 6
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_34
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 6
+        width: 290
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_TRUMPET_COMEMORANDO_35
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 6
+        width: 290
+        height: 236
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

@@ -3,6 +3,12 @@ using System.Collections;
 
 public class MenuOpcoes : Menu {
 
+	public override void Hide ()
+	{
+		base.Hide ();
+		gSave.s.GravarInformacoes();
+	}
+
 	public void OnClickHome()
 	{
 		gMenus.s.ShowMenu("Principal");

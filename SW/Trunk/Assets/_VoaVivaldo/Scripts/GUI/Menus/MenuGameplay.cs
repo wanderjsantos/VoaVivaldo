@@ -15,15 +15,16 @@ public class MenuGameplay : Menu
 
 	public UIRoot		uiRoot;
 
-	public UILabel		labelContagemRegressiva;
-	public GameObject	goContagemRegressiva;
-	
+	public UILabel				labelContagemRegressiva;
+	public GameObject			goContagemRegressiva;
+	public vPersonagensDancando	personagensDancantes;
 
 	public override void Show()
 	{
 		base.Show ();
 		gGame.onPlayGame += ResetContagemRegressiva;
 		InitContagemRegressiva();
+		VerificarPersonagensDancando();
 	}
 	
 	public override void Resetar ()
@@ -50,6 +51,18 @@ public class MenuGameplay : Menu
 	{
 		goContagemRegressiva.SetActive (false);
 		labelContagemRegressiva.text = (gGame.s.contagemRegressiva + 1).ToString ("00");
+	}
+
+	void VerificarPersonagensDancando ()
+	{
+		personagensDancantes.DesativarTodos();
+		
+		foreach(QualPersonagem personagem in gLevels.s.GetPersonagensDoLevelAtual() )
+		{
+			if( personagem == gGame.s.player.mInfo.meuPersonagem ) continue;
+			
+			personagensDancantes.Ativar( personagem );
+		}
 	}
 	
 	public void OnClickPause()

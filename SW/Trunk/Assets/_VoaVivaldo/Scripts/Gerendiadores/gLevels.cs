@@ -70,6 +70,18 @@ public class gLevels : MonoBehaviour
 		
 		return allLevels [index];
 	}
+
+	public List<QualPersonagem> GetPersonagensDoLevelAtual ()
+	{
+		List<QualPersonagem> ret = new List<QualPersonagem>();
+					
+		for( int i = currentPartituraIndex; i >= 0 ; i-- )
+		{
+			ret.Add( currentLevel.info.partituras[i].info.personagem );
+		}
+		
+		return ret;
+	}
 	
 	public void SetLevel( int musica, int partitura )
 	{

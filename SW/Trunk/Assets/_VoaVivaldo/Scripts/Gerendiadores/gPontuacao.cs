@@ -12,6 +12,8 @@ public class gPontuacao : MonoBehaviour {
 	
 	public int tolerancia = 1;
 
+	public int pontuacaoMinimaParaVitoria = 100;
+	
 	public 	int pontosPorNota = 100;
 	public 	int aCadaXNotas = 5;
 

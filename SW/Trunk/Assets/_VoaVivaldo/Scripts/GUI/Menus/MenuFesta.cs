@@ -18,9 +18,9 @@ public class MenuFesta : Menu
 	public override void Show ()
 	{
 		base.Show ();
-		goPartituras.SetActive(false);
-		
-		Play();
+//		goPartituras.SetActive(false);
+//		
+//		Play();
 	}
 	
 	public void OnClickMostrarPartitura()

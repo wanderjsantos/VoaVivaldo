@@ -1,0 +1,729 @@
+fileFormatVersion: 2
+guid: b9c2ef38263d2424dbc053d650321427
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FESTA_PIANO_DANCANDO_0
+    21300002: FESTA_PIANO_DANCANDO_1
+    21300004: FESTA_PIANO_DANCANDO_2
+    21300006: FESTA_PIANO_DANCANDO_3
+    21300008: FESTA_PIANO_DANCANDO_4
+    21300010: FESTA_PIANO_DANCANDO_5
+    21300012: FESTA_PIANO_DANCANDO_6
+    21300014: FESTA_PIANO_DANCANDO_7
+    21300016: FESTA_PIANO_DANCANDO_8
+    21300018: FESTA_PIANO_DANCANDO_9
+    21300020: FESTA_PIANO_DANCANDO_10
+    21300022: FESTA_PIANO_DANCANDO_11
+    21300024: FESTA_PIANO_DANCANDO_12
+    21300026: FESTA_PIANO_DANCANDO_13
+    21300028: FESTA_PIANO_DANCANDO_14
+    21300030: FESTA_PIANO_DANCANDO_15
+    21300032: FESTA_PIANO_DANCANDO_16
+    21300034: FESTA_PIANO_DANCANDO_17
+    21300036: FESTA_PIANO_DANCANDO_18
+    21300038: FESTA_PIANO_DANCANDO_19
+    21300040: FESTA_PIANO_DANCANDO_20
+    21300042: FESTA_PIANO_DANCANDO_21
+    21300044: FESTA_PIANO_DANCANDO_22
+    21300046: FESTA_PIANO_DANCANDO_23
+    21300048: FESTA_PIANO_DANCANDO_24
+    21300050: FESTA_PIANO_DANCANDO_25
+    21300052: FESTA_PIANO_DANCANDO_26
+    21300054: FESTA_PIANO_DANCANDO_27
+    21300056: FESTA_PIANO_DANCANDO_28
+    21300058: FESTA_PIANO_DANCANDO_29
+    21300060: FESTA_PIANO_DANCANDO_30
+    21300062: FESTA_PIANO_DANCANDO_31
+    21300064: FESTA_PIANO_DANCANDO_32
+    21300066: FESTA_PIANO_DANCANDO_33
+    21300068: FESTA_PIANO_DANCANDO_34
+    21300070: FESTA_PIANO_DANCANDO_35
+    21300072: FESTA_PIANO_DANCANDO_36
+    21300074: FESTA_PIANO_DANCANDO_37
+    21300076: FESTA_PIANO_DANCANDO_38
+    21300078: FESTA_PIANO_DANCANDO_39
+    21300080: FESTA_PIANO_DANCANDO_40
+    21300082: FESTA_PIANO_DANCANDO_41
+    21300084: FESTA_PIANO_DANCANDO_42
+    21300086: FESTA_PIANO_DANCANDO_43
+    21300088: FESTA_PIANO_DANCANDO_44
+    21300090: FESTA_PIANO_DANCANDO_45
+    21300092: FESTA_PIANO_DANCANDO_46
+    21300094: FESTA_PIANO_DANCANDO_47
+    21300096: FESTA_PIANO_DANCANDO_48
+    21300098: FESTA_PIANO_DANCANDO_49
+    21300100: FESTA_PIANO_DANCANDO_50
+    21300102: FESTA_PIANO_DANCANDO_51
+    21300104: FESTA_PIANO_DANCANDO_52
+    21300106: FESTA_PIANO_DANCANDO_53
+    21300108: FESTA_PIANO_DANCANDO_54
+    21300110: FESTA_PIANO_DANCANDO_55
+    21300112: FESTA_PIANO_DANCANDO_56
+    21300114: FESTA_PIANO_DANCANDO_57
+    21300116: FESTA_PIANO_DANCANDO_58
+    21300118: FESTA_PIANO_DANCANDO_59
+    21300120: FESTA_PIANO_DANCANDO_60
+    21300122: FESTA_PIANO_DANCANDO_61
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: FESTA_PIANO_DANCANDO_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1884
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_1
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1884
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_2
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1884
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_3
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1884
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_4
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1884
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_5
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1884
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_6
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1884
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1726
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_8
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1726
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_9
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1726
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_10
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1726
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_11
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1726
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_12
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1726
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_13
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1726
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1568
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_15
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1568
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_16
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1568
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_17
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1568
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_18
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1568
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_19
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1568
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_20
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1568
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1410
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_22
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1410
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_23
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1410
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_24
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1410
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_25
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1410
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_26
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1410
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_27
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1410
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1252
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_29
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1252
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_30
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1252
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_31
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1252
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_32
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1252
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_33
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1252
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_34
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1252
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1094
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_36
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1094
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_37
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1094
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_38
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1094
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_39
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1094
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_40
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1094
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_41
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1094
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_43
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 936
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_44
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 936
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_45
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 936
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_46
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 936
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_47
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 936
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_48
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 936
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 778
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_50
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 778
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_51
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 778
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_52
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 778
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_53
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 778
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_54
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 778
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_55
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 778
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 620
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_57
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 620
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_58
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 620
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_59
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 620
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_60
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 620
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_PIANO_DANCANDO_61
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 620
+        width: 200
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

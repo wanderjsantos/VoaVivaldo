@@ -2,20 +2,26 @@ fileFormatVersion: 2
 guid: ddc9a4fdc675eca458eb6f1613f9e9e6
 TextureImporter:
   fileIDToRecycleName:
-    21300000: VITORIA_HORN_DANCANDO_0
-    21300002: VITORIA_HORN_DANCANDO_1
-    21300004: VITORIA_HORN_DANCANDO_2
-    21300006: VITORIA_HORN_DANCANDO_3
-    21300008: VITORIA_HORN_DANCANDO_4
-    21300010: VITORIA_HORN_DANCANDO_5
-    21300012: VITORIA_HORN_DANCANDO_6
-    21300014: FESTA_HORN_DANCANDO_0
-    21300016: FESTA_HORN_DANCANDO_1
-    21300018: FESTA_HORN_DANCANDO_2
-    21300020: FESTA_HORN_DANCANDO_3
-    21300022: FESTA_HORN_DANCANDO_4
-    21300024: FESTA_HORN_DANCANDO_5
-    21300026: FESTA_HORN_DANCANDO_6
+    21300000: FESTA_HORN_DANCANDO_0
+    21300002: FESTA_HORN_DANCANDO_1
+    21300004: FESTA_HORN_DANCANDO_2
+    21300006: FESTA_HORN_DANCANDO_3
+    21300008: FESTA_HORN_DANCANDO_4
+    21300010: FESTA_HORN_DANCANDO_5
+    21300012: FESTA_HORN_DANCANDO_6
+    21300014: FESTA_HORN_DANCANDO_7
+    21300016: FESTA_HORN_DANCANDO_8
+    21300018: FESTA_HORN_DANCANDO_9
+    21300020: FESTA_HORN_DANCANDO_10
+    21300022: FESTA_HORN_DANCANDO_11
+    21300024: FESTA_HORN_DANCANDO_12
+    21300026: FESTA_HORN_DANCANDO_13
+    21300028: FESTA_HORN_DANCANDO_14
+    21300030: FESTA_HORN_DANCANDO_15
+    21300032: FESTA_HORN_DANCANDO_16
+    21300034: FESTA_HORN_DANCANDO_17
+    21300036: FESTA_HORN_DANCANDO_18
+    21300038: FESTA_HORN_DANCANDO_19
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -39,7 +45,7 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -61,71 +67,181 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 260
-        height: 512
+        y: 2500
+        width: 390
+        height: 620
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_HORN_DANCANDO_1
       rect:
         serializedVersion: 2
-        x: 260
-        y: 0
-        width: 260
-        height: 512
+        x: 390
+        y: 2500
+        width: 390
+        height: 620
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_HORN_DANCANDO_2
       rect:
         serializedVersion: 2
-        x: 520
-        y: 0
-        width: 260
-        height: 512
+        x: 780
+        y: 2500
+        width: 390
+        height: 620
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_HORN_DANCANDO_3
       rect:
         serializedVersion: 2
-        x: 780
-        y: 0
-        width: 260
-        height: 512
+        x: 1170
+        y: 2500
+        width: 390
+        height: 620
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_HORN_DANCANDO_4
       rect:
         serializedVersion: 2
-        x: 1040
-        y: 0
-        width: 260
-        height: 512
+        x: 0
+        y: 1876
+        width: 390
+        height: 620
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_HORN_DANCANDO_5
       rect:
         serializedVersion: 2
-        x: 1300
-        y: 0
-        width: 260
-        height: 512
+        x: 390
+        y: 1876
+        width: 390
+        height: 620
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_HORN_DANCANDO_6
       rect:
         serializedVersion: 2
-        x: 1560
-        y: 0
-        width: 260
-        height: 512
+        x: 780
+        y: 1876
+        width: 390
+        height: 620
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_7
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1876
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1252
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_9
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1252
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_10
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1252
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_11
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1252
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 628
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_14
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 628
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_15
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 628
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_HORN_DANCANDO_17
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 4
+        width: 390
+        height: 620
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

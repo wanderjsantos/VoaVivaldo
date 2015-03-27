@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 2dbf13a1ffadb0748b5b9b7853966844
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FESTA_FAUTA_DANCANDO_0
+    21300002: FESTA_FAUTA_DANCANDO_1
+    21300004: FESTA_FAUTA_DANCANDO_2
+    21300006: FESTA_FAUTA_DANCANDO_3
+    21300008: FESTA_FAUTA_DANCANDO_4
+    21300010: FESTA_FAUTA_DANCANDO_5
+    21300012: FESTA_FAUTA_DANCANDO_6
+    21300014: FESTA_FAUTA_DANCANDO_7
+    21300016: FESTA_FAUTA_DANCANDO_8
+    21300018: FESTA_FAUTA_DANCANDO_9
+    21300020: FESTA_FAUTA_DANCANDO_10
+    21300022: FESTA_FAUTA_DANCANDO_11
+    21300024: FESTA_FAUTA_DANCANDO_12
+    21300026: FESTA_FAUTA_DANCANDO_13
+    21300028: FESTA_FAUTA_DANCANDO_14
+    21300030: FESTA_FAUTA_DANCANDO_15
+    21300032: FESTA_FAUTA_DANCANDO_16
+    21300034: FESTA_FAUTA_DANCANDO_17
+    21300036: FESTA_FAUTA_DANCANDO_18
+    21300038: FESTA_FAUTA_DANCANDO_19
+    21300040: FESTA_FAUTA_DANCANDO_20
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: FESTA_FAUTA_DANCANDO_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1682
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1682
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_2
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1682
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_3
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1682
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_4
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1682
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1314
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1314
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_7
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1314
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_8
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1314
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_9
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1314
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 946
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 946
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_12
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 946
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_13
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 946
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_14
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 946
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 578
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_16
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 578
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_17
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 578
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_18
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 578
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_19
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 578
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_FAUTA_DANCANDO_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 79
+        height: 366
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

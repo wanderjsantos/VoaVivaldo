@@ -190,4 +190,28 @@ public class gLevels : MonoBehaviour
 	{
 		return Mathf.Clamp (currentIndex, 0, allLevels.Count);
 	}
+
+	public List<string> GetInstrumentosAnteriores ()
+	{
+		List<string> ret = new List<string>();
+		
+		int quantidadeDeTrechos =  3;
+		int partituraAtual = currentPartituraIndex;
+		
+		if( partituraAtual < quantidadeDeTrechos ) return ret;
+		
+		int quantosInstrumentosAMais = 0;
+		int count = partituraAtual;
+		while( count >= quantidadeDeTrechos )
+		{	
+			count = count - quantidadeDeTrechos;		
+			quantosInstrumentosAMais += 1;
+			Debug.Log("Tentando ver: " + count);
+			ret.Add( currentLevel.info.partituras[count].info.nomeAudioInstrumento );
+		}
+		
+		Debug.Log("Retornando[ " + quantosInstrumentosAMais + " ] mais instrumentos para tocar junto");
+		
+		return ret;
+	}
 }

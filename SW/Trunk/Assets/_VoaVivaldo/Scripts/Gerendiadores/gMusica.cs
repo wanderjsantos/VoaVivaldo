@@ -121,8 +121,8 @@ public class gMusica : MonoBehaviour
 		}
 		
 		Debug.Log("Dados> Compasso: " + dados.compassos.Count );
-		Debug.Log("Dados> base: " + dados.nomeAudioBase );
-		Debug.Log("Dados> base: " + dados.nomeAudioInstrumento );
+		Debug.Log("Dados> Base: " + dados.nomeAudioBase );
+		Debug.Log("Dados> Instrumento: " + dados.nomeAudioInstrumento );
 
 		MusicaInfo info 				= new MusicaInfo ();
 		info.mPartitura = dados;
@@ -132,8 +132,17 @@ public class gMusica : MonoBehaviour
 
 		Musica m = Instantiate (_prefabMusica) as Musica;
 		m.mInfo = info;
-
+						
 		gRitmo.s.SetBPM (info.mPartitura.BPM);
+		
+		List<string> outrosInstrumentos = gLevels.s.GetInstrumentosAnteriores( );
+		foreach( string s in outrosInstrumentos )
+		{
+			AudioClip clip = Vivaldos.NameToAudioClip( s ) ;
+			m.AdicionarInstrumentoExtra( clip );
+		}
+		
+		
 		
 		musicaAtual = m;
 		if (autoPlay)	PlayMusica ();

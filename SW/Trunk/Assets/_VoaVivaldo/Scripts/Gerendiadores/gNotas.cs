@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -117,15 +117,17 @@ public class gNotas : MonoBehaviour
 		
 		int c = Mathf.Clamp (verificarXNotasPorVez, 1, notasNaPista.Count);
 		
-		for (int i = 0; i < c; i++) 
+		for ( int i = 0; i < notasNaPista.Count; i++ ) 
 		{
-			if( c > notasNaPista.Count || i >= notasNaPista.Count )
+			if( c > notasNaPista.Count || i  >= notasNaPista.Count )
 			{
-				return;
+				break;
+//				return;
 			}
 			
 			Vector3 posNota = UICamera.mainCamera.WorldToScreenPoint( notasNaPista[i].transform.position );
 			
+			if( notasNaPista.Count <= 0 || notasNaPista[i] == null) continue;
 			
 			VerificarPercursoDePontuacao(posNota, notasNaPista[i]);
 			VerificarFimDePercurso(posNota, notasNaPista[i]);

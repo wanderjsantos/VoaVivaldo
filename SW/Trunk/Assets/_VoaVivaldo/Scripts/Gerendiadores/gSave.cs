@@ -17,6 +17,10 @@ public class gSave : MonoBehaviour {
 	public void Awake()
 	{
 		s = this;
+		
+		defaultSavedGame.settings.savedVolumeBase = 1f;
+		defaultSavedGame.settings.savedVolumeInstrumento = 1f;
+		defaultSavedGame.settings.savedVolumeGeral = 1f;
 	}
 	
 	public void Start()
@@ -34,7 +38,7 @@ public class gSave : MonoBehaviour {
 	{
 		Debug.LogWarning("Saving Settings");
 		XmlSerializer 	serializer = new XmlSerializer( typeof(VivaldoSave ) );
-		FileStream		writer = new FileStream( "Assets/_VoaVivaldo/SaveGames/Save.xml", FileMode.Create );
+		FileStream		writer = new FileStream( Vivaldos.SAVE_PATH + "Save.xml", FileMode.Create );
 		serializer.Serialize( writer, saveSettings );
 		writer.Close();
 
@@ -42,7 +46,7 @@ public class gSave : MonoBehaviour {
 
 	VivaldoSave CarregarArquivo ()
 	{
-		if( File.Exists( "Assets/_VoaVivaldo/SaveGames/Save.xml" ) == false )
+		if( File.Exists( Vivaldos.SAVE_PATH + "Save.xml" ) == false )
 		{
 			Debug.LogWarning("Usando save default");
 			return defaultSavedGame;
@@ -50,7 +54,7 @@ public class gSave : MonoBehaviour {
 	
 		Debug.LogWarning ("Loading Settings");
 		XmlSerializer serializer = new XmlSerializer (typeof(VivaldoSave));
-		FileStream stream = new FileStream ("Assets/_VoaVivaldo/SaveGames/Save.xml", FileMode.Open);
+		FileStream stream = new FileStream ( Vivaldos.SAVE_PATH + "Save.xml", FileMode.Open);
 		VivaldoSave ret = serializer.Deserialize (stream) as VivaldoSave;
 		stream.Close ();
 		return ret;

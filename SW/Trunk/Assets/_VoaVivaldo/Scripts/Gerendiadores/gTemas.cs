@@ -32,6 +32,14 @@ public class gTemas : MonoBehaviour
 //		Change();
 	}
 	
+	public void AplicarAtual()
+	{
+		if( gLevels.s.currentLevel != null )
+			Aplicar( gLevels.s.currentLevel.info.tema );
+		else
+			Aplicar ( gLevels.s.allLevels[0].info.tema );
+	}
+	
 	public void Change()
 	{
 		if( onChange != null ) onChange();

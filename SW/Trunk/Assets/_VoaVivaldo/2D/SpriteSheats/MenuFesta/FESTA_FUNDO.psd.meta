@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 08a18cc575d58414f824c8f021299c0c
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: FESTA_FUNDO
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

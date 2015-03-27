@@ -40,8 +40,11 @@ public class gMenus : MonoBehaviour
 	{
 		if (menuAtual != null)
 						menuAtual.Hide ();
-
+		
 		novoMenu.Show ();
+		
+		gTemas.s.AplicarAtual();
+		
 		menuAtual = novoMenu;
 	}
 

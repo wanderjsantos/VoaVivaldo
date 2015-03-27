@@ -11,6 +11,8 @@ public static class Vivaldos
 	public static int COLUNAS = 4;
 	public static int COMPASSOS_DEFAULT = 1;
 	public static float WIDTH_COMPASSO = 600f;
+
+	public static string SAVE_PATH = "Assets/_VoaVivaldo/SaveGames/";
 	
 	static bool	vibrar = false;
 	public static bool VIBRAR

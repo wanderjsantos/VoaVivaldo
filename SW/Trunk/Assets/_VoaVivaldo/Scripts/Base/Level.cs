@@ -6,6 +6,7 @@ public class Level : MonoBehaviour
 {
 	public LevelInfo 		info;
 	public LevelSaveInfo 	savedInfo;
+	public MusicaFestaInfo	instrumentosDaFesta;
 	
 	public bool FestaLiberada()
 	{

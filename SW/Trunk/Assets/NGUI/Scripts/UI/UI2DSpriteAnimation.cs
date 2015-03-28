@@ -164,6 +164,8 @@ public class UI2DSpriteAnimation : MonoBehaviour
 
 		float time = ignoreTimeScale ? RealTime.time : Time.time;
 		if (framerate != 0) mUpdate = time + Mathf.Abs(1f / framerate);
+		
+		mIndex = Mathf.Clamp( mIndex, 0, animations[currentAnimation].frames.Length-1 );
 
 		if (mUnitySprite != null)
 		{
@@ -171,12 +173,15 @@ public class UI2DSpriteAnimation : MonoBehaviour
 		}
 		else if (mNguiSprite != null)
 		{
+			
 			mNguiSprite.nextSprite = animations[currentAnimation].frames[mIndex];;
 		}
 	}
 	
 	public void AddNewAnimation( string name,  Sprite[] sprites, bool loop = true )
 	{
+		if( animations == null ) animations = new UI2DAnimation[0];
+	
 		List<UI2DAnimation> temp = new List<UI2DAnimation>();
 		temp.AddRange( animations );
 		
@@ -186,7 +191,7 @@ public class UI2DSpriteAnimation : MonoBehaviour
 		newAnimation.frames = sprites;
 		
 		temp.Add(newAnimation);
-		
+				
 		animations = new UI2DAnimation[temp.Count];
 		animations = temp.ToArray();
 	}

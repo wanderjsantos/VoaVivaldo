@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 9c173e48c15fb8a46a0dea09bd9971eb
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FESTA_BOTAO_SANFONA_0
+    21300002: FESTA_BOTAO_SANFONA_1
+    21300004: FESTA_BOTAO_SANFONA_2
+    21300006: FESTA_BOTAO_SANFONA_3
+    21300008: FESTA_BOTAO_SANFONA_4
+    21300010: FESTA_BOTAO_SANFONA_5
+    21300012: FESTA_BOTAO_SANFONA_6
+    21300014: FESTA_BOTAO_SANFONA_7
+    21300016: FESTA_BOTAO_SANFONA_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 128
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: FESTA_BOTAO_SANFONA_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 238
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_BOTAO_SANFONA_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 238
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_BOTAO_SANFONA_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 238
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_BOTAO_SANFONA_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 137
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_BOTAO_SANFONA_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 137
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_BOTAO_SANFONA_5
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 137
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_BOTAO_SANFONA_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_BOTAO_SANFONA_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 36
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FESTA_BOTAO_SANFONA_8
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 36
+        width: 113
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -16,6 +16,33 @@ public class vPersonagensDancando : MonoBehaviour
 		sanfona	.SetActive(false);
 	}	
 	
+	public GameObject GetInstrumento(QualPersonagem personagem)
+	{
+		switch( personagem )
+		{
+			case QualPersonagem.TRUMPET:
+				return trumpet;
+			case QualPersonagem.HORNET:
+				return horn;
+			case QualPersonagem.FLAUTA:
+				return flauta;
+			case QualPersonagem.SANFONA:
+				return sanfona;
+			default :
+				return null;
+		}	
+	}
+	
+	public QualPersonagem GetPersonagem(GameObject go )
+	{
+		if( go == trumpet ) return QualPersonagem.TRUMPET;
+		if( go == horn )	return QualPersonagem.HORNET;
+		if( go == flauta )	return QualPersonagem.FLAUTA;
+		if( go == sanfona ) return QualPersonagem.SANFONA;
+		
+		 return QualPersonagem.TRUMPET; 
+	}
+	
 	public void Ativar( QualPersonagem qual )
 	{
 		switch( qual )

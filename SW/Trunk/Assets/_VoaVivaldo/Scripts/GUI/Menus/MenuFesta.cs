@@ -1,5 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
+[System.Serializable]
+public class MusicaFestaInfo
+{
+	public string clipBase;
+	[HideInInspector]
+	public AudioSource sourceBase;
+	[HideInInspector]
+	public GameObject parentBase;
+	
+	public List<InstrumentoFestaInfo> instrumentos;
+	
+	public MusicaFestaInfo()
+	{
+		instrumentos = new List<InstrumentoFestaInfo>();
+	}
+}
+[System.Serializable]
+public class InstrumentoFestaInfo
+{
+	public QualPersonagem 	personagem;
+	public string			clipInstrumento;
+	
+	[HideInInspector]
+	public AudioSource 		mSource;
+	[HideInInspector]
+	public AudioClip 		mClip;
+	[HideInInspector]
+	public GameObject		goParent;
+	
+	public InstrumentoFestaInfo( QualPersonagem _personagem, string _clipInstrumento )
+	{
+		personagem = _personagem;
+		clipInstrumento = _clipInstrumento;
+	}
+	
+}
 
 public class MenuFesta : Menu 
 {
@@ -7,6 +45,9 @@ public class MenuFesta : Menu
 	public bool tocandoMusica = false;
 	
 	public Musica musica;
+	public MusicaFestaInfo musicaFesta;
+	
+	public vPersonagensDancando vPersonagens;
 	
 	public int samplesBase;
 	
@@ -19,8 +60,57 @@ public class MenuFesta : Menu
 	{
 		base.Show ();
 //		goPartituras.SetActive(false);
-//		
-//		Play();
+		musicaFesta = gLevels.s.allLevels[gLevels.s.currentLevelIndex].instrumentosDaFesta;
+		
+		musicaFesta.parentBase = new GameObject(musicaFesta.clipBase);
+		musicaFesta.parentBase.transform.parent = transform;
+			
+		AudioSource ASB = musicaFesta.parentBase.AddComponent<AudioSource>();
+		AudioClip	ACB = Vivaldos.NameToAudioClip( musicaFesta.clipBase );
+		ASB.clip = ACB;
+		
+		musicaFesta.sourceBase = ASB;
+		
+		foreach( InstrumentoFestaInfo inst in musicaFesta.instrumentos )
+		{
+			inst.goParent = new GameObject(inst.clipInstrumento);
+			inst.goParent.transform.parent = vPersonagens.GetInstrumento( inst.personagem ).transform;
+			AudioSource AS = inst.goParent.AddComponent<AudioSource>();
+			AudioClip	AC = Vivaldos.NameToAudioClip( inst.clipInstrumento );
+			
+			AS.clip = AC;
+			
+			inst.mSource = AS;
+			inst.mClip = AC;
+		}
+		
+		Play();
+		
+	}
+	
+	public void OnClickPersonagem( GameObject go, bool isChecked )
+	{
+		if( isChecked == false )
+		{
+			 go.GetComponent<UI2DSpriteAnimation>().Play("disabled");
+			 go.GetComponent<UIButton>().isEnabled = false;
+			 
+			 Debug.Log("Desligamdo as coisas aqui");
+			 musicaFesta.instrumentos.Find( e => e.personagem == vPersonagens.GetPersonagem( go ) ).mSource.Stop();
+		}
+		else
+		{
+			go.GetComponent<UI2DSpriteAnimation>().Play("idle");
+			go.GetComponent<UIButton>().isEnabled = true;
+			
+			Debug.Log("Ligando as coisas aqui");
+			AudioSource current = musicaFesta.instrumentos.Find( e => e.personagem == vPersonagens.GetPersonagem( go ) ).mSource;
+			current.time = musicaFesta.sourceBase.time;
+			current.Play();
+		}
+		
+		
+		
 	}
 	
 	public void OnClickMostrarPartitura()
@@ -42,24 +132,15 @@ public class MenuFesta : Menu
 	void Play ()
 	{
 		if( tocandoMusica ) Stop();
-	
-//		if(gMusica.s.musicaAtual != null )
-//		{
-			musica = gMusica.s.musicaAtual;
-//		}
-		if( musica == null )
+		
+		musicaFesta.sourceBase.Stop();	
+		musicaFesta.sourceBase.Play();	
+		
+		foreach( InstrumentoFestaInfo clip in musicaFesta.instrumentos)
 		{
-			Debug.LogError("Nao ha uma musica para ser tocada");
-			return;
+			clip.mSource.Stop();
+			clip.mSource.Play();
 		}
-
-
-		
-		musica.sourceBase.Stop();		
-		musica.sourceBase.Play();
-		
-		musica.sourceInstrumento.Stop();
-		musica.sourceInstrumento.Play();
 		
 		tocandoMusica = true;
 		

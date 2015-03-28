@@ -9,7 +9,7 @@ public class BotaoFase : MonoBehaviour {
 
 	public void SetValue (bool liberado, bool festaLiberada)
 	{
-		Debug.Log(gameObject.name + " liberado: " + liberado );
+//		Debug.Log(gameObject.name + " liberado: " + liberado );
 		
 		
 		if( liberado ) 	gameObject.GetComponent<UI2DSpriteAnimation>().Play("idle");// = liberado;

@@ -44,7 +44,7 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 2048
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -73,7 +73,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_1
       rect:
@@ -83,7 +83,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_2
       rect:
@@ -93,7 +93,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_3
       rect:
@@ -103,7 +103,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_4
       rect:
@@ -113,7 +113,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_5
       rect:
@@ -123,7 +123,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_6
       rect:
@@ -133,7 +133,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_7
       rect:
@@ -143,7 +143,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_8
       rect:
@@ -153,7 +153,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_9
       rect:
@@ -163,7 +163,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_10
       rect:
@@ -173,27 +173,27 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_11
       rect:
         serializedVersion: 2
         x: 1410
-        y: 518
+        y: 521
         width: 180
-        height: 168
+        height: 165
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 349
-        width: 180
-        height: 168
+        y: 352
+        width: 179
+        height: 165
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_13
       rect:
@@ -203,7 +203,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_14
       rect:
@@ -213,27 +213,27 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_15
       rect:
         serializedVersion: 2
-        x: 1410
-        y: 349
-        width: 180
-        height: 168
+        x: 1397
+        y: 348
+        width: 193
+        height: 173
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_16
       rect:
         serializedVersion: 2
         x: 0
-        y: 180
+        y: 184
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_17
       rect:
@@ -243,7 +243,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_18
       rect:
@@ -253,7 +253,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_19
       rect:
@@ -263,7 +263,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_20
       rect:
@@ -273,7 +273,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_TRUMPET_DANCANDO_21
       rect:
@@ -283,7 +283,7 @@ TextureImporter:
         width: 180
         height: 168
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

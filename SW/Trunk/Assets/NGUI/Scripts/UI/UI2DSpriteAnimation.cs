@@ -67,7 +67,7 @@ public class UI2DSpriteAnimation : MonoBehaviour
 	
 	public void Play (string animationName)
 	{ 
-		Debug.Log("Play:" + animationName);
+//		Debug.Log("Play:" + animationName);
 	
 		for( int i =0; i< animations.Length; i++ )
 			if( animations[i].name.ToLower() == animationName.ToLower())

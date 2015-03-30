@@ -71,8 +71,12 @@ public class MenuFesta : Menu
 		
 		musicaFesta.sourceBase = ASB;
 		
+		vPersonagens.DesativarTodos();
+		
 		foreach( InstrumentoFestaInfo inst in musicaFesta.instrumentos )
 		{
+			vPersonagens.Ativar(inst.personagem);
+		
 			inst.goParent = new GameObject(inst.clipInstrumento);
 			inst.goParent.transform.parent = vPersonagens.GetInstrumento( inst.personagem ).transform;
 			AudioSource AS = inst.goParent.AddComponent<AudioSource>();
@@ -88,12 +92,28 @@ public class MenuFesta : Menu
 		
 	}
 	
+	public override void Hide ()
+	{
+		base.Hide ();
+		Destroy(  musicaFesta.parentBase);
+		foreach( InstrumentoFestaInfo inst in musicaFesta.instrumentos )
+		{
+			Destroy( inst.goParent );			
+		}
+		
+		musicaFesta = null;
+		
+		
+	}
+	
 	public void OnClickPersonagem( GameObject go, bool isChecked )
 	{
+		if( tocandoMusica == false ) return;
+	
 		if( isChecked == false )
 		{
 			 go.GetComponent<UI2DSpriteAnimation>().Play("disabled");
-			 go.GetComponent<UIButton>().isEnabled = false;
+//			 go.GetComponent<UIButton>().isEnabled = false;
 			 
 			 Debug.Log("Desligamdo as coisas aqui");
 			 musicaFesta.instrumentos.Find( e => e.personagem == vPersonagens.GetPersonagem( go ) ).mSource.Stop();
@@ -101,11 +121,11 @@ public class MenuFesta : Menu
 		else
 		{
 			go.GetComponent<UI2DSpriteAnimation>().Play("idle");
-			go.GetComponent<UIButton>().isEnabled = true;
+//			go.GetComponent<UIButton>().isEnabled = true;
 			
 			Debug.Log("Ligando as coisas aqui");
 			AudioSource current = musicaFesta.instrumentos.Find( e => e.personagem == vPersonagens.GetPersonagem( go ) ).mSource;
-			current.time = musicaFesta.sourceBase.time;
+			current.timeSamples = musicaFesta.sourceBase.timeSamples;
 			current.Play();
 		}
 		
@@ -147,8 +167,6 @@ public class MenuFesta : Menu
 		iTime = Time.realtimeSinceStartup;
 		
 		btnPlay.SetActive(false);
-		
-		Play();
 	}
 
 	void Stop ()
@@ -171,27 +189,7 @@ public class MenuFesta : Menu
 	{
 		if( musica == null  ) return;
 	
-						
-		if( active )
-		{
-//			Debug.Log("ON");
-		
-			button.normalSprite = "FESTA_" + nomeDoInstrumento + "_ON";
-			
-			samplesBase = musica.sourceBase.timeSamples;
-			
-			musica.sourceInstrumento.timeSamples = samplesBase;
-			musica.sourceInstrumento.Play();
-		}
-		else
-		{
-//			Debug.Log("OFF");			
-			
-			button.normalSprite = "FESTA_" + nomeDoInstrumento + "_OFF";
-			
-			musica.sourceInstrumento.Pause();
-		}
-		
+	
 		
 	}
 	
@@ -208,7 +206,7 @@ public class MenuFesta : Menu
 	{
 		if( tocandoMusica == false ) return;
 		
-		if( Time.realtimeSinceStartup > ( iTime + musica.sourceBase.clip.length ) )
+		if( Time.realtimeSinceStartup > ( iTime + musicaFesta.sourceBase.clip.length ) )
 		{
 			Stop ();
 		}

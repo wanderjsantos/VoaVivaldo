@@ -37,6 +37,11 @@ public class MenuVitoria : Menu {
 		gMenus.s.ShowMenu("Festa");
 	}
 	
+	public void OnClickHome()
+	{
+		gMenus.s.ShowMenu("Principal");
+	}
+	
 	public void OnClickMusicas()
 	{
 		gMenus.s.ShowMenu("Musica");

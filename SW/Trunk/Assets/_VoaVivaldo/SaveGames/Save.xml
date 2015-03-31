@@ -21,8 +21,8 @@
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>2</meuIndice>
-          <estrelasGanhas>0</estrelasGanhas>
-          <pontosMarcados>0</pontosMarcados>
+          <estrelasGanhas>3</estrelasGanhas>
+          <pontosMarcados>12470</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
       </partiturasConcluidas>
@@ -35,8 +35,8 @@
       <partiturasConcluidas>
         <PartituraSaveInfo>
           <meuIndice>0</meuIndice>
-          <estrelasGanhas>0</estrelasGanhas>
-          <pontosMarcados>0</pontosMarcados>
+          <estrelasGanhas>3</estrelasGanhas>
+          <pontosMarcados>13590</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
@@ -109,8 +109,8 @@
         </PartituraSaveInfo>
         <PartituraSaveInfo>
           <meuIndice>5</meuIndice>
-          <estrelasGanhas>0</estrelasGanhas>
-          <pontosMarcados>0</pontosMarcados>
+          <estrelasGanhas>3</estrelasGanhas>
+          <pontosMarcados>10030</pontosMarcados>
           <liberado>true</liberado>
         </PartituraSaveInfo>
         <PartituraSaveInfo>
@@ -216,7 +216,7 @@
   </savedLevels>
   <settings>
     <audio>true</audio>
-    <vibrar>false</vibrar>
+    <vibrar>true</vibrar>
     <volumeGeral>1</volumeGeral>
     <volumeBase>1</volumeBase>
     <volumeInstrumentos>1</volumeInstrumentos>

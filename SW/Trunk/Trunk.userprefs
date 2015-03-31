@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\..\Desktop\Projetos\decoRA\Sw\trunk\Assets\Plugins\gEventos.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuSelecaoDeInstrumento.cs">
     <Files>
-      <File FileName="..\..\..\..\..\..\Desktop\Projetos\decoRA\Sw\trunk\Assets\Plugins\gEventos.js" Line="31" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gNotas.cs" Line="238" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\View\vPersonagem.cs" Line="1" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuVitoria.cs" Line="42" Column="31" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuSelecaoDeInstrumento.cs" Line="18" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

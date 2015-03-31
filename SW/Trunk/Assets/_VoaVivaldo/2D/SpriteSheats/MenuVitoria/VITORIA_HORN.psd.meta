@@ -25,7 +25,7 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 512
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -49,30 +49,30 @@ TextureImporter:
     - name: VITORIA_HORN_0
       rect:
         serializedVersion: 2
-        x: 842
-        y: 1218
-        width: 828
-        height: 824
+        x: 2
+        y: 0
+        width: 510
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: VITORIA_HORN_1
       rect:
         serializedVersion: 2
-        x: 6
-        y: 382
-        width: 828
-        height: 828
+        x: 512
+        y: 0
+        width: 510
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: VITORIA_HORN_2
       rect:
         serializedVersion: 2
-        x: 842
-        y: 386
-        width: 828
-        height: 824
+        x: 1022
+        y: 0
+        width: 510
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

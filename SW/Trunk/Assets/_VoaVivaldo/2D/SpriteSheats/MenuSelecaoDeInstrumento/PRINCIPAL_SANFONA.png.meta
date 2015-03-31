@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: 772ac4fc5bc858a4aaa7a71e1c5e9acb
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PRINCIPAL_SANFONA
+    21300002: PRINCIPAL_SANFONA_0
+    21300004: PRINCIPAL_SANFONA_1
+    21300006: PRINCIPAL_SANFONA_2
+    21300008: PRINCIPAL_SANFONA_3
+    21300010: PRINCIPAL_SANFONA_4
+    21300012: PRINCIPAL_SANFONA_5
+    21300014: PRINCIPAL_SANFONA_6
+    21300016: PRINCIPAL_SANFONA_7
+    21300018: PRINCIPAL_SANFONA_8
+    21300020: PRINCIPAL_SANFONA_9
+    21300022: PRINCIPAL_SANFONA_10
+    21300024: PRINCIPAL_SANFONA_11
+    21300026: PRINCIPAL_SANFONA_12
+    21300028: PRINCIPAL_SANFONA_13
+    21300030: PRINCIPAL_SANFONA_14
+    21300032: PRINCIPAL_SANFONA_15
+    21300034: PRINCIPAL_SANFONA_16
+    21300036: PRINCIPAL_SANFONA_17
+    21300038: PRINCIPAL_SANFONA_18
+    21300040: PRINCIPAL_SANFONA_19
+    21300042: PRINCIPAL_SANFONA_20
+    21300044: PRINCIPAL_SANFONA_21
+    21300046: PRINCIPAL_SANFONA_22
+    21300048: PRINCIPAL_SANFONA_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PRINCIPAL_SANFONA_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_1
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 864
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_2
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 864
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_3
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 864
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_4
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 864
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_6
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 648
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 648
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_8
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 648
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_9
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 648
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_11
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 432
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_12
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 432
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_13
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 432
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_14
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 432
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_16
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 216
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_17
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 216
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_18
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 216
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_19
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 216
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_21
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 0
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_22
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_SANFONA_23
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 0
+        width: 235
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: b2ca769254cd1844d96703941977709f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PRINCIPAL_TRUMPET
+    21300002: PRINCIPAL_TRUMPET_0
+    21300004: PRINCIPAL_TRUMPET_1
+    21300006: PRINCIPAL_TRUMPET_2
+    21300008: PRINCIPAL_TRUMPET_3
+    21300010: PRINCIPAL_TRUMPET_4
+    21300012: PRINCIPAL_TRUMPET_5
+    21300014: PRINCIPAL_TRUMPET_6
+    21300016: PRINCIPAL_TRUMPET_7
+    21300018: PRINCIPAL_TRUMPET_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PRINCIPAL_TRUMPET_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 474
+        width: 232
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_TRUMPET_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 474
+        width: 232
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_TRUMPET_2
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 474
+        width: 232
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_TRUMPET_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 237
+        width: 232
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_TRUMPET_4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 237
+        width: 232
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_TRUMPET_5
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 237
+        width: 232
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_TRUMPET_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 232
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_TRUMPET_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 0
+        width: 232
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PRINCIPAL_TRUMPET_8
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 232
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

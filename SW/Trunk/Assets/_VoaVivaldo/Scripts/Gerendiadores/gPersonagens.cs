@@ -9,6 +9,8 @@ public class gPersonagens : MonoBehaviour {
 	public List<vPersonagem> personagens;
 	
 	vPersonagem personagemAtual;
+	
+	public int framerateAnimacoes = 15;
 			
 	public void Awake()
 	{

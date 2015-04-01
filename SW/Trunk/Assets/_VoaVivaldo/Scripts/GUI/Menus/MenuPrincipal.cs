@@ -6,7 +6,7 @@ public class MenuPrincipal : Menu
 	public override void Show ()
 	{
 		base.Show ();
-		gTemas.s.Aplicar( );
+//		gTemas.s.Aplicar( );
 	}
 
 	public override void Hide()

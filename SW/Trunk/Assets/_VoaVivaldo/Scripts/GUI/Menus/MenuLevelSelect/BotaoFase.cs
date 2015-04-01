@@ -12,8 +12,8 @@ public class BotaoFase : MonoBehaviour {
 //		Debug.Log(gameObject.name + " liberado: " + liberado );
 		
 		
-		if( liberado ) 	gameObject.GetComponent<UI2DSpriteAnimation>().Play("idle");// = liberado;
-		else 			gameObject.GetComponent<UI2DSpriteAnimation>().Pause();// = liberado;
+		if( liberado ) 	gameObject.GetComponentInChildren<UI2DSpriteAnimation>().Play("idle");// = liberado;
+		else 			gameObject.GetComponentInChildren<UI2DSpriteAnimation>().Pause();// = liberado;
 		
 		botaoFesta.SetActive( festaLiberada );
 		

@@ -26,13 +26,13 @@ public class gTemas : MonoBehaviour
 		Change();
 	}
 	
-	public void Aplicar(  )
-	{
-		Aplicar ( gLevels.s.allLevels[0].info.tema );
-//		Change();
-	}
+//	public void Aplicar(  )
+//	{
+//		Aplicar ( gLevels.s.allLevels[0].info.tema );
+////		Change();
+//	}
 	
-	public void AplicarAtual()
+	 public void AplicarAtual()
 	{
 		if( gLevels.s.currentLevel != null )
 			Aplicar( gLevels.s.currentLevel.info.tema );

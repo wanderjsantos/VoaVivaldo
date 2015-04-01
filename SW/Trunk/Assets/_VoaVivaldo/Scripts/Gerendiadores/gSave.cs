@@ -38,6 +38,10 @@ public class gSave : MonoBehaviour {
 	{
 		Debug.LogWarning("Saving Settings");
 		XmlSerializer 	serializer = new XmlSerializer( typeof(VivaldoSave ) );
+		
+		if( Directory.Exists( Vivaldos.SAVE_PATH ) == false ) Directory.CreateDirectory( Vivaldos.SAVE_PATH );
+		
+		
 		FileStream		writer = new FileStream( Vivaldos.SAVE_PATH + "Save.xml", FileMode.Create );
 		serializer.Serialize( writer, saveSettings );
 		writer.Close();

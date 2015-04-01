@@ -14,6 +14,15 @@ public class MenuPause : Menu {
 		gGame.s.Pause(false);
 	}
 	
+	public void OnClickMusicas()
+	{
+		gComandosDeMusica.s.Stop();
+		gGame.s.Pause( false );
+		gMusica.s.musicaAtual.Stop();
+		gGame.s.FimDeJogo();
+		gMenus.s.ShowMenu("Musica");
+	}
+	
 	public void OnClickHome()
 	{
 		gComandosDeMusica.s.Stop();

@@ -50,7 +50,7 @@ public class gLevels : MonoBehaviour
 //		currentLevel = NewLevel(index);
 		currentLevel = allLevels[index];
 		
-		gTemas.s.Aplicar( currentLevel.info.tema );
+//		gTemas.s.Aplicar( currentLevel.info.tema );
 		
 		return currentLevel;
 	}

@@ -14,6 +14,8 @@ public class Menu : MonoBehaviour, iMenu
 		Resetar();
 		gameObject.SetActive (true);
 		
+//		gTemas.s.AplicarAtual();
+		
 	}
 
 	public virtual void Hide()

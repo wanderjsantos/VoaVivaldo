@@ -29,7 +29,6 @@ public class TemaBehaviour : MonoBehaviour
 	void MudarCor ()
 	{
 		if( gTemas.s.usarTemas == false ) return;
-		
 		mWidget.color = gTemas.s.GetCor( aplicar );
 	}
 }

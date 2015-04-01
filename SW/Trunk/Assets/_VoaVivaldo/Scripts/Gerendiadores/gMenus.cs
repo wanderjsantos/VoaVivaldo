@@ -43,7 +43,7 @@ public class gMenus : MonoBehaviour
 		
 		novoMenu.Show ();
 		
-		gTemas.s.AplicarAtual();
+//		gTemas.s.AplicarAtual();
 		
 		menuAtual = novoMenu;
 	}

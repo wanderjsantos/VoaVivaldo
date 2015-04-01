@@ -7,10 +7,20 @@ TextureImporter:
     21300004: GAMEPLAY_FLAUTA_VOANDO_2
     21300006: GAMEPLAY_FLAUTA_VOANDO_3
     21300008: GAMEPLAY_FLAUTA_VOANDO_4
+    21300010: GAMEPLAY_FLAUTA_VOANDO_5
+    21300012: GAMEPLAY_FLAUTA_VOANDO_6
+    21300014: GAMEPLAY_FLAUTA_VOANDO_7
+    21300016: GAMEPLAY_FLAUTA_VOANDO_8
+    21300018: GAMEPLAY_FLAUTA_VOANDO_9
+    21300020: GAMEPLAY_FLAUTA_VOANDO_10
+    21300022: GAMEPLAY_FLAUTA_VOANDO_11
+    21300024: GAMEPLAY_FLAUTA_VOANDO_12
+    21300026: GAMEPLAY_FLAUTA_VOANDO_13
+    21300028: GAMEPLAY_FLAUTA_VOANDO_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -27,10 +37,10 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 512
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -51,52 +61,152 @@ TextureImporter:
     - name: GAMEPLAY_FLAUTA_VOANDO_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 134
-        width: 185
-        height: 116
-      alignment: 9
-      pivot: {x: .531382978, y: .449949592}
+        x: 0
+        y: 732
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_FLAUTA_VOANDO_1
       rect:
         serializedVersion: 2
-        x: 205
-        y: 123
-        width: 185
-        height: 127
-      alignment: 9
-      pivot: {x: .519427478, y: .471699983}
+        x: 319
+        y: 732
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_FLAUTA_VOANDO_2
       rect:
         serializedVersion: 2
-        x: 406
-        y: 122
-        width: 187
-        height: 128
-      alignment: 9
-      pivot: {x: .522176623, y: .469761252}
+        x: 638
+        y: 732
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_FLAUTA_VOANDO_3
       rect:
         serializedVersion: 2
-        x: 607
-        y: 114
-        width: 187
-        height: 136
-      alignment: 9
-      pivot: {x: .516268015, y: .504516721}
+        x: 957
+        y: 732
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_FLAUTA_VOANDO_4
       rect:
         serializedVersion: 2
-        x: 806
-        y: 112
-        width: 193
-        height: 133
-      alignment: 9
-      pivot: {x: .526278615, y: .498093218}
+        x: 0
+        y: 488
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_5
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 488
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_6
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 488
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_7
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 488
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 244
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_9
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 244
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_10
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 244
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_11
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 244
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_13
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 0
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_FLAUTA_VOANDO_14
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 0
+        width: 319
+        height: 244
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

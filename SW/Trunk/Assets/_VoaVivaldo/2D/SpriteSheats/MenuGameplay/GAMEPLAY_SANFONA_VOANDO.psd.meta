@@ -105,582 +105,302 @@ TextureImporter:
     - name: GAMEPLAY_SANFONA_VOANDO_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 1803
-        width: 232
-        height: 238
+        x: 0
+        y: 2350
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_1
       rect:
         serializedVersion: 2
-        x: 267
-        y: 1803
-        width: 232
-        height: 238
+        x: 471
+        y: 2350
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_2
       rect:
         serializedVersion: 2
-        x: 525
-        y: 1791
-        width: 226
-        height: 240
+        x: 942
+        y: 2350
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_3
       rect:
         serializedVersion: 2
-        x: 781
-        y: 1803
-        width: 226
-        height: 228
+        x: 1413
+        y: 2350
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_4
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 1809
-        width: 230
-        height: 212
+        x: 1884
+        y: 2350
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_5
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 1809
-        width: 230
-        height: 212
+        x: 0
+        y: 1880
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_6
       rect:
         serializedVersion: 2
-        x: 1545
-        y: 1819
-        width: 244
-        height: 204
+        x: 471
+        y: 1880
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_7
       rect:
         serializedVersion: 2
-        x: 1801
-        y: 1819
-        width: 244
-        height: 204
+        x: 942
+        y: 1880
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_8
       rect:
         serializedVersion: 2
-        x: 11
-        y: 1563
-        width: 244
-        height: 202
+        x: 1413
+        y: 1880
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_9
       rect:
         serializedVersion: 2
-        x: 265
-        y: 1561
-        width: 246
-        height: 210
+        x: 1884
+        y: 1880
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_10
       rect:
         serializedVersion: 2
-        x: 519
-        y: 1561
-        width: 250
-        height: 210
+        x: 0
+        y: 1410
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_11
       rect:
         serializedVersion: 2
-        x: 775
-        y: 1565
-        width: 250
-        height: 210
+        x: 471
+        y: 1410
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_12
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 1555
-        width: 246
-        height: 218
+        x: 942
+        y: 1410
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_13
       rect:
         serializedVersion: 2
-        x: 1291
-        y: 1557
-        width: 246
-        height: 218
+        x: 1413
+        y: 1410
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_14
       rect:
         serializedVersion: 2
-        x: 1547
-        y: 1557
-        width: 246
-        height: 218
+        x: 1884
+        y: 1410
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_15
       rect:
         serializedVersion: 2
-        x: 1799
-        y: 1553
-        width: 248
-        height: 228
+        x: 0
+        y: 940
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_16
       rect:
         serializedVersion: 2
-        x: 7
-        y: 1297
-        width: 248
-        height: 228
+        x: 471
+        y: 940
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_17
       rect:
         serializedVersion: 2
-        x: 255
-        y: 1300
-        width: 257
-        height: 225
+        x: 942
+        y: 940
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_18
       rect:
         serializedVersion: 2
-        x: 781
-        y: 1319
-        width: 220
-        height: 214
+        x: 1413
+        y: 940
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_19
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 1319
-        width: 220
-        height: 214
+        x: 1884
+        y: 940
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_20
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 1327
-        width: 226
-        height: 210
+        x: 0
+        y: 470
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_21
       rect:
         serializedVersion: 2
-        x: 1549
-        y: 1327
-        width: 226
-        height: 210
+        x: 471
+        y: 470
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_22
       rect:
         serializedVersion: 2
-        x: 1805
-        y: 1321
-        width: 228
-        height: 216
+        x: 942
+        y: 470
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_23
       rect:
         serializedVersion: 2
-        x: 13
-        y: 1057
-        width: 228
-        height: 224
+        x: 1413
+        y: 470
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_24
       rect:
         serializedVersion: 2
-        x: 269
-        y: 1053
-        width: 228
-        height: 224
+        x: 1884
+        y: 470
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_25
       rect:
         serializedVersion: 2
-        x: 525
-        y: 1053
-        width: 228
-        height: 224
+        x: 0
+        y: 0
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_26
       rect:
         serializedVersion: 2
-        x: 781
-        y: 1039
-        width: 228
-        height: 236
+        x: 471
+        y: 0
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_27
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 1039
-        width: 228
-        height: 236
+        x: 942
+        y: 0
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_28
       rect:
         serializedVersion: 2
-        x: 1291
-        y: 1035
-        width: 232
-        height: 238
+        x: 1413
+        y: 0
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_SANFONA_VOANDO_29
       rect:
         serializedVersion: 2
-        x: 1547
-        y: 1035
-        width: 232
-        height: 238
+        x: 1884
+        y: 0
+        width: 471
+        height: 470
       alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_30
-      rect:
-        serializedVersion: 2
-        x: 1805
-        y: 1023
-        width: 226
-        height: 240
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_31
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 779
-        width: 226
-        height: 228
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_32
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 785
-        width: 230
-        height: 212
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_33
-      rect:
-        serializedVersion: 2
-        x: 525
-        y: 785
-        width: 230
-        height: 212
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_34
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 795
-        width: 244
-        height: 204
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_35
-      rect:
-        serializedVersion: 2
-        x: 1033
-        y: 795
-        width: 244
-        height: 204
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_36
-      rect:
-        serializedVersion: 2
-        x: 1291
-        y: 795
-        width: 244
-        height: 202
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_37
-      rect:
-        serializedVersion: 2
-        x: 1545
-        y: 793
-        width: 246
-        height: 210
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_38
-      rect:
-        serializedVersion: 2
-        x: 1799
-        y: 793
-        width: 249
-        height: 210
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_39
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 541
-        width: 250
-        height: 210
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_40
-      rect:
-        serializedVersion: 2
-        x: 267
-        y: 531
-        width: 246
-        height: 218
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_41
-      rect:
-        serializedVersion: 2
-        x: 523
-        y: 533
-        width: 246
-        height: 218
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_42
-      rect:
-        serializedVersion: 2
-        x: 779
-        y: 533
-        width: 246
-        height: 218
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_43
-      rect:
-        serializedVersion: 2
-        x: 1031
-        y: 529
-        width: 248
-        height: 228
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_44
-      rect:
-        serializedVersion: 2
-        x: 1287
-        y: 529
-        width: 248
-        height: 228
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_45
-      rect:
-        serializedVersion: 2
-        x: 1535
-        y: 532
-        width: 258
-        height: 225
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_46
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 295
-        width: 220
-        height: 214
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_47
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 295
-        width: 220
-        height: 214
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_48
-      rect:
-        serializedVersion: 2
-        x: 525
-        y: 303
-        width: 226
-        height: 210
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_49
-      rect:
-        serializedVersion: 2
-        x: 781
-        y: 303
-        width: 226
-        height: 210
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_50
-      rect:
-        serializedVersion: 2
-        x: 1037
-        y: 297
-        width: 228
-        height: 216
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_51
-      rect:
-        serializedVersion: 2
-        x: 1293
-        y: 289
-        width: 228
-        height: 224
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_52
-      rect:
-        serializedVersion: 2
-        x: 1549
-        y: 285
-        width: 228
-        height: 224
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_53
-      rect:
-        serializedVersion: 2
-        x: 1805
-        y: 285
-        width: 228
-        height: 224
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_54
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 15
-        width: 228
-        height: 236
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_55
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 15
-        width: 228
-        height: 236
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_56
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 1314
-        width: 257
-        height: 211
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_SANFONA_VOANDO_57
-      rect:
-        serializedVersion: 2
-        x: 1793
-        y: 547
-        width: 255
-        height: 211
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

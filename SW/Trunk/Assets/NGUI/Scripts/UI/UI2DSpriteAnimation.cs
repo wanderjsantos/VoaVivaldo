@@ -76,7 +76,7 @@ public class UI2DSpriteAnimation : MonoBehaviour
 
 	public void Play ()
 	{
-		if( gPersonagens.s ) framerate = gPersonagens.s.framerateAnimacoes;
+//		if( gPersonagens.s ) framerate = gPersonagens.s.framerateAnimacoes;
 		
 		if (animations != null && animations.Length > 0 && animations[currentAnimation].frames.Length > 0)
 		{

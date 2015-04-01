@@ -8,6 +8,16 @@ TextureImporter:
     21300006: GAMEPLAY_HORN_VOANDO_2
     21300008: GAMEPLAY_HORN_VOANDO_3
     21300010: GAMEPLAY_HORN_VOANDO_4
+    21300012: GAMEPLAY_HORN_VOANDO_5
+    21300014: GAMEPLAY_HORN_VOANDO_6
+    21300016: GAMEPLAY_HORN_VOANDO_7
+    21300018: GAMEPLAY_HORN_VOANDO_8
+    21300020: GAMEPLAY_HORN_VOANDO_9
+    21300022: GAMEPLAY_HORN_VOANDO_10
+    21300024: GAMEPLAY_HORN_VOANDO_11
+    21300026: GAMEPLAY_HORN_VOANDO_12
+    21300028: GAMEPLAY_HORN_VOANDO_13
+    21300030: GAMEPLAY_HORN_VOANDO_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -28,7 +38,7 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 512
   textureSettings:
     filterMode: -1
     aniso: 1
@@ -52,50 +62,150 @@ TextureImporter:
     - name: GAMEPLAY_HORN_VOANDO_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 171
-        width: 326
-        height: 336
+        x: 0
+        y: 1410
+        width: 408
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_HORN_VOANDO_1
       rect:
         serializedVersion: 2
-        x: 341
-        y: 167
-        width: 308
-        height: 340
+        x: 408
+        y: 1410
+        width: 408
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_HORN_VOANDO_2
       rect:
         serializedVersion: 2
-        x: 661
-        y: 153
-        width: 310
-        height: 354
+        x: 816
+        y: 1410
+        width: 408
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_HORN_VOANDO_3
       rect:
         serializedVersion: 2
-        x: 983
-        y: 143
-        width: 286
-        height: 364
+        x: 1224
+        y: 1410
+        width: 408
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GAMEPLAY_HORN_VOANDO_4
       rect:
         serializedVersion: 2
-        x: 1283
-        y: 131
-        width: 304
-        height: 376
+        x: 0
+        y: 940
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_5
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 940
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_6
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 940
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_7
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 940
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 470
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_9
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 470
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_10
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 470
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_11
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 470
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_13
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 408
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GAMEPLAY_HORN_VOANDO_14
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 408
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

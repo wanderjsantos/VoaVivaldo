@@ -56,7 +56,7 @@ public class Musica : MonoBehaviour
 		AudioSource mSource = CriarSourceExtra();
 		mSource.clip = clip;
 		
-		mSource.volume = gSave.s.GetCurrentInstrumentosVolume() * .3f ;
+		mSource.volume = gSave.s.GetCurrentInstrumentosVolume() * .1f ;
 		
 		sourcesExtras.Add( mSource ); 
 	}

@@ -1,15 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuPause.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\Gerendiadores\gSave.cs">
     <Files>
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuLevelSelect.cs" Line="51" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gTemas.cs" Line="35" Column="20" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Base\TemaBehaviour.cs" Line="22" Column="3" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menu.cs" Line="17" Column="21" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gLevels.cs" Line="53" Column="7" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuPrincipal.cs" Line="9" Column="15" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gMenus.cs" Line="46" Column="15" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuPause.cs" Line="18" Column="3" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Musica.cs" Line="59" Column="41" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gMusica.cs" Line="142" Column="21" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gSave.cs" Line="84" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

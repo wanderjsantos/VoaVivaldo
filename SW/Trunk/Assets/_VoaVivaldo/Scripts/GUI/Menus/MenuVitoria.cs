@@ -8,6 +8,9 @@ public class MenuVitoria : Menu {
 	public GameObject	botaoContinuar;
 	public GameObject	botaoFesta;
 	
+	public string		textoTV;
+	public UILabel		codigoTV;
+	
 	vPersonagem personagem;
 
 	public override void Show ()
@@ -27,9 +30,15 @@ public class MenuVitoria : Menu {
 		gPontuacao.s.ForcarAtualizarPontosEstrelas();
 		
 		if( gLevels.s.currentLevel.info.partituras.Length-1 == gLevels.s.currentPartituraIndex ) 
+		{
+			codigoTV.text = textoTV + "\n" +" [b]990" + (gLevels.s.currentLevelIndex + 1).ToString() + "[/b]";			
 			botaoFesta.SetActive(true);
+		}
 		else
+		{
+			codigoTV.text = "";
 			botaoFesta.SetActive(false);
+		}
 	}
 	
 	public void OnClickFestinha()

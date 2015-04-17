@@ -45,11 +45,13 @@ public class Player : MonoBehaviour
 	public void Disable ()
 	{
 		mController.enabled = false;
+		
 	}
 
 	public void Enable()
 	{
 		mController.enabled = true;
+		mController.SetInitialPosition();
 	}
 }
 

@@ -21,7 +21,10 @@ public class Controller : MonoBehaviour
 	public float	speed = 30f;
 
 	public int 		pista;
-
+	
+	public float	aceleracaoInicial;
+	public float	aceleracaoAtual;
+	float			direcao;
 	void Start()
 	{
 
@@ -30,6 +33,14 @@ public class Controller : MonoBehaviour
 		faixasTotais 	= gPista.s.faixasTotais;
 		porFaixa = (Mathf.Abs (minMaxInput.y) + Mathf.Abs (minMaxInput.x))/faixasTotais;
 		faixaAnterior = -1;
+	}
+
+	public void SetInitialPosition ()
+	{
+#if UNITY_IOS || UNITY_ANDROID
+		aceleracaoInicial = Input.acceleration.y;
+#endif
+		if( Application.isEditor ) aceleracaoInicial = Input.GetAxis ("Vertical");
 	}
 	
 	void OnGUI()
@@ -44,13 +55,18 @@ public class Controller : MonoBehaviour
 
 		float y =0f;
 #if UNITY_IOS || UNITY_ANDROID
-		y = Mathf.Clamp (Input.acceleration.y, minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
+		aceleracaoAtual = Input.acceleration.y;
+		direcao = aceleracaoInicial + aceleracaoAtual;
+		y = Mathf.Clamp (direcao, minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
 		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
 #endif
 
 		if( Application.isEditor )
 		{
-			y = Mathf.Clamp (Input.GetAxis ("Vertical"), minMaxInput.x, minMaxInput.y); 
+			aceleracaoAtual = Input.GetAxis ("Vertical");
+			direcao = aceleracaoInicial + aceleracaoAtual;
+			
+			y = Mathf.Clamp (direcao, minMaxInput.x, minMaxInput.y); 
 			input.y = y / Mathf.Abs (minMaxInput.x);
 		}
 

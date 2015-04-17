@@ -144,7 +144,8 @@ public class MenuFesta : Menu
 	}
 	
 	public void OnClickPlay()
-	{		
+	{	
+		Stop();	
 		Play();
 		
 	}

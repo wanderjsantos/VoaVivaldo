@@ -1,11 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\Utils\AudioImportSettingsUtils.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuGameplay.cs">
     <Files>
-      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Musica.cs" Line="1" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gMusica.cs" Line="1" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gSave.cs" Line="1" Column="1" />
-      <File FileName="Assets\Editor\Utils\AudioImportSettingsUtils.cs" Line="18" Column="19" />
+      <File FileName="Assets\NGUI\Scripts\UI\UI2DSpriteAnimation.cs" Line="99" Column="2" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuPause.cs" Line="38" Column="22" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gComandosDeMusica.cs" Line="79" Column="2" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Musica.cs" Line="77" Column="2" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gMusica.cs" Line="61" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Nota.cs" Line="28" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gNotas.cs" Line="59" Column="9" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gRitmo.cs" Line="70" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuGameplay.cs" Line="77" Column="31" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gGame.cs" Line="139" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

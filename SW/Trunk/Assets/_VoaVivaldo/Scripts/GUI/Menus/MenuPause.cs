@@ -20,6 +20,10 @@ public class MenuPause : Menu {
 		gGame.s.Pause( false );
 		gMusica.s.musicaAtual.Stop();
 		gGame.s.FimDeJogo();
+		
+		gMusica.s.Resetar();
+		gNotas.s.Resetar();
+		
 		gMenus.s.ShowMenu("Musica");
 	}
 	
@@ -29,6 +33,10 @@ public class MenuPause : Menu {
 		gGame.s.Pause( false );
 		gMusica.s.musicaAtual.Stop();
 		gGame.s.FimDeJogo();
+		
+		gMusica.s.Resetar();
+		gNotas.s.Resetar();
+		
 		gMenus.s.ShowMenu("Principal");
 	}
 }

@@ -20,7 +20,7 @@ public class gTemas : MonoBehaviour
 	}	
 	
 	public void Aplicar( Tema tema )
-	{
+	{			
 		if( temaAtual == tema ) return;
 		temaAtual = tema;
 		Change();

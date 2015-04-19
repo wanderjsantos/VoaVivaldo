@@ -7,6 +7,8 @@ public class Controller : MonoBehaviour
 	public Vector3 	input;
 	public Vector2 	minMaxInput = new Vector2(-1f,1f);
 	public Vector2 	minMaxInputOnDevice = new Vector2(-1f,1f);
+	public Vector2 init;
+	public Vector2 	minMaxTemp = new Vector2(-1f,1f);
 
 	Vector3	initialPosition;
 
@@ -27,7 +29,7 @@ public class Controller : MonoBehaviour
 	float			direcao;
 	void Start()
 	{
-
+		init = minMaxInputOnDevice;
 		initialPosition = transform.localPosition;
 		initialPosition.y = (faixaAtual * gPista.s.tamanhoDeCadaPista) - (gPista.s.tamanhoDeCadaPista/2);
 		faixasTotais 	= gPista.s.faixasTotais;
@@ -37,17 +39,52 @@ public class Controller : MonoBehaviour
 
 	public void SetInitialPosition ()
 	{
+		minMaxInputOnDevice = init;
+	
 #if UNITY_IOS || UNITY_ANDROID
 		aceleracaoInicial = Input.acceleration.y;
+		
+		minMaxTemp.x = minMaxInputOnDevice.x - Mathf.Abs(aceleracaoInicial);
+		minMaxTemp.y = minMaxInputOnDevice.y - Mathf.Abs(aceleracaoInicial);
+		
 #endif
-		if( Application.isEditor ) aceleracaoInicial = Input.GetAxis ("Vertical");
+		if( Application.isEditor )
+		{
+				aceleracaoInicial = Input.GetAxis ("Vertical");
+				minMaxTemp.x = minMaxInput.x + aceleracaoInicial;
+				minMaxTemp.y = minMaxInput.y - aceleracaoInicial;
+		 }
+		
+		
+		Vector2 extra = new Vector2(0f,0f);
+		if( Mathf.Abs( minMaxTemp.x ) > 1f )
+		{
+			minMaxTemp.x = -1f;
+			extra.x = Mathf.Abs( minMaxTemp.x ) - 1f;
+			minMaxTemp.y = minMaxTemp.y - extra.x;
+		}
+		if( Mathf.Abs( minMaxTemp.y ) > 1f )
+		{
+			minMaxTemp.y = 1f;
+			extra.y = Mathf.Abs( minMaxTemp.y ) - 1f;
+			minMaxTemp.x = minMaxTemp.x + extra.y;
+		}
+#if UNITY_IOS || UNITY_ANDROID
+
+		minMaxInputOnDevice = minMaxTemp;
+
+#endif
+		if( Application.isEditor ) minMaxInput = minMaxTemp;
+		
+		
 	}
 	
 	void OnGUI()
 	{
-//		GUI.Box( new Rect( 0f, 0f, 100f, 100f ), Input.acceleration.ToString() );
-//		GUI.Box( new Rect( 0f, 0f, 100f, 100f ), input.ToString() );
-//		GUI.Box( new Rect( 0f, 0f, 100f, 100f ), faixaAtual.ToString() );
+		GUI.Box( new Rect( 0f, 0, 400f, 60f ), "Input.acceleration" + Input.acceleration.ToString() );
+		GUI.Box( new Rect( 0f, 60f, 400f, 60f ), "minMaxInput" + minMaxInputOnDevice.ToString() );
+		GUI.Box( new Rect( 0f, 120f, 400f, 60f ), "faixaAtual" +faixaAtual.ToString() );
+		GUI.Box( new Rect( 0f, 180f, 400f, 60f ), "direcao" +direcao.ToString() );
 	}
 
 	public void Update()

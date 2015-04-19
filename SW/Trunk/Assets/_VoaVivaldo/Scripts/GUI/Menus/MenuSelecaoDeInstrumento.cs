@@ -52,6 +52,7 @@ public class MenuSelecaoDeInstrumento : Menu
 	public void SelectInstrumento(int numero)
 	{
 		gMusica.s.SetFase(numero );
+		
 		gLevels.s.SetLevel( gMusica.s.indiceMusica, gMusica.s.indiceFase );		
 		gGame.s.IniciarJogo();
 	}

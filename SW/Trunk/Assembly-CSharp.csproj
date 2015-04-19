@@ -197,6 +197,7 @@
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Nota.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Partitura.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\PartituraInfo.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Base\PlayAudio.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Player.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Teclado.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Base\Tema.cs" />
@@ -220,6 +221,7 @@
      <Compile Include="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuVitoria.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gAudio.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gComandosDeMusica.cs" />
+     <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gFX.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gGame.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gLevels.cs" />
      <Compile Include="Assets\_VoaVivaldo\Scripts\Gerendiadores\gMenus.cs" />
@@ -268,6 +270,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
+     <None Include="Assets\_VoaVivaldo\SaveGames\Save.xml" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />

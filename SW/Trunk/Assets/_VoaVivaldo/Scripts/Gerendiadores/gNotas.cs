@@ -56,7 +56,7 @@ public class gNotas : MonoBehaviour
 		
 	}
 
-	void Resetar ()
+	public void Resetar ()
 	{
 		if( notasNaPista.Count > 0 )
 		{
@@ -138,6 +138,7 @@ public class gNotas : MonoBehaviour
 
 	void VerificarFimDePercurso (Vector3 posNota, Nota nota)
 	{
+		if( nota == null ) return;
 	
 		if( nota.VerificarZonaDeMorte( areaDeDead, posNota ) )
 		{

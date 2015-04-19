@@ -25,6 +25,7 @@ public class Nota : MonoBehaviour
 	
 	public float GetSizeX(  )
 	{
+		
 		sizeX = mView.mSprite.localSize.x;
 //		mView.SetSpriteSize( sizeX );
 		return sizeX;

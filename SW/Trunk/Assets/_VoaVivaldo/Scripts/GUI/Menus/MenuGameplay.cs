@@ -42,7 +42,7 @@ public class MenuGameplay : Menu
 	}
 
 	public void InitContagemRegressiva()
-	{
+	{			
 		goContagemRegressiva.SetActive (true);
 		labelContagemRegressiva.text = (gGame.s.contagemRegressiva + 1).ToString ("00");
 	}

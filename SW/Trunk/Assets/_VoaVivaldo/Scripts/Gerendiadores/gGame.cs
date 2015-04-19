@@ -106,6 +106,8 @@ public class gGame : MonoBehaviour
 		contando = true;
 
 		player.Disable ();
+		
+		gFX.s.Set( player.mInfo.meuPersonagem );
 
 		gMenus.s.ShowMenu ("Gameplay");
 
@@ -131,6 +133,13 @@ public class gGame : MonoBehaviour
 
 	public void PlayGame()
 	{
+		if( gMusica.s.musicaAtual == null ) 
+		{
+			Debug.LogWarning("Algo deu errado, abortando");
+			return;
+		}
+	
+	
 		gameStarted = true;
 		
 		if( pausado ) Pause(false);

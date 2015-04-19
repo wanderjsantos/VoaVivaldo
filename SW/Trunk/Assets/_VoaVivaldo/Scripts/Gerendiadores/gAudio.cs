@@ -26,8 +26,9 @@ public class gAudio : MonoBehaviour
 	
 	public void PlayErrorClip()
 	{
-		audio.clip = error;
-		audio.PlayOneShot( audio.clip );
+//		audio.clip = error;
+//		audio.PlayOneShot( audio.clip );
+		gFX.s.Play( FX.ERRO );
 		
 	}
 	

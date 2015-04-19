@@ -59,7 +59,7 @@ public class gMusica : MonoBehaviour
 		}
 	}
 
-	void Resetar ()
+	public void Resetar ()
 	{
 //		Set();
 		if( musicaAtual != null ) 

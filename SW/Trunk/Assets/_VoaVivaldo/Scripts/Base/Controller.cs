@@ -6,24 +6,13 @@ public class Controller : MonoBehaviour
 
 	public float 	InputY;
 	
-	public float	inputAccelerationY;
+	public float	inputAccelerationY;	
+	public float	rotacaoDoDevice;
 	
-	//Quanto do Input.acceleration estarei usando
-	//Acceleration vai de 1/-1  entao .5f = .5f/-.5f (metade do uso)
-	public float	usoDoEixo = .5f;
-	
-	//Aceleracao que devo considerar como sendo o ponto inicial (pista central)
-	public float	accNeutra;
+	public float 	multiplicadorRotacao = .5f;
 	
 	//MAximo e minimo atuais
 	public Vector2 MinMax;
-		
-//	public Vector2 	minMaxInput = new Vector2(-1f,1f);
-//	public Vector2 	minMaxInputOnDevice = new Vector2(-1f,1f);
-//	public Vector2 init;
-//	public Vector2 	minMaxTemp = new Vector2(-1f,1f);
-
-//	Vector3	initialPosition;
 	
 	public Vector3  pos;
 	int 			faixasTotais = 5;
@@ -35,6 +24,7 @@ public class Controller : MonoBehaviour
 	
 	void Start()
 	{
+		
 		Init();
 	}
 
@@ -43,40 +33,45 @@ public class Controller : MonoBehaviour
 		if( Application.isEditor ) 
 			return Input.GetAxis("Vertical");
 		else
-			return Input.acceleration.y;
+			return Input.gyro.rotationRate.x;
 	}
 	
 	public void Init()
 	{
 		if( Application.isEditor == false )
-			accNeutra = GetAccelerationY();
+			rotacaoDoDevice = GetAccelerationY();
+			
+		Input.gyro.enabled = true;
 		
-		faixasTotais = gPista.s.faixasTotais;
-		
-		MinMax.x = accNeutra - usoDoEixo;
-		MinMax.y = accNeutra + usoDoEixo;
-		
-		//Pego o tamanho total que eu uso no acelerometro ( 2 = -1/1 possivel )
-		//divido pelo total de faixas
-		porFaixa = (usoDoEixo*2)/faixasTotais;
-		
+		faixaAtual = (int)(gPista.s.faixasTotais/2);
+		faixasTotais = gPista.s.faixasTotais;		
 		faixaAnterior = -1;
+		
+		porFaixa = gPista.s.tamanhoDeCadaPista;
+		
+		pos = Vector3.zero;
+		pos.y = gPista.s.GetPista( (int)(gPista.s.faixasTotais/2) ).position.y;
 	}
+	
+	
+//	public void OnGUI()
+//	{
+//		
+//		GUI.Box( new Rect( 30f, 30f, 400f, 30f  ), "RotacaoDoDevice        :  " + rotacaoDoDevice);
+//		GUI.Box( new Rect( 30f, 60f, 400f, 30f  ), "Inputacceleration      :  " + inputAccelerationY);
+//		GUI.Box( new Rect( 30f, 90f, 400f, 30f  ), "FaixaAtual             :  " + faixaAtual);
+//		GUI.Box( new Rect( 30f, 120f, 400f, 30f ), "InputY                 :  " + InputY);
+//		GUI.Box( new Rect( 30f, 150f, 400f, 30f ), "porcentagemNoInput     :  " + (InputY * 100)  /( Mathf.Abs(MinMax.x) + Mathf.Abs( MinMax.y ) ));
+//		GUI.Box( new Rect( 30f, 180f, 400f, 30f ), "faixas Adicionais      :  " + (int) ( faixasTotais * ( porcentagemNoInput / 100f )));
+//	}
 
 	public void SetInitialPosition ()
 	{
 		Init();
 	}
 	
-//	void OnGUI()
-//	{
-//		GUI.Box( new Rect( 0f, 0, 400f, 60f ), "inicial: " + aceleracaoInicial.ToString("0.000") + "Atual: " + aceleracaoAtual.ToString("0.000") );
-//		GUI.Box( new Rect( 0f, 60f, 400f, 60f ), "minMaxInput" + minMaxInputOnDevice.ToString() + " :: input.y: " + input.y);
-//		GUI.Box( new Rect( 0f, 120f, 400f, 60f ), "faixaAtual" +faixaAtual.ToString() + " :: porFaixa: "+ porFaixa.ToString("0.000") );
-//		GUI.Box( new Rect( 0f, 180f, 400f, 60f ), "direcao" +direcao.ToString() );
-//		GUI.Box( new Rect( 0f, 240f, 400f, 60f ), "Input.y" +input.y.ToString() );
-//	}
-
+	float porcentagemNoInput;
+	int adicionalAFaixa;
 	
 	public void Update()
 	{
@@ -88,11 +83,15 @@ public class Controller : MonoBehaviour
 		//		input.y = y ;/// Mathf.Abs (minMaxInputOnDevice.x);
 		//#endif
 	
-		inputAccelerationY = GetAccelerationY();		
+		rotacaoDoDevice = GetAccelerationY() * multiplicadorRotacao * Time.deltaTime ;
+		inputAccelerationY += rotacaoDoDevice;
 		
-		InputY = Mathf.Clamp( inputAccelerationY , MinMax.x, MinMax.y );
+		InputY = Mathf.Clamp( inputAccelerationY, MinMax.x, MinMax.y );
+		porcentagemNoInput = (InputY * 100f)  /( Mathf.Abs(MinMax.x) + Mathf.Abs( MinMax.y ) );
 		
-		faixaAtual = Mathf.RoundToInt((InputY / porFaixa) - (InputY % porFaixa));
+		faixaAtual = (-1 * ((int) ( faixasTotais * ( porcentagemNoInput / 100f ) )));
+		
+//		faixaAtual = Mathf.Clamp( Mathf.RoundToInt((InputY / porFaixa) - (InputY % porFaixa)), -7, 7) ;
 
 		if (faixaAnterior != faixaAtual) 
 		{

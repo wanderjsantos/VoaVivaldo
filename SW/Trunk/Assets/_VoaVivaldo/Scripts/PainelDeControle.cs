@@ -17,6 +17,23 @@ public class PainelDeControle : MonoBehaviour {
 
 	public int		carregarLevel		= 0;
 	public bool		loadXML				= false;
+	
+	public bool		drawGyro			= false;
+	
+	public void OnGUI()
+	{
+		if( drawGyro ) 
+		{
+			Input.gyro.enabled = true;
+		
+			GUI.Box( new Rect( 30f, 30f, 400f, 30f  ), "Gyro.Attitude        :  " + Input.gyro.attitude);
+			GUI.Box( new Rect( 30f, 60f, 400f, 30f  ), "Gyro.Gravity         :  " + Input.gyro.gravity);
+			GUI.Box( new Rect( 30f, 90f, 400f, 30f  ), "Gyro.RotationRate    :  " + Input.gyro.rotationRate);
+			GUI.Box( new Rect( 30f, 120f, 400f, 30f ), "Gyro.RotationRate2   :  " + Input.gyro.rotationRateUnbiased);
+			GUI.Box( new Rect( 30f, 150f, 400f, 30f ), "Gyro.userAcceleration:  " + Input.gyro.userAcceleration);
+		}
+	}
+	
 
 	void Update()
 	{

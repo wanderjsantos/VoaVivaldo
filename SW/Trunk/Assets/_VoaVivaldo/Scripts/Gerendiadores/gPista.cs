@@ -36,6 +36,12 @@ public class gPista : MonoBehaviour {
 		s = this;
 
 	}
+	
+	public void Start()
+	{
+		tamanhoDeCadaPista = pista1.GetComponent<UIWidget>().height;
+		tamanhoYPista = faixasTotais * tamanhoDeCadaPista;
+	}
 
 	void OnEnable()
 	{

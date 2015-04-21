@@ -30,61 +30,64 @@ public class Controller : MonoBehaviour
 	void Start()
 	{
 		init = minMaxInputOnDevice;
+		Init();
+	}
+	
+	public void Init()
+	{
 		initialPosition = transform.localPosition;
-		initialPosition.y = (faixaAtual * gPista.s.tamanhoDeCadaPista) - (gPista.s.tamanhoDeCadaPista/2);
+//		initialPosition.y = (faixaAtual * gPista.s.tamanhoDeCadaPista) - (gPista.s.tamanhoDeCadaPista/2);
+		initialPosition.y = (0 * gPista.s.tamanhoDeCadaPista) - (gPista.s.tamanhoDeCadaPista/2);
 		faixasTotais 	= gPista.s.faixasTotais;
-		porFaixa = (Mathf.Abs (minMaxInput.y) + Mathf.Abs (minMaxInput.x))/faixasTotais;
+		if( Application.isEditor ) porFaixa = (Mathf.Abs (minMaxInput.y) + Mathf.Abs (minMaxInput.x))/faixasTotais;
 		faixaAnterior = -1;
 	}
 
 	public void SetInitialPosition ()
 	{
+		Init();
+	
 		minMaxInputOnDevice = init;
 	
 #if UNITY_IOS || UNITY_ANDROID
 		aceleracaoInicial = Input.acceleration.y;
+		//-0.4 -  0.5 = -0.9
+		minMaxTemp.x = minMaxInputOnDevice.x + aceleracaoInicial;
+		//0.4 - 0.5 = -0.1
+		minMaxTemp.y = minMaxInputOnDevice.y + aceleracaoInicial;
 		
-		minMaxTemp.x = minMaxInputOnDevice.x - Mathf.Abs(aceleracaoInicial);
-		minMaxTemp.y = minMaxInputOnDevice.y - Mathf.Abs(aceleracaoInicial);
-		
-#endif
-		if( Application.isEditor )
-		{
-				aceleracaoInicial = Input.GetAxis ("Vertical");
-				minMaxTemp.x = minMaxInput.x + aceleracaoInicial;
-				minMaxTemp.y = minMaxInput.y - aceleracaoInicial;
-		 }
-		
-		
-		Vector2 extra = new Vector2(0f,0f);
-		if( Mathf.Abs( minMaxTemp.x ) > 1f )
-		{
-			minMaxTemp.x = -1f;
-			extra.x = Mathf.Abs( minMaxTemp.x ) - 1f;
-			minMaxTemp.y = minMaxTemp.y - extra.x;
-		}
-		if( Mathf.Abs( minMaxTemp.y ) > 1f )
-		{
-			minMaxTemp.y = 1f;
-			extra.y = Mathf.Abs( minMaxTemp.y ) - 1f;
-			minMaxTemp.x = minMaxTemp.x + extra.y;
-		}
-#if UNITY_IOS || UNITY_ANDROID
 
+//		Vector2 extra = new Vector2(0f,0f);
+//		if( Mathf.Abs( minMaxTemp.x ) < -1f )
+//		{
+//			minMaxTemp.x = -1f;
+//			extra.x = Mathf.Abs( minMaxTemp.x ) - 1f;
+//			minMaxTemp.y = minMaxTemp.y + extra.x;
+//		}
+//		if( Mathf.Abs( minMaxTemp.y ) > 1f )
+//		{
+//			minMaxTemp.y = 1f;
+//			extra.y = Mathf.Abs( minMaxTemp.y ) - 1f;
+//			minMaxTemp.x = minMaxTemp.x - extra.y;
+//		}
+		
+		Debug.LogWarning( "MINMAX TEMP::" + minMaxTemp );
+		
 		minMaxInputOnDevice = minMaxTemp;
+		
+		porFaixa = (Mathf.Abs (minMaxInputOnDevice.y) + Mathf.Abs (minMaxInputOnDevice.x))/faixasTotais;
 
 #endif
-		if( Application.isEditor ) minMaxInput = minMaxTemp;
-		
 		
 	}
 	
 	void OnGUI()
 	{
-		GUI.Box( new Rect( 0f, 0, 400f, 60f ), "Input.acceleration" + Input.acceleration.ToString() );
-		GUI.Box( new Rect( 0f, 60f, 400f, 60f ), "minMaxInput" + minMaxInputOnDevice.ToString() );
-		GUI.Box( new Rect( 0f, 120f, 400f, 60f ), "faixaAtual" +faixaAtual.ToString() );
+		GUI.Box( new Rect( 0f, 0, 400f, 60f ), "inicial: " + aceleracaoInicial.ToString("0.000") + "Atual: " + aceleracaoAtual.ToString("0.000") );
+		GUI.Box( new Rect( 0f, 60f, 400f, 60f ), "minMaxInput" + minMaxInputOnDevice.ToString() + " :: input.y: " + input.y);
+		GUI.Box( new Rect( 0f, 120f, 400f, 60f ), "faixaAtual" +faixaAtual.ToString() + " :: porFaixa: "+ porFaixa.ToString("0.000") );
 		GUI.Box( new Rect( 0f, 180f, 400f, 60f ), "direcao" +direcao.ToString() );
+		GUI.Box( new Rect( 0f, 240f, 400f, 60f ), "Input.y" +input.y.ToString() );
 	}
 
 	public void Update()
@@ -93,19 +96,18 @@ public class Controller : MonoBehaviour
 		float y =0f;
 #if UNITY_IOS || UNITY_ANDROID
 		aceleracaoAtual = Input.acceleration.y;
-		direcao = aceleracaoInicial + aceleracaoAtual;
+		direcao = aceleracaoAtual - aceleracaoInicial;
 		y = Mathf.Clamp (direcao, minMaxInputOnDevice.x, minMaxInputOnDevice.y); 
-		input.y = y / Mathf.Abs (minMaxInputOnDevice.x);
+		input.y = y ;/// Mathf.Abs (minMaxInputOnDevice.x);
 #endif
 
-		if( Application.isEditor )
-		{
-			aceleracaoAtual = Input.GetAxis ("Vertical");
-			direcao = aceleracaoInicial + aceleracaoAtual;
-			
-			y = Mathf.Clamp (direcao, minMaxInput.x, minMaxInput.y); 
-			input.y = y / Mathf.Abs (minMaxInput.x);
-		}
+//		if( Application.isEditor )
+//		{
+//			direcao = Input.GetAxis ("Vertical");
+//			
+//			y = Mathf.Clamp (direcao, minMaxInput.x, minMaxInput.y); 
+//			input.y = y / Mathf.Abs (minMaxInput.x);
+//		}
 
 		faixaAtual = Mathf.RoundToInt((input.y / porFaixa) - (input.y % porFaixa));
 

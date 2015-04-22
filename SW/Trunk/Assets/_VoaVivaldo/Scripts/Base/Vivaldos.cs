@@ -12,7 +12,7 @@ public static class Vivaldos
 	public static int COMPASSOS_DEFAULT = 1;
 	public static float WIDTH_COMPASSO = 600f;
 
-	public static string SAVE_PATH = "Assets/_VoaVivaldo/SaveGames/";
+	public static string SAVE_PATH = Application.persistentDataPath;// "Assets/_VoaVivaldo/SaveGames/";
 	
 	static bool	vibrar = false;
 	public static bool VIBRAR

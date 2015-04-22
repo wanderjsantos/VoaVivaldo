@@ -127,6 +127,9 @@ public class gPontuacao : MonoBehaviour {
 		if (nota.kill ) return;
 		
 		 nota.kill = true;
+		 
+		if( Vivaldos.VIBRAR )
+			Handheld.Vibrate();
 	
 		int pontuacaoAtual = p.mInfo.pontuacao;
 		
@@ -154,6 +157,9 @@ public class gPontuacao : MonoBehaviour {
 	public void PontuarNotaLonga (Nota nota, Player p)
 	{
 		if( nota.pontuando ) return;
+		
+		if( Vivaldos.VIBRAR )
+			Handheld.Vibrate();
 		
 		nota.pontuando = true;
 //		lastNota = nota;

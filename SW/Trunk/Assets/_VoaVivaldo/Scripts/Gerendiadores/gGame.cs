@@ -150,6 +150,8 @@ public class gGame : MonoBehaviour
 
 		if (onPlayGame != null)
 						onPlayGame ();
+						
+		Debug.Break();
 	}
 	
 	/// <summary>

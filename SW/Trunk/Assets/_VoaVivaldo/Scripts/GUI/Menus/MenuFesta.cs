@@ -60,6 +60,11 @@ public class MenuFesta : Menu
 	{
 		base.Show ();
 //		goPartituras.SetActive(false);
+
+		
+		
+		Debug.Log( "gLevels.s.currentLevelIndex :: " + gLevels.s.currentLevelIndex );
+
 		musicaFesta = gLevels.s.allLevels[gLevels.s.currentLevelIndex].instrumentosDaFesta;
 		
 		musicaFesta.parentBase = new GameObject(musicaFesta.clipBase);

@@ -104,6 +104,8 @@ public class gGame : MonoBehaviour
 		tempoParaIniciar = 0;
 		iTime = Time.realtimeSinceStartup;
 		contando = true;
+		
+		gTemas.s.AplicarAtual();
 
 		player.Disable ();
 		
@@ -124,6 +126,13 @@ public class gGame : MonoBehaviour
 			 gComandosDeMusica.s.Stop();
 			 FimDeJogo();
 		 }
+		 
+		if( gameStarted == false )
+		{
+			contando = !pausar;
+			currentTime = Time.realtimeSinceStartup;
+			iTime = Time.realtimeSinceStartup;
+		}
 		
 		pausado = pausar;
 		Time.timeScale = (pausado)? 0f : 1f ;
@@ -151,7 +160,7 @@ public class gGame : MonoBehaviour
 		if (onPlayGame != null)
 						onPlayGame ();
 						
-		Debug.Break();
+//		Debug.Break();
 	}
 	
 	/// <summary>
@@ -188,11 +197,14 @@ public class gGame : MonoBehaviour
 			onStopGame();
 	}
 
+	float currentTime;
 	void Update()
 	{
+	
 		if (contando)
 		{
-			if( Time.realtimeSinceStartup < (iTime + contagemRegressiva ) )
+			currentTime = Time.realtimeSinceStartup;
+			if( currentTime < (iTime + contagemRegressiva ) )
 			{
 				tempoParaIniciar = (int) ((iTime + contagemRegressiva) - Time.realtimeSinceStartup);
 			}

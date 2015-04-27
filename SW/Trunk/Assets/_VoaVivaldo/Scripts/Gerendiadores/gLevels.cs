@@ -168,6 +168,7 @@ public class gLevels : MonoBehaviour
 		int fase = currentPartituraIndex;
 		
 		Debug.LogWarning("PROXIMA FASE (atual): " + faseAtual );
+		Debug.LogWarning("PROXIMO LEVEL (atual): " + level );
 		
 		if( fase >= allLevels[level].info.partituras.Length - 1 ) 
 		{
@@ -178,7 +179,7 @@ public class gLevels : MonoBehaviour
 		else
 			fase += 1;
 		
-		if( level >= allLevels.Count -1 ){ Debug.LogWarning( "Todos os levels desbloqueados"); gMenus.s.ShowMenu("Principal"); return; }
+		if( level > allLevels.Count -1 ){ Debug.LogWarning( "Todos os levels desbloqueados"); gMenus.s.ShowMenu("Principal"); return; }
 		
 		gMusica.s.Set( level, fase );
 //		gMusica.s.SetFase (numero);		

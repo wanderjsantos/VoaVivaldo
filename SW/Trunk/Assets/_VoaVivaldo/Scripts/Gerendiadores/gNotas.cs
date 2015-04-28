@@ -127,7 +127,7 @@ public class gNotas : MonoBehaviour
 			
 			Vector3 posNota = UICamera.mainCamera.WorldToScreenPoint( notasNaPista[i].transform.position );
 			
-			if( i >= notasNaPista.Count || notasNaPista.Count <= 0 || notasNaPista[i] == null) continue;
+			if( i >= notasNaPista.Count || notasNaPista.Count <= 0 || notasNaPista[i] == null || notasNaPista[i].mInfo.tipo == TipoDeNota.PAUSA ) continue;
 			else
 			{
 				VerificarPercursoDePontuacao(posNota, notasNaPista[i]);

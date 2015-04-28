@@ -19,7 +19,8 @@ public class GravadorDeFase : EditorWindow
 	
 	public void OnGUI()
 	{
-		partituraEditor.Draw();
+		if( partituraEditor != null )
+			partituraEditor.Draw();
 		DrawRodaPe();
 	}
 	

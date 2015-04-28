@@ -6,6 +6,9 @@ TextureImporter:
     21300002: GAMEPLAY_NOTA_4_0
     21300004: GAMEPLAY_NOTA_4_1
     21300006: GAMEPLAY_NOTA_4_2
+    21300008: GAMEPLAY_NOTA_X4_0
+    21300010: GAMEPLAY_NOTA_X4_1
+    21300012: GAMEPLAY_NOTA_X4_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -47,33 +50,33 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: GAMEPLAY_NOTA_4_0
+    - name: GAMEPLAY_NOTA_X4_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 13
-        width: 398
+        x: 0
+        y: 103
+        width: 1000
         height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_NOTA_4_1
+    - name: GAMEPLAY_NOTA_X4_1
       rect:
         serializedVersion: 2
-        x: 419
-        y: 11
-        width: 406
-        height: 48
+        x: 0
+        y: 51
+        width: 999
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GAMEPLAY_NOTA_4_2
+    - name: GAMEPLAY_NOTA_X4_2
       rect:
         serializedVersion: 2
-        x: 835
-        y: 11
-        width: 404
-        height: 48
+        x: 1
+        y: 1
+        width: 998
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

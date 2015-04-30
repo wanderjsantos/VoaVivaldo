@@ -13,8 +13,6 @@ public class gAudio : MonoBehaviour
 	
 	float lastVolume = .5f;
 	
-//	float iTime;
-	
 	public AudioClip error;
 	public AudioClip novaEstrela;
 	

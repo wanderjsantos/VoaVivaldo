@@ -93,7 +93,8 @@ public class MenuFesta : Menu
 			inst.mClip = AC;
 		}
 		
-		Play();
+//		Play();
+		Stop();
 		
 	}
 	

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class vEstrelas : MonoBehaviour 
 {	
 	public int estrelasGanhas = 0;
+	
+	public bool playAudio = true;
 
 	public List<GameObject> estrelas;	
 	
@@ -39,6 +41,6 @@ public class vEstrelas : MonoBehaviour
 		estrelasGanhas = estrelas;
 		
 		SetNewEstrela( estrelasGanhas );
-		gAudio.s.PlayNovaEstrelaClip();
+		if( playAudio) gAudio.s.PlayNovaEstrelaClip();
 	}
 }

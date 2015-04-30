@@ -17,6 +17,8 @@ public class MenuVitoria : Menu {
 	{
 		base.Show ();
 		
+		gFX.s.Play( FX.VITORIA );
+		
 		personagem = spritePersonagem.gameObject.GetComponent<vPersonagem>();
 		personagem.meuPersonagem = gGame.s.player.vPlayer.meuPersonagem;
 		

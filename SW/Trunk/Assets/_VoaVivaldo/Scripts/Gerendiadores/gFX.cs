@@ -65,6 +65,12 @@ public class gFX : MonoBehaviour {
 			case FX.ERRO:
 				Play( currentFxSet.erro );
 				break;
+			case FX.VITORIA:
+				Play( currentFxSet.vitoria );
+				break;
+			case FX.DERROTA:
+				Play( currentFxSet.derrotas );
+				break;
 			default :
 				Play(currentFxSet.avancar);
 				break;
@@ -83,7 +89,7 @@ public class gFX : MonoBehaviour {
 	
 }
 
-public enum FX{ AVANCAR, VOLTAR, ERRO }
+public enum FX{ AVANCAR, VOLTAR, ERRO, VITORIA,DERROTA }
 
 [System.Serializable]
 public class FxSetInfo
@@ -91,5 +97,7 @@ public class FxSetInfo
 	public AudioClip avancar;
 	public AudioClip voltar;
 	public AudioClip erro;
+	public AudioClip vitoria;
+	public AudioClip derrotas;
 	
 }

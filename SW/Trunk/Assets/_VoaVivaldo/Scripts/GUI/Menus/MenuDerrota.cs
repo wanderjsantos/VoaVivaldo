@@ -8,6 +8,9 @@ public class MenuDerrota : Menu {
 	public override void Show ()
 	{
 		base.Show ();
+		
+		gFX.s.Play( FX.DERROTA );
+		
 		personagens.DesativarTodos();
 		personagens.Ativar( gGame.s.player.mInfo.meuPersonagem );
 		gPontuacao.s.ForcarAtualizarPontosEstrelas();

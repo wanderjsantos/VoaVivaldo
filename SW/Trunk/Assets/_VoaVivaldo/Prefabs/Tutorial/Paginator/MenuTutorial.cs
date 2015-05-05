@@ -10,21 +10,21 @@ public class MenuTutorial : Menu {
 		base.Show ();
 		paginator.Init();
 		
-		Screen.orientation = ScreenOrientation.Portrait;
-		Screen.autorotateToLandscapeLeft = false;
-		Screen.autorotateToLandscapeRight = false;
-		Screen.autorotateToPortrait = true;
-		Screen.autorotateToPortraitUpsideDown = false;
+//		Screen.orientation = ScreenOrientation.Landscape;
+//		Screen.autorotateToLandscapeLeft = true;
+//		Screen.autorotateToLandscapeRight = true;
+//		Screen.autorotateToPortrait = false;
+//		Screen.autorotateToPortraitUpsideDown = false;
 	}
 	
 	public override void Hide ()
 	{
 		base.Hide ();
-		Screen.orientation = ScreenOrientation.AutoRotation;
-		Screen.autorotateToLandscapeLeft = true;
-		Screen.autorotateToLandscapeRight = true;
-		Screen.autorotateToPortrait = true;
-		Screen.autorotateToPortraitUpsideDown = true;
+//		Screen.orientation = ScreenOrientation.AutoRotation;
+//		Screen.autorotateToLandscapeLeft = true;
+//		Screen.autorotateToLandscapeRight = true;
+//		Screen.autorotateToPortrait = true;
+//		Screen.autorotateToPortraitUpsideDown = true;
 	}
 	
 	public void Fechar()

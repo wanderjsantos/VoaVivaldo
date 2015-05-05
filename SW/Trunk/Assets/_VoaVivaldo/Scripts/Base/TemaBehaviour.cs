@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum QualCorDoTema{ BACKGROUND, CLARO, ESCURO, TEXTO }
+public enum QualCorDoTema{ BACKGROUND, CLARO, ESCURO, TEXTO, LINHAS }
 public class TemaBehaviour : MonoBehaviour 
 {
 	UIWidget mWidget;

@@ -1,13 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuFesta.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\SaveManager.cs">
     <Files>
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuGameplay.cs" Line="1" Column="1" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuGameplay\Combo.cs" Line="36" Column="21" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gPontuacao.cs" Line="229" Column="45" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuFesta.cs" Line="94" Column="52" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\View\vPersonagensDancando.cs" Line="40" Column="11" />
-      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menu.cs" Line="27" Column="2" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Gerendiadores\gTemas.cs" Line="61" Column="5" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Tema.cs" Line="1" Column="1" />
+      <File FileName="Assets\Editor\_LevelEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Base\Infos\LevelInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\Base\TemaBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\GUI\Menus\MenuFesta.cs" Line="224" Column="23" />
+      <File FileName="Assets\_VoaVivaldo\Scripts\View\vPersonagensDancando.cs" Line="1" Column="1" />
+      <File FileName="Assets\Editor\SaveManager.cs" Line="39" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

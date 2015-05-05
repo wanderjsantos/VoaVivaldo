@@ -57,6 +57,8 @@ public class gTemas : MonoBehaviour
 				return temaAtual.corEscuro;
 			case QualCorDoTema.TEXTO:
 				return temaAtual.corTextos;
+			case QualCorDoTema.LINHAS:
+				return temaAtual.corLinhas;
 			default:
 				return temaAtual.corBackground;
 		}

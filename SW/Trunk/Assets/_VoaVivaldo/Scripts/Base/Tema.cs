@@ -9,4 +9,5 @@ public class Tema
 	public Color				corEscuro = Color.white;
 	public Color				corClaro = Color.white;
 	public Color				corTextos = Color.white;
+	public Color				corLinhas = Color.grey;
 }

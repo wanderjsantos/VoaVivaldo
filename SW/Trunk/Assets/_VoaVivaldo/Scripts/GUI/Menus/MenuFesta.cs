@@ -13,10 +13,18 @@ public class MusicaFestaInfo
 	
 	public List<InstrumentoFestaInfo> instrumentos;
 	
+	
+	
 	public MusicaFestaInfo()
 	{
 		instrumentos = new List<InstrumentoFestaInfo>();
 	}
+	
+	public InstrumentoFestaInfo GetInstrumento(QualPersonagem personagem)
+	{
+		return instrumentos.Find( e => e.personagem == personagem );
+	}
+	
 }
 [System.Serializable]
 public class InstrumentoFestaInfo
@@ -30,6 +38,8 @@ public class InstrumentoFestaInfo
 	public AudioClip 		mClip;
 //	[HideInInspector]
 	public GameObject		goParent;
+	
+	public Sprite	partitura;
 	
 	public InstrumentoFestaInfo( QualPersonagem _personagem, string _clipInstrumento )
 	{
@@ -204,8 +214,15 @@ public class MenuFesta : Menu
 		
 	}
 	
-	public void OnClickMostrarPartitura()
+	public UI2DSprite poolSprites;
+	public void OnClickMostrarPartitura( GameObject personagemGO )
 	{
+		QualPersonagem personagem = vPersonagens.GetPersonagem( personagemGO );
+		
+		Debug.Log("PErsonagem:" + personagem );
+		
+		poolSprites.sprite2D =  musicaFesta.GetInstrumento( personagem ).partitura;
+	
 		goPartituras.SetActive(true);
 	}
 	

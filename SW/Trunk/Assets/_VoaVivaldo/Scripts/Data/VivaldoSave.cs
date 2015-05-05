@@ -44,11 +44,11 @@ public class SettingsSaveInfo
 	public float 	volumeInstrumentos = 1f;
 	
 	//Sao usados temporariamente para guardar os valores antes de 
-	[HideInInspector]
-	public float savedVolumeBase = 1f;
-	[HideInInspector]
-	public float savedVolumeInstrumento = 1f;
-	[HideInInspector]
-	public float savedVolumeGeral = 1f;
+//	[HideInInspector]
+//	public float savedVolumeBase = 1f;
+//	[HideInInspector]
+//	public float savedVolumeInstrumento = 1f;
+//	[HideInInspector]
+//	public float savedVolumeGeral = 1f;
 }
 

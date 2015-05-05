@@ -15,6 +15,7 @@ public class gFX : MonoBehaviour {
 	{
 		s = this;
 		source = GetComponent<AudioSource>();
+//		source.volume = gSave.s.saveSettings.settings.volumeGeral;
 		source.playOnAwake = false;
 	}
 	
@@ -81,7 +82,7 @@ public class gFX : MonoBehaviour {
 	
 	void Play( AudioClip clip )
 	{
-		source.volume = gSave.s.GetCurrentBaseVolume();
+		source.volume = gSave.s.saveSettings.settings.volumeGeral;
 	
 		source.clip = clip;
 		source.PlayOneShot(clip);

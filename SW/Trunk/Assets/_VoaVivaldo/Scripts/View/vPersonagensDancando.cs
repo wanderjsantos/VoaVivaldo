@@ -16,6 +16,30 @@ public class vPersonagensDancando : MonoBehaviour
 		sanfona	.SetActive(false);
 	}	
 	
+	public void AtivarTodos(bool forcarAtivacao)
+	{
+		if( trumpet.activeInHierarchy == false && forcarAtivacao )
+			trumpet	.SetActive(true);
+		if( horn.activeInHierarchy == false && forcarAtivacao )
+		horn	.SetActive (true);
+		
+		if( flauta.activeInHierarchy == false && forcarAtivacao )
+			flauta	.SetActive(true);
+		
+		if( sanfona.activeInHierarchy == false && forcarAtivacao )
+			sanfona	.SetActive(true);
+		
+		trumpet.GetComponent<UIToggle>().value = true;
+		horn.GetComponent<UIToggle>().value = true;
+		flauta.GetComponent<UIToggle>().value = true;
+		sanfona.GetComponent<UIToggle>().value = true;
+		
+		trumpet	.GetComponent<UI2DSpriteAnimation>().Play("idle");
+		horn	.GetComponent<UI2DSpriteAnimation>().Play("idle");
+		flauta	.GetComponent<UI2DSpriteAnimation>().Play("idle");
+		sanfona	.GetComponent<UI2DSpriteAnimation>().Play("idle");
+	}	
+	
 	public GameObject GetInstrumento(QualPersonagem personagem)
 	{
 		switch( personagem )

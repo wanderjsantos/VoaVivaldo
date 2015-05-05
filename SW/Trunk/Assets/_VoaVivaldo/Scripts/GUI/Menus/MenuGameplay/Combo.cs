@@ -31,14 +31,28 @@ public class Combo : MonoBehaviour
 	
 	public void UpdateCombo( int multiplicador )
 	{
-		if( multiplicador <= 1 ) 
+		if( multiplicador < 0 )
 		{
-			Saida();
+			lbl_multiplicador.text = "x"+multiplicador.ToString();
+			ForcarSaida();
 			return;
+		}
+		else
+		{
+			if( multiplicador <= 1 ) 
+			{
+				Saida();
+				return;
+			}
 		}
 		
 		lbl_multiplicador.text = "x"+multiplicador.ToString();
 		Entrada();
+	}
+
+	void ForcarSaida ()
+	{
+		goCombo.SetActive(false);
 	}
 	
 	public bool ativo = false;

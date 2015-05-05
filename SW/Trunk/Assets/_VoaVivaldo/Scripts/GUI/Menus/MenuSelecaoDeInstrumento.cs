@@ -54,12 +54,19 @@ public class MenuSelecaoDeInstrumento : Menu
 		gMusica.s.SetFase(numero );
 		
 		gLevels.s.SetLevel( gMusica.s.indiceMusica, gMusica.s.indiceFase );		
-		gGame.s.IniciarJogo();
+		
+		if( gLevels.s.currentLevelIndex == 0 && gLevels.s.currentPartituraIndex == 0 )
+			gMenus.s.ShowMenu("Tutorial");
+		else
+			gGame.s.IniciarJogo();
 	}
 
 	public void IniciarPartida()
 	{
-		gGame.s.IniciarJogo ();
+		if( gLevels.s.currentLevelIndex == 0 && gLevels.s.currentPartituraIndex == 0 )
+			gMenus.s.ShowMenu("Tutorial");
+		else
+			gGame.s.IniciarJogo ();
 	}
 	
 	public void OnClickVoltar()

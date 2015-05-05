@@ -17,14 +17,11 @@ public class gSave : MonoBehaviour {
 	public void Awake()
 	{
 		s = this;
-		
-		defaultSavedGame.settings.savedVolumeBase = 1f;
-		defaultSavedGame.settings.savedVolumeInstrumento = 1f;
-		defaultSavedGame.settings.savedVolumeGeral = 1f;
 	}
 	
 	public void Start()
 	{
+		Debug.Log(Vivaldos.SAVE_PATH);
 		saveSettings = CarregarArquivo();
 		AplicarSaveGame();
 	}
@@ -53,6 +50,7 @@ public class gSave : MonoBehaviour {
 		if( File.Exists( Vivaldos.SAVE_PATH + "Save.xml" ) == false )
 		{
 			Debug.LogWarning("Usando save default");
+			Debug.Log(defaultSavedGame.settings.volumeBase);
 			return defaultSavedGame;
 		}
 	
@@ -77,7 +75,7 @@ public class gSave : MonoBehaviour {
 	}
 	public void SetBaseVolume(float volume)
 	{
-		saveSettings.settings.savedVolumeBase = saveSettings.settings.volumeBase;
+//		saveSettings.settings.savedVolumeBase = saveSettings.settings.volumeBase;
 		saveSettings.settings.volumeBase = volume;
 	}
 	
@@ -88,7 +86,7 @@ public class gSave : MonoBehaviour {
 	
 	public void SetCurrentInstrumentosVolume(float volume)
 	{
-		saveSettings.settings.savedVolumeInstrumento = saveSettings.settings.volumeInstrumentos;
+//		saveSettings.settings.savedVolumeInstrumento = saveSettings.settings.volumeInstrumentos;
 		saveSettings.settings.volumeBase = volume;
 	}
 
@@ -98,7 +96,7 @@ public class gSave : MonoBehaviour {
 		saveSettings.settings.audio = false;
 		SetBaseVolume(0f);
 		SetCurrentInstrumentosVolume(0f);
-		saveSettings.settings.savedVolumeGeral = saveSettings.settings.volumeGeral;
+//		saveSettings.settings.savedVolumeGeral = saveSettings.settings.volumeGeral;
 		saveSettings.settings.volumeGeral = 0;
 		
 	}
@@ -108,14 +106,18 @@ public class gSave : MonoBehaviour {
 		Debug.Log("gSave:: Restaurar");
 		saveSettings.settings.audio = true;
 		
-		saveSettings.settings.savedVolumeBase = defaultSavedGame.settings.savedVolumeBase;
-		saveSettings.settings.savedVolumeInstrumento = defaultSavedGame.settings.savedVolumeInstrumento;
-		saveSettings.settings.savedVolumeGeral = defaultSavedGame.settings.savedVolumeGeral;
+		saveSettings.settings.volumeBase = defaultSavedGame.settings.volumeBase;
+		saveSettings.settings.volumeInstrumentos = defaultSavedGame.settings.volumeInstrumentos;
+		saveSettings.settings.volumeGeral = defaultSavedGame.settings.volumeGeral;
 		
-		
-		saveSettings.settings.volumeBase = saveSettings.settings.savedVolumeBase;
-		saveSettings.settings.volumeInstrumentos = saveSettings.settings.savedVolumeInstrumento;
-		saveSettings.settings.volumeGeral = saveSettings.settings.savedVolumeGeral;
+//		saveSettings.settings.savedVolumeBase = defaultSavedGame.settings.volumeBase;
+//		saveSettings.settings.savedVolumeInstrumento = defaultSavedGame.settings.volumeInstrumentos;
+//		saveSettings.settings.savedVolumeGeral = defaultSavedGame.settings.volumeGeral;
+//		
+//		
+//		saveSettings.settings.volumeBase = saveSettings.settings.savedVolumeBase;
+//		saveSettings.settings.volumeInstrumentos = saveSettings.settings.savedVolumeInstrumento;
+//		saveSettings.settings.volumeGeral = saveSettings.settings.savedVolumeGeral;
 	}
 	
 	void AplicarLevels ()

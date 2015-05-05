@@ -33,6 +33,7 @@ public class gAudio : MonoBehaviour
 	public void PlayNovaEstrelaClip()
 	{
 		audio.clip = novaEstrela;
+		audio.volume = gSave.s.saveSettings.settings.volumeGeral;
 		audio.PlayOneShot( audio.clip );
 	}
 	

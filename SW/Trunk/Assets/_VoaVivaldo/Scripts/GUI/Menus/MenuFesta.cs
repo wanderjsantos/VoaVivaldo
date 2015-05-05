@@ -28,7 +28,7 @@ public class InstrumentoFestaInfo
 	public AudioSource 		mSource;
 	[HideInInspector]
 	public AudioClip 		mClip;
-	[HideInInspector]
+//	[HideInInspector]
 	public GameObject		goParent;
 	
 	public InstrumentoFestaInfo( QualPersonagem _personagem, string _clipInstrumento )
@@ -53,15 +53,19 @@ public class MenuFesta : Menu
 	
 	public bool ativo = true;
 	
-	public GameObject btnPlay;
-	public GameObject goPartituras;
+	public GameObject 	btnPause;
+	public GameObject 	btnPlay;
+	public UILabel		labelPlay;
+	public GameObject 	goPartituras;
 	
 	public override void Show ()
 	{
 		base.Show ();
 //		goPartituras.SetActive(false);
-
 		
+		Resetar();
+		
+		btnPause.SetActive(false);
 		
 		Debug.Log( "gLevels.s.currentLevelIndex :: " + gLevels.s.currentLevelIndex );
 
@@ -73,7 +77,7 @@ public class MenuFesta : Menu
 		AudioSource ASB = musicaFesta.parentBase.AddComponent<AudioSource>();
 		AudioClip	ACB = Vivaldos.NameToAudioClip( musicaFesta.clipBase );
 		ASB.clip = ACB;
-		
+		ASB.volume = gSave.s.GetCurrentBaseVolume();
 		musicaFesta.sourceBase = ASB;
 		
 		vPersonagens.DesativarTodos();
@@ -87,6 +91,9 @@ public class MenuFesta : Menu
 			AudioSource AS = inst.goParent.AddComponent<AudioSource>();
 			AudioClip	AC = Vivaldos.NameToAudioClip( inst.clipInstrumento );
 			
+			AS.volume = gSave.s.GetCurrentInstrumentosVolume();
+			
+			
 			AS.clip = AC;
 			
 			inst.mSource = AS;
@@ -96,6 +103,22 @@ public class MenuFesta : Menu
 //		Play();
 		Stop();
 		
+	}
+	
+	public override void Resetar ()
+	{
+		base.Resetar ();
+		
+		if( musicaFesta == null ) return;
+		
+		Stop();	
+		
+		Destroy( musicaFesta.parentBase );
+		foreach( InstrumentoFestaInfo i in musicaFesta.instrumentos )
+		{
+	
+			Destroy(i.goParent);
+		}
 	}
 	
 	public override void Hide ()
@@ -110,6 +133,45 @@ public class MenuFesta : Menu
 		musicaFesta = null;
 		
 		
+	}
+	
+	public bool isPaused = false;
+	public void Pause()
+	{
+		if(tocandoMusica == false) return;
+	
+		isPaused = true;
+		btnPause.SetActive(false);
+		labelPlay.text = "Play";
+		
+		musicaFesta.sourceBase.Pause();
+		foreach( InstrumentoFestaInfo i in musicaFesta.instrumentos )
+		{
+			i.mSource.Pause();
+		}
+		
+	}
+	
+	public void UnPause()
+	{
+		isPaused = false;
+		
+		btnPause.SetActive(true);
+		labelPlay.text = "Replay";
+		
+		musicaFesta.sourceBase.Play();
+		foreach( InstrumentoFestaInfo i in musicaFesta.instrumentos )
+		{
+			if( i.goParent.transform.parent.GetComponent<UIToggle>().value )
+				i.mSource.Play();
+		}
+		
+	}
+	
+	public void Replay()
+	{
+		Show();
+		Play();	
 	}
 	
 	public void OnClickPersonagem( GameObject go, bool isChecked )
@@ -130,9 +192,12 @@ public class MenuFesta : Menu
 //			go.GetComponent<UIButton>().isEnabled = true;
 			
 			Debug.Log("Ligando as coisas aqui");
-			AudioSource current = musicaFesta.instrumentos.Find( e => e.personagem == vPersonagens.GetPersonagem( go ) ).mSource;
-			current.timeSamples = musicaFesta.sourceBase.timeSamples;
-			current.Play();
+			if( isPaused == false )
+			{
+				AudioSource current = musicaFesta.instrumentos.Find( e => e.personagem == vPersonagens.GetPersonagem( go ) ).mSource;
+				current.timeSamples = musicaFesta.sourceBase.timeSamples;
+				current.Play();
+			}
 		}
 		
 		
@@ -151,14 +216,27 @@ public class MenuFesta : Menu
 	
 	public void OnClickPlay()
 	{	
-		Stop();	
-		Play();
-		
+		if( tocandoMusica )
+		{
+			if( isPaused )
+			{
+				UnPause();
+			}
+			else
+				Replay();
+		}
+		else
+		{
+			Stop();	
+			Play();
+		}
 	}
 
 	void Play ()
 	{
 		if( tocandoMusica ) Stop();
+		
+		
 		
 		musicaFesta.sourceBase.Stop();	
 		musicaFesta.sourceBase.Play();	
@@ -173,7 +251,15 @@ public class MenuFesta : Menu
 		
 		iTime = Time.realtimeSinceStartup;
 		
-		btnPlay.SetActive(false);
+		btnPause.SetActive(true);
+		labelPlay.text = "Replay";
+	}
+
+	void AtivarTodosOSPersonagens ()
+	{
+		vPersonagens.AtivarTodos(false);
+	
+		
 	}
 
 	void Stop ()
@@ -187,6 +273,10 @@ public class MenuFesta : Menu
 		tocandoMusica = false;
 		
 		btnPlay.SetActive(true);
+		labelPlay.text = "Play";
+		btnPause.SetActive(false);
+		
+		AtivarTodosOSPersonagens();
 		
 		OnClickFecharPartituras();
 		

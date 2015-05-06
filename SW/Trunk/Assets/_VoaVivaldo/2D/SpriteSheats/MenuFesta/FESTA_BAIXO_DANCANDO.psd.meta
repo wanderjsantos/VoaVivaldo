@@ -111,622 +111,622 @@ TextureImporter:
     - name: FESTA_BAIXO_DANCANDO_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1756
+        x: 0
+        y: 1760
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_1
       rect:
         serializedVersion: 2
-        x: 198
-        y: 1756
+        x: 197
+        y: 1760
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_2
       rect:
         serializedVersion: 2
-        x: 395
-        y: 1756
+        x: 394
+        y: 1760
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_3
       rect:
         serializedVersion: 2
-        x: 592
-        y: 1756
+        x: 591
+        y: 1760
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_4
       rect:
         serializedVersion: 2
-        x: 789
-        y: 1756
+        x: 788
+        y: 1760
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_5
       rect:
         serializedVersion: 2
-        x: 986
-        y: 1756
+        x: 985
+        y: 1760
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_6
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 1756
+        x: 1182
+        y: 1760
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_7
       rect:
         serializedVersion: 2
-        x: 1380
-        y: 1756
+        x: 1379
+        y: 1760
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_8
       rect:
         serializedVersion: 2
-        x: 1577
-        y: 1756
+        x: 1576
+        y: 1760
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_9
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1464
+        x: 0
+        y: 1467
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_10
       rect:
         serializedVersion: 2
-        x: 198
-        y: 1464
+        x: 197
+        y: 1467
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_11
       rect:
         serializedVersion: 2
-        x: 395
-        y: 1464
+        x: 394
+        y: 1467
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_12
       rect:
         serializedVersion: 2
-        x: 592
-        y: 1464
+        x: 591
+        y: 1467
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_13
       rect:
         serializedVersion: 2
-        x: 789
-        y: 1464
+        x: 788
+        y: 1467
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_14
       rect:
         serializedVersion: 2
-        x: 986
-        y: 1464
+        x: 985
+        y: 1467
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_15
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 1464
+        x: 1182
+        y: 1467
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_16
       rect:
         serializedVersion: 2
-        x: 1380
-        y: 1464
+        x: 1379
+        y: 1467
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_17
       rect:
         serializedVersion: 2
-        x: 1577
-        y: 1464
+        x: 1576
+        y: 1467
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_18
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1172
+        x: 0
+        y: 1174
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_19
       rect:
         serializedVersion: 2
-        x: 198
-        y: 1172
+        x: 197
+        y: 1174
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_20
       rect:
         serializedVersion: 2
-        x: 395
-        y: 1172
+        x: 394
+        y: 1174
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_21
       rect:
         serializedVersion: 2
-        x: 592
-        y: 1172
+        x: 591
+        y: 1174
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_22
       rect:
         serializedVersion: 2
-        x: 789
-        y: 1172
+        x: 788
+        y: 1174
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_23
       rect:
         serializedVersion: 2
-        x: 986
-        y: 1172
+        x: 985
+        y: 1174
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_24
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 1172
+        x: 1182
+        y: 1174
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_25
       rect:
         serializedVersion: 2
-        x: 1380
-        y: 1172
+        x: 1379
+        y: 1174
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_26
       rect:
         serializedVersion: 2
-        x: 1577
-        y: 1172
+        x: 1576
+        y: 1174
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_27
       rect:
         serializedVersion: 2
-        x: 1
-        y: 880
+        x: 0
+        y: 881
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_28
       rect:
         serializedVersion: 2
-        x: 198
-        y: 880
+        x: 197
+        y: 881
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_29
       rect:
         serializedVersion: 2
-        x: 395
-        y: 880
+        x: 394
+        y: 881
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_30
       rect:
         serializedVersion: 2
-        x: 592
-        y: 880
+        x: 591
+        y: 881
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_31
       rect:
         serializedVersion: 2
-        x: 789
-        y: 880
+        x: 788
+        y: 881
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_32
       rect:
         serializedVersion: 2
-        x: 986
-        y: 880
+        x: 985
+        y: 881
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_33
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 880
+        x: 1182
+        y: 881
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_34
       rect:
         serializedVersion: 2
-        x: 1380
-        y: 880
+        x: 1379
+        y: 881
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_35
       rect:
         serializedVersion: 2
-        x: 1577
-        y: 880
+        x: 1576
+        y: 881
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_37
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 588
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_38
       rect:
         serializedVersion: 2
-        x: 198
+        x: 197
         y: 588
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_39
       rect:
         serializedVersion: 2
-        x: 395
+        x: 394
         y: 588
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_40
       rect:
         serializedVersion: 2
-        x: 592
+        x: 591
         y: 588
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_41
       rect:
         serializedVersion: 2
-        x: 789
+        x: 788
         y: 588
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_42
       rect:
         serializedVersion: 2
-        x: 986
+        x: 985
         y: 588
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_43
       rect:
         serializedVersion: 2
-        x: 1183
+        x: 1182
         y: 588
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_44
       rect:
         serializedVersion: 2
-        x: 1380
+        x: 1379
         y: 588
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_45
       rect:
         serializedVersion: 2
-        x: 1577
+        x: 1576
         y: 588
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_46
       rect:
         serializedVersion: 2
-        x: 1
-        y: 296
+        x: 0
+        y: 293
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_47
       rect:
         serializedVersion: 2
-        x: 198
-        y: 296
+        x: 197
+        y: 293
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_48
       rect:
         serializedVersion: 2
-        x: 395
-        y: 296
+        x: 394
+        y: 293
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_49
       rect:
         serializedVersion: 2
-        x: 592
-        y: 296
+        x: 591
+        y: 293
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_50
       rect:
         serializedVersion: 2
-        x: 789
-        y: 296
+        x: 788
+        y: 294
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_51
       rect:
         serializedVersion: 2
-        x: 986
-        y: 296
+        x: 985
+        y: 294
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_52
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 296
+        x: 1182
+        y: 294
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_53
       rect:
         serializedVersion: 2
-        x: 1380
-        y: 296
+        x: 1379
+        y: 294
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_54
       rect:
         serializedVersion: 2
-        x: 1577
-        y: 296
+        x: 1576
+        y: 294
         width: 197
-        height: 292
+        height: 293
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_55
       rect:
         serializedVersion: 2
-        x: 1
-        y: 4
+        x: 0
+        y: 0
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_56
       rect:
         serializedVersion: 2
-        x: 198
-        y: 4
+        x: 197
+        y: 0
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_57
       rect:
         serializedVersion: 2
-        x: 395
-        y: 4
+        x: 394
+        y: 0
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_58
       rect:
         serializedVersion: 2
-        x: 592
-        y: 4
+        x: 591
+        y: 0
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_59
       rect:
         serializedVersion: 2
-        x: 789
-        y: 4
+        x: 788
+        y: 0
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_60
       rect:
         serializedVersion: 2
-        x: 986
-        y: 4
+        x: 985
+        y: 0
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_61
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 4
+        x: 1182
+        y: 0
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_BAIXO_DANCANDO_62
       rect:
         serializedVersion: 2
-        x: 1380
-        y: 4
+        x: 1379
+        y: 0
         width: 197
-        height: 292
+        height: 293
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

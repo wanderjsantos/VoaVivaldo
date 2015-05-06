@@ -129,8 +129,10 @@ public class gLevels : MonoBehaviour
 		else
 		{			
 			LiberarProximaFase();
-			LiberarFesta();
+			
 		}
+		
+		LiberarFesta();
 		
 	}
 	
@@ -158,6 +160,8 @@ public class gLevels : MonoBehaviour
 		
 		Debug.LogWarning("PROXIMO LEVEL: " + (currentLevelIndex+1));
 		
+		if( (currentLevelIndex + 1 ) >= allLevels.Count ) return;
+		
 		allLevels[currentLevelIndex + 1 ].savedInfo.liberado = true;
 		allLevels[currentLevelIndex + 1 ].savedInfo.partiturasConcluidas[0].liberado = true;
 	}
@@ -179,7 +183,13 @@ public class gLevels : MonoBehaviour
 		else
 			fase += 1;
 		
-		if( level > allLevels.Count -1 ){ Debug.LogWarning( "Todos os levels desbloqueados"); gMenus.s.ShowMenu("Principal"); return; }
+		if( level > allLevels.Count -1 )
+		{ 
+			Debug.LogWarning( "Fim de Jogo"); 
+			Loader.Load( "Final" );
+//			gMenus.s.ShowMenu("Principal"); 
+			return; 
+		}
 		
 		gMusica.s.Set( level, fase );
 //		gMusica.s.SetFase (numero);		

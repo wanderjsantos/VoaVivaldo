@@ -70,42 +70,42 @@ TextureImporter:
     - name: FESTA_GUITARRA_DANCANDO_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 781
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_1
       rect:
         serializedVersion: 2
-        x: 170
+        x: 172
         y: 781
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_2
       rect:
         serializedVersion: 2
-        x: 340
+        x: 343
         y: 781
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_3
       rect:
         serializedVersion: 2
-        x: 510
+        x: 512
         y: 781
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_4
       rect:
@@ -115,7 +115,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_5
       rect:
@@ -125,7 +125,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_6
       rect:
@@ -135,7 +135,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_7
       rect:
@@ -145,7 +145,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_8
       rect:
@@ -155,7 +155,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_9
       rect:
@@ -165,7 +165,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_10
       rect:
@@ -175,7 +175,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_11
       rect:
@@ -185,47 +185,47 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_12
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 297
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_13
       rect:
         serializedVersion: 2
-        x: 170
+        x: 172
         y: 297
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_14
       rect:
         serializedVersion: 2
-        x: 340
+        x: 342
         y: 297
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_15
       rect:
         serializedVersion: 2
-        x: 510
+        x: 512
         y: 297
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_16
       rect:
@@ -235,7 +235,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_17
       rect:
@@ -245,7 +245,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_18
       rect:
@@ -255,7 +255,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_19
       rect:
@@ -265,7 +265,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_20
       rect:
@@ -275,7 +275,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_21
       rect:
@@ -285,7 +285,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_22
       rect:
@@ -295,7 +295,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FESTA_GUITARRA_DANCANDO_23
       rect:
@@ -305,7 +305,7 @@ TextureImporter:
         width: 170
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

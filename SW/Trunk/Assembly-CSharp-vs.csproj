@@ -182,6 +182,10 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\VirgoLoader\Examples\1-LoadingScenes\Scripts\LoadGUI.cs" />
+     <Compile Include="Assets\VirgoLoader\Examples\1-LoadingScenes\Scripts\Rotate.cs" />
+     <Compile Include="Assets\VirgoLoader\Examples\1-LoadingScenes\Scripts\Translate.cs" />
+     <Compile Include="Assets\VirgoLoader\Scripts\Loader.cs" />
      <Compile Include="Assets\_VoaVivaldo\Prefabs\Tutorial\Paginator\MenuTutorial.cs" />
      <Compile Include="Assets\_VoaVivaldo\Prefabs\Tutorial\Paginator\Paginator.cs" />
      <Compile Include="Assets\_VoaVivaldo\Prefabs\Tutorial\Paginator\UIPage.cs" />
@@ -256,6 +260,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored (TextureClip).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (TextureClip).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 2.shader" />
+     <None Include="Assets\VirgoLoader\readme.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Masked Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />

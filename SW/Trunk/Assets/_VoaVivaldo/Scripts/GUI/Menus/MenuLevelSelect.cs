@@ -23,6 +23,8 @@ public class MenuLevelSelect : Menu {
 			botoesDeLevel[i].SetValue( false, false );
 		}
 		
+		
+		
 		levelsDisponiveis.ForEach( delegate( Level level)
 		{
 			botoesDeLevel.Find( e=> e.selecionarLevel == level.savedInfo.meuLevel ).SetValue( level.savedInfo.liberado, level.savedInfo.festaLiberada);

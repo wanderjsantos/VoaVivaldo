@@ -51,11 +51,19 @@ public class gMusica : MonoBehaviour
 		{
 			musicaAtual.sourceBase.Pause();
 			musicaAtual.sourceInstrumento.Pause();
+			musicaAtual.sourcesExtras.ForEach( delegate( AudioSource source )
+			{
+				source.Pause();
+			});
 		}
 		else
 		{
 			musicaAtual.sourceBase.Play();
 			musicaAtual.sourceInstrumento.Play();
+			musicaAtual.sourcesExtras.ForEach( delegate( AudioSource source )
+          	{
+				source.Play();
+			});
 		}
 	}
 

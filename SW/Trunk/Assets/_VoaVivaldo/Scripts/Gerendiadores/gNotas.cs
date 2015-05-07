@@ -98,7 +98,7 @@ public class gNotas : MonoBehaviour
 		
 	}
 
-	void OnGUI()
+	void FixedUpdate()
 	{
 		if( dbg ) 
 		{

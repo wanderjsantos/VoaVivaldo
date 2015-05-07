@@ -78,6 +78,8 @@ public class gPontuacao : MonoBehaviour {
 		estrelasGanhas = 0;
 		pontuacao = 0;
 		
+		pontuandoNotaLonga = false;
+		
 		if( onUpdateEstrelas != null ) onUpdateEstrelas( 0 );
 		if( onUpdateCombo != null ) onUpdateCombo(-1);
 		if( onUpdatePontuacao != null ) onUpdatePontuacao( 0 );

@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: afbc60302ef245b4d85e3e1463f23570
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: piano_danca
+    21300002: piano_danca_0
+    21300004: piano_danca_1
+    21300006: piano_danca_2
+    21300008: piano_danca_3
+    21300010: piano_danca_4
+    21300012: piano_danca_5
+    21300014: piano_danca_6
+    21300016: piano_danca_7
+    21300018: piano_danca_8
+    21300020: piano_danca_9
+    21300022: piano_danca_10
+    21300024: piano_danca_11
+    21300026: piano_danca_12
+    21300028: piano_danca_13
+    21300030: piano_danca_14
+    21300032: piano_danca_15
+    21300034: piano_danca_16
+    21300036: piano_danca_17
+    21300038: piano_danca_18
+    21300040: piano_danca_19
+    21300042: piano_danca_20
+    21300044: piano_danca_21
+    21300046: piano_danca_22
+    21300048: piano_danca_23
+    21300050: piano_danca_24
+    21300052: piano_danca_25
+    21300054: piano_danca_26
+    21300056: piano_danca_27
+    21300058: piano_danca_28
+    21300060: piano_danca_29
+    21300062: piano_danca_30
+    21300064: piano_danca_31
+    21300066: piano_danca_32
+    21300068: piano_danca_33
+    21300070: piano_danca_34
+    21300072: piano_danca_35
+    21300074: piano_danca_36
+    21300076: piano_danca_37
+    21300078: piano_danca_38
+    21300080: piano_danca_39
+    21300082: piano_danca_40
+    21300084: piano_danca_41
+    21300086: piano_danca_42
+    21300088: piano_danca_43
+    21300090: piano_danca_44
+    21300092: piano_danca_45
+    21300094: piano_danca_46
+    21300096: piano_danca_47
+    21300098: piano_danca_48
+    21300100: piano_danca_49
+    21300102: piano_danca_50
+    21300104: piano_danca_51
+    21300106: piano_danca_52
+    21300108: piano_danca_53
+    21300110: piano_danca_54
+    21300112: piano_danca_55
+    21300114: piano_danca_56
+    21300116: piano_danca_57
+    21300118: piano_danca_58
+    21300120: piano_danca_59
+    21300122: piano_danca_60
+    21300124: piano_danca_61
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: piano_danca_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1265
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_1
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1265
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_2
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1265
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_3
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1265
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_4
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1265
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_5
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 1265
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_6
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 1265
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1107
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_8
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1107
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_9
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1107
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_10
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1107
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_11
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1107
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_12
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 1107
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_13
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 1107
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 949
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_15
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 949
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_16
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 949
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_17
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 949
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_18
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 949
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_19
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 949
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_20
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 949
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 791
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_22
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 791
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_23
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 791
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_24
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 791
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_25
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 791
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_26
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 791
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_27
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 791
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 633
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_29
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 633
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_30
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 633
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_31
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 633
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_32
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 633
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_33
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 633
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_34
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 633
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 475
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_36
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 475
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_37
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 475
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_38
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 475
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_39
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 475
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_40
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 475
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_41
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 475
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 317
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_43
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 317
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_44
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 317
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_45
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 317
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_46
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 317
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_47
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 317
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_48
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 317
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_50
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 159
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_51
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 159
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_52
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 159
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_53
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 159
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_54
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 159
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_55
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 159
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_57
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_58
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_59
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_60
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: piano_danca_61
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 1
+        width: 293
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
